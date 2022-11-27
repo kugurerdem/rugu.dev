@@ -1,0 +1,20 @@
+<html>
+    {{ partial "head.html" . }}
+    {{ if isset .Params "forward"}}
+        <meta http-equiv="refresh" content="0; url={{.Params.Forward}}" />
+    {{ end }}
+    <body>
+        <nav>
+            <a href="/"> Home </a>
+        </nav>
+        <div class="master-container">
+            <article>
+                <div class="page">
+                    <h1> {{ .Title }} </h1>
+                    {{ .Content }}
+                </div>
+            </article>
+            {{ partial "aside.html" . }}
+        </div>
+    </body>
+<html>

@@ -1,0 +1,11 @@
+baseURL: 'https://ugur.wtf/'
+languageCode: 'en-us'
+title: 'ugur'
+theme: 'simplerugu'
+
+params:
+  description: "a software developer with a hacker's attitude, senior math undergrad, interested in philosophy and psychology, dives.fyi cofounder"
+  authorImage: "/ugur_img.jpg"
+  connect:
+    - twitter: 'https://twitter.com/kugurerdem'
+    - github: 'https://github.com/kugurerdem'

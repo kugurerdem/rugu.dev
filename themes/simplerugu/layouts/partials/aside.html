@@ -1,0 +1,19 @@
+<aside class="side">
+    <div>
+        <img
+            class="author-image"
+            src="{{.Site.Params.AuthorImage}}"/>
+    </div>
+    <hr/>
+        <div> {{ .Site.Params.Description }} </div>
+    <hr/>
+    <div>
+        {{ range .Site.Params.Connect }}
+            <li>
+            {{ range $k, $v := . }}
+                <a href="{{ $v }}">{{ $k }}</a>
+            {{ end }}
+            </li>
+        {{ end }}
+    </div>
+</aside>
