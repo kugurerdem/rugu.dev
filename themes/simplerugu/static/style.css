@@ -40,6 +40,8 @@ article, aside {
 
 pre {
     margin-left: 1em;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .page{
@@ -74,6 +76,19 @@ img[src$='#center']
                             horizontal 'auto' for this to work */
     /* whatever else styles you fancy here */
 }
+
+
+img[src$='#fullsize']
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
 
 @media (max-width: 52em) {
     .master-container {

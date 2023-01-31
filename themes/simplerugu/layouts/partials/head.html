@@ -3,5 +3,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Uğur Erdem Seyfi">
         <link rel="stylesheet" href="/style.css?v={{.Date.Unix}}">
-        <title> {{ .Site.BaseURL }} </title>
+        <title> {{ if (isset .Params "title") }} {{ .Params.Title }} | {{ end }}
+        rugu </title>
     </head>
