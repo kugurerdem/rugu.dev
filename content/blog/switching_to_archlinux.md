@@ -23,8 +23,8 @@ myself, struggle with. Influenced by this, I started asking him (he was our
 consultant, after all) as many questions as I could and focused on the resources
 he suggested and the technologies he used.
 
-The inspiration from this hacker guy, combined with the very precious helps of a
-friend of mine who had a strong interest in operating systems (he uses Arch in
+The inspiration from this hacker guy, combined with the very precious help from
+a friend of mine who had a strong interest in operating systems (he uses Arch in
 Qubes OS btw), being libre, and having control over his computer, led me to
 switch to Arch Linux. I have also benefited a lot from discussions on hackernews
 and from youtubers like Luke Smith which I also heard from the Qubes OS friend
@@ -159,14 +159,14 @@ you do it. And because of this, one is left with the question "which program sho
 prefer first?" I must admit that I still often get stunned by this question and
 already lost enough time on it.
 
-    'I am using X as a Window Server Protocol but I heard that Wayland is a newer
-    protocol, should I switch to it?'
-
-    'A program called pipeware for audio handling is recommended but some suggest
-    something called pulseaudio, which one shall I use?'
-
-    'Shall I use vim or neovim? I heard that vim is organized by one person whereas
-    neovim is more community driven.'
+>'I am using X as a Window Server Protocol but I heard that Wayland is a newer
+>protocol, should I switch to it?'
+>
+>'A program called pipeware for audio handling is recommended but some suggest
+>something called pulseaudio, which one shall I use?'
+>
+>'Shall I use vim or neovim? I heard that vim is organized by one person whereas
+>neovim is more community driven.'
 
 Don’t get me wrong. I am not implying that these questions are meaningless. They
 are indeed meaningful after a point where small nuances between them start to
@@ -235,12 +235,12 @@ amount of time:
         convert $file -rotate 90 rotated-$file;
     done
   ```
-- I used `youtube-dl` to easily download youtube videos and playlists. It
+- I used `yt-dlp` to easily download youtube videos and playlists. It
   was one of the most comfortable downloading experiences I had.
 
 - I used `pdfcrop` for cropping PDF files.
-- I changed structure of folders that has many files in it by using simple for
-  loops alongside with `mv cp rm`
+- I changed the structure of folders that have many files in them by using
+  simple for loops alongside with `mv cp rm`
 
 Not to mention how much its easier to install packages that are on AUR or Arch
 Repository compared to installing stuff in Windows.
@@ -390,7 +390,8 @@ splits anyways.
 
 Here is an example showcase of dvtm:
 
-![Example DVTM Showcase](https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#center)
+![Example DVTM
+Showcase](https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize)
 
 
 ### File Manager
