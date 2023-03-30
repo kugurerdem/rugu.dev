@@ -4,12 +4,12 @@ draft: false
 date: '2022-12-24'
 ---
 
-*This essay was originally written for my Philosophy PHIL103 course at Bilkent
-University, where we delved into various branches of philosophy, including
-consciousness. It reflects some of the thought processes that arose as I
-grappled with these philosophical questions. It's important to note that this
-essay is not an exact reflection of my personal beliefs, but rather an exercise
-in argumentation.*
+*This essay was originally written for the 'Introduction to Philosophy I'
+(PHIL103) course at Bilkent University, where we delved into various branches of
+philosophy, including consciousness. It reflects some of the thought processes
+that arose as I grappled with these philosophical questions. It's important to
+note that this essay is not an exact reflection of my personal beliefs, but
+rather an exercise in argumentation.*
 
 *Despite this, I believe the arguments presented in this essay hold value and are
 worth exploring. My hope is that this essay provides you with insight and
