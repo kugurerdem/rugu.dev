@@ -68,6 +68,10 @@ pre {
     height: auto;
 }
 
+img {
+    max-width: 100%;
+}
+
 img[src$='#center']
 {
     display: block;
