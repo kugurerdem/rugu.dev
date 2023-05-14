@@ -13,7 +13,7 @@ languages:
   en:
     contentDir: content/english
     languageName: English
-    weight: 10
+    weight: 0
     params:
       description: "a software developer with a hacker's attitude, senior math undergrad, interested in philosophy and psychology, dives.fyi cofounder"
       menu:
@@ -22,7 +22,7 @@ languages:
   tr:
     contentDir: content/turkce
     languageName: Turkce
-    weight: 9
+    weight: 1
     params:
       description: "hacker kafalı yazılımcı, matematik öğrencisi, felsefe ve psikoloji ile ilgikeniyor, dives.fyi eşkurucusu"
       menu:
