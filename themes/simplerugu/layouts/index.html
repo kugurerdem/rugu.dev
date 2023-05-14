@@ -2,7 +2,22 @@
     {{ partial "head.html" . }}
     <body>
         <nav>
-            <a href="/"> Home </a>
+            <div class="menu">
+                <a href="/{{ $.Site.Language }}"> {{ $.Site.Params.Menu.Home }}  </a>
+            </div>
+
+            <div class="languages">
+                {{ range $key, $lang := $.Site.Languages }}
+                    {{ if ne $key 0 }}
+                        <span> | </span>
+                    {{ end }}
+                    {{ if eq $.Lang $lang.Lang }}
+                        <a href="#" style="color: black"> {{ $lang.Lang }} </span>
+                    {{ else }}
+                        <a href="#"> {{ $lang.Lang }} </span>
+                    {{ end }}
+                {{ end }}
+            </div>
         </nav>
         <div class="master-container">
             <article>
