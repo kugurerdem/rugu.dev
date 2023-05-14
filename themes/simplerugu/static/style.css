@@ -15,6 +15,7 @@ nav {
 }
 
 .menu{
+    padding-left: 2em;
     flex-grow: 9;
 }
 

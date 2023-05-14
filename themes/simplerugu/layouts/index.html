@@ -12,9 +12,9 @@
                         <span> | </span>
                     {{ end }}
                     {{ if eq $.Lang $lang.Lang }}
-                        <a href="#" style="color: black"> {{ $lang.Lang }} </span>
+                    <a href="/{{ $lang.Lang }}" style="color: black"> {{ $lang.Lang }} </a>
                     {{ else }}
-                        <a href="#"> {{ $lang.Lang }} </span>
+                    <a href="/{{ $lang.Lang }}"> {{ $lang.Lang }} </a>
                     {{ end }}
                 {{ end }}
             </div>
