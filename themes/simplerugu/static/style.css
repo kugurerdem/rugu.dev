@@ -11,7 +11,15 @@ h1 {
 }
 
 nav {
-    padding-left: 2em;
+  display: flex;
+}
+
+.menu{
+    flex-grow: 9;
+}
+
+.languages {
+    flex-grow: 1;
 }
 
 ul, li {
