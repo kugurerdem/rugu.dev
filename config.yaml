@@ -9,6 +9,7 @@ params:
     - twitter: 'https://twitter.com/kugurerdem'
     - github: 'https://github.com/kugurerdem'
 
+defaultContentLanguageInSubdir: true
 languages:
   en:
     contentDir: content/english
