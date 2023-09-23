@@ -14,14 +14,15 @@ on people's code at a speed I had never seen before. He was able to jump between
 different files in an instant, examining the diffs that were made in different
 git commits.
 
-After seeing what I saw, I thought to myself, 'If I were able to develop and
-refactor code at that speed, I would save a lot of time, I could have spend more
-time on thinking about the actual stuff with less friction as possible. I want
-to have this power.' So I have look to [his CV](https://gwn.wtf/resume.html) and
-realized that he was knowledgeable on topics that many developers, including
-myself, struggle with. Influenced by this, I started asking him (he was our
-consultant, after all) as many questions as I could and focused on the resources
-he suggested and the technologies he used.
+After seeing what I saw, I thought to myself, ‘If I were able to develop and
+refactor code at that speed, I would save a lot of time, I could have spent
+more time thinking about the actual stuff with as little friction as possible.
+I want to have this power.’ So I have looked at [his
+CV](https://gwn.wtf/resume.html) and realized that he was knowledgeable on
+topics that many developers, including myself, struggle with. Influenced by
+this, I started asking him (he was our consultant, after all) as many questions
+as I could and focused on the resources he suggested and the technologies he
+used.
 
 The inspiration from this hacker guy, combined with the very precious help from
 a friend of mine who had a strong interest in operating systems (he uses Arch in
