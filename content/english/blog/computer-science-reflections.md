@@ -1,5 +1,5 @@
 ---
-title: 'Reflections on My Journey into Computer Science'
+title: 'Reflections on My Journey into Software Development'
 draft: false
 date: '2023-09-22'
 ---
@@ -261,7 +261,7 @@ Developer periods) in navigating such complexities.
 # A new Mentor
 
 While working at my first Job, I got the opportunity to meet with a very
-[interesting person](https://gwn.wtf/resume.html), as he likes to call himself
+[interesting person](https://gwn.wtf/mortals.html), as he likes to call himself
 as well "not your usual hacker".
 
 In one of my previous essays [Switching to Arch Linux]({{< ref
@@ -319,7 +319,7 @@ Mentors, like all things, can be good or bad. A mentor is good if they:
   interested in assisting your growth and development.
 
 In my journey as a software developer, From [yuempek](http://yuempek.com) to
-[gwn](https://gwn.wtf/resume.html). Whenever I've come across a new concept or
+[gwn](https://gwn.wtf/mortals.html). Whenever I've come across a new concept or
 a challenging problem that needs a unique solution, seeking the advice of more
 experienced individuals has been incredibly helpful.
 
