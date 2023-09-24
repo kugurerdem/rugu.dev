@@ -5,10 +5,10 @@ theme: 'simplerugu'
 
 params:
   authorImage: "/ugur_img.jpg"
-  email: "rugudev@protonme.com"
   connect:
     - twitter: 'https://twitter.com/kugurerdem'
     - github: 'https://github.com/kugurerdem'
+  email: "rugudev@proton.me"
 
 defaultContentLanguageInSubdir: true
 languages:
