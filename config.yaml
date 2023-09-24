@@ -5,6 +5,7 @@ theme: 'simplerugu'
 
 params:
   authorImage: "/ugur_img.jpg"
+  email: "rugudev@protonme.com"
   connect:
     - twitter: 'https://twitter.com/kugurerdem'
     - github: 'https://github.com/kugurerdem'
@@ -16,7 +17,7 @@ languages:
     languageName: English
     weight: 0
     params:
-      description: "a software developer with a hacker's attitude, senior math undergrad, interested in philosophy and psychology, dives.fyi cofounder"
+      description: "a software developer with a hacker's attitude, dev at lab.gwn.wtf, BSc Math '23, interested in philosophy and psychology, dives.fyi cofounder"
       menu:
         home: 'Home'
 
@@ -25,6 +26,6 @@ languages:
     languageName: Turkce
     weight: 1
     params:
-      description: "hacker kafalı yazılımcı, matematik öğrencisi, felsefe ve psikoloji ile ilgikeniyor, dives.fyi eşkurucusu"
+      description: "hacker kafalı yazılımcı, matematik mezunu '23, lab.gwn.wtf'de geliştirici, felsefe ve psikoloji ile ilgileniyor, dives.fyi eşkurucusu"
       menu:
         home: 'Anasayfa'
