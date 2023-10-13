@@ -2,6 +2,8 @@
 title: 'Reflections on My Journey into Software Development'
 draft: false
 date: '2023-09-22'
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=37622974
 ---
 
 In the following essay, I will reflect on my journey which led me to become a
