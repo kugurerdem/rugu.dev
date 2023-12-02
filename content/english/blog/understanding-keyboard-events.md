@@ -54,11 +54,11 @@ solutions only focused on capturing keyboard events within the current window
 associated with the process.
 
 I stumbled upon a library called ``xev-emitter`` but it didn't provide what I
-needed as it mainly dealt with listening to xevents of a specific X client.
+needed as it mainly dealt with listening to xevents of a specific X library.
 
 After some contemplation, I decided to create my own Node.js module using
 ``xinput`` underneath, just for the sake of it and out of curiosity. ``xinput``
-is a Unix tool that allows listening to keyboard events and provides an
+is a Linux tool that allows listening to keyboard events and provides an
 interface to monitor events from connected keyboards.
 
 For instance, running the command ``xinput`` gives me a list of available input
@@ -156,8 +156,8 @@ https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-cod
 Moreover, using scripts like xinput as subprocesses under our script might not
 be the optimal approach for implementing an EventEmitter library to listen to
 system-wide keypresses. The conventional way is likely to interact with the X
-server using an X client. Unfortunately, I couldn't build the x11 library on my
-computer and chose not to delve into it much.
+server using an X library. Unfortunately, I couldn't build the nodeJS x11
+library on my computer and chose not to delve into it much.
 
 ## Conclusion
 
