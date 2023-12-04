@@ -1,7 +1,8 @@
 ---
-title: 'Developer Story: Key Remapping & Keylogging'
+title: 'Developer Story: Understanding Keyboard Events Better'
 draft: false
 date: '2023-12-02'
+updated: '2023-12-04'
 ---
 
 In this essay, I describe how I made a Node.js module to listen to keypresses
@@ -108,9 +109,9 @@ that 38 stands for the key 'a'?
 The numbers provided by xinput are known as X Key Codes. These codes represent
 the physical keys pressed on the X layer. They are essentially similar to Linux
 Input Event Codes, which the Linux Operating System generates to represent the
-physical keys pressed. For reasons I'm not aware of, X Key Codes are
-incremented by 8 compared to Linux keycodes (see:
-https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console).
+physical keys pressed. For reasons I'm not aware of, [X Key Codes are
+incremented by 8 compared to Linux
+keycodes](https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console)
 
 Now, the challenge lies in making sense of each X Key Code. We need a mapping
 between the X Key Codes and their corresponding keys. However, what they
@@ -136,8 +137,8 @@ subprocess.
 4) Use the result of `xmodmap -pke` to understand the semantic meaning assigned
 to each physical keypress, known as a KeySym.
 
-If you're curious, you can check out the module I created:
-https://github.com/kugurerdem/node-xinput-event
+If you're curious, you can check out the module I created,
+[Node XInput Events](https://github.com/kugurerdem/node-xinput-event).
 
 ## Probably a Better Approach
 
@@ -150,8 +151,8 @@ because it operates on a more fundamental level than X.
 
 Similar to how we mapped between X Key Codes and their corresponding X Key
 Codes, we could create a mapping between Linux Event Codes and their meanings
-by examining the Linux source code:
-https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h
+by examining the [Linux source code for the input event
+codes](https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h)
 
 Moreover, using scripts like xinput as subprocesses under our script might not
 be the optimal approach for implementing an EventEmitter library to listen to
