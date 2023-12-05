@@ -140,7 +140,7 @@ subprocess.
 to each physical keypress, known as a KeySym.
 
 If you're curious, you can check out the module I created,
-[Node XInput Events](https://github.com/kugurerdem/node-xinput-event).
+[Node XInput Events](https://github.com/kugurerdem/node-xinput-events).
 
 ## Probably a Better Approach
 
