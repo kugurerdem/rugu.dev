@@ -57,7 +57,7 @@ solutions only focused on capturing keyboard events within the current window
 associated with the process.
 
 I stumbled upon a library called ``xev-emitter`` but it didn't provide what I
-needed as it mainly dealt with listening to xevents of a specific X library.
+needed as it mainly dealt with listening to xevents of a specific X windows.
 
 After some contemplation, I decided to create my own Node.js module using
 ``xinput`` underneath, just for the sake of it and out of curiosity. ``xinput``
