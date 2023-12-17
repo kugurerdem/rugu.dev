@@ -1,11 +1,8 @@
 <aside class="side">
-    <div>
         <img
             class="author-image"
             src="{{.Site.Params.AuthorImage}}"/>
-    </div>
-    <hr/>
-        <div> {{ .Site.Params.Description }} </div>
+
     <hr/>
     <div class="icon-container">
     {{ range .Site.Params.Connect }}
@@ -17,7 +14,7 @@
     {{ end }}
     </div>
     <hr/>
-    <div>
-        <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
-    </div>
+        <div> {{ .Site.Params.Description }} </div>
+    <hr/>
+    <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
 </aside>

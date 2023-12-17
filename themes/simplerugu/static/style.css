@@ -47,6 +47,14 @@ article, aside {
     display: block;
 }
 
+aside {
+    width: 15em;
+    margin-left: 2em;
+    margin-right: 1em;
+    flex-shrink: 0;
+    align-items: center;
+}
+
 pre {
     margin-left: 1em;
     overflow-x: auto;
@@ -54,27 +62,21 @@ pre {
 }
 
 .page{
-    margin-top: 1em;
     background-color: #fff;
     max-width: 54rem;
     padding: 1em 1em;
     box-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
-.side {
-    width: 15em;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    flex-shrink: 0;
-    align-items: center;
-}
 
 .author-image {
+    margin: 0 auto;
+    max-width: 208px;
+    width: 100%;
+    height: auto;
+
     display: block;
     width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-    height: auto;
+    border-radius: 25%;
 }
 
 .icon-container {
@@ -125,7 +127,8 @@ img[src$='#fullsize']
         display: block;
     }
 
-    .side {
+    aside {
+        margin-top: 1em;
         width: auto;
     }
 }
