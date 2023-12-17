@@ -8,13 +8,15 @@
         <div> {{ .Site.Params.Description }} </div>
     <hr/>
     <div>
+        <div class="icon-container">
         {{ range .Site.Params.Connect }}
-            <li>
-            {{ range $k, $v := . }}
-                <a href="{{ $v }}">{{ $k }}</a>
-            {{ end }}
-            </li>
+                {{ range $k, $v := . }}
+                    <a href="{{ $v }}" target="_blank">
+                        <img class="icon" src="/icons/{{ $k }}.svg"/>
+                    </a>
+                {{ end }}
         {{ end }}
+        </div>
 
     </div>
     <hr/>

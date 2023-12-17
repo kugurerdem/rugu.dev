@@ -77,6 +77,20 @@ pre {
     height: auto;
 }
 
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5em;
+}
+
 img {
     max-width: 100%;
 }

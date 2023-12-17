@@ -8,6 +8,8 @@ params:
   connect:
     - twitter: 'https://twitter.com/kugurerdem'
     - github: 'https://github.com/kugurerdem'
+    - hackernews: 'https://news.ycombinator.com/user?id=kugurerdem'
+    - rss: '/en/index.xml'
   email: "rugudev@proton.me"
 
 defaultContentLanguageInSubdir: true
@@ -17,6 +19,7 @@ languages:
     languageName: English
     weight: 0
     params:
+      descriptions: ["A software developer with a hacker's attitude", "developer @ lab.gwn.wtf", "dives.fyi cofounder", "BSc Math '23", "interested in phil and psyc"]
       description: "a software developer with a hacker's attitude, dev at lab.gwn.wtf, BSc Math '23, interested in philosophy and psychology, dives.fyi cofounder"
       menu:
         home: 'Home'
