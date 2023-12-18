@@ -2,6 +2,8 @@
 title: 'Incorporating AI Tools Into My Terminal Workflow'
 date: 2023-12-18
 updated: 2023-12-19
+discussions:
+    hackernews: 'https://news.ycombinator.com/item?id=38689075'
 ---
 
 For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
