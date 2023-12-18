@@ -143,12 +143,18 @@ img[src$='#fullsize']
     }
 }
 
-.highlight > pre  {
+
+pre {
   padding-left: 1.5em;
-  border-radius: 0.5em;
   margin-left: 0;
+  background-color: #eee;
+}
+
+pre > code {
+    background-color: #eee;
 }
 
 code {
     background-color: #eee;
+    border-radius: 0.3em;
 }
