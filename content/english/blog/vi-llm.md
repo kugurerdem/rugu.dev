@@ -1,6 +1,7 @@
 ---
-title: 'Integrating LLMs into My Environment'
+title: 'Incorporating AI Tools Into My Terminal Workflow'
 date: 2023-12-18
+updated: 2023-12-19
 ---
 
 For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
@@ -32,7 +33,7 @@ The process of integrating Co-pilot was relatively simple thanks to a
 However, incorporating ChatGPT into my workflow wasn't as straightforward as I
 had hoped. I looked into several neovim plugins, like
 [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim), which allow
-interaction with ChatGPT through Neovim. However, majority of these plugins
+interaction with ChatGPT through Neovim. However, the majority of these plugins
 seemed like an overkill compared to what I expect from them. They also had many
 features designed to simplify the programming process, a job that Co-pilot
 already handles for me. Additionally, I would want llms to be accessible not
@@ -62,7 +63,7 @@ git diff | llm 'Recommend 5 different commit messages for these change'
 ```
 
 ```bash
-cat file | llm 'Summarize what these are about'
+cat essay.txt | llm 'Summarize what these are about'
 ```
 
 Furthermore, if you keep finding yourself using the same prompts over and over
@@ -71,11 +72,12 @@ again, you can create templates for them.
 ```bash
 # Create a template for finding synonyms of a word
 llm 'What are the synonyms of "$input"' --save synonyms
-```
 
-```bash
 # Create a template for rephrasing text
 llm 'Fix grammar mistakes and rephrase the text: "$input"' --save rephrase
+
+# Create a template for finding titles for given content
+llm 'Recommend 5 titles for the following content: "$input"' --save titleize
 ```
 
 You can later use these templates by passing the ``-t`` flag to the command.
@@ -83,13 +85,12 @@ You can later use these templates by passing the ``-t`` flag to the command.
 ```bash
 # Rephrase the text which are copiod in your clipboard
 xsel -b | llm -t rephrase
-```
 
-For finding synonyms for a particular word you have in mind:
-
-```bash
 # Find synonyms of the word 'serenity'
 echo 'serenity' | llm -t synonyms
+
+# Find appropriate titles for your document
+cat vi-llm.md | llm -t titleize
 ```
 
 You can also further specify system messages, choose language model you want to
@@ -144,7 +145,7 @@ Here is a quick showcase:
 
 ![vi-llm-showcase](https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center)
 
-If you are interested, you can check out the [github repo](https://github.com/kugurerdem/vi-llm)
+If you are interested, you can check out the [github repo.](https://github.com/kugurerdem/vi-llm)
 
 ## Conclusion
 
