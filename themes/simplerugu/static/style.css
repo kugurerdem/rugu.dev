@@ -142,3 +142,13 @@ img[src$='#fullsize']
         min-width: 35em;
     }
 }
+
+.highlight > pre  {
+  padding-left: 1.5em;
+  border-radius: 0.5em;
+  margin-left: 0;
+}
+
+code {
+    background-color: #eee;
+}
