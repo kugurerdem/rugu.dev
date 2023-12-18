@@ -54,28 +54,43 @@ into another command or file.
 
 ## Examples
 
-Here are some of the examples that comes to my mind:
+Here are some of the examples that comes to my mind on how you could use the
+``llm`` tool:
 
-``git diff | llm 'Recommend 5 different commit messages for these change'``
+```bash
+git diff | llm 'Recommend 5 different commit messages for these change'
+```
 
-``cat file | llm 'Summarize what these are about'``
+```bash
+cat file | llm 'Summarize what these are about'
+```
 
 Furthermore, if you keep finding yourself using the same prompts over and over
 again, you can create templates for them.
 
-``llm 'What are the synonyms of "$input"' --save``
+```bash
+# Create a template for finding synonyms of a word
+llm 'What are the synonyms of "$input"' --save synonyms
+```
 
-``llm 'Fix grammar mistakes and rephrase the following text: "$input"' --save``
+```bash
+# Create a template for rephrasing text
+llm 'Fix grammar mistakes and rephrase the text: "$input"' --save rephrase
+```
 
 You can later use these templates by passing the ``-t`` flag to the command.
 
-For rephrasing the text which are copied in your clipboard:
-
-``xsel -b | llm -t rephrase``
+```bash
+# Rephrase the text which are copiod in your clipboard
+xsel -b | llm -t rephrase
+```
 
 For finding synonyms for a particular word you have in mind:
 
-``echo 'serenity' | llm -t synonyms``
+```bash
+# Find synonyms of the word 'serenity'
+echo 'serenity' | llm -t synonyms
+```
 
 You can also further specify system messages, choose language model you want to
 interact with, and many more things, which you can examine on the
