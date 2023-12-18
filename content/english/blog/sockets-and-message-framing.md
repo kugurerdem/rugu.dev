@@ -1,5 +1,5 @@
 ---
-title: 'Developer Story: Sockets and Message Framing'
+title: 'Sockets and Message Framing'
 draft: false
 date: '2023-11-21'
 ---

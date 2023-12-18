@@ -1,5 +1,5 @@
 ---
-title: 'Developer Story: Understanding Keyboard Events Better'
+title: 'Understanding Keyboard Events Better'
 draft: false
 date: '2023-12-02'
 updated: '2023-12-04'
