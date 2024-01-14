@@ -1,7 +1,7 @@
 ---
 title: 'Incorporating AI Tools Into My Terminal Workflow'
 date: 2023-12-18
-updated: 2023-12-19
+updated: 2024-01-15
 discussions:
     hackernews: 'https://news.ycombinator.com/item?id=38689075'
 ---
@@ -73,13 +73,13 @@ again, you can create templates for them.
 
 ```bash
 # Create a template for finding synonyms of a word
-llm 'What are the synonyms of "$input"' --save synonyms
+llm --system 'What are the synonyms of the following prompt' --save synonyms
 
 # Create a template for rephrasing text
-llm 'Fix grammar mistakes and rephrase the text: "$input"' --save rephrase
+llm --system 'Fix grammar mistakes and rephrase the text' --save rephrase
 
 # Create a template for finding titles for given content
-llm 'Recommend 5 titles for the following content: "$input"' --save titleize
+llm --system 'Recommend 5 titles for the following prompt' --save titleize
 ```
 
 You can later use these templates by passing the ``-t`` flag to the command.
