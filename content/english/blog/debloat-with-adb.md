@@ -135,7 +135,7 @@ adb uninstall --user 0 package.name
 # Automating the Process
 
 Remember that I told you to make a list of the packages you remove. This was
-for to list make the debloating process easier if you need to do it a second
+for to make the debloating process easier if you need to do it a second
 time on your phone.
 
 I use a specific [git
