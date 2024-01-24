@@ -2,6 +2,7 @@
 title: 'My Experience on Switching to Arch Linux'
 draft: false
 date: '2023-01-29'
+updated: '2024-01-24'
 ---
 
 About a year ago, I was invited to a pair coding session at the startup where I
@@ -36,129 +37,137 @@ particular. Then, I will discuss my reflections on the past few months,
 including the downsides and upsides of switching to Arch Linux. Finally, I will
 explain the programs that I currently use in my workflow.
 
-## What is special about Linux?
+## What are my reasons for using Linux?
 
-Linux is a free and open-source operating system (OS) based on the Linux kernel,
-a piece of software that sits between the hardware and programs that you run.
-Maybe you already know it but the vast majority of servers are already running
-in Linux. Android, the operating systems that most phones use, is also a
-specific fork of the Linux Opearting System. By this means, even a developer
-uses Windows or MacOS, it is still thought among many programmers that it is
-very beneficial to learn some fundamental aspects of Linux regardless.
+Unlike MacOS or Windows, Linux is a free and open-source operating system.
+Perhaps you are already know that a vast majority of servers actually run on
+Linux. Android, which is the operating system most phones use, is a specific
+variant of the Linux Operating System. By these means, many developers already
+seem to acknowledge the importance of learning Linux for practical reasons.
+However, the controversy usually arises when it comes to using Linux on a
+personal computer.
 
-Many developers already seem to agree on the importance of learning Linux to
-some extent for System Administration is out of the question. The variety of
-views seem to raise when it comes to use Linux on a personal computer. From the
-view of an average computer user, it might not matter much whether one uses
-Linux, Windows or MacOS but as your values and needs become more nuanced it
-might be more reasonable for you to switch to Linux over its alternatives.
+For an average computer user, it typically doesn't matter which operating
+system they use as long as it doesn't interfere with their daily tasks.
 
-The first aspect that comes to my mind between Linux and other well-known
-operating systems is that Linux is a free and open-source operating system,
-while Windows and Mac OS are proprietary operating systems that must be
-purchased. This has several implications:
+However, in my case, as my views have become more nuanced, switching to Linux
+has started to be more appealing.
 
-- You can set up Linux on a computer with no cost except some finite amount of
-  time where you have to spend some money in order to use MacOS or Windows.
+Here are some of the reasons why I prefer using Linux over MacOS or Windows:
+
+- Both Windows and MacOS forces you their ecosystem by their updates. With each
+  update, its more likely that your Desktop Environment is cluttered by a new
+  application which Microsoft added and most likely you will not even use. Most
+  of the prebuilt stuff that are coming with Windows, I do not use at all. I
+  think the same argument also holds for MacOS, as using one of their apps
+  usually forces you to use other Apple apps and you to stick with their
+  environment.
+
 - Since both MacOS and Windows are closed-source, we don't know for sure what
-  they do under the scenes. Windows, for example has a builtin keylogger.
-  Although Apple does not have such a claim, there is nothing preventing them to
-  do something like that.
-- By being open source, linux is highly customizable and allows users to modify
-  and tailor their environment to meet their specific needs. In contrast,
-  Windows and Mac OS are more limited in terms of customization. So Linux is a
-  great choice for users who want to have control over their operating system
-  and want to modify or customize it to meet their specific needs.
-- By being Open Source, the source code of Linux is checked and maintain by a
-  HUGE group of experienced developers. This might also have some implications
-  on its security.
+  they do under the scenes. Windows, for example had a builtin keylogger. If
+  you are curious about this, please type "Windows builtin keylogger" to your
+  favorite search engine. You will encounter many entries explaining how to
+  disable builtin keylogging. Although I do not have sufficient reasons to
+  claim that the Apple is doing the same thing, in practice, there is nothing
+  preventing these Close Sourced applications to do things like that besides
+  legal issues.
 
-Another aspect that I like to focus on its Linux's user base. As with many
-products, to use a product is often not merely using it but also being part of a
-group. By using Linux, you also become part of a group that it contains a lot of
-experienced software developers, hacker-minded people. To me, this is very
-important because when you become part of a group, it is more likely for you to
-get some of the habits of the group whether whether you intended so or not. By
-switching to an environment where there are more experienced people you become
-more exposed to their content.
+- You need to pay some money in order to use both MacOS and Windows, whereas
+  Linux is essentially free. You can set up Linux on a computer with no cost at
+  all except some finite amount of time you will put in to learn things.
+
+- Linux is highly customizable and allows users to modify and tailor their
+  environment to meet their specific needs. In contrast, Windows and Mac OS are
+  more limited in terms of customization. This partly makes Linux a better
+  choice for users who aim to be a power user, a user who wants to have control
+  over their operating system and want to modify or customize it to meet their
+  specific needs.
+
+- Linux offers a variety of versions that cater to the different needs of
+  various users, which is a significant advantage. These versions, known as
+  Linux distros, are essentially Linux systems with additional packages
+  specifically designed for certain users. I have not come across a similar
+  phenomenon in either MacOS or Windows. Linux provides more options than any
+  other proprietary operating system can offer.
+
+- Using a product often means more than just using it; it also means becoming
+  part of a group. Using Linux involves you in a community populated by hacker
+  minded people. And whether you indend it or not being part of a group
+  influences your habits. By immersing yourself in an environment filled with
+  more experienced individuals, you become more exposed to their knowledge and
+  ideas.
+
+I understand that similar points could be made for the sake of Windows or
+MacOS. Examples include Linux not being able to run some proprietary software
+that these operating systems can, or Linux not being as convenient because you
+often have to figure out most things yourself. I get that. However, all things
+considered, the value that Linux provides to me exceeds the values that those
+proprietary OSes provide.
 
 ## What is unique about Arch Linux?
 
-Before diving into this question, I shall clarify what a linux distribution is.
-In essence a linux distribution is a version of the Linux operating system that
-is packaged with additional software and tools.
+Essentially, a Linux distro is a version of the Linux operating system that
+comes packaged with additional software and tools.
 
-So an oversimplicated, but an intuitive formula can be given as:
+Oversimplicated, but an intuitive formula can be given as:
 
 ``DISTRIBUTION = KERNEL + SOME ADDITIONAL DEPENDENCIES``
 
-In essence, there is nothing preventing you from doing what one can do in one
-linux distribution in another by changing the 'SOME ADDITIONAL DEPENDENCIES'
-part of the formula above. These additional dependencies vary from package
-manages to init systems, and the initial softwares that come with the
-distribution.
+Theoretically, there's nothing stopping you from doing in one Linux
+distribution what you can do in another simply by altering the 'SOME ADDITIONAL
+DEPENDENCIES' part of the above formula. These additional dependencies can
+range from package managers to init systems, as well as the initial software
+that comes with the distribution.
 
-If you look at the amount of possible distributions one can choose, you can be
-buffled. Why are there so many different linux distributions? Because, there are
-lots of people who have different goals when using an OS and therefore needing
-different dependencies. There are also lots of organizations and communities
-that share different perspectives of what a constitutes a good linux distro.
+When you examine the variety of potential distributions one can select from, it
+can be overwhelming. Why are there so many different Linux distributions? The
+answer is because many people have different objectives when using an operating
+system and therefore require different dependencies. Additionally, numerous
+organizations and communities each have their distinct views on what
+constitutes a good Linux distribution.
 
 While distros like Ubuntu focus on being more friendly and welcoming to new
-users, some distros, like debian focus on stability and some like arch, focus on
-a certain combination of being minimal, cutting-edge and active.
+users, some distros, like Debian focus on stability and some like Arch, focus
+on a certain combination of being minimal, cutting-edge and active.
 
-Despite the fact that there is no objective metric to determine which one of
-these distributions is the best, they can be superior to each other given a
-certain context. For example, if you are working on a production server for an
-important application you might want to choose a linux distribution that does
-not give major updates regularly to become stable. If you are a new person who
-switches to Linux you might prefer a friendly linux distro such as Ubuntu for
-their user friendly community. If you are a person who only wants the programs
-that they use and nothing more than that, a distro which comes with less
-dependencies as much as possible might be a good choice for you.
+To me the key principles that Arch Linux were emphasasising (which can also be
+read in their [wiki](https://wiki.archlinux.org/title/Arch_Linux)), were more
+appealing than the other mainstream distros available.
 
-To me, Arch Linux comes forward by being a *modern*, *minimalist* distribution
-that have a very knowledgable *community*. You may be already heard that Arch
-Linux is a cutting-edge distribution, this is to say that it adapts new updates
-and releases of a wide variaty of programs very quickly. In Arch Linux besides
-its own package manager `pacman` an organization called Arch User Repository is
-also providing a possibility for installing programs, this repository is
-basically very frequently maintained by Arch Linux users, the community. I think
-it would not be unfair to say that AUR is one of the most active Linux
-repository, if not the most. One of the widely known things about Arch Linux is
-that when installed, you dont have anything but a terminal and some of the
-programs you specified arch installer to download. This is related to Arch Linux
-being minimal. Instead of building many packages into your system by default
-that my contain several programs that you might need at the expense of
-downloading lots of programs that is certain you will not use, it just leaves to
-customization part on the users' shoulders. This way you can install and focus
-on only what you need.
+Arch Linux essentially distinguishes itself as a minimalist distribution with a
+very knowledgeable community. This fact partially explains why Arch is
+considered one of the most cutting-edge distributions out there -- its active
+community maintains available packages that Arch users can install through a
+community-driven repository called the Arch User Repository.
 
-This article will not just be about my journey of switching to arch linux but
-also embracing its philosophy.
+When you install Arch, you don't receive anything but a virtual console and
+specific programs that you instructed the Arch installer to download. Unlike
+other distributions that build many packages into your system by default, which
+might include several programs that you may need but at the cost of downloading
+additional unwanted programs, Arch Linux instead puts the customization
+responsibility on the user. Which allows you to install and focus solely on
+what you need.
 
 ## Some Reflections
 
 ### Getting used to it
 
-It was hard to change the environment that I used to (Windows) with another
-environment that almost for all the things you want to do you are the one who
-needs to take the responsibility of deciding how things should go. During this
-process, I noticed that there are lots of things that we take it granted but by
-itself an actual thing: Screen lockers, clipboard functionalities, power
-management, multimedia keys... All of these things are handled by certain
-processes that are running on the background. Your typical computer user might
-not be aware that these are actual programs that are needed to be set up but
-when you are building an environment on a minimalist distribution, your
-awareness of such things tend to increase.
+Switching from Windows to Arch Linux was really challenging as in Arch Linux,
+it is you that needs to bear practically all responsibilities regarding your
+computer. As a result of this transition, I began to appreciate all the
+features we often take for granted; screen lockers, clipboard functionalities,
+power management, multimedia keys, and so on. These functionalities are usually
+managed by specific processes running unseen in the background. The average
+computer user might not realize that these are distinct programs that need
+setup. However, when you are building your system on a minimalist distribution,
+your knowledge of such details tends to increase.
 
 ### Variety of Solutions
 
-When you want to do something on Linux, there are a lot of alternative programs to let
-you do it. And because of this, one is left with the question "which program should one
-prefer first?" I must admit that I still often get stunned by this question and
-already lost enough time on it.
+When you want to accomplish something on Linux, there are many alternative ways
+to do it. As a result, you're often left wondering, "which method/approach
+should I choose first?" I think that these kinds of questions frequently
+puzzled me. Here are some examples:
 
 >'I am using X as a Window Server Protocol but I heard that Wayland is a newer
 >protocol, should I switch to it?'
@@ -169,64 +178,75 @@ already lost enough time on it.
 >'Shall I use vim or neovim? I heard that vim is organized by one person whereas
 >neovim is more community driven.'
 
-Don’t get me wrong. I am not implying that these questions are meaningless. They
-are indeed meaningful after a point where small nuances between them start to
-matter.
-
-I think the best approach here would be to just choose a tool that solves the
-problem without thinking too much and continuing on with what we do. It is a
-mistake to find the ‘best’ program for your beginners. In many cases, going with
-the ‘sufficient’ solution is also ‘best’ in terms of your time spent on finding
-a program.
+Don't misunderstand me. I'm not suggesting that these questions are irrelevant.
+They indeed become meaningful when the minor differences between them begin to
+matter. However, I believe that the best approach is to simply select a tool
+that resolves the problem at hand without overthinking and keep progressing in
+our work. It's not beneficial for beginners to obsessively search for the
+'best' program. Often, opting for a 'sufficient' solution can also be the
+'best' choice, considering the time you might waste finding a program.
 
 ### Some beginner mistakes
-Another mistake I see rookies do and I did is to try to do things without actually understanding them. It is not at all uncommon amongst new Linux users to break their system by copying and pasting the commands they saw on some forum. They install programs that do the same stuff, they use different package managers that configure several dependencies and configuration files which result in one manager breaking the changes made by another, and so on.
 
-While it is understandable that people want to do things in the same way they are used to in their previous settings I think this behavior also prevents them from getting used to handling things in Linux: For example, instead of seeking programs that enable installation stuff through certain programs with GUI, it is better to learn how one’s native package manager is working through a terminal, how to build stuff from source code with makefiles and so on.
+One common mistake I see among beginners, which I also made myself, is
+attempting to do things without understanding them properly. This is especially
+common among new Linux users who may wind up breaking their system by copying
+and pasting commands from some forum. They tend to install programs that
+perform the same functions and use different package managers that configure
+multiple dependencies and configuration files. Which often leads to one manager
+disrupting the changes made by the other, and so on.
 
-Sometimes the solutions people come up with to imitate their previous workspace are so complex that it is better to not solve the ‘problem’ in the first place. One example is from me: Since I love MSPaint, when I needed to draw things, I was running a Windows instance on QEMU and initiating MSPaint with a bash alias that I have set. This was a very bad idea as just switching to another Linux program for drawing would be just easier.
+While it's understandable that people may want to work in the same way they're
+accustomed to, this habit can also hinder them from getting used to the Linux
+environment. For instance, instead of looking for programs that allow
+installations through GUI-based applications, it's more beneficial to
+understand how to operate the native package manager through a terminal, learn
+how to build things from source code using makefiles, and so on.
+
+The solutions people try to replicate their previous workspace can become
+overly complicated. In these cases, it can be better not to solve the 'problem'
+in the first place. Hell, even I've been guilty of this myself. Since I loved to
+use MSPaint, whenever I needed to draw something on Linux, I used to run a
+Windows instance on QEMU and start MSPaint with a bash alias that I had set up.
+In retrospect, this was a poor solution as it would have been just simpler to
+switch to another drawing program designed for Linux.
 
 ### Dual Boot
 
-Setting up a dual-boot computer with Linux and Windows may seem like a good idea
-for those looking to learn Linux, but I think that it can be a bad idea. A few
-years ago, I made the mistake of setting up Linux Mint alongside Windows.
+Setting up a dual-boot computer with Linux and Windows could seem like a good
+choice for those interested in learning Linux. However based on my experience,
+it is usually a bad idea. I made the error of installing Linux Mint alongside
+Windows few years ago only to find myself frequently trying to synchronize my
+files between the two systems. The maintenance that was required increased due
+to the usage of both systems. Moreover, having the option to fall back on
+Windows when facing issues prevented me from engaging with the Linux
+environment enough. I could not learn how to troubleshoot and resolve issues on
+myself.
 
-Firstly, dual-booting increases the amount of maintenance that one has to do.
-Not only do you have to keep both operating systems updated and running
-smoothly, but you also have to know how to synchronize your files between the
-two systems.
+In my view, what I have described above is like attempting to learn swimming
+while using a flotation device. It's probably more effective to dive in and
+learn the Linux operating system without relying on Windows as a safety
+net.
 
-Secondly, having the option to fall back on Windows when encountering problems
-can prevent one from fully immersing themselves in the Linux experience and
-learning how to troubleshoot and solve issues on their own. It's similar to
-trying to learn how to swim while having a floatation device. It's better to
-dive in and learn the Linux operating system without the crutch of Windows as a
-backup.
-
-In my opinion, the only good reason for still wanting to have Windows installed
-on a computer is for either playing video games or for using special programs
-that are not available on Linux.
+I guess the only valid reason for wanting to keep Windows installed on a
+computer is to play video games or use specific programs that are not available
+on Linux. Other than that, I suggest using Linux for most things you do.
 
 ### GUI vs Terminal
 
-Linux users often find themselves using terminal programs because of the
-flexibility and power it offers for advanced users. Terminal programs, which are
-controlled through a command-line interface (CLI), allow users to enter commands
-in order to perform actions, unlike programs with a graphical user interface
-(GUI) which typically have a visual interface such as buttons and menus. While
-GUI programs have the advantage of ease of use for non-technical users and quick
-access to common tasks through visual cues, terminal programs offer more
-flexibility and can be programmed and automated through scripting, making it a
-preferred choice for advanced users.
+Linux users often use terminal programs as they sometimes offer more
+flexibility and power for certain tasks. The tasks are usually completed by
+using command-line interface (CLI) programs which allows users to enter
+commands to perform various actions. This is different from programs with a
+graphical user interface (GUI) which usually have buttons and menus.
 
-Even when using GUIs, it is common to find ourselves performing repetitive tasks
-manually. With simple programs that are designed to perform one specific task
-well and are also available to use programmatically, you can use them in for
-loops, conditionally, and pipe the output of one program to another. This
-approach can be a game changer, especially for those who want to become power
-users. Here are a few examples of where this approach has saved me a significant
-amount of time:
+Even when using GUIs, we often end up performing repetitive tasks manually. In
+these kinds of situations, using a terminal instead of a GUI program can become
+really handy. As simple CLI can easily be used programmatically. They can be
+used in loops, conditionally, and to pipe the output from one program to
+another. This approach can be a game-changer, especially for those who aspire
+to become power users. Here are a few simple examples of where this approach
+has saved me a significant amount of time:
 
 - Recently, I had a batch of 113 weirdly rotated images, but I was able to
   rotate them all to the desired orientation using the following code:
@@ -236,10 +256,11 @@ amount of time:
         convert $file -rotate 90 rotated-$file;
     done
   ```
-- I used `yt-dlp` to easily download youtube videos and playlists. It
-  was one of the most comfortable downloading experiences I had.
+- I used `yt-dlp` to easily download youtube videos and playlists. It was one
+  of the most comfortable downloading experiences I had.
 
 - I used `pdfcrop` for cropping PDF files.
+
 - I changed the structure of folders that have many files in them by using
   simple for loops alongside with `mv cp rm`
 
@@ -299,7 +320,7 @@ I only show Volume, Battery, Memory and Date info there.
 Since I am from Turkey, I need to use Turkish characters in my daily life a lot
 especially when interacting with my friends. The thing is I also find English
 keyboard layout very productive, especially when it comes to coding and using
-vim. As a result, I needed a mechanism to be able to benefit from both of these
+Vim. As a result, I needed a mechanism to be able to benefit from both of these
 functionalities. For this, I have attached a shortcut to switch between TR and
 US layouts.
 
@@ -335,7 +356,6 @@ personal environment as well. The only possible problem that I can think of zsh
 is portability problem of the scripts written for it.
 
 ### Text editing and programming
-
 
 I use `neovim` for almost all my works involving text. Neovim is a fork of Vim,
 a highly configurable text editor that is designed to be extendible and also
@@ -457,3 +477,4 @@ anymore, except for cases like playing video games (which I also don't do it
 much these days).
 
 It's also fun to challenge yourself and succesfully get over those challenges.
+
