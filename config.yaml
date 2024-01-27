@@ -10,7 +10,7 @@ params:
     - github: 'https://github.com/kugurerdem'
     - hackernews: 'https://news.ycombinator.com/user?id=kugurerdem'
     - rss: '/en/index.xml'
-  email: "rugudev@proton.me"
+  email: "ugur@rugu.dev"
 
 defaultContentLanguageInSubdir: true
 languages:
