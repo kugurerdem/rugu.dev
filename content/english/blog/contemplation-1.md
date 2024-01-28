@@ -2,6 +2,8 @@
 title: 'Contemplating Simultaneous Thinking, God and Logos'
 draft: false
 date: '2024-01-28'
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=39166764
 ---
 
 I usually enjoy listening to certain types of ambient music or sounds when
