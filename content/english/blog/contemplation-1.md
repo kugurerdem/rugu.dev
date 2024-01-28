@@ -14,16 +14,16 @@ opening them.
 
 Even right now, it's highly likely that a random individual somewhere in the
 world is contemplating spreading love and positive energy. I don't know
-anything about them, yet this statement prolly holds true. Now, if I were to
+anything about them, yet this statement probably holds true. Now, if I were to
 feel a certain affection for this person and they also had the thought of
 "there's probably another random person out there spreading love," would this
 constitute a very basic form of interaction?
 
 Imagine a simple game, such as XOX. The algorithm you need to follow is pretty
 straightforward. Even with the many possible game states, you can generally
-categorize most of the outcomes [without a loss of
+categorize most of the outcomes [without loss of
 generality](https://en.wikipedia.org/wiki/Without_loss_of_generality). Now,
-let's suppose there are other people in different physical locations who knows
+let's suppose there are other people in different physical locations who know
 the algorithm for playing the game. Assume that these people are also thinking
 about the other people whom also contemplate this game in their heads. If these
 people were to play O and X in their minds, the algorithm they follow would
@@ -41,7 +41,7 @@ domain in which the thinking is occurring has clear rules.
 
 If I were to become more rational, would I become more aware of others'
 feelings or thoughts of those people whom I've never seen or physically
-interacted with? Would I be able to have simple interaction with them?
+interacted with? Would I be able to have simple interactions with them?
 
 This could also be related to how an omniscient God would understand each of
 us, as it would possess knowledge of all logical possibilities. This might even
