@@ -35,11 +35,11 @@ always seem to increase at the rate they become available.
 The quality of our being, how we feel, and how we learn, are not solely
 determined by the content or information we're exposed to but also determined
 by how we intentionally react to them. The way we do things is just as
-important as what is being done. The effect of me intentionally watching a
-certain movie is not the same as YouTube randomly suggesting certain videos
-to... The effect of choosing a topic and taking the time to learn about it is
-not the same as a random platform such as YouTube recommending a random video
-for learning X in Y minutes.
+important as what is being done. The effect of intentionally watching a certain
+movie is not the same as watching randomly suggested YouTube videos ... The
+effect of choosing a topic and taking the time to learn about it is not the
+same as a random platform such as YouTube recommending a random video for
+learning X in Y minutes.
 
 Think about it, even when it comes to learning and education, we see the
 results of this. There are concepts well-known to many people such as "tutorial
@@ -111,8 +111,8 @@ apps.
 
 *Most of the things we are notified of, or shown are distractions.*
 
-This being said, what things can we do if we want our exposure to pushed
-information?
+This being said, what can we do if we want to reduce our exposure to pushed
+informations?
 
 ## Reducing Our Exposure To Pushed Content
 
