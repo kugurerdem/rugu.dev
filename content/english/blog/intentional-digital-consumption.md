@@ -1,6 +1,8 @@
 ---
 title: 'Importance of Intentionality in Digital Consumption'
 date: 2024-03-13
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=39695020
 ---
 
 A significant amount of my time of the day is spent interacting with computers
