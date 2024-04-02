@@ -27,7 +27,10 @@
                         {{ if .Site.Taxonomies.tags }}
                         Tags:
                         {{ range .Site.Taxonomies.tags }}
-                        <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }}</a>
+                        <a href="{{ .Page.Permalink }}" class="tag"> {{ .Page.Title }}
+                            <span>
+                                ({{.Count}})
+                            </span> </a>
                         {{ end }}
                         {{ end }}
 

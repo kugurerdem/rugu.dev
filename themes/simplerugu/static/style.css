@@ -160,11 +160,18 @@ code {
 }
 
 .tag {
-    background-color: #ddd;
+    background-color: #eee;
     padding: 0.2em;
+    margin-right: 0.2em;
     border-radius: 0.3em;
 }
 
 .tag:hover {
     background-color: #ccc;
+}
+
+.tag span {
+    color: #900;
+    font-size: 0.7em;
+    border-radius: 100%;
 }
