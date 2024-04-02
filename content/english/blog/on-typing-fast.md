@@ -5,6 +5,9 @@ date: '2023-03-03'
 updated: '2023-11-07'
 discussions:
     hackernews: https://news.ycombinator.com/item?id=38366187
+tags:
+    - technology
+    - productivity
 ---
 
 ## Typing Fast is Important

@@ -2,6 +2,8 @@
 title: 'An Argument for Idealism'
 draft: false
 date: '2022-12-24'
+tags:
+    - philosophy
 ---
 
 *This essay was originally written for the 'Introduction to Philosophy I'

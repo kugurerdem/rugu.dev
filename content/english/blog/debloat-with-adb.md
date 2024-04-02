@@ -4,6 +4,10 @@ draft: false
 date: '2024-01-16'
 discussions:
     hackernews: https://news.ycombinator.com/item?id=39019252
+tags:
+    - technology
+    - linux
+    - productivity
 ---
 
 My mother recently mentioned that her phone is continually opening certain

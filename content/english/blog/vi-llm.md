@@ -4,6 +4,9 @@ date: 2023-12-18
 updated: 2024-01-15
 discussions:
     hackernews: 'https://news.ycombinator.com/item?id=38689075'
+tags:
+    - technology
+    - productivity
 ---
 
 For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.

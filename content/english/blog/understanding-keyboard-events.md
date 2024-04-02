@@ -5,6 +5,9 @@ date: '2023-12-02'
 updated: '2023-12-04'
 discussions:
     hackernews: 'https://news.ycombinator.com/item?id=38515004'
+tags:
+    - technology
+    - linux
 ---
 
 In this essay, I describe how I made a Node.js module to listen to keypresses

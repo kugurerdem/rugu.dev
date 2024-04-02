@@ -2,6 +2,8 @@
 title: 'Sockets and Message Framing'
 draft: false
 date: '2023-11-21'
+tags:
+    - technology
 ---
 
 I've recently been involved in a fintech project that demands high performance,

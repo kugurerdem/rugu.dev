@@ -3,6 +3,10 @@ title: 'My Experience on Switching to Arch Linux'
 draft: false
 date: '2023-01-29'
 updated: '2024-01-24'
+tags:
+    - linux
+    - technology
+    - productivity
 ---
 
 About a year ago, I was invited to a pair coding session at the startup where I

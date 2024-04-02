@@ -2,6 +2,9 @@
 title: 'Book Review: The Art of Living by Thich Nhat Hanh'
 draft: false
 date: 2024-02-27
+tags:
+    - review
+    - philosophy
 ---
 
 After finishing the book "Siddhartha" by Hermann Hesse, I felt a need to
