@@ -1,0 +1,47 @@
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        <nav>
+            <div class="menu">
+                <a href="/{{ $.Site.Language }}"> {{ $.Site.Params.Menu.Home }}  </a>
+            </div>
+
+            <div class="languages">
+                {{ range $key, $lang := $.Site.Languages }}
+                    {{ if ne $key 0 }}
+                        <span> | </span>
+                    {{ end }}
+                    {{ if eq $.Lang $lang.Lang }}
+                    <a href="/{{ $lang.Lang }}" style="color: black"> {{ $lang.Lang }} </a>
+                    {{ else }}
+                    <a href="/{{ $lang.Lang }}"> {{ $lang.Lang }} </a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </nav>
+        <div class="master-container">
+            <article>
+                <div class="page">
+                    <h1> {{ .Title }} Essays </h1>
+                    {{ $tag := .Title | lower }}
+                    {{- range where .Site.RegularPages "Type" "blog" -}}
+                            {{ if in .Params.tags $tag }}
+                                <ul>
+                                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+                                    {{ $url := .RelPermalink }}
+                                    {{ $postfix := "" }}
+                                    {{ if isset .Params "forward"}}
+                                        {{ $url = .Params.Forward }}
+                                        {{ $postfix = "(outlink)"}}
+                                    {{ end }}
+                                    <a href="{{ $url }}">{{ .Title }}</a> {{
+                                    $postfix }}
+                                </ul>
+                            {{ end }}
+                    {{ end }}
+                </div>
+            </article>
+            {{ partial "aside.html" . }}
+        </div>
+    </body>
+<html>
