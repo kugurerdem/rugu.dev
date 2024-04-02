@@ -24,9 +24,11 @@
 
                     <div class="page">
                         <h1> Blog </h1>
+                        {{ if .Site.Taxonomies.tags }}
                         Tags:
-                        {{ range $key, $tag := $.Site.Taxonomies.tags }}
-                        <a href="{{ $tag.Page.Permalink }}" class="tag">{{ $tag.Page.Title }}</a>
+                        {{ range .Site.Taxonomies.tags }}
+                        <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }}</a>
+                        {{ end }}
                         {{ end }}
 
                         {{ with .Site.GetPage "section" "blog" }}
