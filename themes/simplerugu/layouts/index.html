@@ -21,9 +21,15 @@
         </nav>
         <div class="master-container">
             <article>
-                {{ range .Sections }}
+
                     <div class="page">
-                        <h1> {{ .File.Dir }} </h1>
+                        <h1> Blog </h1>
+                        Tags:
+                        {{ range $key, $tag := $.Site.Taxonomies.tags }}
+                        <a href="{{ $tag.Page.Permalink }}" class="tag">{{ $tag.Page.Title }}</a>
+                        {{ end }}
+
+                        {{ with .Site.GetPage "section" "blog" }}
                         {{ .Content }}
                         <p>
                             {{- range .Pages }}
@@ -40,8 +46,8 @@
                             </ul>
                             {{ end }}
                         </p>
+                        {{ end }}
                     </div>
-                {{ end }}
 
                 {{ with .Site.GetPage "projects" }}
                     <div class="page">
