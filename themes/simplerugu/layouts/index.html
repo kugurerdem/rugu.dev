@@ -37,7 +37,7 @@
                         {{ .Content }}
                             <b> Recommended </b>
                             {{- range .Pages }}
-                            {{ if not .Params.archive }}
+                            {{ if not .Params.vault }}
                             <ul>
                                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
                                 {{ $url := .RelPermalink }}
@@ -52,9 +52,12 @@
                             {{ end }}
                             {{ end }}
 
-                            <b id="archived"> Archived </b>
+                            <details>
+                                <summary>
+                                    <b>Vault</b>
+                                </summary>
                             {{- range .Pages }}
-                            {{ if .Params.archive }}
+                            {{ if .Params.vault }}
                             <ul>
                                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
                                 {{ $url := .RelPermalink }}
@@ -68,6 +71,7 @@
                             </ul>
                             {{ end }}
                             {{ end }}
+                            </details>
                         {{ end }}
                     </div>
 

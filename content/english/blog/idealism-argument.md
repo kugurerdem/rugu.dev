@@ -1,6 +1,6 @@
 ---
 title: 'An Argument for Idealism'
-archive: true
+vault: true
 draft: false
 date: '2022-12-24'
 tags:

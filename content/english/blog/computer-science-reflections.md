@@ -347,7 +347,7 @@ so far:
   the random ideas that would come which can be accomplished just with the tool
   I have learned.
 
-- Whether it's a small or large project, archive them in a place where you can
+- Whether it's a small or large project, vault them in a place where you can
   access them later. If possible, you can even make them public on platforms
   like GitHub or similar platforms. This will not only motivate you to expand
   your collection of your programs but also enable you to track your
