@@ -1,5 +1,6 @@
 ---
 title: 'Contemplating Simultaneous Thinking, God and Logos'
+archive: true
 draft: false
 date: '2024-01-28'
 discussions:

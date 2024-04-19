@@ -1,5 +1,6 @@
 ---
 title: 'My Experience on Switching to Arch Linux'
+archive: true
 draft: false
 date: '2023-01-29'
 updated: '2024-01-24'

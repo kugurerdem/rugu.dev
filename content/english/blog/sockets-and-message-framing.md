@@ -1,5 +1,6 @@
 ---
 title: 'Sockets and Message Framing'
+archive: true
 draft: false
 date: '2023-11-21'
 tags:

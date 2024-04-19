@@ -1,5 +1,6 @@
 ---
 title: 'Incorporating AI Tools Into My Terminal Workflow'
+archive: true
 date: 2023-12-18
 updated: 2024-01-15
 discussions:

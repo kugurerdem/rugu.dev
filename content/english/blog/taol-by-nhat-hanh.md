@@ -1,5 +1,6 @@
 ---
 title: 'Book Review: The Art of Living by Thich Nhat Hanh'
+archive: true
 draft: false
 date: 2024-02-27
 tags:

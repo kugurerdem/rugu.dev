@@ -1,1 +1,1 @@
-Some of my articles regarding software, philosophy, psychology and etc.
+*If an essay doesn't receive enough attention or becomes outdated, I move it to the archived section unless I think it is something that you need to see regardless.*
