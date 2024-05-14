@@ -23,7 +23,8 @@ languages:
       description: "a software developer with a hacker's attitude, dev at lab.gwn.wtf, BSc Math '23, interested in philosophy and psychology, dives.fyi cofounder"
       menu:
         home: 'Home'
-
+      contact: 'Contact'
+      misc: 'See also:'
   tr:
     contentDir: content/turkce
     languageName: Turkce
@@ -32,3 +33,5 @@ languages:
       description: "hacker kafalı yazılımcı, matematik mezunu '23, lab.gwn.wtf'de geliştirici, felsefe ve psikoloji ile ilgileniyor, dives.fyi eşkurucusu"
       menu:
         home: 'Anasayfa'
+      contact: 'İletişim'
+      misc: 'Şuna da bir bakın:'
