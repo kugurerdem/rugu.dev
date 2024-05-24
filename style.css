@@ -1,0 +1,177 @@
+* { box-sizing: border-box }
+
+html {
+    background-color: #eee;
+    tab-size: 4;
+    font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+nav {
+  display: flex;
+}
+
+.menu{
+    padding-left: 2em;
+    flex-grow: 9;
+}
+
+.languages {
+    flex-grow: 1;
+}
+
+ul, li {
+    margin: 0 1em;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+time {
+    font-size: 0.7em;
+}
+
+.master-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+article, aside {
+    display: block;
+}
+
+aside {
+    width: 15em;
+    margin-left: 2em;
+    margin-right: 1em;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+pre {
+    margin-left: 1em;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.page{
+    background-color: #fff;
+    max-width: 54rem;
+    padding: 1em 1em;
+    box-shadow: 0 0 6px rgb(0 0 0 / 20%);
+}
+
+.author-image {
+    margin: 0 auto;
+    max-width: 208px;
+    width: 100%;
+    height: auto;
+
+    display: block;
+    width: 100%;
+    border-radius: 25%;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+}
+
+.icon:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+img {
+    max-width: 100%;
+}
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+
+img[src$='#fullsize']
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+
+@media (max-width: 52em) {
+    .master-container {
+        display: block;
+    }
+
+    aside {
+        margin-top: 1em;
+        width: auto;
+    }
+}
+
+@media (min-width: 52em){
+    article {
+        max-width: calc(100% - 17em);
+    }
+
+    .page {
+        min-width: 35em;
+    }
+}
+
+
+pre {
+  padding-left: 1.5em;
+  margin-left: 0;
+  background-color: #eee;
+}
+
+pre > code {
+    background-color: #eee;
+}
+
+code {
+    background-color: #eee;
+    border-radius: 0.3em;
+}
+
+.tag {
+    background-color: #eee;
+    padding: 0.2em;
+    margin-right: 0.2em;
+    border-radius: 0.3em;
+}
+
+.tag:hover {
+    background-color: #ccc;
+}
+
+.tag span {
+    color: #900;
+    font-size: 0.7em;
+    border-radius: 100%;
+}

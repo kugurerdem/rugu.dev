@@ -1,0 +1,110 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1701475200"><title>Understanding Keyboard Events Better |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Understanding Keyboard Events Better</h1><i>Written at 2023-12-02
+- Updated at 2023-12-04</i><div>Discussions:
+<a href="https://news.ycombinator.com/item?id=38515004" target=_blank>(hackernews)</a></div><hr><p>In this essay, I describe how I made a Node.js module to listen to keypresses
+across the system on Linux machines using X. This experience helped me grasp
+how the OS and Window Managers handle keyboard inputs, clarifying the reasons
+behind an unexpected behavior I had encountered before, which I also mention in
+the essay.</p><p>If you&rsquo;re interested in learning more about how keyboard events are handled,
+this essay might be of interest to you.</p><h2 id=an-issue-about-remapping-keys>An Issue About Remapping Keys</h2><p>As a person who uses VIM for many things I do, seamlessly transitioning between
+VIM modes is essential for my workflow. However, the default key for returning
+back to normal VIM mode is the Escape key, necessitating me to remove my hands
+from the keyboard in order to reach it.</p><p>This is exactly why many VIM users, including myself, remap the Escape key to
+the Caps Lock key. This adjustment is particularly beneficial for those who are
+already accustomed to pressing the Shift key for uppercase characters.</p><p>However, I&rsquo;ve encountered a minor issue with this setting: Certain applications
+seem indifferent to the remappings I&rsquo;ve configured. Occasionally, when I press
+the Caps Lock key, the operating system interprets it as an Escape key press,
+while the specific program I&rsquo;m using still recognizes it as the original
+physical key pressed.</p><p>I have encountered this problem both in my Linux computer, and Windows
+computer. So the problem itself is OS-agnostic. However I&rsquo;ve unintentionally
+identified the reason behind this occasional discrepancy while I was working on
+a recreational project.</p><h2 id=linux-and-keyboard-events>Linux and Keyboard Events</h2><p>Recently, a friend asked me if it&rsquo;s possible to create macros using Node.js. I
+confidently said, &lsquo;Sure, it&rsquo;s probably easy.&rsquo; After a quick search, I found a
+desktop automation library called robotJS and wrote a simple script where
+specific keys are pressed regularly by the script.</p><p>However, I started wondering if it was possible to trigger those keypresses
+after a user presses a certain key. To achieve this, I needed to listen to
+keypress events on a system-wide level. I searched for suitable Node.js
+libraries for this task on Linux, but I couldn&rsquo;t find one that worked
+seamlessly.</p><p>There were libraries like <code>iohook</code>, but they seemed to lack support for
+listening to Linux keyboard events in the latest versions of Node.js. Some
+solutions only focused on capturing keyboard events within the current window
+associated with the process.</p><p>I stumbled upon a library called <code>xev-emitter</code> but it didn&rsquo;t provide what I
+needed as it mainly dealt with listening to xevents of a specific X windows.</p><p>After some contemplation, I decided to create my own Node.js module using
+<code>xinput</code> underneath, just for the sake of it and out of curiosity. <code>xinput</code>
+is a Linux tool that allows listening to keyboard events and provides an
+interface to monitor events from connected keyboards.</p><p>For instance, running the command <code>xinput</code> gives me a list of available input
+devices connected to my PC:</p><pre tabindex=0><code>⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ 2.4G Mouse                              	id=10	[slave  pointer  (2)]
+⎜   ↳ 2.4G Mouse Consumer Control             	id=11	[slave  pointer  (2)]
+⎜   ↳ Synaptics TM3336-004                    	id=14	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Power Button                            	id=8	[slave  keyboard (3)]
+    ↳ 2.4G Mouse                              	id=9	[slave  keyboard (3)]
+    ↳ 2.4G Mouse System Control               	id=12	[slave  keyboard (3)]
+    ↳ Ideapad extra buttons                   	id=13	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=15	[slave  keyboard (3)]
+    ↳ 2.4G Mouse Consumer Control             	id=16	[slave  keyboard (3)]
+</code></pre><p><code>xinput</code> also has a command type that lets you listen to a specific input
+device. For instance, if I use <code>xinput test 15</code>, it listens to the device with
+the specified ID 15. When I run the command <code>xinput test 15</code> and then press the
+&lsquo;a,&rsquo; &rsquo;s,&rsquo; and &rsquo;d&rsquo; keys on my keyboard, the output I get is as follows:</p><pre tabindex=0><code>key press   38
+key release 38
+key press   39
+key release 39
+key press   40
+key release 40
+</code></pre><p>Now, with these two commands, we can iterate through all the input devices
+related to keyboards and listen to them. We can create a script that first
+lists the available input devices, filters them, and then runs the command
+<code>xinput test</code> for each of them.</p><p>However, there is still a minor problem. How do we understand which key is
+pressed just by looking at the numbers that xinput gave us? How can we know
+that 38 stands for the key &lsquo;a&rsquo;?</p><p>The numbers provided by xinput are known as X Key Codes. These codes represent
+the physical keys pressed on the X layer. They are essentially similar to Linux
+Input Event Codes, which the Linux Operating System generates to represent the
+physical keys pressed. For reasons I&rsquo;m not aware of, <a href=https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console>X Key Codes are
+incremented by 8 compared to Linux
+keycodes</a></p><p>Now, the challenge lies in making sense of each X Key Code. We need a mapping
+between the X Key Codes and their corresponding keys. However, what they
+correspond to can be configured by users. In fact, I&rsquo;ve configured this using
+the command <code>setxkbmap -option "caps:swapescape"</code>. So, although pressing the
+same keys on a physical keyboard will result in the same key codes, the
+interpretation by your operating system or window management server can be
+configured. Therefore, the correspondence of each keycode with what you&rsquo;ve
+pressed might vary from one environment to another. In the X protocol, you can
+view the mapping between X Key Codes and X KeySyms by running the command
+<code>xmodmap -pke</code>.</p><p>This is essentially what I did in the Node.js module I created to listen to
+keyboard events using X:</p><ol><li><p>Obtain the list of available input devices by running <code>xinput</code> as a
+subprocess.</p></li><li><p>Filter the devices; you don&rsquo;t need all of them, just their IDs.</p></li><li><p>For each ID, run the command <code>xinput test id</code>.</p></li><li><p>Use the result of <code>xmodmap -pke</code> to understand the semantic meaning assigned
+to each physical keypress, known as a KeySym.</p></li></ol><p>If you&rsquo;re curious, you can check out the module I created,
+<a href=https://github.com/kugurerdem/node-xinput-events>Node XInput Events</a>.</p><h2 id=probably-a-better-approach>Probably a Better Approach</h2><p>After implementing the module mentioned earlier, I discovered the existence of
+a Linux utility called showkey that allows listening to pressed keys.</p><p>It&rsquo;s also possible to create a similar script using showkey under the hood. In
+fact, this might have been a better approach compared to what I did above
+because it operates on a more fundamental level than X.</p><p>Similar to how we mapped between X Key Codes and their corresponding X Key
+Codes, we could create a mapping between Linux Event Codes and their meanings
+by examining the <a href=https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h>Linux source code for the input event
+codes</a></p><p>Moreover, using scripts like xinput as subprocesses under our script might not
+be the optimal approach for implementing an EventEmitter library to listen to
+system-wide keypresses. The conventional way is likely to interact with the X
+server using an X library. Unfortunately, I couldn&rsquo;t build the nodeJS x11
+library on my computer and chose not to delve into it much.</p><h2 id=conclusion>Conclusion</h2><p>The series of experimental processes I went through greatly enhanced my
+understanding of what happens behind the scenes when I simply press a key on my
+physical keyboard.</p><p>Returning to the initial scenario I described, when you&rsquo;re developing a
+program, you can act upon the values of key syms or key codes. While the key
+codes might remain the same, the key syms—the meanings attached to those key
+codes—can differ. It appears that some applications focus on key codes,
+disregarding your local options.</p><p>Essentially, at the kernel layer, there are only keycodes. Your operating
+system assigns meaning to these keycodes through specific configuration files,
+which you can either directly modify or use another program for modification
+(in this case, the X Window Management server). Since it&rsquo;s generally more
+convenient to alter settings in the window management layer, most people
+configure their preferences through utilities provided by their window manager,
+and the window manager handles the interaction with the OS.</p><p>This serves as a compelling example of how casually experimenting with things
+can significantly contribute to one&rsquo;s understanding of the core concepts they
+are dealing with.</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
+</a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
+</a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
+</a><a href=/en/index.xml target=_blank><img class=icon src=/icons/rss.svg></a></div><hr><div>a software developer with a hacker's attitude, interested in philosophy and psychology</div><hr>Contact: <a href=mailto:ugur@rugu.dev>ugur@rugu.dev</a><hr>See also:<ul>- <a href=https://wisdom.rugu.dev target=_blank>Wisdom</a></ul></aside></div></body><html>

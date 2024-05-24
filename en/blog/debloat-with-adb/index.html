@@ -1,0 +1,81 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1705363200"><title>Debloating My Android Phone with ADB |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Debloating My Android Phone with ADB</h1><i>Written at 2024-01-16</i><div>Discussions:
+<a href="https://news.ycombinator.com/item?id=39019252" target=_blank>(hackernews)</a></div><hr><p>My mother recently mentioned that her phone is continually opening certain
+windows and prompting her to use services she doesn’t need. After checking her
+phone and doing some online research, I found out that many others have also
+complained about this issue.</p><p>Apparently, she was referring to pop-ups triggered by a pre-built program
+called &ldquo;SIM Menu&rdquo;. This program basically allows operators to send
+notifications and even generate pop-ups on your phone. And the frustrating part
+is that most of these pop-ups seem to promote irrelevant services. If you
+accidentally click &ldquo;OK&rdquo; when one of these pop-ups appears, you get charged by
+your provider. It is a carefully set up trap designed to make you accidentally
+subscribe to their unnecessary services and pay money.</p><p>Since I prefer simplicity and like to have control over the tools I use. I was
+already thinking about removing the bloatware on my phone that came
+pre-installed and can&rsquo;t be deleted through the interface. Hell, even some of
+the fundamental apps, like a gallery or file manager, are filled with ads. It
+gets on my nerves. So, I was already planning to learn how to remove these
+bloatware and the situation I described earlier was the final straw for me.</p><p>I&rsquo;ve searched for tools to debloat Android phones and found <code>adb</code>, Android
+Developer Bridge. It&rsquo;s basically a program which allows you to directly create
+a shell session for your phone, similar to connecting to a remote server via
+SSH (the only difference is that instead of connecting through the internet,
+the connection is made via USB).</p><p>Since Android is essentially an OS based on the Linux Kernel, the shell you
+connect to will most likely be a variant of the sh dialect. So, for those who
+are familiar with working in UNIX environments, its very convenient to remove
+or install packages and customize your phone this way.</p><p>In this essay, I document this process of removing bloatware from my phone
+as a reference for future use. Hopefully, you find it helpful as well.</p><h1 id=enabling-usb-debugging-mode>Enabling USB Debugging Mode</h1><p>While it is possible to establish an ADB connection to your phone over Wi-Fi, I
+chose to use ADB through a USB connection as using Wi-Fi involves certain
+security risks. For instance, others on your Wi-Fi network could potentially
+connect to your phone, especially if your phone doesn&rsquo;t have proper security
+settings. Not to mention that you would need to set up your phone using ADB
+through a USB connection first before initiating a Wi-Fi connection anyways.
+Which kind of makes using WiFi seem more pointless as the reasons for
+preferring Wi-Fi over USB are usually just convenience or not having a USB
+cable available.</p><p>To connect your phone using adb via a USB connection, you need to enable USB
+Debugging mode on your phone. I won&rsquo;t go into the specifics of this process as
+it varies by phone. But for my own phone, I simply navigated to the &ldquo;About&rdquo;
+section and tapped &ldquo;MIUI Version&rdquo; multiple times to switch into Developer Mode.
+Then, I searched for the &ldquo;USB Debugging&rdquo; option and enabled it.</p><h1 id=connecting-to-your-phone-via-a-shell-session>Connecting to your phone via a Shell Session</h1><p>Once you&rsquo;ve installed <code>adb</code>, you can view the manual by typing <code>adb help</code>. You
+can also refer to the <a href=https://android.googlesource.com/platform/packages/modules/adb/+/refs/heads/master/docs/user/adb.1.md>online
+documentation</a>.</p><p>To connect to your phone via a shell session, simply type <code>adb shell</code> and
+you&rsquo;re good to go. Most standard UNIX commands such as <code>ls</code>, <code>cat</code>, <code>echo</code>,
+<code>grep</code>, and more can be used.</p><p>Keep in mind that you don&rsquo;t need to enter a shell session just to run specific
+commands. You can also use the <code>adb shell &lt;cmd></code> pattern to run your particular
+command <code>&lt;cmd></code>. This approach simply creates a shell session, executes your
+command, and closes the session, while forwarding the stdout to your current
+shell session.</p><h1 id=uninstalling-bloatware>Uninstalling Bloatware</h1><p>The Command Line Interface (CLI) tool used in Android for interaction with the
+Android Package Manager is <code>pm</code>. This tool basically allows you to list,
+install, or uninstall software packages.</p><p>To list the currently installed packages, execute the following command:</p><pre tabindex=0><code>pm list packages
+</code></pre><p>To view only the default apps on Android, enter this command:</p><pre tabindex=0><code>pm list packages | grep &#39;android&#39;
+</code></pre><p>At this point, I would advice you to search for other unwanted pre-installed
+apps known to come with your phone&rsquo;s brand as well as android packages which
+are known to be bloatware. Take a list of these apps for future reference so
+you can easily repeat this process if you need it later again.</p><p>To delete a specific app from your phone, you first need to identify its
+package name. You can accomplish this by searching for it on the internet.
+However if you can&rsquo;t still find it, you should be able to locate the app&rsquo;s &ldquo;apk
+package code&rdquo; directly on your phone. This process can vary depending on the
+phone you&rsquo;re using, so I suggest you look up how to find package codes for
+applications on your specific phone model.</p><p>Also, be careful to not to delete anything critical for your system to work. Do
+not delete a package if you are not sure that it is not something system
+critical.</p><p>Once you get the package.name, you can just run the following command in the
+adb shell:</p><pre tabindex=0><code>pm uninstall --user 0 package.name
+</code></pre><p>Here, <code>--user 0</code> specifies the user for which you want to uninstall the
+package. User 0 is typically the device&rsquo;s default or primary user. When I have
+run the command <code>pm uninstall</code> without this, it would say package is
+successfully deleted but the package would still remain on my phone.</p><p>Keep in mind that we could have also used the following command:</p><pre tabindex=0><code>adb shell pm uninstall --user 0 package.name
+</code></pre><p>Or even:</p><pre tabindex=0><code>adb uninstall --user 0 package.name
+</code></pre><h1 id=automating-the-process>Automating the Process</h1><p>Remember that I told you to make a list of the packages you remove. This was
+for to make the debloating process easier if you need to do it a second
+time on your phone.</p><p>I use a specific <a href=https://github.com/kugurerdem/android-bloatwares>git
+repository</a> for this purpose.
+In this repository, I have a file named <code>bloatwares.txt</code> that contains the
+package names of certain prebuilt applications for Mi, Xiaomi, Android, and
+third-party applications.</p><p>If I ever need to debloat my phone, or anyone else&rsquo;s, all I need to do is to
+run the following command:</p><pre tabindex=0><code>cat bloatwares.txt | xargs adb shell pm uninstall -k --user 0
+</code></pre><h1 id=conclusion>Conclusion</h1><p>If you haven&rsquo;t already started, I strongly encourage you to consider debloating
+your phone. Install <code>adb</code> on your computer, connect to your phone using it,
+identify packages that seem unnecessary, and free your device from the unwanted
+&lsquo;guests.&rsquo;</p><p>Go ahead and take back at least a partial ownership of your phone by getting
+rid of these intruders!</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
+</a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
+</a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
+</a><a href=/en/index.xml target=_blank><img class=icon src=/icons/rss.svg></a></div><hr><div>a software developer with a hacker's attitude, interested in philosophy and psychology</div><hr>Contact: <a href=mailto:ugur@rugu.dev>ugur@rugu.dev</a><hr>See also:<ul>- <a href=https://wisdom.rugu.dev target=_blank>Wisdom</a></ul></aside></div></body><html>

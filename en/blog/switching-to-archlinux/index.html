@@ -1,0 +1,265 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1674950400"><title>My Experience on Switching to Arch Linux |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>My Experience on Switching to Arch Linux</h1><i>Written at 2023-01-29
+- Updated at 2024-01-24</i><hr><p>About a year ago, I was invited to a pair coding session at the startup where I
+was working. The developers were receiving consultancy from a strange person. At
+one point, he took control of the screen sharing while reviewing some of the
+pull requests that had been made to our codebase. When he shared his screen,
+there was nothing but a black screen. Suddenly, a terminal screen appeared with
+his keystrokes and he quickly began examining the codebase, providing feedback
+on people&rsquo;s code at a speed I had never seen before. He was able to jump between
+different files in an instant, examining the diffs that were made in different
+git commits.</p><p>After seeing what I saw, I thought to myself, ‘If I were able to develop and
+refactor code at that speed, I would save a lot of time, I could have spent
+more time thinking about the actual stuff with as little friction as possible.
+I want to have this power.’ So I have looked at <a href=https://gwn.wtf/resume.html>his
+CV</a> and realized that he was knowledgeable on
+topics that many developers, including myself, struggle with. Influenced by
+this, I started asking him (he was our consultant, after all) as many questions
+as I could and focused on the resources he suggested and the technologies he
+used.</p><p>The inspiration from this hacker guy, combined with the very precious help from
+a friend of mine who had a strong interest in operating systems (he uses Arch in
+Qubes OS btw), being libre, and having control over his computer, led me to
+switch to Arch Linux. I have also benefited a lot from discussions on hackernews
+and from youtubers like Luke Smith which I also heard from the Qubes OS friend
+of mine.</p><p>In this post, I will first provide a brief overview of Linux and Arch Linux in
+particular. Then, I will discuss my reflections on the past few months,
+including the downsides and upsides of switching to Arch Linux. Finally, I will
+explain the programs that I currently use in my workflow.</p><h2 id=what-are-my-reasons-for-using-linux>What are my reasons for using Linux?</h2><p>Unlike MacOS or Windows, Linux is a free and open-source operating system.
+Perhaps you are already know that a vast majority of servers actually run on
+Linux. Android, which is the operating system most phones use, is a specific
+variant of the Linux Operating System. By these means, many developers already
+seem to acknowledge the importance of learning Linux for practical reasons.
+However, the controversy usually arises when it comes to using Linux on a
+personal computer.</p><p>For an average computer user, it typically doesn&rsquo;t matter which operating
+system they use as long as it doesn&rsquo;t interfere with their daily tasks.</p><p>However, in my case, as my views have become more nuanced, switching to Linux
+has started to be more appealing.</p><p>Here are some of the reasons why I prefer using Linux over MacOS or Windows:</p><ul><li><p>Both Windows and MacOS forces you their ecosystem by their updates. With each
+update, its more likely that your Desktop Environment is cluttered by a new
+application which Microsoft added and most likely you will not even use. Most
+of the prebuilt stuff that are coming with Windows, I do not use at all. I
+think the same argument also holds for MacOS, as using one of their apps
+usually forces you to use other Apple apps and you to stick with their
+environment.</p></li><li><p>Since both MacOS and Windows are closed-source, we don&rsquo;t know for sure what
+they do under the scenes. Windows, for example had a builtin keylogger. If
+you are curious about this, please type &ldquo;Windows builtin keylogger&rdquo; to your
+favorite search engine. You will encounter many entries explaining how to
+disable builtin keylogging. Although I do not have sufficient reasons to
+claim that the Apple is doing the same thing, in practice, there is nothing
+preventing these Close Sourced applications to do things like that besides
+legal issues.</p></li><li><p>You need to pay some money in order to use both MacOS and Windows, whereas
+Linux is essentially free. You can set up Linux on a computer with no cost at
+all except some finite amount of time you will put in to learn things.</p></li><li><p>Linux is highly customizable and allows users to modify and tailor their
+environment to meet their specific needs. In contrast, Windows and Mac OS are
+more limited in terms of customization. This partly makes Linux a better
+choice for users who aim to be a power user, a user who wants to have control
+over their operating system and want to modify or customize it to meet their
+specific needs.</p></li><li><p>Linux offers a variety of versions that cater to the different needs of
+various users, which is a significant advantage. These versions, known as
+Linux distros, are essentially Linux systems with additional packages
+specifically designed for certain users. I have not come across a similar
+phenomenon in either MacOS or Windows. Linux provides more options than any
+other proprietary operating system can offer.</p></li><li><p>Using a product often means more than just using it; it also means becoming
+part of a group. Using Linux involves you in a community populated by hacker
+minded people. And whether you indend it or not being part of a group
+influences your habits. By immersing yourself in an environment filled with
+more experienced individuals, you become more exposed to their knowledge and
+ideas.</p></li></ul><p>I understand that similar points could be made for the sake of Windows or
+MacOS. Examples include Linux not being able to run some proprietary software
+that these operating systems can, or Linux not being as convenient because you
+often have to figure out most things yourself. I get that. However, all things
+considered, the value that Linux provides to me exceeds the values that those
+proprietary OSes provide.</p><h2 id=what-is-unique-about-arch-linux>What is unique about Arch Linux?</h2><p>Essentially, a Linux distro is a version of the Linux operating system that
+comes packaged with additional software and tools.</p><p>Oversimplicated, but an intuitive formula can be given as:</p><p><code>DISTRIBUTION = KERNEL + SOME ADDITIONAL DEPENDENCIES</code></p><p>Theoretically, there&rsquo;s nothing stopping you from doing in one Linux
+distribution what you can do in another simply by altering the &lsquo;SOME ADDITIONAL
+DEPENDENCIES&rsquo; part of the above formula. These additional dependencies can
+range from package managers to init systems, as well as the initial software
+that comes with the distribution.</p><p>When you examine the variety of potential distributions one can select from, it
+can be overwhelming. Why are there so many different Linux distributions? The
+answer is because many people have different objectives when using an operating
+system and therefore require different dependencies. Additionally, numerous
+organizations and communities each have their distinct views on what
+constitutes a good Linux distribution.</p><p>While distros like Ubuntu focus on being more friendly and welcoming to new
+users, some distros, like Debian focus on stability and some like Arch, focus
+on a certain combination of being minimal, cutting-edge and active.</p><p>To me the key principles that Arch Linux were emphasasising (which can also be
+read in their <a href=https://wiki.archlinux.org/title/Arch_Linux>wiki</a>), were more
+appealing than the other mainstream distros available.</p><p>Arch Linux essentially distinguishes itself as a minimalist distribution with a
+very knowledgeable community. This fact partially explains why Arch is
+considered one of the most cutting-edge distributions out there &ndash; its active
+community maintains available packages that Arch users can install through a
+community-driven repository called the Arch User Repository.</p><p>When you install Arch, you don&rsquo;t receive anything but a virtual console and
+specific programs that you instructed the Arch installer to download. Unlike
+other distributions that build many packages into your system by default, which
+might include several programs that you may need but at the cost of downloading
+additional unwanted programs, Arch Linux instead puts the customization
+responsibility on the user. Which allows you to install and focus solely on
+what you need.</p><h2 id=some-reflections>Some Reflections</h2><h3 id=getting-used-to-it>Getting used to it</h3><p>Switching from Windows to Arch Linux was really challenging as in Arch Linux,
+it is you that needs to bear practically all responsibilities regarding your
+computer. As a result of this transition, I began to appreciate all the
+features we often take for granted; screen lockers, clipboard functionalities,
+power management, multimedia keys, and so on. These functionalities are usually
+managed by specific processes running unseen in the background. The average
+computer user might not realize that these are distinct programs that need
+setup. However, when you are building your system on a minimalist distribution,
+your knowledge of such details tends to increase.</p><h3 id=variety-of-solutions>Variety of Solutions</h3><p>When you want to accomplish something on Linux, there are many alternative ways
+to do it. As a result, you&rsquo;re often left wondering, &ldquo;which method/approach
+should I choose first?&rdquo; I think that these kinds of questions frequently
+puzzled me. Here are some examples:</p><blockquote><p>&lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+protocol, should I switch to it?&rsquo;</p><p>&lsquo;A program called pipeware for audio handling is recommended but some suggest
+something called pulseaudio, which one shall I use?&rsquo;</p><p>&lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
+neovim is more community driven.&rsquo;</p></blockquote><p>Don&rsquo;t misunderstand me. I&rsquo;m not suggesting that these questions are irrelevant.
+They indeed become meaningful when the minor differences between them begin to
+matter. However, I believe that the best approach is to simply select a tool
+that resolves the problem at hand without overthinking and keep progressing in
+our work. It&rsquo;s not beneficial for beginners to obsessively search for the
+&lsquo;best&rsquo; program. Often, opting for a &lsquo;sufficient&rsquo; solution can also be the
+&lsquo;best&rsquo; choice, considering the time you might waste finding a program.</p><h3 id=some-beginner-mistakes>Some beginner mistakes</h3><p>One common mistake I see among beginners, which I also made myself, is
+attempting to do things without understanding them properly. This is especially
+common among new Linux users who may wind up breaking their system by copying
+and pasting commands from some forum. They tend to install programs that
+perform the same functions and use different package managers that configure
+multiple dependencies and configuration files. Which often leads to one manager
+disrupting the changes made by the other, and so on.</p><p>While it&rsquo;s understandable that people may want to work in the same way they&rsquo;re
+accustomed to, this habit can also hinder them from getting used to the Linux
+environment. For instance, instead of looking for programs that allow
+installations through GUI-based applications, it&rsquo;s more beneficial to
+understand how to operate the native package manager through a terminal, learn
+how to build things from source code using makefiles, and so on.</p><p>The solutions people try to replicate their previous workspace can become
+overly complicated. In these cases, it can be better not to solve the &lsquo;problem&rsquo;
+in the first place. Hell, even I&rsquo;ve been guilty of this myself. Since I loved to
+use MSPaint, whenever I needed to draw something on Linux, I used to run a
+Windows instance on QEMU and start MSPaint with a bash alias that I had set up.
+In retrospect, this was a poor solution as it would have been just simpler to
+switch to another drawing program designed for Linux.</p><h3 id=dual-boot>Dual Boot</h3><p>Setting up a dual-boot computer with Linux and Windows could seem like a good
+choice for those interested in learning Linux. However based on my experience,
+it is usually a bad idea. I made the error of installing Linux Mint alongside
+Windows few years ago only to find myself frequently trying to synchronize my
+files between the two systems. The maintenance that was required increased due
+to the usage of both systems. Moreover, having the option to fall back on
+Windows when facing issues prevented me from engaging with the Linux
+environment enough. I could not learn how to troubleshoot and resolve issues on
+myself.</p><p>In my view, what I have described above is like attempting to learn swimming
+while using a flotation device. It&rsquo;s probably more effective to dive in and
+learn the Linux operating system without relying on Windows as a safety
+net.</p><p>I guess the only valid reason for wanting to keep Windows installed on a
+computer is to play video games or use specific programs that are not available
+on Linux. Other than that, I suggest using Linux for most things you do.</p><h3 id=gui-vs-terminal>GUI vs Terminal</h3><p>Linux users often use terminal programs as they sometimes offer more
+flexibility and power for certain tasks. The tasks are usually completed by
+using command-line interface (CLI) programs which allows users to enter
+commands to perform various actions. This is different from programs with a
+graphical user interface (GUI) which usually have buttons and menus.</p><p>Even when using GUIs, we often end up performing repetitive tasks manually. In
+these kinds of situations, using a terminal instead of a GUI program can become
+really handy. As simple CLI can easily be used programmatically. They can be
+used in loops, conditionally, and to pipe the output from one program to
+another. This approach can be a game-changer, especially for those who aspire
+to become power users. Here are a few simple examples of where this approach
+has saved me a significant amount of time:</p><ul><li><p>Recently, I had a batch of 113 weirdly rotated images, but I was able to
+rotate them all to the desired orientation using the following code:</p><pre tabindex=0><code>  for file in *.jpg;
+  do
+      convert $file -rotate 90 rotated-$file;
+  done
+</code></pre></li><li><p>I used <code>yt-dlp</code> to easily download youtube videos and playlists. It was one
+of the most comfortable downloading experiences I had.</p></li><li><p>I used <code>pdfcrop</code> for cropping PDF files.</p></li><li><p>I changed the structure of folders that have many files in them by using
+simple for loops alongside with <code>mv cp rm</code></p></li></ul><p>Not to mention how much its easier to install packages that are on AUR or Arch
+Repository compared to installing stuff in Windows.</p><p>Overall, I strongly believe that the power of interacting with programs through
+terminal can increase one&rsquo;s overall productivity.</p><h3 id=arch-linux-manuals>Arch Linux manuals</h3><p>One caveat of using command-line interfaces (CLIs) is that it can be easy to
+forget the specifics of the interface. As a result, it is essential for terminal
+users to know how to quickly open and find the information they need in manual
+pages in order to effectively use CLIs.</p><p>Thankfully, most programs in Linux already have their own manuals available
+through the <code>man</code> command. When I need to use a certain utility or CLI function,
+all I do is open the terminal through a keybinding that I have set up and type
+<code>man programname</code>, then I can quickly scroll through the manual page using VI
+keybindings.</p><p>Despite the fact that I am already acquinted by heart with some of the most
+important flags and utilities of the programs that I use, I am also a lot better
+(faster) at finding the stuff I need. It is just as much important, if not more
+important, to be able to find the stuff you need by knowing them by heart.</p><h2 id=current-workflow>Current Workflow</h2><p>All of the configs for the apps below can be found from my <a href=https://www.github.com/kugurerdem/dotfiles>dotfiles
+github repository</a>.</p><h3 id=window-manager>Window Manager</h3><p>I do not use any desktop environments. I use a tiling Window Manager (WM), a
+type of software that automatically arranges and resizes application windows in
+a non-overlapping fashion, without the need for manual dragging and resizing.
+The particular WM I use now is called <code>dwm</code>, it is one of the tools that are
+built by the hacker organization <a href=https://suckless.org/>suckless</a>.</p><p>Having switching to a tiling window manager, I now realize that how much of a
+hassle was it to manually resize, drag, and select all my application windows.
+Besides slowing me down, your average desktop environment also takes a lot of
+space with their tilebars and etc. which I might want to use for seeing more
+content.</p><p>dwm comes with another program called <code>dmenu</code> which enables you to select list
+of options from the menu and do whatever you want with it. Initially dwm uses
+dmenu to make the user easily open the programs they want to open through a
+certain shortcut.</p><p>I also use <code>dwmblocks</code> to control the contents of the info bar on the top left.
+I only show Volume, Battery, Memory and Date info there.</p><h3 id=keyboard-layout>Keyboard Layout</h3><p>Since I am from Turkey, I need to use Turkish characters in my daily life a lot
+especially when interacting with my friends. The thing is I also find English
+keyboard layout very productive, especially when it comes to coding and using
+Vim. As a result, I needed a mechanism to be able to benefit from both of these
+functionalities. For this, I have attached a shortcut to switch between TR and
+US layouts.</p><p>I have also swapped the Escape key with the CapsLock key as I use the escaping
+functionality a lot when using VIM but do not use Caps Lock that much. It is
+ergonomically a lot more preferable to use the CapsLock key for the Escape
+functionality.</p><p>Here are my settings in .xinitrc that imply those changes:</p><pre tabindex=0><code># ~/.xinitrc
+
+setxkbmap -option &#34;caps:swapescape&#34;
+setxkbmap -model pc104 -layout us,tr -option grp:win_space_toggle
+</code></pre><p>I am also aware that I could have used <code>tr-alt-q</code> layout which is basically an
+English keyboard layout but if you use AltGr, keys like <code>i,o,u,g,c</code> turns into
+<code>ı,ö,ü,ğ,ç</code>. The problem is that the only way I found was to change the keycode
+tables through <code>.Xmodmap</code> and it was buggy. I could not find a simple and clean
+way to implement this layout</p><h3 id=terminal--shell>Terminal & Shell</h3><p>As terminal, I use <code>st</code>, so far I have not seen particular advantage of using st
+over other possible terminals that I could have use Alacritty or so, I just
+needed a terminal that is lightweight and st was one of the possibilities I
+could choose.</p><p>As shell, I mostly use bash. But I understand using zsh is perfectly fine in a
+personal environment as well. The only possible problem that I can think of zsh
+is portability problem of the scripts written for it.</p><h3 id=text-editing-and-programming>Text editing and programming</h3><p>I use <code>neovim</code> for almost all my works involving text. Neovim is a fork of Vim,
+a highly configurable text editor that is designed to be extendible and also
+efficient through the maximal use of keyboard both with macros and
+shortcuts. It also comes with a powerful syntax highlighting engine and support
+for a wide range of programming languages and file formats. As a dialect of Vim,
+Neovim is fully compatible with Vim and uses the same configuration files and
+command syntax, but it includes additional functionality and improvements that
+are not available in the original Vim. dialect of vim.</p><p>&lsquo;Why use neovim instead of vim?&rsquo; you might ask. Right now, it does not matter to
+me whether I use vim or neovim since in both of these the things I want is
+available. I use neovim because it was my first decision to go with it and
+because of this I already have my files configured for neovim. The reason why I
+initially chose neovim over vim was because of a certain workflow video I have
+seen on youtube: Vim had not some the plugins that were used in the video. Later
+on, I thought that video was full of unnecessary stuff so I gave up on it.</p><p>Getting used to vim has significantly improved my speed and comfort when
+programming as its command mode is very efficient for text navigation and
+manipulation without even having to use mouse or moving your hand much.
+When my friends see me getting done stuff in VIM they sometimes refer to it as
+&lsquo;black magic&rsquo;, I like this a lot too. =)</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/8n-ylg-pw6s?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><p>I should also mention that I have started to convert some of my .odt, .docx
+files like diaries, logs, records to plain text just because it gives me to
+flexibility to be able to edit/read them through simple text editors such as
+vim.</p><h3 id=terminal-multiplexer>Terminal Multiplexer</h3><p>A terminal multiplexer is a software program that allows multiple terminal
+sessions to be created, accessed, and controlled from a single terminal window
+or console. It enables users to have multiple terminal sessions running
+simultaneously, switch between them, and manage them easily.</p><p>Since I use terminal for almost all the text work I do including software
+development, it is, thus, ergonomically important for me to have a way to manage
+different programs through one terminal.</p><p>I do this thorugh a program called <code>dvtm</code>, an alternative for tmux.</p><p>Although I can split screens in vim when doing software development, it does not
+give the same flexibity and ease of use the dvtm gives. There are some
+programs you might want to see running simultaneously through one terminal
+instead in addition to being able to edit/write files. You can do the latter in
+vim, but the former is not so trivial to achieve.</p><p>Since <code>dvtm</code> already solves a problem that vim splits solve, I do not use vim
+splits anyways.</p><p>Here is an example showcase of dvtm:</p><p><img alt="Example DVTM\nShowcase" src=https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize></p><h3 id=file-manager>File Manager</h3><p>I use <code>ranger</code>, considering to switch to <code>lf</code> but also don&rsquo;t see a reason for it
+since I am already used to <code>ranger</code>.</p><p>As far as I remember the only thing I have changed in ranger is some of the
+priorities on which programs to use when openning files and to enable image
+preview mechanism.</p><p>Before getting used to ranger I was using a file manager with GUI named
+<code>dolphin</code>.</p><h3 id=taking-notes>Taking Notes</h3><p>I used lots of different note-taking apps such as Google Keep, Obsidian, Notion…
+The problem is, almost all of these apps come with features that I do not use at
+all, I mostly use note-taking applications as a way to remember the things that
+I intended to do and for this, all I need is a way to sync my files between my
+Phone and Computer. I used telegram for this purpose for a while, but since its
+purpose is not this, I then looked for some alternatives.</p><p>Meanwhile, I found <code>gitjournal</code>, it is a git based note taking application with
+a Mobile App. On my phone, I use its own application whereas on my computer, I
+just use the <code>gitjournal</code> script that I created that updates the notes by
+automatically running commands such as <code>git pull</code> <code>git commit</code> <code>git push</code> before
+and after opening <code>nvim</code> to change note files.</p><p>The script for this can be found <a href=https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497>here</a>.</p><h3 id=password-management-and-otp>Password Management and OTP</h3><p><code>pass</code> and <code>pass-otp</code></p><p>Also there is a very simple script called <code>passmenu</code> which uses dmenu to fetch
+the passwords from pass easily. For passphrase aplet to open, you need <code>gtk2</code> or
+<code>gtk3</code> though.</p><h3 id=wifi--bluetooth>Wifi & Bluetooth</h3><p>I use <code>bluetoothctl</code> to connect bluetooth devices and use <code>networkmanager</code> &
+<code>nmcli</code> to connect to the internet.</p><h3 id=web-browser>Web Browser</h3><p>I just use <code>brave</code> like a normal human being. I like that it has a builtin
+adblocker. Since I like moving with vim keybindings, I have also installed an
+extension called <a href=https://vimium.github.io/>vimium</a>. This extension helps you to navigate your browser
+through vim keybindings.</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/t67Sn0RGK54?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><h2 id=conclusion>Conclusion</h2><p>Switching to Arch Linux was a challenging experience due to its steep learning
+curve. I had to deal with many things that I always used, but never realized
+that there were actual programs for those functionalities, such as clipboard,
+screen locks, and opening screens. It took some time to get used to it, but now
+I am so accustomed to using Arch Linux that I don&rsquo;t even want to use Windows
+anymore, except for cases like playing video games (which I also don&rsquo;t do it
+much these days).</p><p>It&rsquo;s also fun to challenge yourself and succesfully get over those challenges.</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
+</a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
+</a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
+</a><a href=/en/index.xml target=_blank><img class=icon src=/icons/rss.svg></a></div><hr><div>a software developer with a hacker's attitude, interested in philosophy and psychology</div><hr>Contact: <a href=mailto:ugur@rugu.dev>ugur@rugu.dev</a><hr>See also:<ul>- <a href=https://wisdom.rugu.dev target=_blank>Wisdom</a></ul></aside></div></body><html>

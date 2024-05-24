@@ -1,0 +1,96 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1702857600"><title>Incorporating AI Tools Into My Terminal Workflow |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Incorporating AI Tools Into My Terminal Workflow</h1><i>Written at 2023-12-18
+- Updated at 2024-01-15</i><div>Discussions:
+<a href="https://news.ycombinator.com/item?id=38689075" target=_blank>(hackernews)</a></div><hr><p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+It forms an essential part of my routine, as I use it for nearly all my tasks
+involving text. Be it drafting an essay, sending an email, or coding, Neovim is
+my go-to tool.</p><p>Moreover, I have a deep admiration for the UNIX philosophy and its command-line
+interface programs. It&rsquo;s quite fascinating to observe how these small,
+uncomplicated UNIX programs, designed to do one thing flawlessly, interact
+effectively using piping mechanisms. Tools like sed, grep, awk, count, cut, and
+many others, often prove to be incredibly useful for text processing.</p><p>I can confidently state that both Neovim and UNIX have proven themselves
+invaluable in my work.</p><p>However, like many others, I have been introduced to another set of efficient
+tools for dealing with text, known as Large Language Models or LLMs. I&rsquo;ve spent
+several months experimenting with tools like Co-pilot and ChatGPT, and I&rsquo;ve
+found them to be highly beneficial for text-based tasks.</p><p>Naturally, I wanted to utilize the true potential of all these tools in my
+interactions including text. For this reason, I began searching for Neovim plugins
+and command-line interface programs capable of integrating these AI tools.</p><p>The process of integrating Co-pilot was relatively simple thanks to a
+<a href=https://github.com/github/copilot.vim>plugin</a> available on Neovim.</p><p>However, incorporating ChatGPT into my workflow wasn&rsquo;t as straightforward as I
+had hoped. I looked into several neovim plugins, like
+<a href=https://github.com/jackMort/ChatGPT.nvim>ChatGPT.nvim</a>, which allow
+interaction with ChatGPT through Neovim. However, the majority of these plugins
+seemed like an overkill compared to what I expect from them. They also had many
+features designed to simplify the programming process, a job that Co-pilot
+already handles for me. Additionally, I would want llms to be accessible not
+only in vim but also within my regular terminal environment. I would appreciate
+it as a command-line interface tool, which would enable piping, giving
+arguments, and flags for more complicated tasks. Unlike Co-pilot, I would like
+to use a tool like ChatGPT in a more widespread context.</p><p>Hanging around Twitter, I recently saw a post from
+<a href=https://twitter.com/garybernhardt/status/1735090271690637803>Gary</a>, giving a
+credit to Simon Willison&rsquo;s library, <a href=https://github.com/simonw/llm>llm</a>. I was
+surprised to find out that this library was exactly what I was looking for as
+well. It was a command-line interface tool that allowed me to interact with
+LLMs through my terminal, which is exactly what I wanted. I could pipe the
+output of any command into llm, and it would return the result of the input.
+For instance, I could pipe the output of a command like <code>cat</code> into <code>llm</code>, and
+it would return a response from the AI model, which you could pipe or redirect
+into another command or file.</p><h2 id=examples>Examples</h2><p>Here are some of the examples that comes to my mind on how you could use the
+<code>llm</code> tool:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git diff | llm <span style=color:#e6db74>&#39;Recommend 5 different commit messages for these change&#39;</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cat essay.txt | llm <span style=color:#e6db74>&#39;Summarize what these are about&#39;</span>
+</span></span></code></pre></div><p>Furthermore, if you keep finding yourself using the same prompts over and over
+again, you can create templates for them.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Create a template for finding synonyms of a word</span>
+</span></span><span style=display:flex><span>llm --system <span style=color:#e6db74>&#39;What are the synonyms of the following prompt&#39;</span> --save synonyms
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create a template for rephrasing text</span>
+</span></span><span style=display:flex><span>llm --system <span style=color:#e6db74>&#39;Fix grammar mistakes and rephrase the text&#39;</span> --save rephrase
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create a template for finding titles for given content</span>
+</span></span><span style=display:flex><span>llm --system <span style=color:#e6db74>&#39;Recommend 5 titles for the following prompt&#39;</span> --save titleize
+</span></span></code></pre></div><p>You can later use these templates by passing the <code>-t</code> flag to the command.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Rephrase the text which are copiod in your clipboard</span>
+</span></span><span style=display:flex><span>xsel -b | llm -t rephrase
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Find synonyms of the word &#39;serenity&#39;</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#39;serenity&#39;</span> | llm -t synonyms
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Find appropriate titles for your document</span>
+</span></span><span style=display:flex><span>cat vi-llm.md | llm -t titleize
+</span></span></code></pre></div><p>You can also further specify system messages, choose language model you want to
+interact with, and many more things, which you can examine on the
+<a href=https://llm.datasette.io/en/stable/help.html>documentation</a> of the app.</p><h2 id=the-readline-issue>The Readline Issue</h2><p>So, I was quite happy for finding this tool, but the only thing I did not like
+about it was that when you try to use chat mode with <code>llm chat</code> command, the
+readline would break my initial GNU readline settings defined in my
+<code>~/.inputrc</code> file.</p><p>When delved into the source code of the repo, I have seen that other people
+have been encountering the same
+<a href=https://github.com/simonw/llm/issues/376>issue</a>.</p><p>I figured out that the issue is likely caused by the readline libraries used to
+build the <code>llm chat</code> command overriding the default readline settings.
+Because I&rsquo;m not very familiar with these Python libraries, I decided not to try
+fixing the issue by changing the source code. Instead, I have decided to use
+the <code>rlwrap</code> command to address this problem. Basically, <code>rlwrap</code> is a
+program that allows you the wrap the readline of the programs that you run so
+that you can still use the application&rsquo;s readline as it was respecting your
+shell&rsquo;s readline settings.</p><p>I know that by the time you, the reader, come across this, the issue may
+already be fixed. However, the purpose of this piece is not just to provide a
+solution to this particular problem, but to share how I approached solving it
+and what I learned from the experience.</p><h2 id=the-vi-llm-wrapper>The vi-llm Wrapper</h2><p>Anyways, the problem with the <code>rlwrap</code> solution was that, yeah, it allowed me
+to use my shell&rsquo;s readline settings, so I could use vi keybindings when giving
+prompts, but I still could not copy, highlight, and modify the answers that are
+given to me, or the previous prompts that I have give. For this, I have built a
+shell script called <a href=https://github.com/kugurerdem/vi-llm>vi-llm</a> based around
+one of my favorite unix utils <a href=https://joeyh.name/code/moreutils/>vipe</a>, and
+llm. <code>vi-llm</code> is basically a wrapper for llm that gets all of its prompts
+from Vim, enabling an interactive communication with ChatGPT using llm, by
+letting you input a message through the vim editor, then sending that message
+to the LLM interface. subsequently displaying any logs received from the
+interface right back in your text editor, repeatedly, until the user quitting
+the vim editor without doing any changes. In essence, it operates similarly to
+a chat interface. You type in messages (or commands) which get sent to the LLM
+system, and any response from the LLM system gets displayed back to you. This
+cycle continues, enabling continuous, interactive communication with the LLM
+from your command line.</p><p>Here is a quick showcase:</p><p><img alt=vi-llm-showcase src=https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center></p><p>If you are interested, you can check out the <a href=https://github.com/kugurerdem/vi-llm>github repo.</a></p><h2 id=conclusion>Conclusion</h2><p>I&rsquo;ve been using Copilot and ChatGPT for months and now I am using this tool for
+a few days now. Now I have all the tools that I have needed in order to utilize
+my workflow even more, a strong autocompletion tool such as Copilot, a program
+that allows me to interact with large language models through shell: llm, and
+finally, a wrapper vi-llm based around llm for my personal use case.</p><p>I hope that this essay was helpful or at least interesting to some of you.</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
+</a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
+</a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
+</a><a href=/en/index.xml target=_blank><img class=icon src=/icons/rss.svg></a></div><hr><div>a software developer with a hacker's attitude, interested in philosophy and psychology</div><hr>Contact: <a href=mailto:ugur@rugu.dev>ugur@rugu.dev</a><hr>See also:<ul>- <a href=https://wisdom.rugu.dev target=_blank>Wisdom</a></ul></aside></div></body><html>
