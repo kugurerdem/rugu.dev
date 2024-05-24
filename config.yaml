@@ -19,8 +19,7 @@ languages:
     languageName: English
     weight: 0
     params:
-      descriptions: ["A software developer with a hacker's attitude", "developer @ lab.gwn.wtf", "dives.fyi cofounder", "BSc Math '23", "interested in phil and psyc"]
-      description: "a software developer with a hacker's attitude, dev at lab.gwn.wtf, BSc Math '23, interested in philosophy and psychology, dives.fyi cofounder"
+      description: "a software developer with a hacker's attitude, interested in philosophy and psychology"
       menu:
         home: 'Home'
       contact: 'Contact'
@@ -30,7 +29,7 @@ languages:
     languageName: Turkce
     weight: 1
     params:
-      description: "hacker kafalı yazılımcı, matematik mezunu '23, lab.gwn.wtf'de geliştirici, felsefe ve psikoloji ile ilgileniyor, dives.fyi eşkurucusu"
+      description: "hacker kafalı yazılımcı, felsefe ve psikoloji ile ilgileniyor"
       menu:
         home: 'Anasayfa'
       contact: 'İletişim'
