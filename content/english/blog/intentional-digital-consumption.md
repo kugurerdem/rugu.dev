@@ -1,6 +1,7 @@
 ---
 title: 'Importance of Intentionality in Digital Consumption'
 date: 2024-03-13
+updated: '2024-05-24'
 discussions:
     hackernews: https://news.ycombinator.com/item?id=39695020
 tags:
@@ -169,3 +170,13 @@ clarity and intentionality to your actions.
 And finally, remind yourself that the best thing we can do in order to be less
 disturbed and distracted is actually to not use those apps which distract us at
 the first place.
+
+## Addendum
+
+_2024-05-24_ : I've been using a Chrome extension called
+[Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+that lets you customize the CSS styles of websites. One problem I had with both
+the mobile and web versions of WhatsApp was that archived chats were still
+easily accessible at the top, even showing a notification icon. I just hid that
+section from the UI using this app.
+
