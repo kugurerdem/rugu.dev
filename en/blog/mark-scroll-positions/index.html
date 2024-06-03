@@ -1,0 +1,87 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1717372800"><title>Introducing: Mark Scroll Positions |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Introducing: Mark Scroll Positions</h1><i>Written at 2024-06-03</i><hr><p>Try the <a href=https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald>extension</a><br>See the source code <a href=https://github.com/kugurerdem/mark-scroll-positions>kugurerdem/mark-scroll-positions</a></p><hr><p>I like reading blog posts a lot. While some of them are short and easy to read,
+most of them are long and requires more time to finish. When reading those long
+essays, I take a break most of the time. And thus, when I re-open an essay, I
+often find myself having lost the original place where I was reading. And if I
+can remember where I was, then I manually scroll back there. This makes the
+reading experience less smooth and more time-consuming.</p><h2 id=a-not-so-clever-workaround-fragmented-identifiers>A Not So Clever Workaround (Fragmented Identifiers)</h2><p>I have found a neat trick to workaround this problem over time. I was already
+using the bookmark feature of my Brave browser, but it was not tracking where I
+left reading. So, I would proceed with the following procedure:</p><p>(1) Open the inspect mode.<br>(2) Click an element that has an ID nearest to where I am at, get the elements
+ID.<br>(3) Append the element ID to the URL of the site in the form of fragmented
+identifier.<br>(4) Using the new URL with fragmented ID, either overwrite the existing
+bookmark or create a new one.</p><p>If you don&rsquo;t know what fragmented identifiers are, they are the part of the URL
+that follows the hash symbol (#). Consider the following URL:</p><div style=text-align:center><a href=https://rugu.dev/en/blog/intentional-digital-consumption/#maintaining-balance>https://rugu.dev/en/blog/intentional-digital-consumption/#maintaining-balance</a></div><p>Here <code>#maintaining-balance</code> is the fragmented identifier and thanks to it the
+browser directly knows where to jump when it opens the page.</p><p>Anyways, this approach works, but there are some problems with it. First of
+all, it requires manual labor which could have been automatized, secondly
+although the fragmented links directly jumps to the element with the id
+specified in the URL, if there is no element with id close to where you are,
+the method fails.</p><h2 id=seemingly-a-better-idea-storing-scroll-positions>Seemingly A Better Idea (Storing Scroll Positions)</h2><p>So, I wanted a tool to save and jump to specific scroll positions on a webpage.</p><p>I found some programs that are built for this purpose, but none of them met my
+expectations.</p><p>The most popular one I found was <a href=https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom>Scrroll
+In</a>,
+and even that could be improved a lot: For example, it forces you to name each
+saved scroll position with an alert prompt. Why not automatically give a random
+name that can be renamed later? The fetch and save UI/UX is confusing—why not
+directly show the saved scrolls and allow users to jump to them? Additionally,
+it lacks features like adding notes to scrolls and searching through saved
+scrolls.</p><p>So I decided to build my own extension for storing/marking scroll positions on
+webpages.</p><h2 id=introducing-mark-scroll-positions>Introducing: Mark Scroll Positions</h2><p>Here is my own extension built for that purpose, you can download it from
+<a href=https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald>here</a>.</p><p>You can save your scroll positions and resume reading later with an ease. You
+can save as many scroll positions as you want, add notes to them, rename them,
+and see and manage all your saved spots on a separate page.</p><h3 id=implementation-details>Implementation Details</h3><p>I think there are 3 important aspects for understanding how this project works
+under the hood.</p><h4 id=1-interaction-between-the-popup-and-content-scripts>1) Interaction between the popup and content scripts</h4><p>In Google Chrome, the environment used by an extension&rsquo;s popup is separate from
+the environment of the current tab the user is viewing (i.e., the HTML, CSS,
+and JavaScript files of the webpage).</p><p>This separation isolates the extension from web content and prevents extensions
+from directly accessing and modifying tab content. For this, extensions need
+specific permissions like scripting and activeTab to interact between the
+extension&rsquo;s popup window and content scripts.</p><p>In our case, when the user clicks the &ldquo;Mark&rdquo; button in the popup window, we
+want to fetch the scroll position information from the active tab. However,
+this can only be done in the content script environment. In such scenarios, you
+can either create a content script that listens for events from the popup
+(using <code>chrome.runtime.onMessage</code> and <code>chrome.runtime.sendMessage</code>) or inject
+content scripts into the page environment (using
+<code>chrome.scripting.executeScript</code>) when the user clicks the &ldquo;Mark&rdquo; button. I
+chose the second approach as it seemed cleaner. The same applies to the &ldquo;Jump&rdquo;
+utility.</p><p>This is basically to isolate the extension&rsquo;s environment from the web content,
+so that extensions cannot directly access to and modify tabs content. As a
+result of this, extensions need to specific permissions such as <code>scripting</code> and
+<code>activeTab</code> permissions in order to make an interaction between the extension&rsquo;s
+popup window and the content scripts.</p><h4 id=2-the-data-structure-to-be-saved>2) The data structure to be saved</h4><p>If you want your application to be persistent and remember what the user has
+done, you need to store data in a persistent form.</p><p>I chose to store the details like this:</p><pre tabindex=0><code>{
+    [absoluteURL]: {
+        scrolls,
+        title,
+    }
+}
+</code></pre><p>So, the datas stored in <code>chrome.storage.local</code> are basically consists keys of
+absolute URLs and values of data related to that page.</p><p>Each time a new scroll position is saved, the scrolls array is fetched and the
+new scroll details are added to it. The same approach is used for deletion and
+updates.</p><h4 id=3-deciding-on-how-to-implement-the-jump-functionality>3) Deciding on how to implement the jump functionality.</h4><p>Deciding how to implement the jump functionality was challenging. I could have
+simply saved the <code>window.pageYOffset</code> value when the user clicked &ldquo;Mark&rdquo; and
+used that value with <code>window.scrollTo(0, offset)</code> when the user clicked &ldquo;Jump&rdquo;
+(like <a href=https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom>Scrroll
+In</a>
+does). However, this would fail if the user resized the page or if the author
+changed font sizes. So, I decided to save enough information to recalculate the
+target offset based on a percentage.</p><p>When the user clicks &ldquo;Mark,&rdquo; I save not only <code>window.pageYOffset</code> but also
+<code>window.innerHeight</code> and <code>document.body.scrollHeight</code>. Since
+<code>window.pageYOffset + window.innerHeight</code> roughly equals
+<code>document.body.scrollHeight</code>, we can adapt to page resizes with a normalization
+procedure when the user clicks &ldquo;Jump.&rdquo;</p><p>Is it that easy? Unfortunately, no. This method fails when the page gets longer
+due to dynamic content updates (like new comments). In this case,
+<code>document.body.scrollHeight</code> gets bigger, but the offset where the user left
+off and should continue to read on doesn&rsquo;t actually change. Here, jumping
+directly to the offset works better. You can still adjust the offset value in
+comparison to <code>window.innerHeight</code>, also known as the viewport.</p><p>Currently, my extension uses the first method, but I might add a feature
+allowing users to choose which jump method they prefer for certain pages.</p><h2 id=an-alternative-idea-storing-uniquely-identifiable-text>An Alternative Idea (Storing Uniquely Identifiable Text)</h2><p>Another option is to mark pages based on uniquely identifiable text so the user
+can jump to specific text. The problem with this is if the author changes the
+page or content. Even changing one word can break the mark. In contrast, if you
+save scroll positions, you will still land somewhere close to the initial text.</p><h2 id=last-thoughts>Last Thoughts</h2><p>I believe all these ideas can be improved to create a better marking
+application. Maybe a combination of these methods could work, or there might be
+even simpler concepts that I have missed.</p><p>The main problem is that pages can change, and it&rsquo;s unclear how our application
+should adapt to these changes.</p><p>Anyway, I hope this application will be useful to some people. It will at least
+be useful to me. If you want to contribute, please feel free to send your PRs
+to
+<a href=https://github.com/kugurerdem/mark-scroll-positions>kugurerdem/mark-scroll-positions</a></p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
+</a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
+</a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
+</a><a href=/en/index.xml target=_blank><img class=icon src=/icons/rss.svg></a></div><hr><div>a software developer with a hacker's attitude, interested in philosophy and psychology</div><hr>Contact: <a href=mailto:ugur@rugu.dev>ugur@rugu.dev</a><hr>See also:<ul>- <a href=https://wisdom.rugu.dev target=_blank>Wisdom</a></ul></aside></div></body><html>
