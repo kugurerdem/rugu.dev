@@ -25,7 +25,7 @@ jobs:
         run: hugo --minify
 
       - name: Create CNAME file
-        run: echo 'rugu.dev' > ./public/CNAME
+        run: echo 'www.rugu.dev' > ./public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
