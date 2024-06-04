@@ -13,22 +13,22 @@ See the source code [kugurerdem/mark-scroll-positions](https://github.com/kugure
 ---
 
 I like reading blog posts a lot. While some of them are short and easy to read,
-most of them are long and requires more time to finish. When reading those long
-essays, I take a break most of the time. And thus, when I re-open an essay, I
-often find myself having lost the original place where I was reading. And if I
+most of them are long and require more time to finish. When reading those long
+essays, I take a break most of the time. Thus, when I re-open an essay, I
+often  lose the original place where I was reading. And if I
 can remember where I was, then I manually scroll back there. This makes the
 reading experience less smooth and more time-consuming.
 
-## A Not So Clever Workaround (Fragmented Identifiers)
+## A Not-So Clever Workaround (Fragmented Identifiers)
 
-I have found a neat trick to workaround this problem over time. I was already
+I have found a neat trick to work around this problem over time. I was already
 using the bookmark feature of my Brave browser, but it was not tracking where I
 left reading. So, I would proceed with the following procedure:
 
 (1) Open the inspect mode. \
-(2) Click an element that has an ID nearest to where I am at, get the elements
+(2) Click an element that has an ID nearest to where I am at, get the element
 ID. \
-(3) Append the element ID to the URL of the site in the form of fragmented
+(3) Append the element ID to the URL of the site in the form of a fragmented
 identifier. \
 (4) Using the new URL with fragmented ID, either overwrite the existing
 bookmark or create a new one.
@@ -44,8 +44,8 @@ Here `#maintaining-balance` is the fragmented identifier and thanks to it the
 browser directly knows where to jump when it opens the page.
 
 Anyways, this approach works, but there are some problems with it. First of
-all, it requires manual labor which could have been automatized, secondly
-although the fragmented links directly jumps to the element with the id
+all, it requires manual labor which could have been automatized, secondly,
+although the fragmented links directly jump to the element with the id
 specified in the URL, if there is no element with id close to where you are,
 the method fails.
 
@@ -65,17 +65,17 @@ directly show the saved scrolls and allow users to jump to them? Additionally,
 it lacks features like adding notes to scrolls and searching through saved
 scrolls.
 
-So I decided to build my own extension for storing/marking scroll positions on
-webpages.
+So I decided to build my extension for storing/marking scroll positions on web
+pages.
 
 ## Introducing: Mark Scroll Positions
 
-Here is my own extension built for that purpose, you can download it from
+Here is my extension built for that purpose, you can download it from
 [here](https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald).
 
-You can save your scroll positions and resume reading later with an ease. You
-can save as many scroll positions as you want, add notes to them, rename them,
-and see and manage all your saved spots on a separate page.
+You can save your scroll positions and resume reading later with ease. You can
+save as many scroll positions as you want, add notes, rename them, and see and
+manage all your saved spots on a separate page.
 
 ### Implementation Details
 
@@ -103,10 +103,10 @@ content scripts into the page environment (using
 chose the second approach as it seemed cleaner. The same applies to the "Jump"
 utility.
 
-This is basically to isolate the extension's environment from the web content,
-so that extensions cannot directly access to and modify tabs content. As a
-result of this, extensions need to specific permissions such as `scripting` and
-`activeTab` permissions in order to make an interaction between the extension's
+This is basically to isolate the extension's environment from the web content
+so that extensions cannot directly access and modify tab content. As a
+result of this, extensions need specific permissions such as `scripting` and
+`activeTab` permissions to make an interaction between the extension's
 popup window and the content scripts.
 
 #### 2) The data structure to be saved
@@ -125,8 +125,8 @@ I chose to store the details like this:
 }
 ```
 
-So, the datas stored in `chrome.storage.local` are basically consists keys of
-absolute URLs and values of data related to that page.
+So, the data is stored in `chrome.storage.local` consists of keys of absolute
+URLs and values of data related to that page.
 
 Each time a new scroll position is saved, the scrolls array is fetched and the
 new scroll details are added to it. The same approach is used for deletion and
@@ -135,8 +135,8 @@ updates.
 #### 3) Deciding on how to implement the jump functionality.
 
 Deciding how to implement the jump functionality was challenging. I could have
-simply saved the `window.pageYOffset` value when the user clicked "Mark" and
-used that value with `window.scrollTo(0, offset)` when the user clicked "Jump"
+simply saved the `window.pageYOffset` value when the user clicks "Mark" and
+uses that value with `window.scrollTo(0, offset)` when the user clicks "Jump"
 (like [Scrroll
 In](https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom)
 does). However, this would fail if the user resized the page or if the author
