@@ -7,9 +7,15 @@ tags:
     - productivity
 ---
 
-Try the [extension](https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald) \
-See the source code [kugurerdem/mark-scroll-positions](https://github.com/kugurerdem/mark-scroll-positions)
+Try the extension in
+[Chrome](https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald)
+or in
+[Firefox](https://addons.mozilla.org/en-US/firefox/addon/mark-scroll-positions/)
+\
+See the source code
+[kugurerdem/mark-scroll-positions](https://github.com/kugurerdem/mark-scroll-positions)
 
+{{< youtube BzbMsaQkt34 >}}
 ---
 
 I like reading blog posts a lot. While some of them are short and easy to read,
