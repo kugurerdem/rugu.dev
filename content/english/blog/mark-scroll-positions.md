@@ -2,9 +2,12 @@
 title: 'Introducing: Mark Scroll Positions'
 draft: false
 date: '2024-06-03'
+updated: '2024-06-05'
 tags:
-    - tech
+    - technology
     - productivity
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=40589852
 ---
 
 Try the extension in
@@ -90,9 +93,9 @@ under the hood.
 
 #### 1) Interaction between the popup and content scripts
 
-In Google Chrome, the environment used by an extension's popup is separate from
-the environment of the current tab the user is viewing (i.e., the HTML, CSS,
-and JavaScript files of the webpage).
+In modern browsers, the environment used by an extension's popup is separate
+from the environment of the current tab the user is viewing (i.e., the HTML,
+CSS, and JavaScript files of the webpage).
 
 This separation isolates the extension from web content and prevents extensions
 from directly accessing and modifying tab content. For this, extensions need
@@ -152,8 +155,9 @@ target offset based on a percentage.
 When the user clicks "Mark," I save not only `window.pageYOffset` but also
 `window.innerHeight` and `document.body.scrollHeight`. Since
 `window.pageYOffset + window.innerHeight` roughly equals
-`document.body.scrollHeight`, we can adapt to page resizes with a normalization
-procedure when the user clicks "Jump."
+`document.body.scrollHeight` when the user scrolls to the bottom of the page,
+we can adapt to page resizes with a normalization procedure when the user
+clicks "Jump."
 
 Is it that easy? Unfortunately, no. This method fails when the page gets longer
 due to dynamic content updates (like new comments). In this case,
