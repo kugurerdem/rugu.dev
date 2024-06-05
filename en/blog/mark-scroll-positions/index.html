@@ -1,9 +1,10 @@
 <html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1717372800"><title>Introducing: Mark Scroll Positions |
-rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Introducing: Mark Scroll Positions</h1><i>Written at 2024-06-03</i><hr><p>Try the extension in
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Introducing: Mark Scroll Positions</h1><i>Written at 2024-06-03
+- Updated at 2024-06-05</i><hr><p>Try the extension in
 <a href=https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald>Chrome</a>
 or in
 <a href=https://addons.mozilla.org/en-US/firefox/addon/mark-scroll-positions/>Firefox</a><br>See the source code
-<a href=https://github.com/kugurerdem/mark-scroll-positions>kugurerdem/mark-scroll-positions</a></p><h2 id=hahahugoshortcode8s0hbhb><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></h2><p>I like reading blog posts a lot. While some of them are short and easy to read,
+<a href=https://github.com/kugurerdem/mark-scroll-positions>kugurerdem/mark-scroll-positions</a></p><h2 id=hahahugoshortcode9s0hbhb><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></h2><p>I like reading blog posts a lot. While some of them are short and easy to read,
 most of them are long and require more time to finish. When reading those long
 essays, I take a break most of the time. Thus, when I re-open an essay, I
 often lose the original place where I was reading. And if I
@@ -32,9 +33,9 @@ pages.</p><h2 id=introducing-mark-scroll-positions>Introducing: Mark Scroll Posi
 <a href=https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald>here</a>.</p><p>You can save your scroll positions and resume reading later with ease. You can
 save as many scroll positions as you want, add notes, rename them, and see and
 manage all your saved spots on a separate page.</p><h3 id=implementation-details>Implementation Details</h3><p>I think there are 3 important aspects for understanding how this project works
-under the hood.</p><h4 id=1-interaction-between-the-popup-and-content-scripts>1) Interaction between the popup and content scripts</h4><p>In Google Chrome, the environment used by an extension&rsquo;s popup is separate from
-the environment of the current tab the user is viewing (i.e., the HTML, CSS,
-and JavaScript files of the webpage).</p><p>This separation isolates the extension from web content and prevents extensions
+under the hood.</p><h4 id=1-interaction-between-the-popup-and-content-scripts>1) Interaction between the popup and content scripts</h4><p>In modern browsers, the environment used by an extension&rsquo;s popup is separate
+from the environment of the current tab the user is viewing (i.e., the HTML,
+CSS, and JavaScript files of the webpage).</p><p>This separation isolates the extension from web content and prevents extensions
 from directly accessing and modifying tab content. For this, extensions need
 specific permissions like scripting and activeTab to interact between the
 extension&rsquo;s popup window and content scripts.</p><p>In our case, when the user clicks the &ldquo;Mark&rdquo; button in the popup window, we
@@ -69,8 +70,9 @@ changed font sizes. So, I decided to save enough information to recalculate the
 target offset based on a percentage.</p><p>When the user clicks &ldquo;Mark,&rdquo; I save not only <code>window.pageYOffset</code> but also
 <code>window.innerHeight</code> and <code>document.body.scrollHeight</code>. Since
 <code>window.pageYOffset + window.innerHeight</code> roughly equals
-<code>document.body.scrollHeight</code>, we can adapt to page resizes with a normalization
-procedure when the user clicks &ldquo;Jump.&rdquo;</p><p>Is it that easy? Unfortunately, no. This method fails when the page gets longer
+<code>document.body.scrollHeight</code> when the user scrolls to the bottom of the page,
+we can adapt to page resizes with a normalization procedure when the user
+clicks &ldquo;Jump.&rdquo;</p><p>Is it that easy? Unfortunately, no. This method fails when the page gets longer
 due to dynamic content updates (like new comments). In this case,
 <code>document.body.scrollHeight</code> gets bigger, but the offset where the user left
 off and should continue to read on doesn&rsquo;t actually change. Here, jumping
