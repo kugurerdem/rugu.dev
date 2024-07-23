@@ -269,7 +269,7 @@ While working at my first Job, I got the opportunity to meet with a very
 as well "not your usual hacker".
 
 In one of my previous essays [Switching to Arch Linux]({{< ref
-"/switching-to-archlinux" >}}) I mention how we met in a short passage as follows:
+"switching-to-archlinux" >}}) I mention how we met in a short passage as follows:
 
 >About a year ago, I was invited to a pair coding session at the startup where
 >I was working. The developers were receiving consultancy from a strange
