@@ -2,6 +2,11 @@
 title: 'Switching from Arch to NixOS'
 draft: false
 date: '2024-07-23'
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=41066431
+tags:
+    - technology
+    - linux
 ---
 
 I’ve switched my desktop computer environment from Arch Linux to NixOS and used
