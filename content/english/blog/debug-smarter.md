@@ -7,6 +7,9 @@ date: '2024-08-25'
 In this essay, I share some tips that I've found particularly beneficial for my
 own debugging experience. Hope it helps the reader as well.
 
+If you have any cool tips you'd also like to share, feel free to share them. I
+might include them in the essay and give you credit for it.
+
 # Writing Logs to STDERR
 
 I've noticed that developers, myself included, often instinctively write debug
@@ -87,11 +90,16 @@ VERBOSE 16337: This is a more specific, detailed log!
 ```
 
 I hope you see the value of this approach. By adjusting the value of the
-`NODE_DEBUG` environment variable, you can control the level of detail in your
-debug logs. This allows you to implement debugging mechanisms that don’t
-unnecessarily clutter STDERR and can be optionally enabled as needed.
+`NODE_DEBUG` environment variable, you can control the level of detail you want
+to see in your debug logs. You can also have different debug logs for unrelated
+parts of the code so that you can seperate unrelated logs from each other. What
+I generally like to do is to have different debug logs for different modules.
 
-And the good thing is that the way `debuglog` works under the hood is pretty
+This way, you can have more control over your debug logs so that they don't
+clutter the STDERR much. You can, for example, choose to disable/enable certain
+kind of debug logs depending on what you really want to see at that moment.
+
+The good thing is that the way `debuglog` works under the hood is pretty
 straightforward, (see [source
 code](https://github.com/nodejs/node/blob/43f699d4d2799cfc17cbcad5770e1889075d5dbe/lib/internal/util/debuglog.js#L87)).
 
@@ -142,6 +150,15 @@ However, tap functions let you do something like this instead:
 f1(f2(taplog(f3( ...someArgs))))
 ```
 
+As you can see, we simply wrapped the `f3` function call with `taplog`. This
+approach requires much less effort and is especially helpful when you need to
+quickly log an argument passed to another function (in this case, the result of
+`f3` being passed to `f2`) without altering the code structure much.
+
+I find tap functions particularly helpful when working with frameworks like
+`React`, where you occasionally pass expressions as arguments to other components
+and want to log those expressions without disrupting the code flow.
+
 What I like is to create a generic function for creating tap functions, called
 `tap`.
 
@@ -171,4 +188,5 @@ const
     })
 ```
 
-You can basically create your own tap functions based on your own needs.
+These are just example functions, but the main idea here is that you can
+basically create your own tap functions for your own needs.
