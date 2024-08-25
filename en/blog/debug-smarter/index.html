@@ -1,6 +1,7 @@
 <html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1724544000"><title>Debug Smarter |
 rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Debug Smarter</h1><i>Written at 2024-08-25</i><hr><p>In this essay, I share some tips that I&rsquo;ve found particularly beneficial for my
-own debugging experience. Hope it helps the reader as well.</p><h1 id=writing-logs-to-stderr>Writing Logs to STDERR</h1><p>I&rsquo;ve noticed that developers, myself included, often instinctively write debug
+own debugging experience. Hope it helps the reader as well.</p><p>If you have any cool tips you&rsquo;d also like to share, feel free to share them. I
+might include them in the essay and give you credit for it.</p><h1 id=writing-logs-to-stderr>Writing Logs to STDERR</h1><p>I&rsquo;ve noticed that developers, myself included, often instinctively write debug
 logs to STDOUT. While this might not cause problems if the program&rsquo;s output
 isn’t intended for other programs to consume, it becomes crucial when managing
 multiple scripts that depend on each other—such as when one script writes to a
@@ -43,9 +44,12 @@ NORMAL 16231: This is a normal log!
 NORMAL 16337: This is a normal log!
 VERBOSE 16337: This is a more specific, detailed log!
 </code></pre><p>I hope you see the value of this approach. By adjusting the value of the
-<code>NODE_DEBUG</code> environment variable, you can control the level of detail in your
-debug logs. This allows you to implement debugging mechanisms that don’t
-unnecessarily clutter STDERR and can be optionally enabled as needed.</p><p>And the good thing is that the way <code>debuglog</code> works under the hood is pretty
+<code>NODE_DEBUG</code> environment variable, you can control the level of detail you want
+to see in your debug logs. You can also have different debug logs for unrelated
+parts of the code so that you can seperate unrelated logs from each other. What
+I generally like to do is to have different debug logs for different modules.</p><p>This way, you can have more control over your debug logs so that they don&rsquo;t
+clutter the STDERR much. You can, for example, choose to disable/enable certain
+kind of debug logs depending on what you really want to see at that moment.</p><p>The good thing is that the way <code>debuglog</code> works under the hood is pretty
 straightforward, (see <a href=https://github.com/nodejs/node/blob/43f699d4d2799cfc17cbcad5770e1889075d5dbe/lib/internal/util/debuglog.js#L87>source
 code</a>).</p><p>If it already doesn&rsquo;n exist, you can easily implement a similar mechanism in
 your favorite language (as long as it supports higher-order functions). Feel
@@ -68,7 +72,12 @@ would you do?</p><p>If you were to write something like:</p><div class=highlight
 </span></span><span style=display:flex><span><span style=color:#a6e22e>f1</span>(<span style=color:#a6e22e>f2</span>(<span style=color:#a6e22e>f3Result</span>)
 </span></span></code></pre></div><p>You can probably understand the frustration that comes with this approach.
 However, tap functions let you do something like this instead:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>f1</span>(<span style=color:#a6e22e>f2</span>(<span style=color:#a6e22e>taplog</span>(<span style=color:#a6e22e>f3</span>( ...<span style=color:#a6e22e>someArgs</span>))))
-</span></span></code></pre></div><p>What I like is to create a generic function for creating tap functions, called
+</span></span></code></pre></div><p>As you can see, we simply wrapped the <code>f3</code> function call with <code>taplog</code>. This
+approach requires much less effort and is especially helpful when you need to
+quickly log an argument passed to another function (in this case, the result of
+<code>f3</code> being passed to <code>f2</code>) without altering the code structure much.</p><p>I find tap functions particularly helpful when working with frameworks like
+<code>React</code>, where you occasionally pass expressions as arguments to other components
+and want to log those expressions without disrupting the code flow.</p><p>What I like is to create a generic function for creating tap functions, called
 <code>tap</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>tap</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>fn</span> =&gt; (<span style=color:#a6e22e>value</span>) =&gt; {
 </span></span><span style=display:flex><span>    <span style=color:#a6e22e>fn</span>(<span style=color:#a6e22e>value</span>)
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>value</span>
@@ -87,7 +96,8 @@ However, tap functions let you do something like this instead:</p><div class=hig
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>tapLog</span>(<span style=color:#a6e22e>val</span>)
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>tapErr</span>(<span style=color:#a6e22e>val</span>)
 </span></span><span style=display:flex><span>    })
-</span></span></code></pre></div><p>You can basically create your own tap functions based on your own needs.</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://www.linkedin.com/in/ugur-erdem-seyfi target=_blank><img class=icon src=/icons/linkedin.svg>
+</span></span></code></pre></div><p>These are just example functions, but the main idea here is that you can
+basically create your own tap functions for your own needs.</p></div></article><aside class=side><img class=author-image src=/ugur_img.jpg><hr><div class=icon-container><a href=https://www.linkedin.com/in/ugur-erdem-seyfi target=_blank><img class=icon src=/icons/linkedin.svg>
 </a><a href=https://github.com/kugurerdem target=_blank><img class=icon src=/icons/github.svg>
 </a><a href="https://news.ycombinator.com/user?id=kugurerdem" target=_blank><img class=icon src=/icons/hackernews.svg>
 </a><a href=https://twitter.com/kugurerdem target=_blank><img class=icon src=/icons/twitter.svg>
