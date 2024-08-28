@@ -1,0 +1,21 @@
+<nav>
+    <div class="menu">
+        <a href="/{{ $.Site.Language }}"> {{ $.Site.Params.Menu.Home }}  </a>
+        <a href="/{{ $.Site.Language }}/about"> About </a>
+        <a href="/{{ $.Site.Language }}/blog"> Blog </span>
+    </div>
+
+    <div class="languages">
+        {{ range $key, $lang := $.Site.Languages }}
+            {{ if ne $key 0 }}
+                <span> | </span>
+            {{ end }}
+            {{ if eq $.Lang $lang.Lang }}
+            <a href="/{{ $lang.Lang }}" style="color: black"> {{ $lang.Lang }} </a>
+            {{ else }}
+            <a href="/{{ $lang.Lang }}"> {{ $lang.Lang }} </a>
+            {{ end }}
+        {{ end }}
+    </div>
+</nav>
+

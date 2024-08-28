@@ -1,60 +1,44 @@
 <html>
     {{ partial "head.html" . }}
     <body>
-        <nav>
-            <div class="menu">
-                <a href="/{{ $.Site.Language }}"> {{ $.Site.Params.Menu.Home }}  </a>
-            </div>
-
-            <div class="languages">
-                {{ range $key, $lang := $.Site.Languages }}
-                    {{ if ne $key 0 }}
-                        <span> | </span>
-                    {{ end }}
-                    {{ if eq $.Lang $lang.Lang }}
-                    <a href="/{{ $lang.Lang }}" style="color: black"> {{ $lang.Lang }} </a>
-                    {{ else }}
-                    <a href="/{{ $lang.Lang }}"> {{ $lang.Lang }} </a>
-                    {{ end }}
-                {{ end }}
-            </div>
-        </nav>
+        {{ partial "nav.html" . }}
         <div class="master-container">
             <article>
-                    <div class="page">
-                        <h1> Blog </h1>
-                        {{ if .Site.Taxonomies.tags }}
-                        Tags:
-                        {{ range .Site.Taxonomies.tags }}
-                        <a href="{{ .Page.Permalink }}" class="tag"> {{ .Page.Title }}
-                            <span>
-                                ({{.Count}})
-                            </span> </a>
+                <div class="page">
+                    {{ $content := readFile $.Site.Params.WelcomePath }}
+                    {{ $content | markdownify }}
+                </div>
+
+                <div class="page">
+                    {{ $content := readFile $.Site.Params.RecommendedPath }}
+                    {{ $content | markdownify }}
+
+                    <h3> Recommended </h3>
+                    {{ with .Site.GetPage "section" "blog" }}
+                        {{- range .Pages }}
+                        {{ if .Params.recommended }}
+                        <ul>
+                            <img src="/icons/star.svg"/>
+
+                            {{ $url := .RelPermalink }}
+                            {{ $postfix := "" }}
+                            {{ if isset .Params "forward"}}
+                                {{ $url = .Params.Forward }}
+                                {{ $postfix = "(outlink)"}}
+                            {{ end }}
+
+                            <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
+                            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+                        </ul>
                         {{ end }}
                         {{ end }}
+                        {{ end }}
+                </div>
 
-                        {{ with .Site.GetPage "section" "blog" }}
-                        {{ .Content }}
-                            {{- range .Pages }}
-                            <ul>
-                                {{ if .Params.recommended }}
-                                <img src="/icons/star.svg"/>
-                                {{ end }}
-
-                                {{ $url := .RelPermalink }}
-                                {{ $postfix := "" }}
-                                {{ if isset .Params "forward"}}
-                                    {{ $url = .Params.Forward }}
-                                    {{ $postfix = "(outlink)"}}
-                                {{ end }}
-
-                                <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
-
-                                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                            </ul>
-                            {{ end }}
-                            {{ end }}
-                    </div>
+                <div class="page">
+                    {{ $content := readFile $.Site.Params.MiscPath }}
+                    {{ $content | markdownify }}
+                </div>
             </article>
             {{ partial "aside.html" . }}
         </div>

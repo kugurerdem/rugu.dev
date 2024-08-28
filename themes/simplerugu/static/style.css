@@ -14,13 +14,20 @@ nav {
   display: flex;
 }
 
-.menu{
-    padding-left: 2em;
+nav > .menu{
+    display: flex;
+    gap: 1em;
+    padding-left: 0em;
     flex-grow: 9;
+    flex-wrap: wrap;
 }
 
-.languages {
+nav > .languages {
     flex-grow: 1;
+    display: flex;
+    justify-content: right;
+    gap: 0.5em;
+    flex-wrap: wrap;
 }
 
 ul, li {
@@ -65,6 +72,7 @@ pre {
 .page{
     background-color: #fff;
     max-width: 54rem;
+    margin-bottom: 1em;
     padding: 1em 1em;
     box-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }

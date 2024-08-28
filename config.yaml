@@ -24,7 +24,10 @@ languages:
       menu:
         home: 'Home'
       contact: 'Contact'
-      misc: 'See also:'
+
+      welcomePath: 'data/en/welcome.md'
+      recommendedPath: 'data/en/recommended.md'
+      miscPath: 'data/en/misc.md'
   tr:
     contentDir: content/turkce
     languageName: Turkce
@@ -34,4 +37,7 @@ languages:
       menu:
         home: 'Anasayfa'
       contact: 'İletişim'
-      misc: 'Şuna da bir bakın:'
+
+      welcomePath: 'data/en/welcome.md'
+      recommendedPath: 'data/en/recommended.md'
+      miscPath: 'data/en/misc.md'
