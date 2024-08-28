@@ -2,6 +2,7 @@
 title: 'Debloating My Android Phone with ADB'
 draft: false
 date: '2024-01-16'
+recommended: true
 discussions:
     hackernews: https://news.ycombinator.com/item?id=39019252
 tags:

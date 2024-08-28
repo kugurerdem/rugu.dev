@@ -2,6 +2,7 @@
 title: 'Switching from Arch to NixOS'
 draft: false
 date: '2024-07-23'
+recommended: true
 discussions:
     hackernews: https://news.ycombinator.com/item?id=41066431
 tags:
