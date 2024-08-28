@@ -12,6 +12,9 @@ h1 {
 
 nav {
   display: flex;
+  justify-content: center; /* Center the content inside nav */
+  margin: 0.5em auto;
+  max-width: 71em; /* Same as .master-container */
 }
 
 nav > .menu{
