@@ -1,1 +1,1 @@
-*If an essay doesn't receive enough attention or becomes outdated, I move it to the vault section unless I think it is something that you really need to see.*
+Here are some of my essays. The ones marked with a star icon are either the ones I highly recommend or the ones that became popular on discussion platforms like HackerNews, Lobsters, Reddit, and others.
