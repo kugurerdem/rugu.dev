@@ -147,7 +147,8 @@ img[src$='#fullsize']
 
 @media (min-width: 52em){
     article {
-        max-width: calc(100% - 17em);
+        width: calc(100% - 17em);
+        max-width: 54em;
     }
 
     .page {
