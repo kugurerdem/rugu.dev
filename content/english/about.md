@@ -8,14 +8,14 @@ am, what I do, and how to contact me.
 
 ### Who?
 
-My full name is Uğur Erdem Seyfi,
+My full name is Uğur Erdem Seyfi.
 
 I am a **full-stack software developer** with an academic background of
 **Mathematics** and **Computer Science**. I have been professionally building
-Software Products for **since 2021**, yet my first introduction to Software
+Software Products **since 2021**, yet my first introduction to Software
 Development can be traced back to my high school years in 2015.
 
-To give you a more idea, I guess we can say that I am **a developer with a
+To give you a better idea, I guess we can say that I am **a developer with a
 hacker's mindset**. I try to dive deep into the technologies I use and to
 understand their underlying philosophies. I use ~~**Arch Linux**~~ **NixOS** as
 my desktop OS, use **Vim** to edit and write text,  play with the tools
