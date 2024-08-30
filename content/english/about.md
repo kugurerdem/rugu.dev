@@ -3,38 +3,25 @@ title: 'About Me'
 draft: false
 ---
 
-Hello! And thank you for visiting my website. This is where I talk about who I
-am, what I do, and how to contact me.
+Full-stack software developer with a B.Sc. in Mathematics from Bilkent
+University (2021). I have been building software products since 2015.
 
-### Who?
+I am **a developer with a hacker’s mindset**. I dive deep into the technologies
+I use and study the philosophy behind them. I use ~~Arch Linux~~ NixOS as
+desktop OS, Vim to edit and write, and [Hacker
+News](https://news.ycombinator.com/user?id=kugurerdem) to indulge.
 
-My full name is Uğur Erdem Seyfi.
-
-I am a **full-stack software developer** with an academic background of
-**Mathematics** and **Computer Science**. I have been professionally building
-Software Products **since 2021**, yet my first introduction to Software
-Development can be traced back to my high school years in 2015.
-
-To give you a better idea, I guess we can say that I am **a developer with a
-hacker's mindset**. I try to dive deep into the technologies I use and to
-understand their underlying philosophies. I use ~~**Arch Linux**~~ **NixOS** as
-my desktop OS, use **Vim** to edit and write text,  play with the tools
-that I am given, spend my free time on [Hacker
-News](https://news.ycombinator.com/user?id=kugurerdem), and write regularly.
-
-I highly value **philosophy**, particularly **rational thinking**. So I try to
-incorporate this side of mine to how I approach software as well. **I think
-having a proper understanding of the fundamentals of the tools and concepts we
-regularly use is a way more valuable skill than to know XYZ framework**. I find
-it a requirement for success to have a philosophy of doing things for
-delivering products. And that's what I am trying to achieve with some of my
-writings.
+I highly value **philosophy**, particularly **rational thinking.** So I
+incorporate this value into how I approach software. **To me, having a proper
+understanding of the fundamentals of the tools and concepts we use on the
+regular is far more valuable than to know any framework.** I find it a
+requirement for success to have a philosophy of doing things for delivering
+products. And that’s what I try to achieve with some of my writings here.
 
 ### Contact
 
-Looking to get in touch, ask a question, discuss, collaborate, or even hire?
+Interested in connecting, collaborating, or hiring? Let's talk.
 
-You can reach me at ugur@rugu.dev for these purposes, but if you find it more
-convenient, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ugur-erdem-seyfi/).
-
-You can choose to do both as well. :)
+Reach me at ugur@rugu.dev, or on
+[LinkedIn](https://www.linkedin.com/in/ugur-erdem-seyfi/)—inclusive
+disjunction.
