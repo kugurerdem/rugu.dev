@@ -112,8 +112,8 @@ Threads. So NodeJS uses threads behind the scenes to manage those blocking
 tasks, without revealing the complexities of managing them to the developer.
 
 Here’s how it works: Blocking operations, such as writing to a file or reading
-file, or sending a network request are typically handled using the built-in
-functions provided by Node.js. You usually pass callback functions as
+from a file, or sending a network request are typically handled using the
+built-in functions provided by Node.js. You usually pass callback functions as
 parameters when calling these functions, so that Node.js Worker Threads can
 execute the callback functions that you provided when they complete their
 tasks.
@@ -145,17 +145,17 @@ setTimeout(() => {
 ```
 
 Here, if you run this program, the only thing you will encounter on your screen
-will be "a"s. This is because the NodeJS interpreter prioritize the main thread
-(the thread where your program and code run) as long as there are instructions
-available.
+will be "a"s. This is because the NodeJS interpreter continue executing the
+current callback as long as there are instructions still available.
 
-As soon as all instructions in the main thread are executed, the NodeJS runtime
-environment then starts calling the callback functions. In the example above,
-the first `setTimeout` is executed with the callback function provided, and the
-second `setTimeout` is executed with the callback function provided. After 1
-second passes, it starts spamming "a"s. You never see "b"s because, once the
-first callback is called, it dominates the main thread with its ugly while
-loop, forever! So, the second callback is never called.
+As soon as all instructions in the main code are executed, the NodeJS runtime
+environment then starts calling the callback functions. You can also think of
+the main code you write as being called by default as a callback. In the
+example above, the first `setTimeout` is executed with the callback function
+provided, and the second `setTimeout` is executed with the callback function
+provided. After 1 second passes, it starts spamming "a"s. You never see "b"s
+because, once the first callback is called, it dominates the main thread with
+its ugly while loop, forever! So, the second callback is never called.
 
 This has a few important effects. First, it reduces the chance of issues like
 race conditions, though they can still happen, especially compared to
