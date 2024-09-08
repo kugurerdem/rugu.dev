@@ -1,5 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on ugur</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>Try the extension in Chrome or in Firefox See the source code kugurerdem/mark-scroll-positions
-I like reading blog posts a lot. While some of them are short and easy to read, most of them are long and require more time to finish. When reading those long essays, I take a break most of the time. Thus, when I re-open an essay, I often lose the original place where I was reading. And if I can remember where I was, then I manually scroll back there.</description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>A significant amount of my time of the day is spent interacting with computers and cell phones. Some of these are due to habits (like having a feeling of missing out), some are due to reasons related to dopamine (like watching movies, tv-series or content which are supposed to be fun), and some are related to work (software development) or productivity (writing, communicating, researching). So, I am regularly exposed to all kinds of stimulants that are available on the internet.</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>My mother recently mentioned that her phone is continually opening certain windows and prompting her to use services she doesn’t need. After checking her phone and doing some online research, I found out that many others have also complained about this issue.
-Apparently, she was referring to pop-ups triggered by a pre-built program called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send notifications and even generate pop-ups on your phone.</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi. It forms an essential part of my routine, as I use it for nearly all my tasks involving text. Be it drafting an essay, sending an email, or coding, Neovim is my go-to tool.
-Moreover, I have a deep admiration for the UNIX philosophy and its command-line interface programs. It&amp;rsquo;s quite fascinating to observe how these small, uncomplicated UNIX programs, designed to do one thing flawlessly, interact effectively using piping mechanisms.</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>Typing Fast is Important It is often mentioned that the bottleneck in building software projects is not one&amp;rsquo;s typing ability but ability to think clearly, and to design the architecture effectively. Afterall, if typing speed was so essential to programming, the time difference between rewriting an already existing project with that of creating it from scratch would not be as high as it is.
-While I agree that typing speed is not essential to programming, I cannot relate on how this fact is used by lots of people to justify their thinking of typing fast being not important for the development process.</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>About a year ago, I was invited to a pair coding session at the startup where I was working. The developers were receiving consultancy from a strange person. At one point, he took control of the screen sharing while reviewing some of the pull requests that had been made to our codebase. When he shared his screen, there was nothing but a black screen. Suddenly, a terminal screen appeared with his keystrokes and he quickly began examining the codebase, providing feedback on people&amp;rsquo;s code at a speed I had never seen before.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on ugur</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>&lt;p>Try the extension in
+&lt;a href="https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald">Chrome&lt;/a>
+or in
+&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/mark-scroll-positions/">Firefox&lt;/a>
+&lt;br>
+See the source code
+&lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
+&lt;h2 id="hahahugoshortcode11s0hbhb">
+
+ 
+ &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+&lt;/h2>
+&lt;p>I like reading blog posts a lot. While some of them are short and easy to read,
+most of them are long and require more time to finish. When reading those long
+essays, I take a break most of the time. Thus, when I re-open an essay, I
+often lose the original place where I was reading. And if I
+can remember where I was, then I manually scroll back there. This makes the
+reading experience less smooth and more time-consuming.&lt;/p></description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p>A significant amount of my time of the day is spent interacting with computers
+and cell phones. Some of these are due to habits (like having a feeling of
+missing out), some are due to reasons related to dopamine (like watching
+movies, tv-series or content which are supposed to be fun), and some are
+related to work (software development) or productivity (writing, communicating,
+researching). So, I am regularly exposed to all kinds of stimulants that are
+available on the internet.&lt;/p></description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p>My mother recently mentioned that her phone is continually opening certain
+windows and prompting her to use services she doesn’t need. After checking her
+phone and doing some online research, I found out that many others have also
+complained about this issue.&lt;/p>
+&lt;p>Apparently, she was referring to pop-ups triggered by a pre-built program
+called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send
+notifications and even generate pop-ups on your phone. And the frustrating part
+is that most of these pop-ups seem to promote irrelevant services. If you
+accidentally click &amp;ldquo;OK&amp;rdquo; when one of these pop-ups appears, you get charged by
+your provider. It is a carefully set up trap designed to make you accidentally
+subscribe to their unnecessary services and pay money.&lt;/p></description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+It forms an essential part of my routine, as I use it for nearly all my tasks
+involving text. Be it drafting an essay, sending an email, or coding, Neovim is
+my go-to tool.&lt;/p>
+&lt;p>Moreover, I have a deep admiration for the UNIX philosophy and its command-line
+interface programs. It&amp;rsquo;s quite fascinating to observe how these small,
+uncomplicated UNIX programs, designed to do one thing flawlessly, interact
+effectively using piping mechanisms. Tools like sed, grep, awk, count, cut, and
+many others, often prove to be incredibly useful for text processing.&lt;/p></description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important">Typing Fast is Important&lt;/h2>
+&lt;p>It is often mentioned that the bottleneck in building software projects is not
+one&amp;rsquo;s typing ability but ability to think clearly, and to design the
+architecture effectively. Afterall, if typing speed was so essential to
+programming, the time difference between rewriting an already existing project
+with that of creating it from scratch would not be as high as it is.&lt;/p>
+&lt;p>While I agree that typing speed is not essential to programming, I cannot
+relate on how this fact is used by lots of people to justify their thinking of
+typing fast being not important for the development process.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
+was working. The developers were receiving consultancy from a strange person. At
+one point, he took control of the screen sharing while reviewing some of the
+pull requests that had been made to our codebase. When he shared his screen,
+there was nothing but a black screen. Suddenly, a terminal screen appeared with
+his keystrokes and he quickly began examining the codebase, providing feedback
+on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
+different files in an instant, examining the diffs that were made in different
+git commits.&lt;/p></description></item></channel></rss>

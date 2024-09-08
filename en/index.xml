@@ -1,18 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ugur</title><link>https://rugu.dev/en/</link><description>Recent content on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Debug Smarter</title><link>https://rugu.dev/en/blog/debug-smarter/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debug-smarter/</guid><description>In this essay, I share some tips that I&amp;rsquo;ve found particularly beneficial for my own debugging experience. Hope it helps the reader as well.
-If you have any cool tips you&amp;rsquo;d also like to share, feel free to share them. I might include them in the essay and give you credit for it.
-Writing Logs to STDERR I&amp;rsquo;ve noticed that developers, myself included, often instinctively write debug logs to STDOUT. While this might not cause problems if the program&amp;rsquo;s output isn’t intended for other programs to consume, it becomes crucial when managing multiple scripts that depend on each other—such as when one script writes to a file that another reads.</description></item><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>I’ve switched my desktop computer environment from Arch Linux to NixOS and used it for about a month. I want to share my migration experience in case it might interest or even help others.
-I also want to thank my friends Onur and Mert for encouraging me to switch to NixOS and providing help.
-Why Migrate from Arch in the first place? As someone who likes playing with tools to understand how they work as well as to match my preferences and ergonomic choices, I find myself frequently changing many configurations on my system.</description></item><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>Try the extension in Chrome or in Firefox See the source code kugurerdem/mark-scroll-positions
-I like reading blog posts a lot. While some of them are short and easy to read, most of them are long and require more time to finish. When reading those long essays, I take a break most of the time. Thus, when I re-open an essay, I often lose the original place where I was reading. And if I can remember where I was, then I manually scroll back there.</description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>A significant amount of my time of the day is spent interacting with computers and cell phones. Some of these are due to habits (like having a feeling of missing out), some are due to reasons related to dopamine (like watching movies, tv-series or content which are supposed to be fun), and some are related to work (software development) or productivity (writing, communicating, researching). So, I am regularly exposed to all kinds of stimulants that are available on the internet.</description></item><item><title>Book Review: The Art of Living by Thich Nhat Hanh</title><link>https://rugu.dev/en/blog/taol-by-nhat-hanh/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/taol-by-nhat-hanh/</guid><description>After finishing the book &amp;ldquo;Siddhartha&amp;rdquo; by Hermann Hesse, I felt a need to explore Buddhism in more detail. People often say that the core teachings of Buddha offer a simple philosophy, which consists of only a few precepts and essential concepts. I figured that it wouldn&amp;rsquo;t hurt to spend some time understanding the core principles of Buddhism, one of the most influential religions and lifestyle philosophies. So, I started searching for resources to learn more about it.</description></item><item><title>Contemplating Simultaneous Thinking, God and Logos</title><link>https://rugu.dev/en/blog/contemplation-1/</link><pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/contemplation-1/</guid><description>I usually enjoy listening to certain types of ambient music or sounds when doing repetitive tasks or even when meditating. In the comment section of these kinds of videos, there are often people spreading love and writing nice things to each other. After consuming so many videos of this kind, I&amp;rsquo;ve started to predict that these kinds of comments would be present in a video even before opening them. Sometimes, it felt like I was reading those comments without even opening them.</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>My mother recently mentioned that her phone is continually opening certain windows and prompting her to use services she doesn’t need. After checking her phone and doing some online research, I found out that many others have also complained about this issue.
-Apparently, she was referring to pop-ups triggered by a pre-built program called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send notifications and even generate pop-ups on your phone.</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi. It forms an essential part of my routine, as I use it for nearly all my tasks involving text. Be it drafting an essay, sending an email, or coding, Neovim is my go-to tool.
-Moreover, I have a deep admiration for the UNIX philosophy and its command-line interface programs. It&amp;rsquo;s quite fascinating to observe how these small, uncomplicated UNIX programs, designed to do one thing flawlessly, interact effectively using piping mechanisms.</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>In this essay, I describe how I made a Node.js module to listen to keypresses across the system on Linux machines using X. This experience helped me grasp how the OS and Window Managers handle keyboard inputs, clarifying the reasons behind an unexpected behavior I had encountered before, which I also mention in the essay.
-If you&amp;rsquo;re interested in learning more about how keyboard events are handled, this essay might be of interest to you.</description></item><item><title>Sockets and Message Framing</title><link>https://rugu.dev/en/blog/sockets-and-message-framing/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/sockets-and-message-framing/</guid><description>I&amp;rsquo;ve recently been involved in a fintech project that demands high performance, posing various challenges related to a solid understanding of low-level concepts, concepts that are primarily relevant to the inner workings of the tools and protocols used beneath the surface.
-One challenge involved separating two tasks into different processes:
-The main process, responsible for constructing the necessary business state from incoming messages through a specific socket connection.
-The monitoring process, allowing users to track relevant changes in the state.</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>In the following essay, I will reflect on my journey which led me to become a software developer.
-I intend this essay to be more of a personal reflection than a technical advisement. But whether you are a seasoned programmer or a newcomer to the world of software development, I hope that my experiences and insights will provide valuable guidance and inspiration for your journey.
-Before College When I was around 6 or 7 years old, I used to hang out with my cousin a lot.</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>Typing Fast is Important It is often mentioned that the bottleneck in building software projects is not one&amp;rsquo;s typing ability but ability to think clearly, and to design the architecture effectively. Afterall, if typing speed was so essential to programming, the time difference between rewriting an already existing project with that of creating it from scratch would not be as high as it is.
-While I agree that typing speed is not essential to programming, I cannot relate on how this fact is used by lots of people to justify their thinking of typing fast being not important for the development process.</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>About a year ago, I was invited to a pair coding session at the startup where I was working. The developers were receiving consultancy from a strange person. At one point, he took control of the screen sharing while reviewing some of the pull requests that had been made to our codebase. When he shared his screen, there was nothing but a black screen. Suddenly, a terminal screen appeared with his keystrokes and he quickly began examining the codebase, providing feedback on people&amp;rsquo;s code at a speed I had never seen before.</description></item><item><title>An Argument for Idealism</title><link>https://rugu.dev/en/blog/idealism-argument/</link><pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/idealism-argument/</guid><description>This essay was originally written for the &amp;lsquo;Introduction to Philosophy I&amp;rsquo; (PHIL103) course at Bilkent University, where we delved into various branches of philosophy, including consciousness. It reflects some of the thought processes that arose as I grappled with these philosophical questions. It&amp;rsquo;s important to note that this essay is not an exact reflection of my personal beliefs, but rather an exercise in argumentation.
-Despite this, I believe the arguments presented in this essay hold value and are worth exploring.</description></item><item><title>Should you use TypeScript?</title><link>https://rugu.dev/en/blog/typescript/</link><pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/typescript/</guid><description>see</description></item><item><title>About Me</title><link>https://rugu.dev/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/about/</guid><description>Full-stack software developer with a B.Sc. in Mathematics from Bilkent University (2021). I have been building software products since 2015.
-I am a developer with a hacker’s mindset. I dive deep into the technologies I use and study the philosophy behind them. I use Arch Linux NixOS as desktop OS, Vim to edit and write, and Hacker News to indulge.
-I highly value philosophy, particularly rational thinking. So I incorporate this value into how I approach software.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ugur</title><link>https://rugu.dev/en/</link><description>Recent content on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency and Parallelism, and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p>Up until now, I was not aware that concurrency and parallelism were actually
+different things since they are often used interchangeably by some. I just
+learned that this is not the case while reading &lt;a href="https://www.braveclojure.com/concurrency/">Chapter
+9&lt;/a> of the book &amp;ldquo;Clojure for the
+Brave and True.&amp;rdquo;&lt;/p>
+&lt;p>This made me want to learn more about concepts related to concurrency and
+parallelism, especially concerning the programming language I know best:
+JavaScript. So this essay is basically a collection of notes I made during this
+learning process.&lt;/p></description></item><item><title>Debug Smarter</title><link>https://rugu.dev/en/blog/debug-smarter/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debug-smarter/</guid><description>&lt;p>In this essay, I share some tips that I&amp;rsquo;ve found particularly beneficial for my
+own debugging experience. Hope it helps the reader as well.&lt;/p>
+&lt;p>If you have any cool tips you&amp;rsquo;d also like to share, feel free to share them. I
+might include them in the essay and give you credit for it.&lt;/p>
+&lt;h1 id="writing-logs-to-stderr">Writing Logs to STDERR&lt;/h1>
+&lt;p>I&amp;rsquo;ve noticed that developers, myself included, often instinctively write debug
+logs to STDOUT. While this might not cause problems if the program&amp;rsquo;s output
+isn’t intended for other programs to consume, it becomes crucial when managing
+multiple scripts that depend on each other—such as when one script writes to a
+file that another reads.&lt;/p></description></item><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p>I’ve switched my desktop computer environment from Arch Linux to NixOS and used
+it for about a month. I want to share my migration experience in case it might
+interest or even help others.&lt;/p>
+&lt;p>I also want to thank my friends &lt;a href="https://github.com/onsah">Onur&lt;/a> and
+&lt;a href="https://github.com/mk-nlp">Mert&lt;/a> for encouraging me to switch to NixOS and
+providing help.&lt;/p>
+&lt;h1 id="why-migrate-from-arch-in-the-first-place">Why Migrate from Arch in the first place?&lt;/h1>
+&lt;p>As someone who likes playing with tools to understand how they work as well as
+to match my preferences and ergonomic choices, I find myself frequently changing many
+configurations on my system. However, it didn&amp;rsquo;t take long for me to realize
+that I need a system to save and possibly automate these configuration
+processes to save time in the future.&lt;/p></description></item><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>&lt;p>Try the extension in
+&lt;a href="https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald">Chrome&lt;/a>
+or in
+&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/mark-scroll-positions/">Firefox&lt;/a>
+&lt;br>
+See the source code
+&lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
+&lt;h2 id="hahahugoshortcode11s0hbhb">
+
+ 
+ &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+&lt;/h2>
+&lt;p>I like reading blog posts a lot. While some of them are short and easy to read,
+most of them are long and require more time to finish. When reading those long
+essays, I take a break most of the time. Thus, when I re-open an essay, I
+often lose the original place where I was reading. And if I
+can remember where I was, then I manually scroll back there. This makes the
+reading experience less smooth and more time-consuming.&lt;/p></description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p>A significant amount of my time of the day is spent interacting with computers
+and cell phones. Some of these are due to habits (like having a feeling of
+missing out), some are due to reasons related to dopamine (like watching
+movies, tv-series or content which are supposed to be fun), and some are
+related to work (software development) or productivity (writing, communicating,
+researching). So, I am regularly exposed to all kinds of stimulants that are
+available on the internet.&lt;/p></description></item><item><title>Book Review: The Art of Living by Thich Nhat Hanh</title><link>https://rugu.dev/en/blog/taol-by-nhat-hanh/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/taol-by-nhat-hanh/</guid><description>&lt;p>After finishing the book &amp;ldquo;Siddhartha&amp;rdquo; by Hermann Hesse, I felt a need to
+explore Buddhism in more detail. People often say that the core teachings of
+Buddha offer a simple philosophy, which consists of only a few precepts and
+essential concepts. I figured that it wouldn&amp;rsquo;t hurt to spend some time
+understanding the core principles of Buddhism, one of the most influential
+religions and lifestyle philosophies. So, I started searching for resources to
+learn more about it. During my search, I came across Thich Nhat Hanh and
+discovered his book &amp;ldquo;The Art of Living&amp;rdquo;.&lt;/p></description></item><item><title>Contemplating Simultaneous Thinking, God and Logos</title><link>https://rugu.dev/en/blog/contemplation-1/</link><pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/contemplation-1/</guid><description>&lt;p>I usually enjoy listening to certain types of ambient music or sounds when
+doing repetitive tasks or even when meditating. In the comment section of these
+kinds of videos, there are often people spreading love and writing nice things
+to each other. After consuming so many videos of this kind, I&amp;rsquo;ve started to
+predict that these kinds of comments would be present in a video even before
+opening them. Sometimes, it felt like I was reading those comments without even
+opening them.&lt;/p></description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p>My mother recently mentioned that her phone is continually opening certain
+windows and prompting her to use services she doesn’t need. After checking her
+phone and doing some online research, I found out that many others have also
+complained about this issue.&lt;/p>
+&lt;p>Apparently, she was referring to pop-ups triggered by a pre-built program
+called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send
+notifications and even generate pop-ups on your phone. And the frustrating part
+is that most of these pop-ups seem to promote irrelevant services. If you
+accidentally click &amp;ldquo;OK&amp;rdquo; when one of these pop-ups appears, you get charged by
+your provider. It is a carefully set up trap designed to make you accidentally
+subscribe to their unnecessary services and pay money.&lt;/p></description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+It forms an essential part of my routine, as I use it for nearly all my tasks
+involving text. Be it drafting an essay, sending an email, or coding, Neovim is
+my go-to tool.&lt;/p>
+&lt;p>Moreover, I have a deep admiration for the UNIX philosophy and its command-line
+interface programs. It&amp;rsquo;s quite fascinating to observe how these small,
+uncomplicated UNIX programs, designed to do one thing flawlessly, interact
+effectively using piping mechanisms. Tools like sed, grep, awk, count, cut, and
+many others, often prove to be incredibly useful for text processing.&lt;/p></description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p>In this essay, I describe how I made a Node.js module to listen to keypresses
+across the system on Linux machines using X. This experience helped me grasp
+how the OS and Window Managers handle keyboard inputs, clarifying the reasons
+behind an unexpected behavior I had encountered before, which I also mention in
+the essay.&lt;/p>
+&lt;p>If you&amp;rsquo;re interested in learning more about how keyboard events are handled,
+this essay might be of interest to you.&lt;/p></description></item><item><title>Sockets and Message Framing</title><link>https://rugu.dev/en/blog/sockets-and-message-framing/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/sockets-and-message-framing/</guid><description>&lt;p>I&amp;rsquo;ve recently been involved in a fintech project that demands high performance,
+posing various challenges related to a solid understanding of low-level
+concepts, concepts that are primarily relevant to the inner workings of the
+tools and protocols used beneath the surface.&lt;/p>
+&lt;p>One challenge involved separating two tasks into different processes:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>The main process, responsible for constructing the necessary business state from
+incoming messages through a specific socket connection.&lt;/p></description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p>In the following essay, I will reflect on my journey which led me to become a
+software developer.&lt;/p>
+&lt;p>I intend this essay to be more of a personal reflection than a technical
+advisement. But whether you are a seasoned programmer or a newcomer to the
+world of software development, I hope that my experiences and insights will
+provide valuable guidance and inspiration for your journey.&lt;/p>
+&lt;h1 id="before-college">Before College&lt;/h1>
+&lt;p>When I was around 6 or 7 years old, I used to hang out with my
+&lt;a href="https://www.yuempek.com">cousin&lt;/a> a lot. Whenever I would see him on his
+computer, he would always be engaged in something interesting like developing
+recreational applications.&lt;/p></description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important">Typing Fast is Important&lt;/h2>
+&lt;p>It is often mentioned that the bottleneck in building software projects is not
+one&amp;rsquo;s typing ability but ability to think clearly, and to design the
+architecture effectively. Afterall, if typing speed was so essential to
+programming, the time difference between rewriting an already existing project
+with that of creating it from scratch would not be as high as it is.&lt;/p>
+&lt;p>While I agree that typing speed is not essential to programming, I cannot
+relate on how this fact is used by lots of people to justify their thinking of
+typing fast being not important for the development process.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
+was working. The developers were receiving consultancy from a strange person. At
+one point, he took control of the screen sharing while reviewing some of the
+pull requests that had been made to our codebase. When he shared his screen,
+there was nothing but a black screen. Suddenly, a terminal screen appeared with
+his keystrokes and he quickly began examining the codebase, providing feedback
+on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
+different files in an instant, examining the diffs that were made in different
+git commits.&lt;/p></description></item><item><title>An Argument for Idealism</title><link>https://rugu.dev/en/blog/idealism-argument/</link><pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/idealism-argument/</guid><description>&lt;p>&lt;em>This essay was originally written for the &amp;lsquo;Introduction to Philosophy I&amp;rsquo;
+(PHIL103) course at Bilkent University, where we delved into various branches of
+philosophy, including consciousness. It reflects some of the thought processes
+that arose as I grappled with these philosophical questions. It&amp;rsquo;s important to
+note that this essay is not an exact reflection of my personal beliefs, but
+rather an exercise in argumentation.&lt;/em>&lt;/p>
+&lt;p>&lt;em>Despite this, I believe the arguments presented in this essay hold value and are
+worth exploring. My hope is that this essay provides you with insight and
+provokes thought, and that you find value in engaging with the ideas presented
+here.&lt;/em>&lt;/p></description></item><item><title>Should you use TypeScript?</title><link>https://rugu.dev/en/blog/typescript/</link><pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/typescript/</guid><description>&lt;p>&lt;a href="https://dives.fyi/blog/typescript">see&lt;/a>&lt;/p></description></item><item><title>About Me</title><link>https://rugu.dev/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/about/</guid><description>&lt;p>Full-stack software developer with a B.Sc. in Mathematics from Bilkent
+University (2021). I have been building software products since 2015.&lt;/p>
+&lt;p>I am &lt;strong>a developer with a hacker’s mindset&lt;/strong>. I dive deep into the technologies
+I use and study the philosophy behind them. I use &lt;del>Arch Linux&lt;/del> NixOS as
+desktop OS, Vim to edit and write, and &lt;a href="https://news.ycombinator.com/user?id=kugurerdem">Hacker
+News&lt;/a> to indulge.&lt;/p>
+&lt;p>I highly value &lt;strong>philosophy&lt;/strong>, particularly &lt;strong>rational thinking.&lt;/strong> So I
+incorporate this value into how I approach software. &lt;strong>To me, having a proper
+understanding of the fundamentals of the tools and concepts we use on the
+regular is far more valuable than to know any framework.&lt;/strong> I find it a
+requirement for success to have a philosophy of doing things for delivering
+products. And that’s what I try to achieve with some of my writings here.&lt;/p></description></item></channel></rss>

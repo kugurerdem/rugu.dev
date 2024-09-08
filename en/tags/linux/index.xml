@@ -1,5 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ugur</title><link>https://rugu.dev/en/tags/linux/</link><description>Recent content in Linux on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>I’ve switched my desktop computer environment from Arch Linux to NixOS and used it for about a month. I want to share my migration experience in case it might interest or even help others.
-I also want to thank my friends Onur and Mert for encouraging me to switch to NixOS and providing help.
-Why Migrate from Arch in the first place? As someone who likes playing with tools to understand how they work as well as to match my preferences and ergonomic choices, I find myself frequently changing many configurations on my system.</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>My mother recently mentioned that her phone is continually opening certain windows and prompting her to use services she doesn’t need. After checking her phone and doing some online research, I found out that many others have also complained about this issue.
-Apparently, she was referring to pop-ups triggered by a pre-built program called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send notifications and even generate pop-ups on your phone.</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>In this essay, I describe how I made a Node.js module to listen to keypresses across the system on Linux machines using X. This experience helped me grasp how the OS and Window Managers handle keyboard inputs, clarifying the reasons behind an unexpected behavior I had encountered before, which I also mention in the essay.
-If you&amp;rsquo;re interested in learning more about how keyboard events are handled, this essay might be of interest to you.</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>About a year ago, I was invited to a pair coding session at the startup where I was working. The developers were receiving consultancy from a strange person. At one point, he took control of the screen sharing while reviewing some of the pull requests that had been made to our codebase. When he shared his screen, there was nothing but a black screen. Suddenly, a terminal screen appeared with his keystrokes and he quickly began examining the codebase, providing feedback on people&amp;rsquo;s code at a speed I had never seen before.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ugur</title><link>https://rugu.dev/en/tags/linux/</link><description>Recent content in Linux on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p>I’ve switched my desktop computer environment from Arch Linux to NixOS and used
+it for about a month. I want to share my migration experience in case it might
+interest or even help others.&lt;/p>
+&lt;p>I also want to thank my friends &lt;a href="https://github.com/onsah">Onur&lt;/a> and
+&lt;a href="https://github.com/mk-nlp">Mert&lt;/a> for encouraging me to switch to NixOS and
+providing help.&lt;/p>
+&lt;h1 id="why-migrate-from-arch-in-the-first-place">Why Migrate from Arch in the first place?&lt;/h1>
+&lt;p>As someone who likes playing with tools to understand how they work as well as
+to match my preferences and ergonomic choices, I find myself frequently changing many
+configurations on my system. However, it didn&amp;rsquo;t take long for me to realize
+that I need a system to save and possibly automate these configuration
+processes to save time in the future.&lt;/p></description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p>My mother recently mentioned that her phone is continually opening certain
+windows and prompting her to use services she doesn’t need. After checking her
+phone and doing some online research, I found out that many others have also
+complained about this issue.&lt;/p>
+&lt;p>Apparently, she was referring to pop-ups triggered by a pre-built program
+called &amp;ldquo;SIM Menu&amp;rdquo;. This program basically allows operators to send
+notifications and even generate pop-ups on your phone. And the frustrating part
+is that most of these pop-ups seem to promote irrelevant services. If you
+accidentally click &amp;ldquo;OK&amp;rdquo; when one of these pop-ups appears, you get charged by
+your provider. It is a carefully set up trap designed to make you accidentally
+subscribe to their unnecessary services and pay money.&lt;/p></description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p>In this essay, I describe how I made a Node.js module to listen to keypresses
+across the system on Linux machines using X. This experience helped me grasp
+how the OS and Window Managers handle keyboard inputs, clarifying the reasons
+behind an unexpected behavior I had encountered before, which I also mention in
+the essay.&lt;/p>
+&lt;p>If you&amp;rsquo;re interested in learning more about how keyboard events are handled,
+this essay might be of interest to you.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
+was working. The developers were receiving consultancy from a strange person. At
+one point, he took control of the screen sharing while reviewing some of the
+pull requests that had been made to our codebase. When he shared his screen,
+there was nothing but a black screen. Suddenly, a terminal screen appeared with
+his keystrokes and he quickly began examining the codebase, providing feedback
+on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
+different files in an instant, examining the diffs that were made in different
+git commits.&lt;/p></description></item></channel></rss>
