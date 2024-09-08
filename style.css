@@ -133,6 +133,17 @@ img[src$='#fullsize']
     /* whatever else styles you fancy here */
 }
 
+img[src$='#75persize']
+{
+    display: block;
+    width: 75%;
+    height: auto;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
 
 @media (max-width: 52em) {
     .master-container {
