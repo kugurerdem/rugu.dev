@@ -1,5 +1,5 @@
 ---
-title: 'Understanding Concurrency and Parallelism, and JS'
+title: 'Understanding Concurrency, Parallelism and JS'
 draft: false
 date: '2024-09-08'
 ---
@@ -245,7 +245,7 @@ scheduler.wait(100).then(() => {
 
 As soon as this callback function is called, nothing can interleave between
 
-```
+```javascript
 let y = x
 x = y + 1
 ```
