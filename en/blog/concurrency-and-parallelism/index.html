@@ -88,14 +88,13 @@ now start practicing this theory by examining certain cases/situations.</p><p>Co
 </span></span></code></pre></div><p>Here, if you run this program, the only thing you will encounter on your screen
 will be &ldquo;a"s. This is because the NodeJS interpreter continue executing the
 current callback as long as there are instructions still available.</p><p>As soon as all instructions in the main code are executed, the NodeJS runtime
-environment then starts calling the callback functions. You can actually think
-of the main code you write as a callback that runs automatically by default. In
-the example above, the first <code>setTimeout</code> is executed with the callback
-function provided, and the second <code>setTimeout</code> is executed with the callback
-function provided. After 1 second passes, it starts spamming &ldquo;a"s. You never
-see &ldquo;b"s because, once the first callback is called, it dominates the main
-thread with its ugly while loop, forever! So, the second callback is never
-called.</p><p>This has a few important effects. First, it reduces the chance of issues like
+environment then starts calling the callback functions. You can also think of
+the main code you write as being called by default as a callback. In the
+example above, the first <code>setTimeout</code> is executed with the callback function
+provided, and the second <code>setTimeout</code> is executed with the callback function
+provided. After 1 second passes, it starts spamming &ldquo;a"s. You never see &ldquo;b"s
+because, once the first callback is called, it dominates the main thread with
+its ugly while loop, forever! So, the second callback is never called.</p><p>This has a few important effects. First, it reduces the chance of issues like
 race conditions, though they can still happen, especially compared to
 multi-threaded languages like C. Why? In C-like languages, the CPU interleaves
 threads at the instruction level, while here, it mostly happens at the callback
