@@ -33,7 +33,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode12s0hbhb">
+&lt;h2 id="hahahugoshortcode11s0hbhb">
 
  
  &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -97,7 +97,10 @@ tools and protocols used beneath the surface.&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>The main process, responsible for constructing the necessary business state from
-incoming messages through a specific socket connection.&lt;/p></description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p>In the following essay, I will reflect on my journey which led me to become a
+incoming messages through a specific socket connection.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The monitoring process, allowing users to track relevant changes in the state.&lt;/p></description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p>In the following essay, I will reflect on my journey which led me to become a
 software developer.&lt;/p>
 &lt;p>I intend this essay to be more of a personal reflection than a technical
 advisement. But whether you are a seasoned programmer or a newcomer to the
