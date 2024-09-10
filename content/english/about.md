@@ -4,7 +4,8 @@ draft: false
 ---
 
 Full-stack software developer with a B.Sc. in Mathematics from Bilkent
-University (2021). I have been building software products since 2015.
+University (2023). I've been building software since 2015 and working
+professionally since 2021.
 
 I am **a developer with a hacker’s mindset**. I dive deep into the technologies
 I use and study the philosophy behind them. I use ~~Arch Linux~~ NixOS as
