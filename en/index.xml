@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ugur</title><link>https://rugu.dev/en/</link><description>Recent content on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p>Up until now, I was not aware that concurrency and parallelism were actually
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ugur</title><link>https://rugu.dev/en/</link><description>Recent content on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Stop Being an NPC</title><link>https://rugu.dev/en/blog/npc/</link><pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/npc/</guid><description>&lt;p>When we encounter new information that conflicts with our current beliefs, we
+typically follow one of the preceding options:&lt;/p>
+&lt;ol>
+&lt;li>Ignore the new information.&lt;/li>
+&lt;li>Place it into your existing belief system, regardless whether it is
+consistent with your other beliefs or not.&lt;/li>
+&lt;li>Create an ad hoc explanation to keep our beliefs intact.&lt;/li>
+&lt;li>Adjust or revise our existing beliefs.&lt;/li>
+&lt;/ol>
+&lt;p>Since the last option is typically the most demanding, and humans are
+programmed through evolution to conserve energy, people usually choose the
+first two options unless the information is crucial to their survival.&lt;/p></description></item><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p>Up until now, I was not aware that concurrency and parallelism were actually
 different things since they are often used interchangeably by some. I just
 learned that this is not the case while reading &lt;a href="https://www.braveclojure.com/concurrency/">Chapter
 9&lt;/a> of the book &amp;ldquo;Clojure for the
@@ -33,7 +44,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode10s0hbhb">
+&lt;h2 id="hahahugoshortcode13s0hbhb">
 
  
  &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
