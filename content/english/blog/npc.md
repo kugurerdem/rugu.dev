@@ -30,7 +30,7 @@ thoughtful analysis of how we choose to do things is more crucial than ever
 
 I can't help but think about how much we could improve quality of our living if
 we honestly tried to be consistent in our beliefs and approaches by applying
-points 3 and 4.
+points 3 and 4 a bit more.
 
 # Don't delegate thinking to others!
 
