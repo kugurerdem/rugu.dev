@@ -22,11 +22,11 @@ were effective in environments where being quick and efficient was more
 important than being accurate, as conserving energy was one of the greatest
 challenges.
 
-The issue is that most of us no longer live in environments where we can’t
+**The issue is that most of us no longer live in environments where we can’t
 afford to think things through. Our world has become so abstract and reliant on
 complex systems with many layers, that we may be living in a time where
 thoughtful analysis of how we choose to do things is more crucial than ever
-.
+.**
 
 I can't help but think about how much we could improve quality of our living if
 we honestly tried to be consistent in our beliefs and approaches by applying
@@ -107,14 +107,14 @@ others don't. But, if you have contradictory beliefs at the same time, you are
 certainly more wrong than the alternative set of beliefs you could have without
 the contradictory beliefs.
 
-The second point I want to emphasize is that, although consistency doesn't
-always mean truth, it often brings you closer to it. When you start comparing
-different perspectives, you may notice similar ideas emerge, likely as a result
-of the same reasoning process. For example, it's fascinating to see that most
-philosophies of life—such as Buddhism, Sufism, Christianity, Stoicism,
-Epicureanism, and others—focus more on internal matters within our control,
-rather than external ones. This is just one example I can think of, but you get
-the idea.
+The second point I want to emphasize is that, **although consistency doesn't
+always mean truth, it often brings you closer to it**. Also, keep in mind that
+it is quite possible that seemingly very different philosophies can arrive at
+the same conclusions in some of the most important subjects. For example, it's
+fascinating to see that most philosophies of life—such as Buddhism, Sufism,
+Christianity, Stoicism, Epicureanism, and others—focus more on internal matters
+within our control, rather than external ones. This is just one example I can
+think of, but you get the idea.
 
 Lastly, is there anything you can do better to be true than to trying
 making your beliefs more coherent and inclusive? Don't think so.
