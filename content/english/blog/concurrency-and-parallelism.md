@@ -2,6 +2,11 @@
 title: 'Understanding Concurrency, Parallelism and JS'
 draft: false
 date: '2024-09-08'
+recommended: true
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=41487965
+tags:
+    - technology
 ---
 
 Up until now, I was not aware that concurrency and parallelism were actually
