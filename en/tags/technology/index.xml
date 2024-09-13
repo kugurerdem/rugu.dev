@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on ugur</title><link>https://rugu.dev/en/tags/technology/</link><description>Recent content in Technology on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p>I’ve switched my desktop computer environment from Arch Linux to NixOS and used
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on ugur</title><link>https://rugu.dev/en/tags/technology/</link><description>Recent content in Technology on ugur</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p>Up until now, I was not aware that concurrency and parallelism were actually
+different things since they are often used interchangeably by some. I just
+learned that this is not the case while reading &lt;a href="https://www.braveclojure.com/concurrency/">Chapter
+9&lt;/a> of the book &amp;ldquo;Clojure for the
+Brave and True.&amp;rdquo;&lt;/p>
+&lt;p>This made me want to learn more about concepts related to concurrency and
+parallelism, especially concerning the programming language I know best:
+JavaScript. So this essay is basically a collection of notes I made during this
+learning process.&lt;/p></description></item><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p>I’ve switched my desktop computer environment from Arch Linux to NixOS and used
 it for about a month. I want to share my migration experience in case it might
 interest or even help others.&lt;/p>
 &lt;p>I also want to thank my friends &lt;a href="https://github.com/onsah">Onur&lt;/a> and
@@ -16,7 +24,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode12s0hbhb">
+&lt;h2 id="hahahugoshortcode11s0hbhb">
 
  
  &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
