@@ -112,7 +112,7 @@ understand so that you don't have to think much.
 
 Node.js is a great example of this concept. Although your JavaScript program
 runs in a single-threaded environment with a sequential execution flow,
-blocking tasks such as IO operations are degelated to the Node.js Worker
+blocking tasks such as IO operations are delegated to the Node.js Worker
 Threads. So NodeJS uses threads behind the scenes to manage those blocking
 tasks, without revealing the complexities of managing them to the developer.
 
