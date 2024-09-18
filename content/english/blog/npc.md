@@ -151,12 +151,12 @@ differ from those that are just as smart as you, you can still benefit from
 having them.
 
 I think following a diet plan is a good example of this. If your goal is simply
-to lose weight, whether it's a carnivore, herbivore, Mediterranean, paleo, or
-intermittent fasting diet, all of them are likely better than not having a plan
-and randomly eating whatever is available. While one diet might be better than
-others in certain ways, I believe most people would benefit from any of these
-diets. The key factor is whether you can healthily stick to the diet while
-maintaining a calorie deficit.
+to lose weight, whether it's a carnivore, Mediterranean, paleo, or intermittent
+fasting diet, all of them are likely better than not having a plan and randomly
+eating whatever is available. While one diet might be better than others in
+certain ways, I believe most people would benefit from any of these diets. The
+key factor is whether you can healthily stick to the diet while maintaining a
+calorie deficit.
 
 I believe this also applies to building exercise programs. Whether you're doing
 calisthenics, bodybuilding, powerlifting, swimming, running, or anything else,
