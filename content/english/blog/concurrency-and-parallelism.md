@@ -270,7 +270,7 @@ concurrently/parallelly. Things can go wrong pretty fast.
 
 ## Addendum
 
-*I - 2024-09-18*: This essay received a lot of attention that I did not
+**2024-09-18**: This essay received a lot of attention that I did not
 anticipate. It got 99 upvotes on HackerNews and appeared on the front page for
 a while. A few days later, my friend Carlo informed me that my essay was
 featured in the [323rd issue](https://bytes.dev/archives/323) of the Bytes
@@ -281,7 +281,7 @@ even got the first [pull request](https://github.com/kugurerdem/rugudev/pull/1)
 to my blog's GitHub repository. Thanks to everyone who took the time to read
 and provide feedback.
 
-*II - 2024-09-18* In the HackerNews discussion, @duped and @donatj recommended
-[Concurrency is not Parallelism](https://www.youtube.com/watch?v=oV9rvDllKEg)
-by Rob Pike. It is a very good talk, so I wanted to mention it here as well for
-anyone else further interested in the topic.
+In the HackerNews discussion, @duped and @donatj recommended [Concurrency is
+not Parallelism](https://www.youtube.com/watch?v=oV9rvDllKEg) by Rob Pike. It
+is a very good talk, so I wanted to mention it here as well for anyone else
+further interested in the topic.
