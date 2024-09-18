@@ -65,7 +65,7 @@ simplify the complexities associated with using the Operating System&rsquo;s API
 high-level code into low-level system calls that the operating system
 understand so that you don&rsquo;t have to think much.</p><p>Node.js is a great example of this concept. Although your JavaScript program
 runs in a single-threaded environment with a sequential execution flow,
-blocking tasks such as IO operations are degelated to the Node.js Worker
+blocking tasks such as IO operations are delegated to the Node.js Worker
 Threads. So NodeJS uses threads behind the scenes to manage those blocking
 tasks, without revealing the complexities of managing them to the developer.</p><p>Here’s how it works: Blocking operations, such as writing to a file or reading
 from a file, or sending a network request are typically handled using the
