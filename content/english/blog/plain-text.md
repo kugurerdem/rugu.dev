@@ -5,7 +5,7 @@ date: '2024-10-09'
 
 When you interact with a text file using an editor, what you see doesn't necessarily reflect the actual data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it's still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. **This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.**
 
-Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as `\t` or as a set number of spaces. The same applies when you press the enter key to create a new line—whether it gets encoded as `\r` (early MacOS), `\n` (UNIX), or `\n\r` (POSIX) depends on the editor's configuration.
+Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as `\t` or as a set number of spaces. The same applies when you press the enter key to create a new line—whether it gets encoded as `\n` (UNIX), or `\r\n` (Windows) depends on the editor's configuration.
 
 Your text editor hides details so you don’t have to think too much. However, there are many times when these details leaks through the protection layer that your text editor tries provide. And you often don't notice these complexities until you face them.
 
