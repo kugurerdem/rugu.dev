@@ -15,7 +15,7 @@ So, the main goal of this essay is to share some of my experiences and what I've
 
 Historically speaking, spaces existed long before tabs. The [reason](https://en.wikipedia.org/wiki/Tab_key) why tabs were initially developed was to reduce the repetitive use of both the space bar and backspace key.
 
-However, people still debate using tabs or spaces in their projects. **This isn't about whether we should use the tab key itself, but rather whether text editors should insert spaces or tabs when we press it.** The debate is about how to encode the blank spaces we see in our editor.
+However, people still debate using tabs or spaces in their projects. **This isn't about whether we should use the tab key itself, but rather whether text editors should insert spaces or tabs when we press it,** that is to say how to encode the blank spaces we see in our editor when we press tab key.
 
 I guess the main advantage of tabs over spaces is the flexibility it provides. When using tabs, you can collaborate with many different people who prefer to see different levels of indentation, without having to expose their preferences over others. (Sure, there is also the fact that tab character takes less space, but I don't think this makes much of a difference, especially considering that we are in 2024.)
 
@@ -76,7 +76,7 @@ rhoncus lobortis sit amet ac ligula.
 
 As you can see, the wrapped text is a lot easier to read compared to the unwrapped one. This is why many people follow the practice of inserting newlines after a certain number of characters is reached (often around 78). In fact, in the text editor I use, NeoVim, it is as simple as just pressing `gq` for this line-wrapping procedure to happen for the current line you are in.
 
-This procedure of putting actual newlines between text so that it looks wrapped is known as hard-wrapping. This was what I did for a while as well, but there are problems with this approach as well. Since you are wrapping a line into multiple lines just because you can read it more easily in the text editor, you now have the following problems:
+This procedure of putting actual newlines between text so that it looks wrapped is known as hard-wrapping. This was what I did for a while as well, but since you are wrapping a line into multiple lines just because you can read it more easily in the text editor, you now have the following problems:
 
 - It's frustrating to constantly hard-wrap the text manually, even if you have a shortcut.
 
