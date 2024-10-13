@@ -126,3 +126,9 @@ And all these conventions continue to exist even today. Files created in Windows
 Even plain text might not always be as straightforward as it appears. Understanding what’s happening behind the scenes can be helpful, especially for those who work with it frequently.
 
 Also, if you have additional things to say about plain text, feel free to share them with me. I would really like to hear them.
+
+# Addendum
+
+**2024-10-13**: It's a nice coincidence to see an author I recently discovered, [Breck Yunits](https://breckyunits.com/), reviewing this essay on a [YouTube Video](https://www.youtube.com/watch?v=rx7nv6R5Rww). I guess you never know how paths might cross.
+
+In the video, he mentions how the Tab key also functions as a delimiter for tabular data in plain text files and shares his own experiences with tabs/spaces and wrapping.
