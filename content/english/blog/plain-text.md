@@ -1,6 +1,10 @@
 ---
 title: 'Lessons from Plain Text'
+recommended: true
 date: '2024-10-10'
+updated: '2024-10-13'
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=41797271
 ---
 
 When you interact with a text file using an editor, what you see doesn't necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it's still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. **This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.**
@@ -49,7 +53,7 @@ With all that said, I still believe that in many cases this conversation is some
 
 ## Soft Wrapping vs Hard Wrapping
 
-When using plain text, there will come a point when the text you write becomes too long. In many text editors (Notepad, Notepad++, NeoVim, or even VSCode), the default behavior is for the text to continue growing horizontally until you press Enter to create a new line break. This can be somewhat unuser-friendly compared to most email or messaging clients, where the text automatically wraps, making it much easier to read.
+When using plain text, there will come a point when the text you write becomes too long. In many text editors (Notepad, Notepad++, Neovim, or even VSCode), the default behavior is for the text to continue growing horizontally until you press Enter to create a new line break. This can be somewhat unuser-friendly compared to most email or messaging clients, where the text automatically wraps, making it much easier to read.
 
 To be more clear, let me show you what non-wrapped and wrapped texts look like.
 
@@ -74,7 +78,7 @@ rhoncus lobortis sit amet ac ligula.
 ```
 ---
 
-As you can see, the wrapped text is a lot easier to read compared to the unwrapped one. This is why many people follow the practice of inserting newlines after a certain number of characters is reached (often around 78). In fact, in the text editor I use, NeoVim, it is as simple as just pressing `gq` for this line-wrapping procedure to happen for the current line you are in.
+As you can see, the wrapped text is a lot easier to read compared to the unwrapped one. This is why many people follow the practice of inserting newlines after a certain number of characters is reached (often around 78). In fact, in the text editor I use, Neovim, it is as simple as just pressing `gq` for this line-wrapping procedure to happen for the current line you are in.
 
 This procedure of putting actual newlines between text so that it looks wrapped is known as hard-wrapping. This was what I did for a while as well, but since you are wrapping a line into multiple lines just because you can read it more easily in the text editor, you now have the following problems:
 
@@ -87,7 +91,7 @@ This procedure of putting actual newlines between text so that it looks wrapped 
 \
     This idea of greppability is so important and time-saving especially when working on a code-base. For example, in general, it is not very optimal to split your error message or log messages into multiple lines as you lose greppability. See [Greppability is an underrated code metric](https://morizbuesing.com/blog/greppability-code-metric/), if you are further interested.
 
-So, what's the solution? **Stop hard-wrapping and just use soft-wrapping**, many modern text editors already provide soft-wrapping solutions. This is what I have started to do recently. I am sure there are ways to achieve it in many modern editors. In NeoVim it is as simple as to use the following commands:
+So, what's the solution? **Stop hard-wrapping and just use soft-wrapping**, many modern text editors already provide soft-wrapping solutions. This is what I have started to do recently. I am sure there are ways to achieve it in many modern editors. In Neovim it is as simple as to use the following commands:
 
 ```
 :set linebreak
