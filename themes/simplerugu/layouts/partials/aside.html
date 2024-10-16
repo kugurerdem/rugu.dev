@@ -12,7 +12,7 @@
     {{ range .Site.Params.Connect }}
             {{ range $k, $v := . }}
                 <a href="{{ $v }}" target="_blank">
-                    <img class="icon" src="/icons/{{ $k }}.svg"/>
+                    <img class="icon hover" src="/icons/{{ $k }}.svg"/>
                 </a>
             {{ end }}
     {{ end }}
@@ -22,4 +22,8 @@
     <hr/>
     {{ .Site.Params.Contact}}: <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
     <hr/>
+    <a class="source icon-container hover" href="{{ .Site.Params.Repo }}" target="_blank">
+        <img class="icon" src="/icons/git.svg"/>
+        Source Code
+    </a>
 </aside>
