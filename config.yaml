@@ -12,6 +12,7 @@ params:
     - twitter: 'https://twitter.com/kugurerdem'
     - rss: '/en/index.xml'
   email: "ugur@rugu.dev"
+  repo: "https://github.com/kugurerdem/rugudev"
 
 defaultContentLanguageInSubdir: true
 languages:
