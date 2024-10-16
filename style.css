@@ -103,7 +103,7 @@ pre {
     height: 2em;
 }
 
-.icon:hover {
+.hover:hover {
     opacity: 0.7;
     transform: scale(1.1);
 }
@@ -154,6 +154,10 @@ img[src$='#75persize']
         margin-top: 1em;
         width: auto;
     }
+
+    .source {
+        position: static;
+    }
 }
 
 @media (min-width: 52em){
@@ -164,6 +168,14 @@ img[src$='#75persize']
 
     .page {
         min-width: 35em;
+    }
+
+
+    .source {
+        position: fixed;
+        padding: 1em;
+        right: 0;
+        bottom: 0;
     }
 }
 
@@ -199,3 +211,4 @@ code {
     font-size: 0.7em;
     border-radius: 100%;
 }
+
