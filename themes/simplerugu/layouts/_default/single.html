@@ -1,3 +1,4 @@
+{{ $filepath := (print "content" (index (split .File.Filename "content") 1) )}}
 <html>
     {{ partial "head.html" . }}
     {{ if isset .Params "forward"}}
@@ -19,10 +20,14 @@
                         <i>
                         Written at {{ dateFormat "2006-01-02" .Params.date }}
                         {{ if isset .Params "updated" }}
-                           - Updated at {{ dateFormat "2006-01-02" .Params.updated }}
+                           - <a
+                               target="_blank"
+                               href="{{$.Site.Params.Repo}}/commits/master/{{$filepath}}">
+                           Updated </a> at {{ dateFormat "2006-01-02" .Params.updated }}
                         {{ end }}
                         </i>
                     {{ end }}
+
 
                     {{ if isset .Params "discussions" }}
                         <div>
