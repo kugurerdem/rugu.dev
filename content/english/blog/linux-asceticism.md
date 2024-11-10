@@ -2,6 +2,9 @@
 title: 'Linux Asceticism'
 draft: false
 date: '2024-11-10'
+recommended: true
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=42099398
 ---
 
 Most well-known living philosophies -such as Cynicism, Epicureanism, Stoicism, Buddhism, and Sufism- advocate some form of [Asceticism](https://en.wikipedia.org/wiki/Asceticism). This could involve various acts such as fasting, deliberately confronting personal fears, or even something as subtle as choosing not to pour salt on food. But regardless of the specific way that these practices are pursued, the main goal remains the same: Strengthening your body and mind to make yourself indifferent to and indifferent from the things that are outside your control. That is to say, turn yourself into someone who can handle hardships with as few possessions as possible.
