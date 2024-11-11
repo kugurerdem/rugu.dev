@@ -29,14 +29,8 @@
                     {{ end }}
 
 
-                    {{ if isset .Params "discussions" }}
-                        <div>
-                        Discussions:
-                        {{ range $key, $value := .Params.discussions }}
-                            <a href="{{$value}}" target="_blank"> ({{ $key }}) </a>
-                        {{ end }}
-                        </div>
-                    {{ end }}
+                    {{ partial "param-links.html" (dict "param" .Params.discussions "title" "Discussions") }}
+                    {{ partial "param-links.html" (dict "param" .Params.translations "title" "Translations") }}
                     <hr>
                     {{ .Content }}
                 </div>
