@@ -6,6 +6,8 @@ updated: '2024-09-18'
 recommended: true
 discussions:
     hackernews: https://news.ycombinator.com/item?id=41487965
+translations:
+    KR: https://velog.io/@surim014/concurrency-and-parallelism
 tags:
     - technology
 ---
