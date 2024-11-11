@@ -1,0 +1,10 @@
+{{- $param := .param -}}
+{{- if $param -}}
+    <div>
+        {{- $title := .title | default "Links" -}}
+        {{ $title }}:
+        {{- range $key, $value := $param -}}
+            <a href="{{ $value }}" target="_blank"> ({{ $key }}) </a>
+        {{- end -}}
+    </div>
+{{- end -}}
