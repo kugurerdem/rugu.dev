@@ -13,27 +13,6 @@
                     {{ $content := readFile $.Site.Params.RecommendedPath }}
                     {{ $content | markdownify }}
 
-                    <h3> Recommended </h3>
-                    {{ with .Site.GetPage "section" "blog" }}
-                        {{- range .Pages }}
-                        {{ if .Params.recommended }}
-                        <ul>
-                            <img src="/icons/star.svg"/>
-
-                            {{ $url := .RelPermalink }}
-                            {{ $postfix := "" }}
-                            {{ if isset .Params "forward"}}
-                                {{ $url = .Params.Forward }}
-                                {{ $postfix = "(outlink)"}}
-                            {{ end }}
-
-                            <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
-                            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                        </ul>
-                        {{ end }}
-                        {{ end }}
-                        {{ end }}
-
                     <h3> Latest </h3>
 
                     {{ with .Site.GetPage "section" "blog" }}
@@ -54,6 +33,28 @@
                         </ul>
                         {{ end }}
                         {{ end }}
+
+                    <h3> Recommended </h3>
+                    {{ with .Site.GetPage "section" "blog" }}
+                    {{- range .Pages }}
+                    {{ if .Params.recommended }}
+                    <ul>
+                        <img src="/icons/star.svg"/>
+
+                        {{ $url := .RelPermalink }}
+                        {{ $postfix := "" }}
+                        {{ if isset .Params "forward"}}
+                        {{ $url = .Params.Forward }}
+                        {{ $postfix = "(outlink)"}}
+                        {{ end }}
+
+                        <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
+                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+                    </ul>
+                    {{ end }}
+                    {{ end }}
+                    {{ end }}
+
 
                 </div>
 
