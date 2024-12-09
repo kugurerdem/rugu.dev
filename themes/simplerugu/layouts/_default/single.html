@@ -30,6 +30,7 @@
 
 
                     {{ partial "param-links.html" (dict "param" .Params.discussions "title" "Discussions") }}
+                    {{ partial "param-links.html" (dict "param" .Params.mentions "title" "Mentioned In") }}
                     {{ partial "param-links.html" (dict "param" .Params.translations "title" "Translations") }}
                     <hr>
                     {{ .Content }}
