@@ -6,6 +6,8 @@ updated: '2024-10-13'
 discussions:
     hackernews: https://news.ycombinator.com/item?id=41797271
     r/programming: https://old.reddit.com/r/programming/comments/1g2vrgn/lessons_from_plain_text
+mentions:
+    yt.be/breckyunits: https://www.youtube.com/watch?v=rx7nv6R5Rww
 ---
 
 When you interact with a text file using an editor, what you see doesn't necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it's still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. **This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.**
@@ -127,9 +129,3 @@ And all these conventions continue to exist even today. Files created in Windows
 Even plain text might not always be as straightforward as it appears. Understanding what’s happening behind the scenes can be helpful, especially for those who work with it frequently.
 
 Also, if you have additional things to say about plain text, feel free to share them with me. I would really like to hear them.
-
-# Addendum
-
-**2024-10-13**: It's a nice coincidence to see an author I recently discovered, [Breck Yunits](https://breckyunits.com/), reviewing this essay on a [YouTube Video](https://www.youtube.com/watch?v=rx7nv6R5Rww). I guess you never know how paths might cross.
-
-In the video, he mentions how the Tab key also functions as a delimiter for tabular data in plain text files and shares his own experiences with tabs/spaces and wrapping.
