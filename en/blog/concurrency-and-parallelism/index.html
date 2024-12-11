@@ -1,5 +1,5 @@
 <html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1725753600"><title>Understanding Concurrency, Parallelism and JS |
-rugu</title></head><body><nav><div class=menu><a href=/en>Home </a><a href=/en/blog>Blog </a><a href=/en/about>About</a></div><div class=languages><a href=/en style=color:#000>en </a><span>| </span><a href=/tr>tr</a></div></nav><div class=master-container><article><div class=page><h1>Understanding Concurrency, Parallelism and JS</h1><i>Written at 2024-09-08
+rugu </title><script data-goatcounter=https://stats.rugu.dev/count async src=//stats.rugu.dev/count.js></script></head><body><nav><div class=menu><a href=/en>Home </a><a href=/en/blog>Blog </a><a href=/en/about>About</a></div><div class=languages><a href=/en style=color:#000>en </a><span>| </span><a href=/tr>tr</a></div></nav><div class=master-container><article><div class=page><h1>Understanding Concurrency, Parallelism and JS</h1><i>Written at 2024-09-08
 - <a target=_blank href=https://github.com/kugurerdem/rugudev/commits/master/content/english/blog/concurrency-and-parallelism.md>Updated </a>at 2024-09-18</i><div>Discussions:<a href="https://news.ycombinator.com/item?id=41487965" target=_blank> (hackernews)</a></div><div>Translations:<a href=https://velog.io/@surim014/concurrency-and-parallelism target=_blank> (kr)</a></div><hr><p>Up until now, I was not aware that concurrency and parallelism were actually
 different things since they are often used interchangeably by some. I just
 learned that this is not the case while reading <a href=https://www.braveclojure.com/concurrency/>Chapter
@@ -24,7 +24,7 @@ to take a spoonful of soup, and then returns to their phone after setting down
 the spoon, they are working concurrently. In contrast, if a person is texting
 with one hand while eating with the other at the same time, they are working in
 parallel. In both cases, they are multitasking, but there is a subtle
-difference in how they multitask.</p><div style=text-align:center><img src=https://martin-thoma.com/images/2021/05/parallel-interleaved.png#75persize>
+difference in how they multitask.</p><div style=text-align:center><img src=https://martin-thoma.com/images/2021/05/parallel-interleaved.png#75persize alt>
 (Image taken from <a href=https://martin-thoma.com/synchronous-asynchronous-concurrent-parallel/>Synchronous vs Asynchronous vs Concurrent vs Parallel</a>)</div><h2 id=threads>Threads</h2><p>In the analogy above, I referred to eating soup and using the phone as
 different tasks and each task consists of subtasks (for example eating soup,
 you need to hold the spoon, then put it into your soup, then put that into your
@@ -72,7 +72,7 @@ from a file, or sending a network request are typically handled using the
 built-in functions provided by Node.js. You usually pass callback functions as
 parameters when calling these functions, so that Node.js Worker Threads can
 execute the callback functions that you provided when they complete their
-tasks.</p><div style=text-align:center><img src=https://miro.medium.com/v2/resize:fit:828/format:webp/1*U_zyHnKdlvjCdAQkoh0uuQ.png#75persize>
+tasks.</p><div style=text-align:center><img src=https://miro.medium.com/v2/resize:fit:828/format:webp/1*U_zyHnKdlvjCdAQkoh0uuQ.png#75persize alt>
 (Image taken from <a href=https://medium.com/@abeythilakeudara3/nodejs-architecture-42a1d0efad8f>NodeJS Architecture</a>)</div><p>Having a bit of more idea how NodeJS concurrency works under the hood, we can
 now start practicing this theory by examining certain cases/situations.</p><p>Consider the following code (thanks to my friend
 <a href=https://github.com/onsah>Onur</a> for coming up with the example);</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>setTimeout</span>(() =&gt; {
