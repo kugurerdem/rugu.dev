@@ -1,5 +1,5 @@
 ---
-title: 'NixOS Hates Precompiled Programs'
+title: 'NixOS Hates Precompiled Programs (Learn How To Fix It)'
 date: '2024-12-21'
 ---
 
