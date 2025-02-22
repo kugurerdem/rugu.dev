@@ -9,7 +9,7 @@ However, the thing is, **no matter how much AI increases our productivity, at th
 
 # The Illusion of Improvement
 
-When someone first starts using AI and experiences a productivity boost, they might find themselves completing more tasks in less time than before. This can create the illusion that they have improved. But in reality, the multiplier effect on their base productivity can also lead to a decline in their capabilities. **Yes, you can achieve more results in the same amount of time, but this also means you can achieve the same results with less effort. Less effort means less time spent on self-improvement.** And humans have a natural tendency to spend as little of energy as possible.
+When someone first starts using AI and experiences a productivity boost, they might find themselves completing more tasks in less time than before. This can create the illusion that they have improved. But in reality, the multiplier effect on their base productivity can also lead to a decline in their capabilities. **Yes, you can achieve more results in the same amount of time, but this also means you can achieve the same results with less effort. Less effort means less time spent on self-improvement.** And humans have a natural tendency to spend as little energy as possible.
 
 A fitting analogy would be the invention of cars. The invention of cars allowed us to travel greater distances. But since we could travel greater distances with less effort, they also have led to muscle atrophy for many, as they no longer needed to rely on their leg muscles. I strongly suspect that over-dependence on AI could lead to similar consequences.
 
