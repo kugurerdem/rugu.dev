@@ -3,8 +3,6 @@ title: 'The AI Productivity Trap'
 date: 2025-02-22
 ---
 
-It has become nearly impossible to use your computer without running into something related to AI. Almost every day, a new AI technology or some related improvement is announced. The hype around it is so overwhelming that you can’t even scroll through social media without being bombarded by the term "AI" or related content, like this post.
-
 For me, whether AI can be beneficial or not is out of the question, and I am not here to discuss that in much detail. I already heavily use tools like `aider` (a terminal-based alternative to Cursor), autocompletion assistants such as `copilot`, and conversational LLMs like `claude`, `chatgpt`, and `deepseek` all the time. So, I truly believe there’s immense value these tools can provide, and I’m not here to discourage anyone from using them. They’ve already proven their worth to me in many ways.
 
 However, the thing is, **no matter how much AI increases our productivity, at the end of the day, that productivity increase is a multiplier of our existing productivity.** The key determining factor remains how well we have mastered the basics and our productivity level without AI, not with it. This is also partly why I believe that existing AI tools are much more useful for people who are already experienced in a field than for newcomers.
@@ -23,4 +21,4 @@ Make sure you’re not relying on AI so much that you’re not just outsourcing 
 
 # Conclusion
 
-If there is one thing to take away from this essay, it is the idea that AI acts as a multiplier on your existing productivity and that you have to prioritize your base productivity levels rather than your AI-enhanced productivity levels if you want to keep your productivity levels consistent.
+The main idea to take away is that AI mostly acts as a multiplier on your existing productivity and that you have to prioritize your base productivity levels rather than your AI-enhanced productivity levels.
