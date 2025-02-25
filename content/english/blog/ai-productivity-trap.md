@@ -19,6 +19,4 @@ Hopefully, it should still be possible to benefit from the good sides of AI whil
 
 Make sure you’re not relying on AI so much that you’re not just outsourcing tasks but also the process of learning. Occasionally write code without using AI tools to keep your skills sharp. Be cautious about the suggestions AI tools give you. I’ve found AI more helpful for tasks I already understand well but don’t want to do myself. However, when I use it in areas I’m not familiar with, the code often becomes messy. **The quality of the answers you get depends on the quality of your prompts, which depends on how well you know the topic.** So, always give more priority to actually learning the concepts that you are working on top off.
 
-# Conclusion
-
-The main idea to take away is that AI mostly acts as a multiplier on your existing productivity and that you have to prioritize your base productivity levels rather than your AI-enhanced productivity levels.
+Again, the main idea to take away here is that AI mostly acts as a multiplier on your existing productivity and that you have to prioritize your base productivity levels rather than your AI-enhanced productivity levels.
