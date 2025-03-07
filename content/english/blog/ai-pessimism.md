@@ -1,6 +1,7 @@
 ---
 title: 'Rethinking AI Pessimism'
 date: 2025-03-06
+updated: 2025-03-07
 ---
 
 I frequently come across people thinking, 'Why bother learning something if AI will do it better than me in the future?' Alongside this thought, I also noticed a rise in pessimism.
@@ -11,7 +12,7 @@ I believe this pessimism originates from three misconceptions: (1) overlooking t
 
 Some things need to be done by specifically you. Not because they can't be done by other beings, but because they are good for you when you do it yourself.
 
-**You don’t exercise to lift things machines can already lift, you lift things to improve your health and life satisfaction. The same thing applies to fundamental activities like thinking and learning.** The moment you start outsourcing what matters to you to AI just because it can do it on your behalf, remember that you may be sacrificing, instead of gaining.
+**You don’t exercise to lift things machines can already lift, you exercise to improve your health and life satisfaction. The same thing applies to fundamental activities like thinking and learning.** The moment you start outsourcing what matters to you to AI just because it can do it on your behalf, remember that you may be sacrificing, instead of gaining.
 
 In the end, I believe the things AI devalues the first are those that derive their worth from being tools, that is to say, things that shouldn’t end in themselves anyway.
 
