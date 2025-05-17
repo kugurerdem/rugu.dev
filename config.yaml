@@ -1,7 +1,6 @@
 baseURL: 'https://rugu.dev/'
 languageCode: 'en-us'
 title: 'ugur'
-theme: 'simplerugu'
 
 params:
   authorImage: "/ugur_img.jpg"
