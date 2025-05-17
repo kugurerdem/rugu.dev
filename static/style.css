@@ -212,3 +212,72 @@ code {
     border-radius: 100%;
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem;
+  background-color: #fdfdfd;
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.project-links {
+  justify-content: end;
+  margin-top: auto;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  font-size: 0.85rem;
+  color: #0066cc;
+  text-decoration: none;
+  border: 1px solid #0066cc;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.project-link:hover {
+  background: #0066cc;
+  color: white;
+}
