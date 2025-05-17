@@ -9,12 +9,8 @@
                     {{ $content | markdownify }}
                 </div>
 
+                <h1 style="margin-top: 1em; text-align: center;"> Most Recent Essays </h1>
                 <div class="page">
-                    {{ $content := readFile $.Site.Params.RecommendedPath }}
-                    {{ $content | markdownify }}
-
-                    <h3> Latest </h3>
-
                     {{ with .Site.GetPage "section" "blog" }}
                         {{- range first 5 .Pages }}
                         <ul>
@@ -32,9 +28,14 @@
                             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
                         </ul>
                         {{ end }}
-                        {{ end }}
+                    {{ end }}
+                    <p style="text-align: center; margin-top: 1em;">
+                        <a href="/en/blog/">View all essays</a>
+                    </p>
+                </div>
 
-                    <h3> Recommended </h3>
+                <h1 style="margin-top:1.5em; text-align: center;"> Recommended Essays </h1>
+                <div class="page">
                     {{ with .Site.GetPage "section" "blog" }}
                     {{- range .Pages }}
                     {{ if .Params.recommended }}
@@ -54,14 +55,33 @@
                     {{ end }}
                     {{ end }}
                     {{ end }}
-
-
                 </div>
 
-                <div class="page">
-                    {{ $content := readFile $.Site.Params.MiscPath }}
-                    {{ $content | markdownify }}
-                </div>
+                    <h1 style="margin-top: 1.5em; text-align: center"> Projects </h1>
+                    <div class="projects-grid">
+                        {{ range $.Site.Params.Projects }}
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                {{ with .icon }}
+                                <img src="{{ . }}" alt="Project icon" class="project-icon" />
+                                {{ end }}
+                                <h2 class="project-name">{{ .name }}</h2>
+                            </div>
+
+                            <p class="project-description">{{ .description }}</p>
+                            <div class="project-links">
+                                {{ range .links }}
+                                    {{ range $k, $v := . }}
+                                    <a href="{{ $v }}" target="_blank">
+                                        <img class="icon hover" src="/icons/{{ $k }}.svg"/>
+                                    </a>
+                                    {{ end }}
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+
             </article>
             {{ partial "aside.html" . }}
         </div>
