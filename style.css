@@ -3,7 +3,7 @@
 html {
     background-color: #eee;
     tab-size: 4;
-    font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+    font: 16px 'sans-serif';
 }
 
 h1 {
@@ -178,7 +178,6 @@ img[src$='#75persize']
         bottom: 0;
     }
 }
-
 
 pre {
   padding-left: 1.5em;
