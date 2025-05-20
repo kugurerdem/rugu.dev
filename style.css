@@ -3,7 +3,7 @@
 html {
     background-color: #eee;
     tab-size: 4;
-    font: 16px 'sans-serif';
+    font: 16px / 180% sans-serif;
 }
 
 h1 {
