@@ -22,8 +22,14 @@
     <hr/>
     {{ .Site.Params.Contact}}: <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
     <hr/>
+
+    <button  class="newsletter-btn" onclick="window.open('{{ .Site.Params.Newsletter }}', '_blank')">
+        Subscribe to Newsletter
+    </button>
+
     <a class="source icon-container hover" href="{{ .Site.Params.Repo }}" target="_blank">
         <img class="icon" src="/icons/git.svg"/>
         Source Code
     </a>
+
 </aside>
