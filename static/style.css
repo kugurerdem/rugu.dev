@@ -64,6 +64,7 @@ aside {
     margin-right: 1em;
     flex-shrink: 0;
     align-items: center;
+    text-align: center;
 }
 
 pre {
@@ -279,4 +280,19 @@ code {
 .project-link:hover {
   background: #0066cc;
   color: white;
+}
+
+.newsletter-btn {
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    background-color: #0056b3;
 }
