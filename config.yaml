@@ -12,6 +12,7 @@ params:
     - rss: '/en/index.xml'
   email: "ugur@rugu.dev"
   repo: "https://github.com/kugurerdem/rugudev"
+  NewsLetter: "https://listmonk.rugu.dev/subscription/form"
 
   projects:
     - name: "HackerNews Domain Stats"
