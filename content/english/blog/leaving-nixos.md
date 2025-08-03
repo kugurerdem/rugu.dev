@@ -1,5 +1,5 @@
 ---
-title: Why I'm Leaving NixOS After a Year
+title: Why I'm Leaving NixOS After a Year?
 date: 2025-08-03
 ---
 
