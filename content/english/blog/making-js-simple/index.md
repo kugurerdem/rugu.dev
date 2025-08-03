@@ -1,5 +1,5 @@
 ---
-title: 'Making JavaScript Simple Again'
+title: 'Making JavaScript Simple Again (With The HyperScript Function)'
 date: 2025-06-29
 ---
 
