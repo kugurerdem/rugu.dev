@@ -1,5 +1,5 @@
 ---
-title: Against Single-File Codebases
+title: A Problem With Single-File Codebases
 date: 2025-07-16
 ---
 A friend recently sent me a tweet of Tsoding, a recreational programmer who creates cool videos on YouTube that I also enjoy watching. The tweet is as follows;
