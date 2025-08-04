@@ -9,7 +9,7 @@ Around a year ago, I published a blog post explaining my overall experience [Swi
 > --- \
 > Ultimately, whether the benefits of learning a particular technology outweigh the costs depends on how much you take full advantage of its features. So, I believe that if I experiment with more setups, try different programs, or start managing servers with Nix, I will begin to see a better return on this investment from what I have learned so far. :)
 
-Well, it's been about a year since I published that post. Since then, I've experimented with more setups, tried different programs, and started managing my own server with NixOS. And... **Contrary to my initial expectations that I would get a better return on investment from NixOS with more usage, but the opposite happened.**
+Well, it's been about a year since I published that post. Since then, I've experimented with more setups, tried different programs, and started managing my own server with NixOS. And... **Contrary to my initial expectations that I would get a better return on investment from NixOS with more usage, the opposite happened.**
 
 # The Pain of Getting Things to Work
 
