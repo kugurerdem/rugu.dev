@@ -174,8 +174,8 @@ physical keyboard.
 
 Returning to the initial scenario I described, when you're developing a
 program, you can act upon the values of key syms or key codes. While the key
-codes might remain the same, the key syms—the meanings attached to those key
-codes—can differ. It appears that some applications focus on key codes,
+codes might remain the same, the key syms (the meanings attached to those key
+codes) can differ. It appears that some applications focus on key codes,
 disregarding your local options.
 
 Essentially, at the kernel layer, there are only keycodes. Your operating
