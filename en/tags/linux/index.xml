@@ -437,8 +437,8 @@ understanding of what happens behind the scenes when I simply press a key on my
 physical keyboard.&lt;/p>
 &lt;p>Returning to the initial scenario I described, when you&amp;rsquo;re developing a
 program, you can act upon the values of key syms or key codes. While the key
-codes might remain the same, the key syms—the meanings attached to those key
-codes—can differ. It appears that some applications focus on key codes,
+codes might remain the same, the key syms (the meanings attached to those key
+codes) can differ. It appears that some applications focus on key codes,
 disregarding your local options.&lt;/p>
 &lt;p>Essentially, at the kernel layer, there are only keycodes. Your operating
 system assigns meaning to these keycodes through specific configuration files,

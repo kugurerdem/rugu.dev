@@ -424,7 +424,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode18s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;h2 id="hahahugoshortcode17s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
  &lt;/div>
 &lt;/h2>
@@ -466,7 +466,7 @@ expectations.&lt;/p>
 In&lt;/a>,
 and even that could be improved a lot: For example, it forces you to name each
 saved scroll position with an alert prompt. Why not automatically give a random
-name that can be renamed later? The fetch and save UI/UX is confusing—why not
+name that can be renamed later? The fetch and save UI/UX is confusing. Why not
 directly show the saved scrolls and allow users to jump to them? Additionally,
 it lacks features like adding notes to scrolls and searching through saved
 scrolls.&lt;/p>
@@ -909,8 +909,8 @@ understanding of what happens behind the scenes when I simply press a key on my
 physical keyboard.&lt;/p>
 &lt;p>Returning to the initial scenario I described, when you&amp;rsquo;re developing a
 program, you can act upon the values of key syms or key codes. While the key
-codes might remain the same, the key syms—the meanings attached to those key
-codes—can differ. It appears that some applications focus on key codes,
+codes might remain the same, the key syms (the meanings attached to those key
+codes) can differ. It appears that some applications focus on key codes,
 disregarding your local options.&lt;/p>
 &lt;p>Essentially, at the kernel layer, there are only keycodes. Your operating
 system assigns meaning to these keycodes through specific configuration files,

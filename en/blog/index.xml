@@ -314,7 +314,7 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;p>Hopefully, it should still be possible to benefit from the good sides of AI while keeping the side effects in control. Just as using cars does not prevent us from still working out our legs.&lt;/p>
 &lt;p>Make sure you’re not relying on AI so much that you’re not just outsourcing tasks but also the process of learning. Occasionally write code without using AI tools to keep your skills sharp. Be cautious about the suggestions AI tools give you. I’ve found AI more helpful for tasks I already understand well but don’t want to do myself. However, when I use it in areas I’m not familiar with, the code often becomes messy. &lt;strong>The quality of the answers you get depends on the quality of your prompts, which depends on how well you know the topic.&lt;/strong> So, always give more priority to actually learning the concepts that you are working on top off.&lt;/p>
 &lt;p>Again, the main idea to take away here is that AI mostly acts as a multiplier on your existing productivity and that you have to prioritize your base productivity levels rather than your AI-enhanced productivity levels.&lt;/p></description></item><item><title>Just Write.</title><link>https://rugu.dev/en/blog/write/</link><pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/write/</guid><description>&lt;p>I can&amp;rsquo;t remember when I truly realized the power of writing. But as far as I remember, I&amp;rsquo;ve been trying to use writing as a tool for putting order to the chaos in my mind since high school.&lt;/p>
-&lt;p>Currently, I have a diary with about 325 pages—assuming each page consists of 500 words. &lt;em>(And there’s probably at least an equal amount other writings I wrote for different purposes but deleted in the end.)&lt;/em> The first entry dates back to 2017, meaning I’ve been writing regularly for around 8 years. That’s a lot of time, but I don’t regret a single moment. Because I know for sure that the positive impact writing has had on my mind far outweighs the effort.&lt;/p>
+&lt;p>Currently, I have a diary with about 325 pages (assuming each page consists of 500 words). &lt;em>(And there’s probably at least an equal amount other writings I wrote for different purposes but deleted in the end.)&lt;/em> The first entry dates back to 2017, meaning I’ve been writing regularly for around 8 years. That’s a lot of time, but I don’t regret a single moment. Because I know for sure that the positive impact writing has had on my mind far outweighs the effort.&lt;/p>
 &lt;p>Whenever I face a problem that requires tough decision-making, I typically open a new entry in my diary and start typing whatever comes to mind. After flushing out whatever is in my mind at that moment, I then start organizing it. Sometimes, this process results in definitive answers to my questions, and sometimes, not. Either way, I still have a clear outline of the choices available and a better understanding of their potential benefits and costs.&lt;/p>
 &lt;p>I also write to my diary whenever I feel strong emotions, or emotions that I am not sure what they are about. Sometimes, I just try to write the things that happened, how I feel and so on, and even while doing so I can understand myself better just realizing certain patterns that appear in my thoughts &amp;amp; feelings over time. This may not have been possible if I had not documented them in the first place.&lt;/p>
 &lt;p>Writing things down is like moving thoughts from your temporary memory to a persistent one. :)&lt;/p>
@@ -376,7 +376,7 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 (3) Use the Nix derivation function &lt;a href="https://ryantm.github.io/nixpkgs/builders/special/fhs-environments">buildFHSEnv&lt;/a> &lt;br>
 (4) Use the &lt;a href="https://search.nixos.org/options?channel=24.11&amp;amp;show=programs.nix-ld">nix-ld&lt;/a> options in NixOS.&lt;/p>
 &lt;p>Among these options, (1) is typically the best solution. If the program you&amp;rsquo;re trying to run is already packaged in &lt;code>nixpkgs&lt;/code> (which is often the case), it saves you a lot of time.&lt;/p>
-&lt;p>Unfortunately, though, there will be times when you can&amp;rsquo;t find what you need in &lt;code>nixpkgs&lt;/code>. In that case, (2) — building your own Nix derivation — is also an option. It&amp;rsquo;s helpful to the community, and it&amp;rsquo;s also the most modular approach as a package in the &lt;code>nixpkgs&lt;/code> repository can still work on a traditional UNIX system without a &lt;code>home-manager&lt;/code> or &lt;code>NixOS&lt;/code>. The downside is that this approach will likely take more time than the other options.&lt;/p>
+&lt;p>Unfortunately, though, there will be times when you can&amp;rsquo;t find what you need in &lt;code>nixpkgs&lt;/code>. In that case, (2) building your own Nix derivation is also an option. It&amp;rsquo;s helpful to the community, and it&amp;rsquo;s also the most modular approach as a package in the &lt;code>nixpkgs&lt;/code> repository can still work on a traditional UNIX system without a &lt;code>home-manager&lt;/code> or &lt;code>NixOS&lt;/code>. The downside is that this approach will likely take more time than the other options.&lt;/p>
 &lt;p>If you are short on time, or not that much of an altruistic person, you can consider using (3) or (4).&lt;/p>
 &lt;p>The &lt;code>buildFHSEnv&lt;/code> function allows you to create an environment that mimics the traditional UNIX filesystem hierarchy (FHS), you can then use this environment, in a nix-shell for example. This enables you to place your program and its dependencies in expected locations like &lt;code>/usr/bin&lt;/code> or &lt;code>/lib&lt;/code> without fully packaging it.&lt;/p>
 &lt;p>On the other hand, &lt;code>nix-ld&lt;/code> (option 4) is a NixOS-specific solution that helps with dynamic linking. It ensures the program can find the libraries in &lt;code>/nix/store&lt;/code> without needing to rebuild or repackage everything.&lt;/p>
@@ -416,7 +416,7 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;p>If you&amp;rsquo;re going to fight in the rain, train in the storm.&lt;br>
 - Unknown&lt;/p>&lt;/blockquote>
 &lt;p>I think it&amp;rsquo;s good to have tools in our toolbox that let us work minimally, but I also think it does not make much sense to use them all the time if there are already other tools available to achieve things in an easier and faster way. &lt;strong>So I am not against using non-minimal software by any means. They are fine as long as they don&amp;rsquo;t introduce more problems than they solve.&lt;/strong>&lt;/p></description></item><item><title>Lessons from Plain Text</title><link>https://rugu.dev/en/blog/plain-text/</link><pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/plain-text/</guid><description>&lt;p>When you interact with a text file using an editor, what you see doesn&amp;rsquo;t necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it&amp;rsquo;s still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. &lt;strong>This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.&lt;/strong>&lt;/p>
-&lt;p>Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as &lt;code>\t&lt;/code> or as a set number of spaces. The same applies when you press the enter key to create a new line—whether it gets encoded as &lt;code>\n&lt;/code> (UNIX), or &lt;code>\r\n&lt;/code> (Windows) depends on the editor&amp;rsquo;s configuration.&lt;/p>
+&lt;p>Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as &lt;code>\t&lt;/code> or as a set number of spaces. The same applies when you press the enter key to create a new line. Whether it gets encoded as &lt;code>\n&lt;/code> (UNIX) or &lt;code>\r\n&lt;/code> (Windows) depends on the editor&amp;rsquo;s configuration.&lt;/p>
 &lt;p>&lt;strong>Your text editor hides details so you don’t have to overthink. However, there are many times when these details leak through the protection layer that your text editor tries to provide. And you often don&amp;rsquo;t notice these complexities until you face them.&lt;/strong>&lt;/p>
 &lt;p>So, the main goal of this essay is to share some of my experiences and what I&amp;rsquo;ve learned over time about common problems you might encounter with plain text.&lt;/p>
 &lt;h2 id="tabs-vs-spaces">Tabs vs Spaces&lt;/h2>
@@ -439,7 +439,7 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is also partly the reason why I use spaces most of the time. If you still end up adjusting the tab width to match others&amp;rsquo; preferences, what&amp;rsquo;s the purpose of using tabs in the first place?&lt;/p>
 &lt;p>I don&amp;rsquo;t know whether this is just due to &lt;a href="https://en.wikipedia.org/wiki/First-mover_advantage">first-mover advantage&lt;/a> or not but it also looks like more projects use &lt;a href="https://insanelab.com/blog/notes/spaces-vs-tabs/">spaces over tabs&lt;/a>. So what&amp;rsquo;s the point of going against the tide where there does not seem to be a very powerful advantage anyway?&lt;/p>
-&lt;p>With all that said, I still believe that in many cases this conversation is somewhat overkill and often doesn&amp;rsquo;t make a significant practical difference. In the end, what truly matters is whether the codebase is consistent—either using tabs or spaces throughout. Aside from that, it shouldn&amp;rsquo;t matter much since these settings can be easily configured in many environments anyway.&lt;/p>
+&lt;p>With all that said, I still believe that in many cases this conversation is somewhat overkill and often doesn&amp;rsquo;t make a significant practical difference. In the end, what truly matters is whether the codebase is consistent (either using tabs or spaces throughout). Aside from that, it shouldn&amp;rsquo;t matter much since these settings can be easily configured in many environments anyway.&lt;/p>
 &lt;h2 id="soft-wrapping-vs-hard-wrapping">Soft Wrapping vs Hard Wrapping&lt;/h2>
 &lt;p>When using plain text, there will come a point when the text you write becomes too long. In many text editors (Notepad, Notepad++, Neovim, or even VSCode), the default behavior is for the text to continue growing horizontally until you press Enter to create a new line break. This can be somewhat unuser-friendly compared to most email or messaging clients, where the text automatically wraps, making it much easier to read.&lt;/p>
 &lt;p>To be more clear, let me show you what non-wrapped and wrapped texts look like.&lt;/p>
@@ -585,8 +585,8 @@ the contradictory beliefs.&lt;/p>
 always mean truth, it often brings you closer to it&lt;/strong>. Also, keep in mind that
 it is quite possible that seemingly very different philosophies can arrive at
 the same conclusions in some of the most important subjects. For example, it&amp;rsquo;s
-fascinating to see that most philosophies of life—such as Buddhism, Sufism,
-Christianity, Stoicism, Epicureanism, and others—focus more on internal matters
+fascinating to see that most philosophies of life (such as Buddhism, Sufism,
+Christianity, Stoicism, Epicureanism, and others) focus more on internal matters
 within our control, rather than external ones. This is just one example I can
 think of, but you get the idea.&lt;/p>
 &lt;p>Lastly, is there anything you can do better to be true than to trying
@@ -871,8 +871,8 @@ might include them in the essay and give you credit for it.&lt;/p>
 &lt;p>I&amp;rsquo;ve noticed that developers, myself included, often instinctively write debug
 logs to STDOUT. While this might not cause problems if the program&amp;rsquo;s output
 isn’t intended for other programs to consume, it becomes crucial when managing
-multiple scripts that depend on each other—such as when one script writes to a
-file that another reads.&lt;/p>
+multiple scripts that depend on each other (such as when one script writes to a
+file that another reads).&lt;/p>
 &lt;p>In these situations, if you&amp;rsquo;re writing everything to STDOUT, you might not be
 taking full advantage of the pipe and redirection mechanisms available in your
 UNIX environment. The primary purpose of the STDOUT file descriptor is to
@@ -1197,7 +1197,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode18s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;h2 id="hahahugoshortcode17s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
  &lt;/div>
 &lt;/h2>
@@ -1239,7 +1239,7 @@ expectations.&lt;/p>
 In&lt;/a>,
 and even that could be improved a lot: For example, it forces you to name each
 saved scroll position with an alert prompt. Why not automatically give a random
-name that can be renamed later? The fetch and save UI/UX is confusing—why not
+name that can be renamed later? The fetch and save UI/UX is confusing. Why not
 directly show the saved scrolls and allow users to jump to them? Additionally,
 it lacks features like adding notes to scrolls and searching through saved
 scrolls.&lt;/p>
@@ -1860,8 +1860,8 @@ understanding of what happens behind the scenes when I simply press a key on my
 physical keyboard.&lt;/p>
 &lt;p>Returning to the initial scenario I described, when you&amp;rsquo;re developing a
 program, you can act upon the values of key syms or key codes. While the key
-codes might remain the same, the key syms—the meanings attached to those key
-codes—can differ. It appears that some applications focus on key codes,
+codes might remain the same, the key syms (the meanings attached to those key
+codes) can differ. It appears that some applications focus on key codes,
 disregarding your local options.&lt;/p>
 &lt;p>Essentially, at the kernel layer, there are only keycodes. Your operating
 system assigns meaning to these keycodes through specific configuration files,
