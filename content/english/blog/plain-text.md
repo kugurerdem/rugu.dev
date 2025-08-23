@@ -12,7 +12,7 @@ mentions:
 
 When you interact with a text file using an editor, what you see doesn't necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it's still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. **This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.**
 
-Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as `\t` or as a set number of spaces. The same applies when you press the enter key to create a new line—whether it gets encoded as `\n` (UNIX), or `\r\n` (Windows) depends on the editor's configuration.
+Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as `\t` or as a set number of spaces. The same applies when you press the enter key to create a new line. Whether it gets encoded as `\n` (UNIX) or `\r\n` (Windows) depends on the editor's configuration.
 
 **Your text editor hides details so you don’t have to overthink. However, there are many times when these details leak through the protection layer that your text editor tries to provide. And you often don't notice these complexities until you face them.**
 
@@ -52,7 +52,7 @@ This is also partly the reason why I use spaces most of the time. If you still e
 
 I don't know whether this is just due to [first-mover advantage](https://en.wikipedia.org/wiki/First-mover_advantage) or not but it also looks like more projects use [spaces over tabs](https://insanelab.com/blog/notes/spaces-vs-tabs/). So what's the point of going against the tide where there does not seem to be a very powerful advantage anyway?
 
-With all that said, I still believe that in many cases this conversation is somewhat overkill and often doesn't make a significant practical difference. In the end, what truly matters is whether the codebase is consistent—either using tabs or spaces throughout. Aside from that, it shouldn't matter much since these settings can be easily configured in many environments anyway.
+With all that said, I still believe that in many cases this conversation is somewhat overkill and often doesn't make a significant practical difference. In the end, what truly matters is whether the codebase is consistent (either using tabs or spaces throughout). Aside from that, it shouldn't matter much since these settings can be easily configured in many environments anyway.
 
 ## Soft Wrapping vs Hard Wrapping
 

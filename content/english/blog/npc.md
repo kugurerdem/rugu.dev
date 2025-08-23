@@ -111,8 +111,8 @@ The second point I want to emphasize is that, **although consistency doesn't
 always mean truth, it often brings you closer to it**. Also, keep in mind that
 it is quite possible that seemingly very different philosophies can arrive at
 the same conclusions in some of the most important subjects. For example, it's
-fascinating to see that most philosophies of life—such as Buddhism, Sufism,
-Christianity, Stoicism, Epicureanism, and others—focus more on internal matters
+fascinating to see that most philosophies of life (such as Buddhism, Sufism,
+Christianity, Stoicism, Epicureanism, and others) focus more on internal matters
 within our control, rather than external ones. This is just one example I can
 think of, but you get the idea.
 

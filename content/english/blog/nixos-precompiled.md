@@ -55,7 +55,7 @@ The solutions I've come across so far to work around this problem are:
 
 Among these options, (1) is typically the best solution. If the program you're trying to run is already packaged in `nixpkgs` (which is often the case), it saves you a lot of time.
 
-Unfortunately, though, there will be times when you can't find what you need in `nixpkgs`. In that case, (2) — building your own Nix derivation — is also an option. It's helpful to the community, and it's also the most modular approach as a package in the `nixpkgs` repository can still work on a traditional UNIX system without a `home-manager` or `NixOS`. The downside is that this approach will likely take more time than the other options.
+Unfortunately, though, there will be times when you can't find what you need in `nixpkgs`. In that case, (2) building your own Nix derivation is also an option. It's helpful to the community, and it's also the most modular approach as a package in the `nixpkgs` repository can still work on a traditional UNIX system without a `home-manager` or `NixOS`. The downside is that this approach will likely take more time than the other options.
 
 If you are short on time, or not that much of an altruistic person, you can consider using (3) or (4).
 

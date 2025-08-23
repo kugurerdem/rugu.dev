@@ -6,7 +6,7 @@ date: '2025-01-20'
 
 I can't remember when I truly realized the power of writing. But as far as I remember, I've been trying to use writing as a tool for putting order to the chaos in my mind since high school.
 
-Currently, I have a diary with about 325 pages—assuming each page consists of 500 words. *(And there’s probably at least an equal amount other writings I wrote for different purposes but deleted in the end.)* The first entry dates back to 2017, meaning I’ve been writing regularly for around 8 years. That’s a lot of time, but I don’t regret a single moment. Because I know for sure that the positive impact writing has had on my mind far outweighs the effort.
+Currently, I have a diary with about 325 pages (assuming each page consists of 500 words). And there’s probably at least an equal amount other writings I wrote for different purposes but deleted in the end. The first entry dates back to 2017, meaning I’ve been writing regularly for around 8 years. That’s a lot of time, but I don’t regret a single moment. Because I know for sure that the positive impact writing has had on my mind far outweighs the effort.
 
 Whenever I face a problem that requires tough decision-making, I typically open a new entry in my diary and start typing whatever comes to mind. After flushing out whatever is in my mind at that moment, I then start organizing it. Sometimes, this process results in definitive answers to my questions, and sometimes, not. Either way, I still have a clear outline of the choices available and a better understanding of their potential benefits and costs.
 
