@@ -4,7 +4,126 @@ and organize the architecture effectively. Afterall, programing is more than
 just typing. If it was just typing we would expect to see the difference between
 in terms of the time and effort required for rewriting an already existing
 project with that of creating it from scratch for the first time to be too
-small. However what we see is not &amp;ldquo;a bit less&amp;rdquo; but a huge difference.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/tr/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/tr/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
+small. However what we see is not &amp;ldquo;a bit less&amp;rdquo; but a huge difference.&lt;/p>
+&lt;p>While I agree that those mentioned properties of a software mentioned more
+important than typing speed, I do not like the fact that this reasoning is
+mostly used for justifying on how typing fast is not important for developers.
+It is not a healthy approach to solely focus on the time and cost difference
+between rewriting a piece of code and writing it for the first time, measured
+purely in terms of the time spent typing. This is because the time spent typing
+while building a project involves not only the final product code but also all
+the tests and iterations made throughout the development cycle, as well as
+the questions posed to the internet and communication made with other team
+members.&lt;/p>
+&lt;p>Yes, it&amp;rsquo;s essential to spend time on the architecture of the code, technology
+stack, and requirement specifications. However this doesn&amp;rsquo;t diminish the
+importance of typing fast. I agree that typing is one of the least significant
+aspects of the development process, this is why I put an emphasis on typing fast
+so much (notice that I do use the phrase typing fast in a different way than
+typing by itself). In essence, reducing the time spent on typing allows us to
+allocate more time to actual work. In other words, typing faster saves time and
+enables us to focus on the more critical aspects of development.&lt;/p>
+&lt;p>&lt;strong>Even though typing itself is shallow and unimportant, typing fast is one of
+the most critical skills for developers because it reduces the time spent on an
+insignificant task of typing.&lt;/strong>&lt;/p>
+&lt;p>This reasoning is similar to what &lt;em>Hans Hoffman&lt;/em> once said:&lt;/p>
+&lt;blockquote>
+&lt;p>“The ability to simplify means to eliminate the unnecessary so that the
+necessary may speak.”&lt;/p>&lt;/blockquote>
+&lt;p>Typing is the way we actualize our ideas into real programs.&lt;/p>
+&lt;p>Assume that you generate your ideas at a rate of 3X per unit of time, but you
+can only actualize X of them in that same time. This means that the number of
+non-actualized ideas will accumulate until you eventually reach a position where
+you have to abandon some of them (due to having a mental stack overflow).
+Essentially, the faster you can transform your ideas into code and test them,
+the less likely you are to experience an overflow of untested and undeveloped
+ideas.&lt;/p>
+&lt;p>Of course, it would be imprudent to assume that the pace of idea generation will
+consistently surpass that of execution. However it is still important to
+acknowledge that circumstances may arise where physical constraints such as
+limited typing speed can hinder one&amp;rsquo;s ability to bring ideas to fruition.&lt;/p>
+&lt;h2 id="setting-up-a-goal">Setting up a Goal&lt;/h2>
+&lt;p>Assuming that typing speed is indeed as important as stated, it is crucial to
+determine how fast we should type to avoid the bottlenecks mentioned above.&lt;/p>
+&lt;p>Setting a goal is indeed a subjective process that depends on an individual&amp;rsquo;s
+expectations. Personally, I believe that thinking in terms of how many words we
+speak per minute is a good metric to use as it is the speed at which we
+typically express our ideas. The higher the ratio of typing WPM to speaking
+WPM, the better for avoiding bottlenecks. Studies show that the average typing
+speed of the people is around 40 (WPM) [1]. In contrast, the average rate of
+speech for native English speakers is around 150 WPM [2].&lt;/p>
+&lt;p>Another critical aspect I like to consider when setting up a criteria for typing
+speed is the concept of &amp;ldquo;diminishing returns&amp;rdquo; [3]. Increasing your average
+typing speed from 140 to 150 might be two or three times harder than increasing
+it from 50 to 100. Therefore, it may not be cost-effective after achieving a
+certain point of typing speed.&lt;/p>
+&lt;p>Here is an example probability density curve [4] that can give you an idea
+about the distribution of people by their typing speed:&lt;/p>
+&lt;p>&lt;img src="https://www.researchgate.net/profile/Anna-Feit-2/publication/324659119/figure/fig2/AS:617652846338048@1524271322602/Histogram-and-density-estimate-of-WPM-uncorrected-errors-IKI-and-keypress-duration.png#center" alt="">&lt;/p>
+&lt;p>Despite my personal record of 144 WPM, I typically type around 90-110 WPM [5].
+I believe that having an average speed of 80 WPM would be more than sufficient
+for most people in terms of cost-effectiveness. However, I still want to
+improve my typing speed a bit more by learning a typing technique called
+touch-typing which is ergonomically just better than what I do right now.&lt;/p>
+&lt;h2 id="improvements">Improvements&lt;/h2>
+&lt;p>So what can we do to improve our typing speed? Here are the first things that
+come to my mind:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Type regularly: The best way to learn a skill that requires a muscle memory
+is just to repeat the things over and over again. Simply put: the more you
+practice typing, the faster you will become. Set aside time each day to
+practice typing, and try to increase your speed gradually.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use typing software: There are many typing software programs available that
+can help you improve and measure your typing speed. I usually use
+&lt;a href="10fastfingers.com">10FastFingers&lt;/a> and &lt;a href="https://play.typeracer.com/">Type Racer&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Learn touch typing: touch typing is a technique where you become accustomed
+to using all 10 of your fingers to type without looking at the keyboard.
+While I am skeptical that this directly increases speed, I believe it can
+indirectly improve your typing speed by increasing accuracy. I also think
+that it increases endurance by making the process more ergonomic for the
+typist since you no longer have to raise your hand as much as you used to.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Improve your typing posture: Your typing posture can also affect your typing
+speed. Sit up straight, keep your wrists and fingers in a neutral position,
+and make sure your keyboard is at the right height. Just google &amp;ldquo;typing
+posture&amp;rdquo;. Not to mention that these kind of things are also important for
+your long term health.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>USE VIM! VIM is a powerful text editor that allows users to manipulate text
+with keyboard shortcuts. It reduces the need for manual navigation and makes
+it easy to perform repetitive tasks. VIM has advanced features such as
+macros, registers, and plugins that can further increase efficiency. By using
+VIM, you can avoid moving your hands away from the keyboard, which can save
+time and increase typing speed. VIM&amp;rsquo;s features streamline workflow and
+increase productivity, making it an excellent choice for programmers and
+writers.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>For developers, I strongly recommend becoming accustomed to using the English
+keyboard layout since most programming languages are designed to use symbols
+readily available on a US keyboard, such as {}[]/`\&amp;quot;&amp;rsquo;, which may not be as
+easily accessible on other layouts, (e.g. Turkish layout).&lt;/p>
+&lt;h1 id="glossary">Glossary&lt;/h1>
+&lt;p>[1] Average typing speed infographic. Ratatype. (n.d.). Retrieved March 3,
+2023, from &lt;a href="https://www.ratatype.com/learn/average-typing-speed/">https://www.ratatype.com/learn/average-typing-speed/&lt;/a>&lt;/p>
+&lt;p>[2] Barnard, D. (2022, November 8). Average speaking rate and words per minute.
+VirtualSpeech. Retrieved March 3, 2023, from
+&lt;a href="https://virtualspeech.com/blog/average-speaking-rate-words-per-minute">https://virtualspeech.com/blog/average-speaking-rate-words-per-minute&lt;/a>&lt;/p>
+&lt;p>[3] Diminishing returns means a special case where an increase in effects start
+to not justify the increase in costs after a certain point. For more
+information, see &lt;a href="https://en.wikipedia.org/wiki/Diminishing_returns">https://en.wikipedia.org/wiki/Diminishing_returns&lt;/a>&lt;/p>
+&lt;p>[4] Histogram and density estimate of WPM, uncorrected errors, Iki, and &amp;hellip;
+(n.d.). Retrieved March 3, 2023, from
+&lt;a href="https://www.researchgate.net/figure/Histogram-and-density-estimate-of-WPM-uncorrected-errors-IKI-and-keypress-duration_fig2_324659119">https://www.researchgate.net/figure/Histogram-and-density-estimate-of-WPM-uncorrected-errors-IKI-and-keypress-duration_fig2_324659119&lt;/a>&lt;/p>
+&lt;p>[5] While there are many sites where you can measure your typing speed, I used
+&lt;a href="10fastfingers.com">10FastFingers&lt;/a> when doint my tests.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/tr/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/tr/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,
@@ -12,7 +131,366 @@ there was nothing but a black screen. Suddenly, a terminal screen appeared with
 his keystrokes and he quickly began examining the codebase, providing feedback
 on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
 different files in an instant, examining the diffs that were made in different
-git commits.&lt;/p></description></item><item><title>An Argument for Idealism</title><link>https://rugu.dev/tr/blog/idealism-argument/</link><pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/tr/blog/idealism-argument/</guid><description>&lt;p>&lt;em>This essay was originally written for the &amp;lsquo;Introduction to Philosophy I&amp;rsquo;
+git commits.&lt;/p>
+&lt;p>After seeing what I saw, I thought to myself, &amp;lsquo;If I were able to develop and
+refactor code at that speed, I would save a lot of time, I could have spend more
+time on thinking about the actual stuff with less friction as possible. I want
+to have this power.&amp;rsquo; So I have look to &lt;a href="https://gwn.wtf/resume.html">his CV&lt;/a> and
+realized that he was knowledgeable on topics that many developers, including
+myself, struggle with. Influenced by this, I started asking him (he was our
+consultant, after all) as many questions as I could and focused on the resources
+he suggested and the technologies he used.&lt;/p>
+&lt;p>The inspiration from this hacker guy, combined with the very precious help from
+a friend of mine who had a strong interest in operating systems (he uses Arch in
+Qubes OS btw), being libre, and having control over his computer, led me to
+switch to Arch Linux. I have also benefited a lot from discussions on hackernews
+and from youtubers like Luke Smith which I also heard from the Qubes OS friend
+of mine.&lt;/p>
+&lt;p>In this post, I will first provide a brief overview of Linux and Arch Linux in
+particular. Then, I will discuss my reflections on the past few months,
+including the downsides and upsides of switching to Arch Linux. Finally, I will
+explain the programs that I currently use in my workflow.&lt;/p>
+&lt;h2 id="what-is-special-about-linux">What is special about Linux?&lt;/h2>
+&lt;p>Linux is a free and open-source operating system (OS) based on the Linux kernel,
+a piece of software that sits between the hardware and programs that you run.
+Maybe you already know it but the vast majority of servers are already running
+in Linux. Android, the operating systems that most phones use, is also a
+specific fork of the Linux Opearting System. By this means, even a developer
+uses Windows or MacOS, it is still thought among many programmers that it is
+very beneficial to learn some fundamental aspects of Linux regardless.&lt;/p>
+&lt;p>Many developers already seem to agree on the importance of learning Linux to
+some extent for System Administration is out of the question. The variety of
+views seem to raise when it comes to use Linux on a personal computer. From the
+view of an average computer user, it might not matter much whether one uses
+Linux, Windows or MacOS but as your values and needs become more nuanced it
+might be more reasonable for you to switch to Linux over its alternatives.&lt;/p>
+&lt;p>The first aspect that comes to my mind between Linux and other well-known
+operating systems is that Linux is a free and open-source operating system,
+while Windows and Mac OS are proprietary operating systems that must be
+purchased. This has several implications:&lt;/p>
+&lt;ul>
+&lt;li>You can set up Linux on a computer with no cost except some finite amount of
+time where you have to spend some money in order to use MacOS or Windows.&lt;/li>
+&lt;li>Since both MacOS and Windows are closed-source, we don&amp;rsquo;t know for sure what
+they do under the scenes. Windows, for example has a builtin keylogger.
+Although Apple does not have such a claim, there is nothing preventing them to
+do something like that.&lt;/li>
+&lt;li>By being open source, linux is highly customizable and allows users to modify
+and tailor their environment to meet their specific needs. In contrast,
+Windows and Mac OS are more limited in terms of customization. So Linux is a
+great choice for users who want to have control over their operating system
+and want to modify or customize it to meet their specific needs.&lt;/li>
+&lt;li>By being Open Source, the source code of Linux is checked and maintain by a
+HUGE group of experienced developers. This might also have some implications
+on its security.&lt;/li>
+&lt;/ul>
+&lt;p>Another aspect that I like to focus on its Linux&amp;rsquo;s user base. As with many
+products, to use a product is often not merely using it but also being part of a
+group. By using Linux, you also become part of a group that it contains a lot of
+experienced software developers, hacker-minded people. To me, this is very
+important because when you become part of a group, it is more likely for you to
+get some of the habits of the group whether whether you intended so or not. By
+switching to an environment where there are more experienced people you become
+more exposed to their content.&lt;/p>
+&lt;h2 id="what-is-unique-about-arch-linux">What is unique about Arch Linux?&lt;/h2>
+&lt;p>Before diving into this question, I shall clarify what a linux distribution is.
+In essence a linux distribution is a version of the Linux operating system that
+is packaged with additional software and tools.&lt;/p>
+&lt;p>So an oversimplicated, but an intuitive formula can be given as:&lt;/p>
+&lt;p>&lt;code>DISTRIBUTION = KERNEL + SOME ADDITIONAL DEPENDENCIES&lt;/code>&lt;/p>
+&lt;p>In essence, there is nothing preventing you from doing what one can do in one
+linux distribution in another by changing the &amp;lsquo;SOME ADDITIONAL DEPENDENCIES&amp;rsquo;
+part of the formula above. These additional dependencies vary from package
+manages to init systems, and the initial softwares that come with the
+distribution.&lt;/p>
+&lt;p>If you look at the amount of possible distributions one can choose, you can be
+buffled. Why are there so many different linux distributions? Because, there are
+lots of people who have different goals when using an OS and therefore needing
+different dependencies. There are also lots of organizations and communities
+that share different perspectives of what a constitutes a good linux distro.&lt;/p>
+&lt;p>While distros like Ubuntu focus on being more friendly and welcoming to new
+users, some distros, like debian focus on stability and some like arch, focus on
+a certain combination of being minimal, cutting-edge and active.&lt;/p>
+&lt;p>Despite the fact that there is no objective metric to determine which one of
+these distributions is the best, they can be superior to each other given a
+certain context. For example, if you are working on a production server for an
+important application you might want to choose a linux distribution that does
+not give major updates regularly to become stable. If you are a new person who
+switches to Linux you might prefer a friendly linux distro such as Ubuntu for
+their user friendly community. If you are a person who only wants the programs
+that they use and nothing more than that, a distro which comes with less
+dependencies as much as possible might be a good choice for you.&lt;/p>
+&lt;p>To me, Arch Linux comes forward by being a &lt;em>modern&lt;/em>, &lt;em>minimalist&lt;/em> distribution
+that have a very knowledgable &lt;em>community&lt;/em>. You may be already heard that Arch
+Linux is a cutting-edge distribution, this is to say that it adapts new updates
+and releases of a wide variaty of programs very quickly. In Arch Linux besides
+its own package manager &lt;code>pacman&lt;/code> an organization called Arch User Repository is
+also providing a possibility for installing programs, this repository is
+basically very frequently maintained by Arch Linux users, the community. I think
+it would not be unfair to say that AUR is one of the most active Linux
+repository, if not the most. One of the widely known things about Arch Linux is
+that when installed, you dont have anything but a terminal and some of the
+programs you specified arch installer to download. This is related to Arch Linux
+being minimal. Instead of building many packages into your system by default
+that my contain several programs that you might need at the expense of
+downloading lots of programs that is certain you will not use, it just leaves to
+customization part on the users&amp;rsquo; shoulders. This way you can install and focus
+on only what you need.&lt;/p>
+&lt;p>This article will not just be about my journey of switching to arch linux but
+also embracing its philosophy.&lt;/p>
+&lt;h2 id="some-reflections">Some Reflections&lt;/h2>
+&lt;h3 id="getting-used-to-it">Getting used to it&lt;/h3>
+&lt;p>It was hard to change the environment that I used to (Windows) with another
+environment that almost for all the things you want to do you are the one who
+needs to take the responsibility of deciding how things should go. During this
+process, I noticed that there are lots of things that we take it granted but by
+itself an actual thing: Screen lockers, clipboard functionalities, power
+management, multimedia keys&amp;hellip; All of these things are handled by certain
+processes that are running on the background. Your typical computer user might
+not be aware that these are actual programs that are needed to be set up but
+when you are building an environment on a minimalist distribution, your
+awareness of such things tend to increase.&lt;/p>
+&lt;h3 id="variety-of-solutions">Variety of Solutions&lt;/h3>
+&lt;p>When you want to do something on Linux, there are a lot of alternative programs to let
+you do it. And because of this, one is left with the question &amp;ldquo;which program should one
+prefer first?&amp;rdquo; I must admit that I still often get stunned by this question and
+already lost enough time on it.&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+protocol, should I switch to it?&amp;rsquo;&lt;/p>
+&lt;p>&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
+something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p>
+&lt;p>&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
+neovim is more community driven.&amp;rsquo;&lt;/p>&lt;/blockquote>
+&lt;p>Don’t get me wrong. I am not implying that these questions are meaningless. They
+are indeed meaningful after a point where small nuances between them start to
+matter.&lt;/p>
+&lt;p>I think the best approach here would be to just choose a tool that solves the
+problem without thinking too much and continuing on with what we do. It is a
+mistake to find the ‘best’ program for your beginners. In many cases, going with
+the ‘sufficient’ solution is also ‘best’ in terms of your time spent on finding
+a program.&lt;/p>
+&lt;h3 id="some-beginner-mistakes">Some beginner mistakes&lt;/h3>
+&lt;p>Another mistake I see rookies do and I did is to try to do things without actually understanding them. It is not at all uncommon amongst new Linux users to break their system by copying and pasting the commands they saw on some forum. They install programs that do the same stuff, they use different package managers that configure several dependencies and configuration files which result in one manager breaking the changes made by another, and so on.&lt;/p>
+&lt;p>While it is understandable that people want to do things in the same way they are used to in their previous settings I think this behavior also prevents them from getting used to handling things in Linux: For example, instead of seeking programs that enable installation stuff through certain programs with GUI, it is better to learn how one’s native package manager is working through a terminal, how to build stuff from source code with makefiles and so on.&lt;/p>
+&lt;p>Sometimes the solutions people come up with to imitate their previous workspace are so complex that it is better to not solve the ‘problem’ in the first place. One example is from me: Since I love MSPaint, when I needed to draw things, I was running a Windows instance on QEMU and initiating MSPaint with a bash alias that I have set. This was a very bad idea as just switching to another Linux program for drawing would be just easier.&lt;/p>
+&lt;h3 id="dual-boot">Dual Boot&lt;/h3>
+&lt;p>Setting up a dual-boot computer with Linux and Windows may seem like a good idea
+for those looking to learn Linux, but I think that it can be a bad idea. A few
+years ago, I made the mistake of setting up Linux Mint alongside Windows.&lt;/p>
+&lt;p>Firstly, dual-booting increases the amount of maintenance that one has to do.
+Not only do you have to keep both operating systems updated and running
+smoothly, but you also have to know how to synchronize your files between the
+two systems.&lt;/p>
+&lt;p>Secondly, having the option to fall back on Windows when encountering problems
+can prevent one from fully immersing themselves in the Linux experience and
+learning how to troubleshoot and solve issues on their own. It&amp;rsquo;s similar to
+trying to learn how to swim while having a floatation device. It&amp;rsquo;s better to
+dive in and learn the Linux operating system without the crutch of Windows as a
+backup.&lt;/p>
+&lt;p>In my opinion, the only good reason for still wanting to have Windows installed
+on a computer is for either playing video games or for using special programs
+that are not available on Linux.&lt;/p>
+&lt;h3 id="gui-vs-terminal">GUI vs Terminal&lt;/h3>
+&lt;p>Linux users often find themselves using terminal programs because of the
+flexibility and power it offers for advanced users. Terminal programs, which are
+controlled through a command-line interface (CLI), allow users to enter commands
+in order to perform actions, unlike programs with a graphical user interface
+(GUI) which typically have a visual interface such as buttons and menus. While
+GUI programs have the advantage of ease of use for non-technical users and quick
+access to common tasks through visual cues, terminal programs offer more
+flexibility and can be programmed and automated through scripting, making it a
+preferred choice for advanced users.&lt;/p>
+&lt;p>Even when using GUIs, it is common to find ourselves performing repetitive tasks
+manually. With simple programs that are designed to perform one specific task
+well and are also available to use programmatically, you can use them in for
+loops, conditionally, and pipe the output of one program to another. This
+approach can be a game changer, especially for those who want to become power
+users. Here are a few examples of where this approach has saved me a significant
+amount of time:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Recently, I had a batch of 113 weirdly rotated images, but I was able to
+rotate them all to the desired orientation using the following code:&lt;/p>
+&lt;pre tabindex="0">&lt;code> for file in *.jpg;
+ do
+ convert $file -rotate 90 rotated-$file;
+ done
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>
+&lt;p>I used &lt;code>yt-dlp&lt;/code> to easily download youtube videos and playlists. It
+was one of the most comfortable downloading experiences I had.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I used &lt;code>pdfcrop&lt;/code> for cropping PDF files.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I changed the structure of folders that have many files in them by using
+simple for loops alongside with &lt;code>mv cp rm&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Not to mention how much its easier to install packages that are on AUR or Arch
+Repository compared to installing stuff in Windows.&lt;/p>
+&lt;p>Overall, I strongly believe that the power of interacting with programs through
+terminal can increase one&amp;rsquo;s overall productivity.&lt;/p>
+&lt;h3 id="arch-linux-manuals">Arch Linux manuals&lt;/h3>
+&lt;p>One caveat of using command-line interfaces (CLIs) is that it can be easy to
+forget the specifics of the interface. As a result, it is essential for terminal
+users to know how to quickly open and find the information they need in manual
+pages in order to effectively use CLIs.&lt;/p>
+&lt;p>Thankfully, most programs in Linux already have their own manuals available
+through the &lt;code>man&lt;/code> command. When I need to use a certain utility or CLI function,
+all I do is open the terminal through a keybinding that I have set up and type
+&lt;code>man programname&lt;/code>, then I can quickly scroll through the manual page using VI
+keybindings.&lt;/p>
+&lt;p>Despite the fact that I am already acquinted by heart with some of the most
+important flags and utilities of the programs that I use, I am also a lot better
+(faster) at finding the stuff I need. It is just as much important, if not more
+important, to be able to find the stuff you need by knowing them by heart.&lt;/p>
+&lt;h2 id="current-workflow">Current Workflow&lt;/h2>
+&lt;p>All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/dotfiles">dotfiles
+github repository&lt;/a>.&lt;/p>
+&lt;h3 id="window-manager">Window Manager&lt;/h3>
+&lt;p>I do not use any desktop environments. I use a tiling Window Manager (WM), a
+type of software that automatically arranges and resizes application windows in
+a non-overlapping fashion, without the need for manual dragging and resizing.
+The particular WM I use now is called &lt;code>dwm&lt;/code>, it is one of the tools that are
+built by the hacker organization &lt;a href="https://suckless.org/">suckless&lt;/a>.&lt;/p>
+&lt;p>Having switching to a tiling window manager, I now realize that how much of a
+hassle was it to manually resize, drag, and select all my application windows.
+Besides slowing me down, your average desktop environment also takes a lot of
+space with their tilebars and etc. which I might want to use for seeing more
+content.&lt;/p>
+&lt;p>dwm comes with another program called &lt;code>dmenu&lt;/code> which enables you to select list
+of options from the menu and do whatever you want with it. Initially dwm uses
+dmenu to make the user easily open the programs they want to open through a
+certain shortcut.&lt;/p>
+&lt;p>I also use &lt;code>dwmblocks&lt;/code> to control the contents of the info bar on the top left.
+I only show Volume, Battery, Memory and Date info there.&lt;/p>
+&lt;h3 id="keyboard-layout">Keyboard Layout&lt;/h3>
+&lt;p>Since I am from Turkey, I need to use Turkish characters in my daily life a lot
+especially when interacting with my friends. The thing is I also find English
+keyboard layout very productive, especially when it comes to coding and using
+vim. As a result, I needed a mechanism to be able to benefit from both of these
+functionalities. For this, I have attached a shortcut to switch between TR and
+US layouts.&lt;/p>
+&lt;p>I have also swapped the Escape key with the CapsLock key as I use the escaping
+functionality a lot when using VIM but do not use Caps Lock that much. It is
+ergonomically a lot more preferable to use the CapsLock key for the Escape
+functionality.&lt;/p>
+&lt;p>Here are my settings in .xinitrc that imply those changes:&lt;/p>
+&lt;pre tabindex="0">&lt;code># ~/.xinitrc
+
+setxkbmap -option &amp;#34;caps:swapescape&amp;#34;
+setxkbmap -model pc104 -layout us,tr -option grp:win_space_toggle
+&lt;/code>&lt;/pre>&lt;p>I am also aware that I could have used &lt;code>tr-alt-q&lt;/code> layout which is basically an
+English keyboard layout but if you use AltGr, keys like &lt;code>i,o,u,g,c&lt;/code> turns into
+&lt;code>ı,ö,ü,ğ,ç&lt;/code>. The problem is that the only way I found was to change the keycode
+tables through &lt;code>.Xmodmap&lt;/code> and it was buggy. I could not find a simple and clean
+way to implement this layout&lt;/p>
+&lt;h3 id="terminal--shell">Terminal &amp;amp; Shell&lt;/h3>
+&lt;p>As terminal, I use &lt;code>st&lt;/code>, so far I have not seen particular advantage of using st
+over other possible terminals that I could have use Alacritty or so, I just
+needed a terminal that is lightweight and st was one of the possibilities I
+could choose.&lt;/p>
+&lt;p>As shell, I mostly use bash. But I understand using zsh is perfectly fine in a
+personal environment as well. The only possible problem that I can think of zsh
+is portability problem of the scripts written for it.&lt;/p>
+&lt;h3 id="text-editing-and-programming">Text editing and programming&lt;/h3>
+&lt;p>I use &lt;code>neovim&lt;/code> for almost all my works involving text. Neovim is a fork of Vim,
+a highly configurable text editor that is designed to be extendible and also
+efficient through the maximal use of keyboard both with macros and
+shortcuts. It also comes with a powerful syntax highlighting engine and support
+for a wide range of programming languages and file formats. As a dialect of Vim,
+Neovim is fully compatible with Vim and uses the same configuration files and
+command syntax, but it includes additional functionality and improvements that
+are not available in the original Vim. dialect of vim.&lt;/p>
+&lt;p>&amp;lsquo;Why use neovim instead of vim?&amp;rsquo; you might ask. Right now, it does not matter to
+me whether I use vim or neovim since in both of these the things I want is
+available. I use neovim because it was my first decision to go with it and
+because of this I already have my files configured for neovim. The reason why I
+initially chose neovim over vim was because of a certain workflow video I have
+seen on youtube: Vim had not some the plugins that were used in the video. Later
+on, I thought that video was full of unnecessary stuff so I gave up on it.&lt;/p>
+&lt;p>Getting used to vim has significantly improved my speed and comfort when
+programming as its command mode is very efficient for text navigation and
+manipulation without even having to use mouse or moving your hand much.
+When my friends see me getting done stuff in VIM they sometimes refer to it as
+&amp;lsquo;black magic&amp;rsquo;, I like this a lot too. =)&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/8n-ylg-pw6s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+ &lt;/div>
+
+&lt;p>I should also mention that I have started to convert some of my .odt, .docx
+files like diaries, logs, records to plain text just because it gives me to
+flexibility to be able to edit/read them through simple text editors such as
+vim.&lt;/p>
+&lt;h3 id="terminal-multiplexer">Terminal Multiplexer&lt;/h3>
+&lt;p>A terminal multiplexer is a software program that allows multiple terminal
+sessions to be created, accessed, and controlled from a single terminal window
+or console. It enables users to have multiple terminal sessions running
+simultaneously, switch between them, and manage them easily.&lt;/p>
+&lt;p>Since I use terminal for almost all the text work I do including software
+development, it is, thus, ergonomically important for me to have a way to manage
+different programs through one terminal.&lt;/p>
+&lt;p>I do this thorugh a program called &lt;code>dvtm&lt;/code>, an alternative for tmux.&lt;/p>
+&lt;p>Although I can split screens in vim when doing software development, it does not
+give the same flexibity and ease of use the dvtm gives. There are some
+programs you might want to see running simultaneously through one terminal
+instead in addition to being able to edit/write files. You can do the latter in
+vim, but the former is not so trivial to achieve.&lt;/p>
+&lt;p>Since &lt;code>dvtm&lt;/code> already solves a problem that vim splits solve, I do not use vim
+splits anyways.&lt;/p>
+&lt;p>Here is an example showcase of dvtm:&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize" alt="Example DVTM
+Showcase">&lt;/p>
+&lt;h3 id="file-manager">File Manager&lt;/h3>
+&lt;p>I use &lt;code>ranger&lt;/code>, considering to switch to &lt;code>lf&lt;/code> but also don&amp;rsquo;t see a reason for it
+since I am already used to &lt;code>ranger&lt;/code>.&lt;/p>
+&lt;p>As far as I remember the only thing I have changed in ranger is some of the
+priorities on which programs to use when openning files and to enable image
+preview mechanism.&lt;/p>
+&lt;p>Before getting used to ranger I was using a file manager with GUI named
+&lt;code>dolphin&lt;/code>.&lt;/p>
+&lt;h3 id="taking-notes">Taking Notes&lt;/h3>
+&lt;p>I used lots of different note-taking apps such as Google Keep, Obsidian, Notion…
+The problem is, almost all of these apps come with features that I do not use at
+all, I mostly use note-taking applications as a way to remember the things that
+I intended to do and for this, all I need is a way to sync my files between my
+Phone and Computer. I used telegram for this purpose for a while, but since its
+purpose is not this, I then looked for some alternatives.&lt;/p>
+&lt;p>Meanwhile, I found &lt;code>gitjournal&lt;/code>, it is a git based note taking application with
+a Mobile App. On my phone, I use its own application whereas on my computer, I
+just use the &lt;code>gitjournal&lt;/code> script that I created that updates the notes by
+automatically running commands such as &lt;code>git pull&lt;/code> &lt;code>git commit&lt;/code> &lt;code>git push&lt;/code> before
+and after opening &lt;code>nvim&lt;/code> to change note files.&lt;/p>
+&lt;p>The script for this can be found &lt;a href="https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497">here&lt;/a>.&lt;/p>
+&lt;h3 id="password-management-and-otp">Password Management and OTP&lt;/h3>
+&lt;p>&lt;code>pass&lt;/code> and &lt;code>pass-otp&lt;/code>&lt;/p>
+&lt;p>Also there is a very simple script called &lt;code>passmenu&lt;/code> which uses dmenu to fetch
+the passwords from pass easily. For passphrase aplet to open, you need &lt;code>gtk2&lt;/code> or
+&lt;code>gtk3&lt;/code> though.&lt;/p>
+&lt;h3 id="wifi--bluetooth">Wifi &amp;amp; Bluetooth&lt;/h3>
+&lt;p>I use &lt;code>bluetoothctl&lt;/code> to connect bluetooth devices and use &lt;code>networkmanager&lt;/code> &amp;amp;
+&lt;code>nmcli&lt;/code> to connect to the internet.&lt;/p>
+&lt;h3 id="web-browser">Web Browser&lt;/h3>
+&lt;p>I just use &lt;code>brave&lt;/code> like a normal human being. I like that it has a builtin
+adblocker. Since I like moving with vim keybindings, I have also installed an
+extension called &lt;a href="https://vimium.github.io/">vimium&lt;/a>. This extension helps you to navigate your browser
+through vim keybindings.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t67Sn0RGK54?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+ &lt;/div>
+
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Switching to Arch Linux was a challenging experience due to its steep learning
+curve. I had to deal with many things that I always used, but never realized
+that there were actual programs for those functionalities, such as clipboard,
+screen locks, and opening screens. It took some time to get used to it, but now
+I am so accustomed to using Arch Linux that I don&amp;rsquo;t even want to use Windows
+anymore, except for cases like playing video games (which I also don&amp;rsquo;t do it
+much these days).&lt;/p>
+&lt;p>It&amp;rsquo;s also fun to challenge yourself and succesfully get over those challenges.&lt;/p></description></item><item><title>An Argument for Idealism</title><link>https://rugu.dev/tr/blog/idealism-argument/</link><pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate><guid>https://rugu.dev/tr/blog/idealism-argument/</guid><description>&lt;p>&lt;em>This essay was originally written for the &amp;lsquo;Introduction to Philosophy I&amp;rsquo;
 (PHIL103) course at Bilkent University, where we delved into various branches of
 philosophy, including consciousness. It reflects some of the thought processes
 that arose as I grappled with these philosophical questions. It&amp;rsquo;s important to
@@ -21,4 +499,163 @@ rather an exercise in argumentation.&lt;/em>&lt;/p>
 &lt;p>&lt;em>Despite this, I believe the arguments presented in this essay hold value and are
 worth exploring. My hope is that this essay provides you with insight and
 provokes thought, and that you find value in engaging with the ideas presented
-here.&lt;/em>&lt;/p></description></item></channel></rss>
+here.&lt;/em>&lt;/p>
+&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>Believing in a particular framework that describes the nature of existence,
+known as an ontology, can greatly influence an individual&amp;rsquo;s perspective on life
+and their actions. Three such ontologies are Physicalism, Dualism and Idealism.&lt;/p>
+&lt;p>Physicalism states that all phenomena can be explained in terms of physical
+concepts. If a person believes in Physicalism, they may prioritize material
+possessions and physical experiences, and focus on achieving practical goals.
+This belief can also affect their beliefs about the afterlife and the nature of
+the self.&lt;/p>
+&lt;p>Dualism, on the other hand, is a view that posits the existence of two
+fundamental and distinct kinds of substances or principles: matter and mind.
+This view is similar to Physicalism in that both agree that there exist physical
+objects. But is different in the sense that it holds that the mind and the body
+are distinct entities that cannot be reduced into one another.&lt;/p>
+&lt;p>In this article, I argue that we have sufficient reason to believe that objects
+that exist are not physical, refuting both Physicalism and Dualism. I do this by first
+showing that the existence of physical objects cannot be known, and then
+combining this belief with the principle of parsimony, also known as Ockham&amp;rsquo;s
+Razor. As a result, this argument supports the ontology of Idealism, which is
+the view that reality is ultimately mental in nature.&lt;/p>
+&lt;h1 id="argument">Argument&lt;/h1>
+&lt;p>Let me present you the outline of my argument:&lt;/p>
+&lt;blockquote>
+&lt;p>P1. If agents can know whether something exists, then they know so a priori
+or a posteriori.&lt;br>
+P2. Agents don’t know a priori whether physical objects exist.&lt;br>
+P3. Agents don’t know a posteriori whether physical objects exist.&lt;br>
+C1. Agents cannot know whether physical objects exist.&lt;br>
+P4. If existance of a thing cannot be known and assuming it does not give us
+more explanatory power than what we are left without it, then there is
+no reason assuming it exists. (parsimony principle)&lt;br>
+P5. Assuming existence of physical objects does not give us more explanatory
+power than what we are left without it.&lt;br>
+C2. There is no reason for assuming that physical objects exists.&lt;/p>&lt;/blockquote>
+&lt;p>The first premise &lt;strong>(P1)&lt;/strong> is very easy to see, if not self-evident. By
+definition, a priori knowledge means the knowledge we gain without experiencing
+whereas a posteriori knowledge means the knowledge we gain with experience. It
+is either one or the other.&lt;/p>
+&lt;p>The real challenge is to show that P2 and P3 are true.&lt;/p>
+&lt;p>For &lt;strong>(P2)&lt;/strong>, we can say that agents&amp;rsquo; understanding of physical objects are
+fundamentally acquired through the sensory experiences they have. For example,
+physicists do not know the behavior of an electron until they perform certain
+experiments, such as observing its interactions with other particles or
+measuring its properties using certain equipments.&lt;/p>
+&lt;p>Also, keep in mind that a priori knowledge is the knowledge that is not
+contingent. Whereas it is not possible to conceive a triangle that has 4 sides,
+it is, possible to conceive physical objects not being exist.&lt;/p>
+&lt;p>&lt;strong>(P3)&lt;/strong> can be deduced by claiming that a representation is not the same thing
+as the thing it represents, and that what we don&amp;rsquo;t deal with physical objects
+themselves, but with their representations.&lt;/p>
+&lt;p>&lt;em>Representation of a thing, is not the same thing as it represents.&lt;/em> For
+example, a wine in a menu is not the same thing as a wine, for you cannot drink
+the wine in a menu but the wine itself. The words we use for describing stuff,
+the concepts we have in minds are also representations of things. When it comes
+to representations, there always are stuff that you can do with one but not with
+another.&lt;/p>
+&lt;p>Furthermore, our experiences of the world are limited by the capabilities of our
+senses. We can only perceive a small range of colors and other sensory
+information, and this information is not experienced directly but is interpreted
+by our brains. This is why we can be susceptible to optical illusions and other
+forms of sensory deception. Additionally, our experiences of physical objects
+are not of the objects themselves, but of their representations in our minds.
+This means that &lt;em>We don&amp;rsquo;t deal with physical objects themselves, but with their
+representations.&lt;/em>&lt;/p>
+&lt;p>This is analagous to one of the metaphors Donald Hoffman, a cognitive scientist,
+likes to use. The sensory systems that humans possess (such as touch, smell,
+sight, sound, and hearing) function as a user interface that hides the true
+complexity of reality (e.g. the circuits and voltages in a computer) and allows
+individuals to control and interact with it without needing to understand it. He
+compares this to the way that a desktop interface on a computer hides the inner
+workings of the device and allows users to control it through icons and actions
+like dragging and clicking (Hoffman).&lt;/p>
+&lt;p>&lt;strong>(P4)&lt;/strong> is also referred as principly of parsimony, or Ockham&amp;rsquo;s Razor. The
+principle helps us to simplify our thinking by reducing the number of competing
+frameworks that compete with each other. There are two reasons I follow this
+reason.&lt;/p>
+&lt;p>Firstly, whether we know reality is necessarily simple or not, unless there is a
+good reason or advantage to believe a concept over other explanations, we are
+justified in not believing it.&lt;/p>
+&lt;p>Secondly, we already use this principle a lot when doing science. In general,
+the massive embracement and success of this principle in scientific fields
+provides a reason to think that it is a useful and reliable guide for
+eliminating certain hypotheses.&lt;/p>
+&lt;p>Finally, let us consider &lt;strong>(P5)&lt;/strong>,&lt;/p>
+&lt;p>In P3, we demonstrated that our understanding of the world is derived from our
+experiences and observations. This is based on representations, not the things
+themselves. We do not obtain these representations after having the concept of
+physical objects; rather, it is the other way around.&lt;/p>
+&lt;p>Even without accepting the existence of physical objects, we are already capable
+of conducting science. Our assumption of the existence of physical objects is
+simply a mental shortcut that we use to try and comprehend our surroundings.
+However, we do not necessarily need this assumption.&lt;/p>
+&lt;p>Moreover, all of the regularities that we observe in the world would still be
+possible even if we only accepted the existence of mental substances. In this
+way, what we refer to as physical objects would be fundamentally a type of
+mental substance. This does not violate Ockham&amp;rsquo;s Razor, as there are already
+strong arguments, such as Descartes&amp;rsquo; cogito ergo sum, that support the existence
+of mental things.&lt;/p>
+&lt;h1 id="criticisms">Criticisms&lt;/h1>
+&lt;p>Now that I have proposed my position in advance, it is now a good time to
+consider some of the potential criticisms and misconceptions that could be
+raised against this position.&lt;/p>
+&lt;h2 id="what-is-it-that-is-represented">What is it that is represented?&lt;/h2>
+&lt;p>&amp;ldquo;If physical objects does not exists, and the only thing that we deal with is
+physical representations, then what is it that is represented? There cant be a
+representation of a thing that does not exist.&amp;rdquo; one might say.&lt;/p>
+&lt;p>Yes, I agree with the part that if something is represented, then a thing
+exists. The part that I don&amp;rsquo;t agree with is that physical representations are
+the representations of objects that are physical objects which are independent
+of mind.&lt;/p>
+&lt;p>It is now a great time to clarify what I mean by physical objects and physical
+representations. In this argument, I used the expression &amp;ldquo;physical objects&amp;rdquo; not
+in the sense that a substance that can be fully explainable through physics. If
+that would be the case then it would be wild that I claim such objects does not
+exist. By physical objects, I refer to objects that exists independently of
+mind. Physical representation, on the other hand, are the kind of
+representations that are made in Physics. This representations, by themselves,
+does not require what is required to be independent of mind.&lt;/p>
+&lt;p>In essence, idealists does not necessarily reject physical objects does not
+exist in the sense that there are objects which can be explained by physics but
+in the sense we prescribed above. When certain a spiritualist says &amp;ldquo;Matter is a
+way of seeing, not something that is seen&amp;rdquo; (Spira) they seem to be agreeing that
+there exists objects that can be understood from the perspective of Physics but
+disagree with the part that those objects are abstract, mind-independent
+substances by themselves.&lt;/p>
+&lt;h2 id="ockhams-razor-is-not-reliable">Ockham&amp;rsquo;s Razor is not reliable&lt;/h2>
+&lt;p>The argument relies on Ockham&amp;rsquo;s Razor, which states that the simplest
+explanation is most likely to be true. However, this assumption may not always
+hold true. Some may argue that we do not have sufficient evidence to assume that
+reality is simple.&lt;/p>
+&lt;p>Although one can believe that reality is not supposed to be ontologically
+simple, they can still be epistemically justified to favor the simplest
+explanation when faced with multiple possibilities. This does not have to be the
+case because the reality is ontologically simple, but rather, it is the best we
+can do: In the absence of other compelling evidence when comparing seemingly
+equivalent explanations, it is already justified to choose one of the theories
+randomly, so why not just choose the simpler one?&lt;/p>
+&lt;h2 id="direct-perception-of-physical-objects">Direct Perception of Physical Objects&lt;/h2>
+&lt;p>It is possible to reject P3 by saying that direct perception of physical objects
+is possible. One could say that a representation of a thing can be seen as
+identical to the thing itself if the function of the representation is the same
+as the thing it represents. For example, one might argue that if a photograph of
+a cup were able to serve the same function as the actual cup it represents, then
+they could be seen as identical.&lt;/p>
+&lt;p>However, this approach ignores all the other aspects of entities besides their
+functions. Even though the photograph and the cup may function in the same way,
+they are not necessarily the same thing unless they are made of the same
+substances and share the same inner workings.&lt;/p>
+&lt;h1 id="conclusion">Conclusion&lt;/h1>
+&lt;p>In conclusion, I have come to the conclusion that there is no reason for assume
+that physical objects exist according to the principly of parsimony. I have done
+this by first arguin that agents cannot know whether physical objects exist. And
+then showing that assuming the existence of physical objects does not give us
+more explanatory power than what we are left without it.&lt;/p>
+&lt;h1 id="references">References&lt;/h1>
+&lt;p>&amp;ldquo;The Case Against Reality.&amp;rdquo; Performance by Donald Hoffman, Youtube, 8 Sep 2019,
+&lt;a href="https://www.youtube.com/watch?v=4HFFr0-ybg0">https://www.youtube.com/watch?v=4HFFr0-ybg0&lt;/a>, Accessed 24 Dec. 2022.&lt;/p>
+&lt;p>“Matter Is a Way of Seeing.” Performance by Rupert Spira, YouTube, 12 May 2015,
+&lt;a href="https://www.youtube.com/watch?v=oqOjFC9MCDc">https://www.youtube.com/watch?v=oqOjFC9MCDc&lt;/a>. Accessed 24 Dec. 2022.&lt;/p></description></item></channel></rss>
