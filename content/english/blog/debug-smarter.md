@@ -15,8 +15,8 @@ might include them in the essay and give you credit for it.
 I've noticed that developers, myself included, often instinctively write debug
 logs to STDOUT. While this might not cause problems if the program's output
 isn’t intended for other programs to consume, it becomes crucial when managing
-multiple scripts that depend on each other—such as when one script writes to a
-file that another reads.
+multiple scripts that depend on each other (such as when one script writes to a
+file that another reads).
 
 In these situations, if you're writing everything to STDOUT, you might not be
 taking full advantage of the pipe and redirection mechanisms available in your

@@ -70,7 +70,7 @@ The most popular one I found was [Scrroll
 In](https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom),
 and even that could be improved a lot: For example, it forces you to name each
 saved scroll position with an alert prompt. Why not automatically give a random
-name that can be renamed later? The fetch and save UI/UX is confusing—why not
+name that can be renamed later? The fetch and save UI/UX is confusing. Why not
 directly show the saved scrolls and allow users to jump to them? Additionally,
 it lacks features like adding notes to scrolls and searching through saved
 scrolls.
