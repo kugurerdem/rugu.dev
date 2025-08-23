@@ -5,7 +5,7 @@ or in
 &lt;br>
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p>
-&lt;h2 id="hahahugoshortcode17s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;h2 id="hahahugoshortcode18s0hbhb">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
  &lt;/div>
 &lt;/h2>
@@ -14,13 +14,263 @@ most of them are long and require more time to finish. When reading those long
 essays, I take a break most of the time. Thus, when I re-open an essay, I
 often lose the original place where I was reading. And if I
 can remember where I was, then I manually scroll back there. This makes the
-reading experience less smooth and more time-consuming.&lt;/p></description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p>A significant amount of my time of the day is spent interacting with computers
+reading experience less smooth and more time-consuming.&lt;/p>
+&lt;h2 id="a-not-so-clever-workaround-fragmented-identifiers">A Not-So Clever Workaround (Fragmented Identifiers)&lt;/h2>
+&lt;p>I have found a neat trick to work around this problem over time. I was already
+using the bookmark feature of my Brave browser, but it was not tracking where I
+left reading. So, I would proceed with the following procedure:&lt;/p>
+&lt;p>(1) Open the inspect mode. &lt;br>
+(2) Click an element that has an ID nearest to where I am at, get the element
+ID. &lt;br>
+(3) Append the element ID to the URL of the site in the form of a fragmented
+identifier. &lt;br>
+(4) Using the new URL with fragmented ID, either overwrite the existing
+bookmark or create a new one.&lt;/p>
+&lt;p>If you don&amp;rsquo;t know what fragmented identifiers are, they are the part of the URL
+that follows the hash symbol (#). Consider the following URL:&lt;/p>
+&lt;div style="text-align: center;">
+&lt;a href="https://rugu.dev/en/blog/intentional-digital-consumption/#maintaining-balance">https://rugu.dev/en/blog/intentional-digital-consumption/#maintaining-balance&lt;/a>
+&lt;/div>
+
+&lt;p>Here &lt;code>#maintaining-balance&lt;/code> is the fragmented identifier and thanks to it the
+browser directly knows where to jump when it opens the page.&lt;/p>
+&lt;p>Anyways, this approach works, but there are some problems with it. First of
+all, it requires manual labor which could have been automatized, secondly,
+although the fragmented links directly jump to the element with the id
+specified in the URL, if there is no element with id close to where you are,
+the method fails.&lt;/p>
+&lt;h2 id="seemingly-a-better-idea-storing-scroll-positions">Seemingly A Better Idea (Storing Scroll Positions)&lt;/h2>
+&lt;p>So, I wanted a tool to save and jump to specific scroll positions on a webpage.&lt;/p>
+&lt;p>I found some programs that are built for this purpose, but none of them met my
+expectations.&lt;/p>
+&lt;p>The most popular one I found was &lt;a href="https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom">Scrroll
+In&lt;/a>,
+and even that could be improved a lot: For example, it forces you to name each
+saved scroll position with an alert prompt. Why not automatically give a random
+name that can be renamed later? The fetch and save UI/UX is confusing—why not
+directly show the saved scrolls and allow users to jump to them? Additionally,
+it lacks features like adding notes to scrolls and searching through saved
+scrolls.&lt;/p>
+&lt;p>So I decided to build my extension for storing/marking scroll positions on web
+pages.&lt;/p>
+&lt;h2 id="introducing-mark-scroll-positions">Introducing: Mark Scroll Positions&lt;/h2>
+&lt;p>Here is my extension built for that purpose, you can download it from
+&lt;a href="https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald">here&lt;/a>.&lt;/p>
+&lt;p>You can save your scroll positions and resume reading later with ease. You can
+save as many scroll positions as you want, add notes, rename them, and see and
+manage all your saved spots on a separate page.&lt;/p>
+&lt;h3 id="implementation-details">Implementation Details&lt;/h3>
+&lt;p>I think there are 3 important aspects for understanding how this project works
+under the hood.&lt;/p>
+&lt;h4 id="1-interaction-between-the-popup-and-content-scripts">1) Interaction between the popup and content scripts&lt;/h4>
+&lt;p>In modern browsers, the environment used by an extension&amp;rsquo;s popup is separate
+from the environment of the current tab the user is viewing (i.e., the HTML,
+CSS, and JavaScript files of the webpage).&lt;/p>
+&lt;p>This separation isolates the extension from web content and prevents extensions
+from directly accessing and modifying tab content. For this, extensions need
+specific permissions like scripting and activeTab to interact between the
+extension&amp;rsquo;s popup window and content scripts.&lt;/p>
+&lt;p>In our case, when the user clicks the &amp;ldquo;Mark&amp;rdquo; button in the popup window, we
+want to fetch the scroll position information from the active tab. However,
+this can only be done in the content script environment. In such scenarios, you
+can either create a content script that listens for events from the popup
+(using &lt;code>chrome.runtime.onMessage&lt;/code> and &lt;code>chrome.runtime.sendMessage&lt;/code>) or inject
+content scripts into the page environment (using
+&lt;code>chrome.scripting.executeScript&lt;/code>) when the user clicks the &amp;ldquo;Mark&amp;rdquo; button. I
+chose the second approach as it seemed cleaner. The same applies to the &amp;ldquo;Jump&amp;rdquo;
+utility.&lt;/p>
+&lt;p>This is basically to isolate the extension&amp;rsquo;s environment from the web content
+so that extensions cannot directly access and modify tab content. As a
+result of this, extensions need specific permissions such as &lt;code>scripting&lt;/code> and
+&lt;code>activeTab&lt;/code> permissions to make an interaction between the extension&amp;rsquo;s
+popup window and the content scripts.&lt;/p>
+&lt;h4 id="2-the-data-structure-to-be-saved">2) The data structure to be saved&lt;/h4>
+&lt;p>If you want your application to be persistent and remember what the user has
+done, you need to store data in a persistent form.&lt;/p>
+&lt;p>I chose to store the details like this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>{
+ [absoluteURL]: {
+ scrolls,
+ title,
+ }
+}
+&lt;/code>&lt;/pre>&lt;p>So, the data is stored in &lt;code>chrome.storage.local&lt;/code> consists of keys of absolute
+URLs and values of data related to that page.&lt;/p>
+&lt;p>Each time a new scroll position is saved, the scrolls array is fetched and the
+new scroll details are added to it. The same approach is used for deletion and
+updates.&lt;/p>
+&lt;h4 id="3-deciding-on-how-to-implement-the-jump-functionality">3) Deciding on how to implement the jump functionality.&lt;/h4>
+&lt;p>Deciding how to implement the jump functionality was challenging. I could have
+simply saved the &lt;code>window.pageYOffset&lt;/code> value when the user clicks &amp;ldquo;Mark&amp;rdquo; and
+uses that value with &lt;code>window.scrollTo(0, offset)&lt;/code> when the user clicks &amp;ldquo;Jump&amp;rdquo;
+(like &lt;a href="https://chromewebstore.google.com/detail/scrroll-in/cjgjbjogfodppempgdlppgefojbcmjom">Scrroll
+In&lt;/a>
+does). However, this would fail if the user resized the page or if the author
+changed font sizes. So, I decided to save enough information to recalculate the
+target offset based on a percentage.&lt;/p>
+&lt;p>When the user clicks &amp;ldquo;Mark,&amp;rdquo; I save not only &lt;code>window.pageYOffset&lt;/code> but also
+&lt;code>window.innerHeight&lt;/code> and &lt;code>document.body.scrollHeight&lt;/code>. Since
+&lt;code>window.pageYOffset + window.innerHeight&lt;/code> roughly equals
+&lt;code>document.body.scrollHeight&lt;/code> when the user scrolls to the bottom of the page,
+we can adapt to page resizes with a normalization procedure when the user
+clicks &amp;ldquo;Jump.&amp;rdquo;&lt;/p>
+&lt;p>Is it that easy? Unfortunately, no. This method fails when the page gets longer
+due to dynamic content updates (like new comments). In this case,
+&lt;code>document.body.scrollHeight&lt;/code> gets bigger, but the offset where the user left
+off and should continue to read on doesn&amp;rsquo;t actually change. Here, jumping
+directly to the offset works better. You can still adjust the offset value in
+comparison to &lt;code>window.innerHeight&lt;/code>, also known as the viewport.&lt;/p>
+&lt;p>Currently, my extension uses the first method, but I might add a feature
+allowing users to choose which jump method they prefer for certain pages.&lt;/p>
+&lt;h2 id="an-alternative-idea-storing-uniquely-identifiable-text">An Alternative Idea (Storing Uniquely Identifiable Text)&lt;/h2>
+&lt;p>Another option is to mark pages based on uniquely identifiable text so the user
+can jump to specific text. The problem with this is if the author changes the
+page or content. Even changing one word can break the mark. In contrast, if you
+save scroll positions, you will still land somewhere close to the initial text.&lt;/p>
+&lt;h2 id="last-thoughts">Last Thoughts&lt;/h2>
+&lt;p>I believe all these ideas can be improved to create a better marking
+application. Maybe a combination of these methods could work, or there might be
+even simpler concepts that I have missed.&lt;/p>
+&lt;p>The main problem is that pages can change, and it&amp;rsquo;s unclear how our application
+should adapt to these changes.&lt;/p>
+&lt;p>Anyway, I hope this application will be useful to some people. It will at least
+be useful to me. If you want to contribute, please feel free to send your PRs
+to
+&lt;a href="https://github.com/kugurerdem/mark-scroll-positions">kugurerdem/mark-scroll-positions&lt;/a>&lt;/p></description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p>A significant amount of my time of the day is spent interacting with computers
 and cell phones. Some of these are due to habits (like having a feeling of
 missing out), some are due to reasons related to dopamine (like watching
 movies, tv-series or content which are supposed to be fun), and some are
 related to work (software development) or productivity (writing, communicating,
 researching). So, I am regularly exposed to all kinds of stimulants that are
-available on the internet.&lt;/p></description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p>My mother recently mentioned that her phone is continually opening certain
+available on the internet.&lt;/p>
+&lt;p>I am quite confident that it is not &amp;ldquo;normal&amp;rdquo; for us human beings to be exposed
+to lots of different kinds of digital stimulants at such a fast, mindless pace.&lt;/p>
+&lt;h2 id="we-cant-keep-up">We Can&amp;rsquo;t Keep Up&lt;/h2>
+&lt;p>Ways to consume stuff always seem to get faster and faster. For most people,
+the content they consume is transforming from deeper and wider content to
+shorter content that is in the form of compensated &amp;ldquo;pill&amp;quot;s. The existence of
+&amp;ldquo;YouTube Shorts&amp;rdquo; and &amp;ldquo;Instagram Reels&amp;rdquo; is a good example of this. I don&amp;rsquo;t think
+there is an inherent problem with content presented in the form of &amp;ldquo;pills&amp;rdquo;. I
+understand that they can be useful when we don&amp;rsquo;t have much time to grasp all
+the details of a certain topic. However, the problem I see is that this way of
+consuming content becoming the norm. Many of us constantly train our brains to
+seek brief moments of feeling good, rather than deliberately focusing on one
+concept and exploring it in more depth. And this happens all the time without
+us even noticing it.&lt;/p>
+&lt;p>I think the key thing that we need to recognize is that the amount of
+satisfaction (or benefit) that we obtain from consuming these contents does not
+always seem to increase at the rate they become available.&lt;/p>
+&lt;p>The quality of our being, how we feel, and how we learn, are not solely
+determined by the content or information we&amp;rsquo;re exposed to but also determined
+by how we intentionally react to them. The way we do things is just as
+important as what is being done. The effect of intentionally watching a certain
+movie is not the same as watching randomly suggested YouTube videos &amp;hellip; The
+effect of choosing a topic and taking the time to learn about it is not the
+same as a random platform such as YouTube recommending a random video for
+learning X in Y minutes.&lt;/p>
+&lt;p>Think about it, even when it comes to learning and education, we see the
+results of this. There are concepts well-known to many people such as &amp;ldquo;tutorial
+hell&amp;rdquo;. It is also quite common for people to feel like they are improving yet
+they are not.&lt;/p>
+&lt;p>How content is consumed is just as important as the content that is being
+consumed. We have to become more mindful when interacting in the realms of the
+internet if we want to benefit from it.&lt;/p>
+&lt;p>I think this is where the concepts of &lt;em>we pulling information&lt;/em> and &lt;em>information
+being pushed to us&lt;/em> come in handy.&lt;/p>
+&lt;h2 id="pulling-vs-being-pushed-to">Pulling vs Being Pushed To&lt;/h2>
+&lt;p>In communication, &amp;lsquo;pulling&amp;rsquo; refers to the phenomenon where the receiver
+actively requests specific information and then receives it. &amp;lsquo;Pushing&amp;rsquo;, on the
+other hand, refers to the phenomenon where a particular piece of information is
+sent to the receiver without them asking for it.&lt;/p>
+&lt;p>You are essentially pulling information each time you search for stuff using
+Google. You are the one who is intentionally asking Google what piece of
+information they need to show it to you.&lt;/p>
+&lt;p>In contrast, information is pushed to you when one of your favorite platforms
+sends you a push notification from your phone or sends an email to recommend
+you to check out their brand-new cool stuff.&lt;/p>
+&lt;p>Keep in mind that it is not always as easy as this to distinguish whether
+information or content you encountered was pulled by you or pushed onto you.
+Consider the case where you open YouTube, it is you who initially triggered the
+process to open the YouTube, but as soon as you open it, you are welcomed with
+a page that is full of video recommendations that you did not specifically ask
+for. While from a technical point of view, it might be our HTTP request that
+triggered that piece of data to be fetched, from a user point of view, we
+see a page that is full of things that we did not initially intend to see.&lt;/p>
+&lt;h2 id="maintaining-balance">Maintaining Balance&lt;/h2>
+&lt;p>While both pulling and pushing seem to be necessary, an unbalance between these
+two concepts makes it harder for us to live mindfully. If you are constantly
+being pushed information, you are not actively and intentionally spending your
+time. You are like a leaf that is blown away in each wind. Not to mention you
+can also be controlled more easily by those apps that you use thanks to their
+recommendation algorithms. You converge into what is presented to you.
+Likewise, if you are completely closed to information being pushed onto you,
+then you are like a closed box, you might miss some of the important stuff
+which are happening around you.&lt;/p>
+&lt;p>The thing is, it is much more common for people to lose balance by constantly
+information being pushed onto them. So what most of us need is to reduce the
+amount to which we are being pushed.&lt;/p>
+&lt;h2 id="pulling-is-usually-better-for-being-intentional">Pulling is Usually Better for Being Intentional&lt;/h2>
+&lt;p>When I reflect on my old school days, most of the things I &lt;em>actually&lt;/em> learned
+were not the ones enforced by the school curriculum. They were the topics I
+found interesting anyway and took the initiative to learn on my own.&lt;/p>
+&lt;p>Pulling information is a more engaging process than things being pushed onto
+you and our brains seem to place higher importance on the subjects we are
+actively engaged with.&lt;/p>
+&lt;p>I think if we want to live our lives more intentionally, what we should aim for
+is to be more active in the way we learn, watch, and do. The alternative is
+leaving ourselves at the initiative of the companies&amp;rsquo; recommendation algorithms
+which are purposefully designed by professionals so that they keep you on their
+apps.&lt;/p>
+&lt;p>&lt;em>Most of the things we are notified of, or shown are distractions.&lt;/em>&lt;/p>
+&lt;p>This being said, what can we do if we want to reduce our exposure to pushed
+informations?&lt;/p>
+&lt;h2 id="reducing-our-exposure-to-pushed-content">Reducing Our Exposure To Pushed Content&lt;/h2>
+&lt;p>I highly suggest that you go to the notification settings of the applications
+you use. &lt;em>Disable all kinds of notifications that you think are not something
+you want to see deliberately.&lt;/em> For example if you are using a social media
+platform, try to disable all kinds of in-app notifications except mentions,
+comments, and so on&amp;hellip; I also highly suggest that you disable push
+notifications almost for all the apps you use unless the kind of notifications
+that are being pushed to you are not related to things that are urgent like
+calls, etc. &lt;em>The end-goal here is not to get rid of all notifications but to
+get rid of notifications that are not important for us or neither urgent.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>Sometimes, an app might continue to push stuff onto you by sending emails and
+so on. &lt;em>Using different emails for primary applications and secondary
+applications might help with this as well.&lt;/em>&lt;/p>
+&lt;p>&lt;em>Also, remember that it&amp;rsquo;s a mistake to register an app with your primary email
+if you&amp;rsquo;ll only use the app for a brief moment. Use disposable emails for those
+cases.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>We have talked about how it is sometimes hard to identify the stuff that is
+being pushed on us. In some cases, even a UI element can be thought of as
+something that is being pushed to us. And indeed, I think there are many cases
+where certain UI designs cause more harm to us than good (while benefitting the
+related company). I think &amp;ldquo;recommendations&amp;rdquo; sections are usually one of these.
+&lt;em>Seek for alternative, lightweight frontends for the applications you use so
+that you are less distracted.&lt;/em> Only Let the app direct you when you need a
+direction, otherwise try to remove all the noise. &lt;em>If you can&amp;rsquo;t find
+alternative frontends to the web applications you use, you can consider using
+Browser extensions that help you to minify the content you see.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Practice mindfulness.&lt;/em> You can set reminders for yourself to check in
+periodically (I use &lt;a href="https://chromewebstore.google.com/detail/bell-of-mindfulness/lggmmceliiaoddfnbaccgpfnpoifilic">Bell of
+Mindfulness&lt;/a>).
+Make it a habit to take a breath in and out while asking yourself specific
+questions such as, &amp;ldquo;Am I consciously doing what I&amp;rsquo;m doing right now, or am I
+just being controlled by the algorithms?&amp;rdquo; This self-reflection can provide
+clarity and intentionality to your actions.&lt;/p>
+&lt;hr>
+&lt;p>And finally, remind yourself that the best thing we can do in order to be less
+disturbed and distracted is actually to not use those apps which distract us at
+the first place.&lt;/p>
+&lt;h2 id="addendum">Addendum&lt;/h2>
+&lt;p>&lt;em>2024-05-24&lt;/em> : I&amp;rsquo;ve been using a Chrome extension called
+&lt;a href="https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne">Stylus&lt;/a>
+that lets you customize the CSS styles of websites. One problem I had with both
+the mobile and web versions of WhatsApp was that archived chats were still
+easily accessible at the top, even showing a notification icon. I just hid that
+section from the UI using this app.&lt;/p></description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p>My mother recently mentioned that her phone is continually opening certain
 windows and prompting her to use services she doesn’t need. After checking her
 phone and doing some online research, I found out that many others have also
 complained about this issue.&lt;/p>
@@ -30,7 +280,102 @@ notifications and even generate pop-ups on your phone. And the frustrating part
 is that most of these pop-ups seem to promote irrelevant services. If you
 accidentally click &amp;ldquo;OK&amp;rdquo; when one of these pop-ups appears, you get charged by
 your provider. It is a carefully set up trap designed to make you accidentally
-subscribe to their unnecessary services and pay money.&lt;/p></description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+subscribe to their unnecessary services and pay money.&lt;/p>
+&lt;p>Since I prefer simplicity and like to have control over the tools I use. I was
+already thinking about removing the bloatware on my phone that came
+pre-installed and can&amp;rsquo;t be deleted through the interface. Hell, even some of
+the fundamental apps, like a gallery or file manager, are filled with ads. It
+gets on my nerves. So, I was already planning to learn how to remove these
+bloatware and the situation I described earlier was the final straw for me.&lt;/p>
+&lt;p>I&amp;rsquo;ve searched for tools to debloat Android phones and found &lt;code>adb&lt;/code>, Android
+Developer Bridge. It&amp;rsquo;s basically a program which allows you to directly create
+a shell session for your phone, similar to connecting to a remote server via
+SSH (the only difference is that instead of connecting through the internet,
+the connection is made via USB).&lt;/p>
+&lt;p>Since Android is essentially an OS based on the Linux Kernel, the shell you
+connect to will most likely be a variant of the sh dialect. So, for those who
+are familiar with working in UNIX environments, its very convenient to remove
+or install packages and customize your phone this way.&lt;/p>
+&lt;p>In this essay, I document this process of removing bloatware from my phone
+as a reference for future use. Hopefully, you find it helpful as well.&lt;/p>
+&lt;h1 id="enabling-usb-debugging-mode">Enabling USB Debugging Mode&lt;/h1>
+&lt;p>While it is possible to establish an ADB connection to your phone over Wi-Fi, I
+chose to use ADB through a USB connection as using Wi-Fi involves certain
+security risks. For instance, others on your Wi-Fi network could potentially
+connect to your phone, especially if your phone doesn&amp;rsquo;t have proper security
+settings. Not to mention that you would need to set up your phone using ADB
+through a USB connection first before initiating a Wi-Fi connection anyways.
+Which kind of makes using WiFi seem more pointless as the reasons for
+preferring Wi-Fi over USB are usually just convenience or not having a USB
+cable available.&lt;/p>
+&lt;p>To connect your phone using adb via a USB connection, you need to enable USB
+Debugging mode on your phone. I won&amp;rsquo;t go into the specifics of this process as
+it varies by phone. But for my own phone, I simply navigated to the &amp;ldquo;About&amp;rdquo;
+section and tapped &amp;ldquo;MIUI Version&amp;rdquo; multiple times to switch into Developer Mode.
+Then, I searched for the &amp;ldquo;USB Debugging&amp;rdquo; option and enabled it.&lt;/p>
+&lt;h1 id="connecting-to-your-phone-via-a-shell-session">Connecting to your phone via a Shell Session&lt;/h1>
+&lt;p>Once you&amp;rsquo;ve installed &lt;code>adb&lt;/code>, you can view the manual by typing &lt;code>adb help&lt;/code>. You
+can also refer to the &lt;a href="https://android.googlesource.com/platform/packages/modules/adb/&amp;#43;/refs/heads/master/docs/user/adb.1.md">online
+documentation&lt;/a>.&lt;/p>
+&lt;p>To connect to your phone via a shell session, simply type &lt;code>adb shell&lt;/code> and
+you&amp;rsquo;re good to go. Most standard UNIX commands such as &lt;code>ls&lt;/code>, &lt;code>cat&lt;/code>, &lt;code>echo&lt;/code>,
+&lt;code>grep&lt;/code>, and more can be used.&lt;/p>
+&lt;p>Keep in mind that you don&amp;rsquo;t need to enter a shell session just to run specific
+commands. You can also use the &lt;code>adb shell &amp;lt;cmd&amp;gt;&lt;/code> pattern to run your particular
+command &lt;code>&amp;lt;cmd&amp;gt;&lt;/code>. This approach simply creates a shell session, executes your
+command, and closes the session, while forwarding the stdout to your current
+shell session.&lt;/p>
+&lt;h1 id="uninstalling-bloatware">Uninstalling Bloatware&lt;/h1>
+&lt;p>The Command Line Interface (CLI) tool used in Android for interaction with the
+Android Package Manager is &lt;code>pm&lt;/code>. This tool basically allows you to list,
+install, or uninstall software packages.&lt;/p>
+&lt;p>To list the currently installed packages, execute the following command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pm list packages
+&lt;/code>&lt;/pre>&lt;p>To view only the default apps on Android, enter this command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pm list packages | grep &amp;#39;android&amp;#39;
+&lt;/code>&lt;/pre>&lt;p>At this point, I would advice you to search for other unwanted pre-installed
+apps known to come with your phone&amp;rsquo;s brand as well as android packages which
+are known to be bloatware. Take a list of these apps for future reference so
+you can easily repeat this process if you need it later again.&lt;/p>
+&lt;p>To delete a specific app from your phone, you first need to identify its
+package name. You can accomplish this by searching for it on the internet.
+However if you can&amp;rsquo;t still find it, you should be able to locate the app&amp;rsquo;s &amp;ldquo;apk
+package code&amp;rdquo; directly on your phone. This process can vary depending on the
+phone you&amp;rsquo;re using, so I suggest you look up how to find package codes for
+applications on your specific phone model.&lt;/p>
+&lt;p>Also, be careful to not to delete anything critical for your system to work. Do
+not delete a package if you are not sure that it is not something system
+critical.&lt;/p>
+&lt;p>Once you get the package.name, you can just run the following command in the
+adb shell:&lt;/p>
+&lt;pre tabindex="0">&lt;code>pm uninstall --user 0 package.name
+&lt;/code>&lt;/pre>&lt;p>Here, &lt;code>--user 0&lt;/code> specifies the user for which you want to uninstall the
+package. User 0 is typically the device&amp;rsquo;s default or primary user. When I have
+run the command &lt;code>pm uninstall&lt;/code> without this, it would say package is
+successfully deleted but the package would still remain on my phone.&lt;/p>
+&lt;p>Keep in mind that we could have also used the following command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>adb shell pm uninstall --user 0 package.name
+&lt;/code>&lt;/pre>&lt;p>Or even:&lt;/p>
+&lt;pre tabindex="0">&lt;code>adb uninstall --user 0 package.name
+&lt;/code>&lt;/pre>&lt;h1 id="automating-the-process">Automating the Process&lt;/h1>
+&lt;p>Remember that I told you to make a list of the packages you remove. This was
+for to make the debloating process easier if you need to do it a second
+time on your phone.&lt;/p>
+&lt;p>I use a specific &lt;a href="https://github.com/kugurerdem/android-bloatwares">git
+repository&lt;/a> for this purpose.
+In this repository, I have a file named &lt;code>bloatwares.txt&lt;/code> that contains the
+package names of certain prebuilt applications for Mi, Xiaomi, Android, and
+third-party applications.&lt;/p>
+&lt;p>If I ever need to debloat my phone, or anyone else&amp;rsquo;s, all I need to do is to
+run the following command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>cat bloatwares.txt | xargs adb shell pm uninstall -k --user 0
+&lt;/code>&lt;/pre>&lt;h1 id="conclusion">Conclusion&lt;/h1>
+&lt;p>If you haven&amp;rsquo;t already started, I strongly encourage you to consider debloating
+your phone. Install &lt;code>adb&lt;/code> on your computer, connect to your phone using it,
+identify packages that seem unnecessary, and free your device from the unwanted
+&amp;lsquo;guests.&amp;rsquo;&lt;/p>
+&lt;p>Go ahead and take back at least a partial ownership of your phone by getting
+rid of these intruders!&lt;/p></description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
 It forms an essential part of my routine, as I use it for nearly all my tasks
 involving text. Be it drafting an essay, sending an email, or coding, Neovim is
 my go-to tool.&lt;/p>
@@ -38,7 +383,113 @@ my go-to tool.&lt;/p>
 interface programs. It&amp;rsquo;s quite fascinating to observe how these small,
 uncomplicated UNIX programs, designed to do one thing flawlessly, interact
 effectively using piping mechanisms. Tools like sed, grep, awk, count, cut, and
-many others, often prove to be incredibly useful for text processing.&lt;/p></description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important">Typing Fast is Important&lt;/h2>
+many others, often prove to be incredibly useful for text processing.&lt;/p>
+&lt;p>I can confidently state that both Neovim and UNIX have proven themselves
+invaluable in my work.&lt;/p>
+&lt;p>However, like many others, I have been introduced to another set of efficient
+tools for dealing with text, known as Large Language Models or LLMs. I&amp;rsquo;ve spent
+several months experimenting with tools like Co-pilot and ChatGPT, and I&amp;rsquo;ve
+found them to be highly beneficial for text-based tasks.&lt;/p>
+&lt;p>Naturally, I wanted to utilize the true potential of all these tools in my
+interactions including text. For this reason, I began searching for Neovim plugins
+and command-line interface programs capable of integrating these AI tools.&lt;/p>
+&lt;p>The process of integrating Co-pilot was relatively simple thanks to a
+&lt;a href="https://github.com/github/copilot.vim">plugin&lt;/a> available on Neovim.&lt;/p>
+&lt;p>However, incorporating ChatGPT into my workflow wasn&amp;rsquo;t as straightforward as I
+had hoped. I looked into several neovim plugins, like
+&lt;a href="https://github.com/jackMort/ChatGPT.nvim">ChatGPT.nvim&lt;/a>, which allow
+interaction with ChatGPT through Neovim. However, the majority of these plugins
+seemed like an overkill compared to what I expect from them. They also had many
+features designed to simplify the programming process, a job that Co-pilot
+already handles for me. Additionally, I would want llms to be accessible not
+only in vim but also within my regular terminal environment. I would appreciate
+it as a command-line interface tool, which would enable piping, giving
+arguments, and flags for more complicated tasks. Unlike Co-pilot, I would like
+to use a tool like ChatGPT in a more widespread context.&lt;/p>
+&lt;p>Hanging around Twitter, I recently saw a post from
+&lt;a href="https://twitter.com/garybernhardt/status/1735090271690637803">Gary&lt;/a>, giving a
+credit to Simon Willison&amp;rsquo;s library, &lt;a href="https://github.com/simonw/llm">llm&lt;/a>. I was
+surprised to find out that this library was exactly what I was looking for as
+well. It was a command-line interface tool that allowed me to interact with
+LLMs through my terminal, which is exactly what I wanted. I could pipe the
+output of any command into llm, and it would return the result of the input.
+For instance, I could pipe the output of a command like &lt;code>cat&lt;/code> into &lt;code>llm&lt;/code>, and
+it would return a response from the AI model, which you could pipe or redirect
+into another command or file.&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>Here are some of the examples that comes to my mind on how you could use the
+&lt;code>llm&lt;/code> tool:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git diff | llm &lt;span style="color:#e6db74">&amp;#39;Recommend 5 different commit messages for these change&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat essay.txt | llm &lt;span style="color:#e6db74">&amp;#39;Summarize what these are about&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Furthermore, if you keep finding yourself using the same prompts over and over
+again, you can create templates for them.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Create a template for finding synonyms of a word&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>llm --system &lt;span style="color:#e6db74">&amp;#39;What are the synonyms of the following prompt&amp;#39;&lt;/span> --save synonyms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Create a template for rephrasing text&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>llm --system &lt;span style="color:#e6db74">&amp;#39;Fix grammar mistakes and rephrase the text&amp;#39;&lt;/span> --save rephrase
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Create a template for finding titles for given content&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>llm --system &lt;span style="color:#e6db74">&amp;#39;Recommend 5 titles for the following prompt&amp;#39;&lt;/span> --save titleize
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can later use these templates by passing the &lt;code>-t&lt;/code> flag to the command.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Rephrase the text which are copiod in your clipboard&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>xsel -b | llm -t rephrase
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Find synonyms of the word &amp;#39;serenity&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;serenity&amp;#39;&lt;/span> | llm -t synonyms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Find appropriate titles for your document&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat vi-llm.md | llm -t titleize
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also further specify system messages, choose language model you want to
+interact with, and many more things, which you can examine on the
+&lt;a href="https://llm.datasette.io/en/stable/help.html">documentation&lt;/a> of the app.&lt;/p>
+&lt;h2 id="the-readline-issue">The Readline Issue&lt;/h2>
+&lt;p>So, I was quite happy for finding this tool, but the only thing I did not like
+about it was that when you try to use chat mode with &lt;code>llm chat&lt;/code> command, the
+readline would break my initial GNU readline settings defined in my
+&lt;code>~/.inputrc&lt;/code> file.&lt;/p>
+&lt;p>When delved into the source code of the repo, I have seen that other people
+have been encountering the same
+&lt;a href="https://github.com/simonw/llm/issues/376">issue&lt;/a>.&lt;/p>
+&lt;p>I figured out that the issue is likely caused by the readline libraries used to
+build the &lt;code>llm chat&lt;/code> command overriding the default readline settings.
+Because I&amp;rsquo;m not very familiar with these Python libraries, I decided not to try
+fixing the issue by changing the source code. Instead, I have decided to use
+the &lt;code>rlwrap&lt;/code> command to address this problem. Basically, &lt;code>rlwrap&lt;/code> is a
+program that allows you the wrap the readline of the programs that you run so
+that you can still use the application&amp;rsquo;s readline as it was respecting your
+shell&amp;rsquo;s readline settings.&lt;/p>
+&lt;p>I know that by the time you, the reader, come across this, the issue may
+already be fixed. However, the purpose of this piece is not just to provide a
+solution to this particular problem, but to share how I approached solving it
+and what I learned from the experience.&lt;/p>
+&lt;h2 id="the-vi-llm-wrapper">The vi-llm Wrapper&lt;/h2>
+&lt;p>Anyways, the problem with the &lt;code>rlwrap&lt;/code> solution was that, yeah, it allowed me
+to use my shell&amp;rsquo;s readline settings, so I could use vi keybindings when giving
+prompts, but I still could not copy, highlight, and modify the answers that are
+given to me, or the previous prompts that I have give. For this, I have built a
+shell script called &lt;a href="https://github.com/kugurerdem/vi-llm">vi-llm&lt;/a> based around
+one of my favorite unix utils &lt;a href="https://joeyh.name/code/moreutils/">vipe&lt;/a>, and
+llm. &lt;code>vi-llm&lt;/code> is basically a wrapper for llm that gets all of its prompts
+from Vim, enabling an interactive communication with ChatGPT using llm, by
+letting you input a message through the vim editor, then sending that message
+to the LLM interface. subsequently displaying any logs received from the
+interface right back in your text editor, repeatedly, until the user quitting
+the vim editor without doing any changes. In essence, it operates similarly to
+a chat interface. You type in messages (or commands) which get sent to the LLM
+system, and any response from the LLM system gets displayed back to you. This
+cycle continues, enabling continuous, interactive communication with the LLM
+from your command line.&lt;/p>
+&lt;p>Here is a quick showcase:&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center" alt="vi-llm-showcase">&lt;/p>
+&lt;p>If you are interested, you can check out the &lt;a href="https://github.com/kugurerdem/vi-llm">github repo.&lt;/a>&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>I&amp;rsquo;ve been using Copilot and ChatGPT for months and now I am using this tool for
+a few days now. Now I have all the tools that I have needed in order to utilize
+my workflow even more, a strong autocompletion tool such as Copilot, a program
+that allows me to interact with large language models through shell: llm, and
+finally, a wrapper vi-llm based around llm for my personal use case.&lt;/p>
+&lt;p>I hope that this essay was helpful or at least interesting to some of you.&lt;/p></description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important">Typing Fast is Important&lt;/h2>
 &lt;p>It is often mentioned that the bottleneck in building software projects is not
 one&amp;rsquo;s typing ability but ability to think clearly, and to design the
 architecture effectively. Afterall, if typing speed was so essential to
@@ -46,7 +497,73 @@ programming, the time difference between rewriting an already existing project
 with that of creating it from scratch would not be as high as it is.&lt;/p>
 &lt;p>While I agree that typing speed is not essential to programming, I cannot
 relate on how this fact is used by lots of people to justify their thinking of
-typing fast being not important for the development process.&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
+typing fast being not important for the development process.&lt;/p>
+&lt;p>The comparison made above between writing a project by scratch and rewriting an
+already existing one, is good for showing that typing speed itself cannot be a
+sufficient criteria for being a good developer. But what it does not show is
+the unimportance of typing fast. In an an ideal setting, we could have compare
+the development speed of developers who almost have the identical cognitive
+abilities and experiences with different typing speeds. Unfortunately, I do not
+heard any such experiments. So what I will do to show you the importance of
+typing is instead will give you my arguments for it.&lt;/p>
+&lt;p>First of all, programming is not just about thinking and designing systems but
+also about debugging bugs, refactoring code, experimenting, and finally
+researching or discussing stuff. One commonality of all these exercises is that
+they are being iterative processes. Any programmer with a sufficient experience
+would probably understand what this means. I remember countless times where I
+needed to put debug logs lots of different places in the code, so that I can
+exactly point source of the bugs. Same applies for experimenting with the tools
+I am not used to so that I can get an idea about the inner workings of them.
+Even searching stuff on the internet is often an iterative process where one
+search leads to another prompt so that you can understand the related concepts.
+All of these processes are usually proceed by trial and error, where in each
+iteration you are somehow bottlenecked by the necessary actions that are needed
+to be done in order to proceed to the next iteration. I think what typing speed
+is esentially helpfull for is to reduce the time between those iterations.&lt;/p>
+&lt;p>Yes, it&amp;rsquo;s essential to spend time on the architecture of the code, technology
+stack, algorithms which will be used and requirement specifications. However
+this doesn&amp;rsquo;t diminish the importance of typing fast. To the contrary, this just
+makes typing fast more important because reducing the time spent on typing
+would allow us to allocate more time to the essential works.&lt;/p>
+&lt;p>&lt;strong>Even though typing itself is not so important, typing fast would still be one
+of the most critical skills for developers because it reduces the time spent on
+an insignificant task of typing.&lt;/strong>&lt;/p>
+&lt;p>This reasoning is similar to what &lt;em>Hans Hoffman&lt;/em> once said:&lt;/p>
+&lt;blockquote>
+&lt;p>“The ability to simplify means to eliminate the unnecessary so that the
+necessary may speak.”&lt;/p>&lt;/blockquote>
+&lt;p>Typing is the way we actualize our ideas into real programs.&lt;/p>
+&lt;p>If you do not have the faculties to realise your ideas at the rate they occur,
+then they can accumulate to a point where you eventually reach a position where
+you have to abandon some of them. Essentially, the faster you can transform
+your ideas into code and test them, the less likely you are to experience an
+overflow of untested and undeveloped ideas.&lt;/p>
+&lt;h2 id="improving-typing-speed">Improving Typing Speed&lt;/h2>
+&lt;p>Given that the typing speed of an average person is around 40 WPM, even
+reaching 70-80 WPM would be a significant leap for most people. While pursuing
+further improvements is still admirable, its important to be aware of that
+there comes a point where the cost-effectiveness of pushing ones typing speed
+diminishes, as the challenge escalates when you approach your personal limits.
+Although having a personal average typing speed of 105 WPM on
+&lt;a href="https://10fastfingers.com">10FastFingers&lt;/a>, I still like to exercise typing
+speed. But I do this as a kind of challenge rather than an expectation of being
+more productive.&lt;/p>
+&lt;p>The main advice I would like to give the people who want to improve their
+typing speed is to learn touch typing, a technique where you become accustomed
+to using all 10 of your fingers to type without looking at the keyboard.
+Although increasing typing speed without a common technique like touch typing
+is indeed possible, I still like to recommend touch typing as it is a
+standardised way of typing which its know-how can also be transferred to other
+people in a consistent way. I personally used sites like
+&lt;a href="https://keybr.com">keybr&lt;/a> and &lt;a href="https://www.typingclub.com/">typing club&lt;/a> while
+I was initially learning touch typing, whereas I still use
+&lt;a href="10fastfingers.com">10FastFingers&lt;/a> and &lt;a href="https://play.typeracer.com/">Type
+Racer&lt;/a> for exercise.&lt;/p>
+&lt;p>For developers, I also strongly recommend becoming accustomed to using the
+English keyboard layout even their native language is not English. Most
+programming languages are designed to use symbols readily available on a US
+keyboard, such as {}[]/`\&amp;quot;&amp;rsquo;, which may not be as easily accessible on other
+layouts, (e.g. Turkish layout).&lt;/p></description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p>About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,
@@ -54,4 +571,390 @@ there was nothing but a black screen. Suddenly, a terminal screen appeared with
 his keystrokes and he quickly began examining the codebase, providing feedback
 on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
 different files in an instant, examining the diffs that were made in different
-git commits.&lt;/p></description></item></channel></rss>
+git commits.&lt;/p>
+&lt;p>After seeing what I saw, I thought to myself, ‘If I were able to develop and
+refactor code at that speed, I would save a lot of time, I could have spent
+more time thinking about the actual stuff with as little friction as possible.
+I want to have this power.’ So I have looked at &lt;a href="https://gwn.wtf/resume.html">his
+CV&lt;/a> and realized that he was knowledgeable on
+topics that many developers, including myself, struggle with. Influenced by
+this, I started asking him (he was our consultant, after all) as many questions
+as I could and focused on the resources he suggested and the technologies he
+used.&lt;/p>
+&lt;p>The inspiration from this hacker guy, combined with the very precious help from
+a friend of mine who had a strong interest in operating systems (he uses Arch in
+Qubes OS btw), being libre, and having control over his computer, led me to
+switch to Arch Linux. I have also benefited a lot from discussions on hackernews
+and from youtubers like Luke Smith which I also heard from the Qubes OS friend
+of mine.&lt;/p>
+&lt;p>In this post, I will first provide a brief overview of Linux and Arch Linux in
+particular. Then, I will discuss my reflections on the past few months,
+including the downsides and upsides of switching to Arch Linux. Finally, I will
+explain the programs that I currently use in my workflow.&lt;/p>
+&lt;h2 id="what-are-my-reasons-for-using-linux">What are my reasons for using Linux?&lt;/h2>
+&lt;p>Unlike MacOS or Windows, Linux is a free and open-source operating system.
+Perhaps you are already know that a vast majority of servers actually run on
+Linux. Android, which is the operating system most phones use, is a specific
+variant of the Linux Operating System. By these means, many developers already
+seem to acknowledge the importance of learning Linux for practical reasons.
+However, the controversy usually arises when it comes to using Linux on a
+personal computer.&lt;/p>
+&lt;p>For an average computer user, it typically doesn&amp;rsquo;t matter which operating
+system they use as long as it doesn&amp;rsquo;t interfere with their daily tasks.&lt;/p>
+&lt;p>However, in my case, as my views have become more nuanced, switching to Linux
+has started to be more appealing.&lt;/p>
+&lt;p>Here are some of the reasons why I prefer using Linux over MacOS or Windows:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Both Windows and MacOS forces you their ecosystem by their updates. With each
+update, its more likely that your Desktop Environment is cluttered by a new
+application which Microsoft added and most likely you will not even use. Most
+of the prebuilt stuff that are coming with Windows, I do not use at all. I
+think the same argument also holds for MacOS, as using one of their apps
+usually forces you to use other Apple apps and you to stick with their
+environment.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Since both MacOS and Windows are closed-source, we don&amp;rsquo;t know for sure what
+they do under the scenes. Windows, for example had a builtin keylogger. If
+you are curious about this, please type &amp;ldquo;Windows builtin keylogger&amp;rdquo; to your
+favorite search engine. You will encounter many entries explaining how to
+disable builtin keylogging. Although I do not have sufficient reasons to
+claim that the Apple is doing the same thing, in practice, there is nothing
+preventing these Close Sourced applications to do things like that besides
+legal issues.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You need to pay some money in order to use both MacOS and Windows, whereas
+Linux is essentially free. You can set up Linux on a computer with no cost at
+all except some finite amount of time you will put in to learn things.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Linux is highly customizable and allows users to modify and tailor their
+environment to meet their specific needs. In contrast, Windows and Mac OS are
+more limited in terms of customization. This partly makes Linux a better
+choice for users who aim to be a power user, a user who wants to have control
+over their operating system and want to modify or customize it to meet their
+specific needs.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Linux offers a variety of versions that cater to the different needs of
+various users, which is a significant advantage. These versions, known as
+Linux distros, are essentially Linux systems with additional packages
+specifically designed for certain users. I have not come across a similar
+phenomenon in either MacOS or Windows. Linux provides more options than any
+other proprietary operating system can offer.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Using a product often means more than just using it; it also means becoming
+part of a group. Using Linux involves you in a community populated by hacker
+minded people. And whether you indend it or not being part of a group
+influences your habits. By immersing yourself in an environment filled with
+more experienced individuals, you become more exposed to their knowledge and
+ideas.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>I understand that similar points could be made for the sake of Windows or
+MacOS. Examples include Linux not being able to run some proprietary software
+that these operating systems can, or Linux not being as convenient because you
+often have to figure out most things yourself. I get that. However, all things
+considered, the value that Linux provides to me exceeds the values that those
+proprietary OSes provide.&lt;/p>
+&lt;h2 id="what-is-unique-about-arch-linux">What is unique about Arch Linux?&lt;/h2>
+&lt;p>Essentially, a Linux distro is a version of the Linux operating system that
+comes packaged with additional software and tools.&lt;/p>
+&lt;p>Oversimplicated, but an intuitive formula can be given as:&lt;/p>
+&lt;p>&lt;code>DISTRIBUTION = KERNEL + SOME ADDITIONAL DEPENDENCIES&lt;/code>&lt;/p>
+&lt;p>Theoretically, there&amp;rsquo;s nothing stopping you from doing in one Linux
+distribution what you can do in another simply by altering the &amp;lsquo;SOME ADDITIONAL
+DEPENDENCIES&amp;rsquo; part of the above formula. These additional dependencies can
+range from package managers to init systems, as well as the initial software
+that comes with the distribution.&lt;/p>
+&lt;p>When you examine the variety of potential distributions one can select from, it
+can be overwhelming. Why are there so many different Linux distributions? The
+answer is because many people have different objectives when using an operating
+system and therefore require different dependencies. Additionally, numerous
+organizations and communities each have their distinct views on what
+constitutes a good Linux distribution.&lt;/p>
+&lt;p>While distros like Ubuntu focus on being more friendly and welcoming to new
+users, some distros, like Debian focus on stability and some like Arch, focus
+on a certain combination of being minimal, cutting-edge and active.&lt;/p>
+&lt;p>To me the key principles that Arch Linux were emphasasising (which can also be
+read in their &lt;a href="https://wiki.archlinux.org/title/Arch_Linux">wiki&lt;/a>), were more
+appealing than the other mainstream distros available.&lt;/p>
+&lt;p>Arch Linux essentially distinguishes itself as a minimalist distribution with a
+very knowledgeable community. This fact partially explains why Arch is
+considered one of the most cutting-edge distributions out there &amp;ndash; its active
+community maintains available packages that Arch users can install through a
+community-driven repository called the Arch User Repository.&lt;/p>
+&lt;p>When you install Arch, you don&amp;rsquo;t receive anything but a virtual console and
+specific programs that you instructed the Arch installer to download. Unlike
+other distributions that build many packages into your system by default, which
+might include several programs that you may need but at the cost of downloading
+additional unwanted programs, Arch Linux instead puts the customization
+responsibility on the user. Which allows you to install and focus solely on
+what you need.&lt;/p>
+&lt;h2 id="some-reflections">Some Reflections&lt;/h2>
+&lt;h3 id="getting-used-to-it">Getting used to it&lt;/h3>
+&lt;p>Switching from Windows to Arch Linux was really challenging as in Arch Linux,
+it is you that needs to bear practically all responsibilities regarding your
+computer. As a result of this transition, I began to appreciate all the
+features we often take for granted; screen lockers, clipboard functionalities,
+power management, multimedia keys, and so on. These functionalities are usually
+managed by specific processes running unseen in the background. The average
+computer user might not realize that these are distinct programs that need
+setup. However, when you are building your system on a minimalist distribution,
+your knowledge of such details tends to increase.&lt;/p>
+&lt;h3 id="variety-of-solutions">Variety of Solutions&lt;/h3>
+&lt;p>When you want to accomplish something on Linux, there are many alternative ways
+to do it. As a result, you&amp;rsquo;re often left wondering, &amp;ldquo;which method/approach
+should I choose first?&amp;rdquo; I think that these kinds of questions frequently
+puzzled me. Here are some examples:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+protocol, should I switch to it?&amp;rsquo;&lt;/p>
+&lt;p>&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
+something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p>
+&lt;p>&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
+neovim is more community driven.&amp;rsquo;&lt;/p>&lt;/blockquote>
+&lt;p>Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
+They indeed become meaningful when the minor differences between them begin to
+matter. However, I believe that the best approach is to simply select a tool
+that resolves the problem at hand without overthinking and keep progressing in
+our work. It&amp;rsquo;s not beneficial for beginners to obsessively search for the
+&amp;lsquo;best&amp;rsquo; program. Often, opting for a &amp;lsquo;sufficient&amp;rsquo; solution can also be the
+&amp;lsquo;best&amp;rsquo; choice, considering the time you might waste finding a program.&lt;/p>
+&lt;h3 id="some-beginner-mistakes">Some beginner mistakes&lt;/h3>
+&lt;p>One common mistake I see among beginners, which I also made myself, is
+attempting to do things without understanding them properly. This is especially
+common among new Linux users who may wind up breaking their system by copying
+and pasting commands from some forum. They tend to install programs that
+perform the same functions and use different package managers that configure
+multiple dependencies and configuration files. Which often leads to one manager
+disrupting the changes made by the other, and so on.&lt;/p>
+&lt;p>While it&amp;rsquo;s understandable that people may want to work in the same way they&amp;rsquo;re
+accustomed to, this habit can also hinder them from getting used to the Linux
+environment. For instance, instead of looking for programs that allow
+installations through GUI-based applications, it&amp;rsquo;s more beneficial to
+understand how to operate the native package manager through a terminal, learn
+how to build things from source code using makefiles, and so on.&lt;/p>
+&lt;p>The solutions people try to replicate their previous workspace can become
+overly complicated. In these cases, it can be better not to solve the &amp;lsquo;problem&amp;rsquo;
+in the first place. Hell, even I&amp;rsquo;ve been guilty of this myself. Since I loved to
+use MSPaint, whenever I needed to draw something on Linux, I used to run a
+Windows instance on QEMU and start MSPaint with a bash alias that I had set up.
+In retrospect, this was a poor solution as it would have been just simpler to
+switch to another drawing program designed for Linux.&lt;/p>
+&lt;h3 id="dual-boot">Dual Boot&lt;/h3>
+&lt;p>Setting up a dual-boot computer with Linux and Windows could seem like a good
+choice for those interested in learning Linux. However based on my experience,
+it is usually a bad idea. I made the error of installing Linux Mint alongside
+Windows few years ago only to find myself frequently trying to synchronize my
+files between the two systems. The maintenance that was required increased due
+to the usage of both systems. Moreover, having the option to fall back on
+Windows when facing issues prevented me from engaging with the Linux
+environment enough. I could not learn how to troubleshoot and resolve issues on
+myself.&lt;/p>
+&lt;p>In my view, what I have described above is like attempting to learn swimming
+while using a flotation device. It&amp;rsquo;s probably more effective to dive in and
+learn the Linux operating system without relying on Windows as a safety
+net.&lt;/p>
+&lt;p>I guess the only valid reason for wanting to keep Windows installed on a
+computer is to play video games or use specific programs that are not available
+on Linux. Other than that, I suggest using Linux for most things you do.&lt;/p>
+&lt;h3 id="gui-vs-terminal">GUI vs Terminal&lt;/h3>
+&lt;p>Linux users often use terminal programs as they sometimes offer more
+flexibility and power for certain tasks. The tasks are usually completed by
+using command-line interface (CLI) programs which allows users to enter
+commands to perform various actions. This is different from programs with a
+graphical user interface (GUI) which usually have buttons and menus.&lt;/p>
+&lt;p>Even when using GUIs, we often end up performing repetitive tasks manually. In
+these kinds of situations, using a terminal instead of a GUI program can become
+really handy. As simple CLI can easily be used programmatically. They can be
+used in loops, conditionally, and to pipe the output from one program to
+another. This approach can be a game-changer, especially for those who aspire
+to become power users. Here are a few simple examples of where this approach
+has saved me a significant amount of time:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Recently, I had a batch of 113 weirdly rotated images, but I was able to
+rotate them all to the desired orientation using the following code:&lt;/p>
+&lt;pre tabindex="0">&lt;code> for file in *.jpg;
+ do
+ convert $file -rotate 90 rotated-$file;
+ done
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>
+&lt;p>I used &lt;code>yt-dlp&lt;/code> to easily download youtube videos and playlists. It was one
+of the most comfortable downloading experiences I had.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I used &lt;code>pdfcrop&lt;/code> for cropping PDF files.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I changed the structure of folders that have many files in them by using
+simple for loops alongside with &lt;code>mv cp rm&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Not to mention how much its easier to install packages that are on AUR or Arch
+Repository compared to installing stuff in Windows.&lt;/p>
+&lt;p>Overall, I strongly believe that the power of interacting with programs through
+terminal can increase one&amp;rsquo;s overall productivity.&lt;/p>
+&lt;h3 id="arch-linux-manuals">Arch Linux manuals&lt;/h3>
+&lt;p>One caveat of using command-line interfaces (CLIs) is that it can be easy to
+forget the specifics of the interface. As a result, it is essential for terminal
+users to know how to quickly open and find the information they need in manual
+pages in order to effectively use CLIs.&lt;/p>
+&lt;p>Thankfully, most programs in Linux already have their own manuals available
+through the &lt;code>man&lt;/code> command. When I need to use a certain utility or CLI function,
+all I do is open the terminal through a keybinding that I have set up and type
+&lt;code>man programname&lt;/code>, then I can quickly scroll through the manual page using VI
+keybindings.&lt;/p>
+&lt;p>Despite the fact that I am already acquinted by heart with some of the most
+important flags and utilities of the programs that I use, I am also a lot better
+(faster) at finding the stuff I need. It is just as much important, if not more
+important, to be able to find the stuff you need by knowing them by heart.&lt;/p>
+&lt;h2 id="current-workflow">Current Workflow&lt;/h2>
+&lt;p>All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/dotfiles">dotfiles
+github repository&lt;/a>.&lt;/p>
+&lt;h3 id="window-manager">Window Manager&lt;/h3>
+&lt;p>I do not use any desktop environments. I use a tiling Window Manager (WM), a
+type of software that automatically arranges and resizes application windows in
+a non-overlapping fashion, without the need for manual dragging and resizing.
+The particular WM I use now is called &lt;code>dwm&lt;/code>, it is one of the tools that are
+built by the hacker organization &lt;a href="https://suckless.org/">suckless&lt;/a>.&lt;/p>
+&lt;p>Having switching to a tiling window manager, I now realize that how much of a
+hassle was it to manually resize, drag, and select all my application windows.
+Besides slowing me down, your average desktop environment also takes a lot of
+space with their tilebars and etc. which I might want to use for seeing more
+content.&lt;/p>
+&lt;p>dwm comes with another program called &lt;code>dmenu&lt;/code> which enables you to select list
+of options from the menu and do whatever you want with it. Initially dwm uses
+dmenu to make the user easily open the programs they want to open through a
+certain shortcut.&lt;/p>
+&lt;p>I also use &lt;code>dwmblocks&lt;/code> to control the contents of the info bar on the top left.
+I only show Volume, Battery, Memory and Date info there.&lt;/p>
+&lt;h3 id="keyboard-layout">Keyboard Layout&lt;/h3>
+&lt;p>Since I am from Turkey, I need to use Turkish characters in my daily life a lot
+especially when interacting with my friends. The thing is I also find English
+keyboard layout very productive, especially when it comes to coding and using
+Vim. As a result, I needed a mechanism to be able to benefit from both of these
+functionalities. For this, I have attached a shortcut to switch between TR and
+US layouts.&lt;/p>
+&lt;p>I have also swapped the Escape key with the CapsLock key as I use the escaping
+functionality a lot when using VIM but do not use Caps Lock that much. It is
+ergonomically a lot more preferable to use the CapsLock key for the Escape
+functionality.&lt;/p>
+&lt;p>Here are my settings in .xinitrc that imply those changes:&lt;/p>
+&lt;pre tabindex="0">&lt;code># ~/.xinitrc
+
+setxkbmap -option &amp;#34;caps:swapescape&amp;#34;
+setxkbmap -model pc104 -layout us,tr -option grp:win_space_toggle
+&lt;/code>&lt;/pre>&lt;p>I am also aware that I could have used &lt;code>tr-alt-q&lt;/code> layout which is basically an
+English keyboard layout but if you use AltGr, keys like &lt;code>i,o,u,g,c&lt;/code> turns into
+&lt;code>ı,ö,ü,ğ,ç&lt;/code>. The problem is that the only way I found was to change the keycode
+tables through &lt;code>.Xmodmap&lt;/code> and it was buggy. I could not find a simple and clean
+way to implement this layout&lt;/p>
+&lt;h3 id="terminal--shell">Terminal &amp;amp; Shell&lt;/h3>
+&lt;p>As terminal, I use &lt;code>st&lt;/code>, so far I have not seen particular advantage of using st
+over other possible terminals that I could have use Alacritty or so, I just
+needed a terminal that is lightweight and st was one of the possibilities I
+could choose.&lt;/p>
+&lt;p>As shell, I mostly use bash. But I understand using zsh is perfectly fine in a
+personal environment as well. The only possible problem that I can think of zsh
+is portability problem of the scripts written for it.&lt;/p>
+&lt;h3 id="text-editing-and-programming">Text editing and programming&lt;/h3>
+&lt;p>I use &lt;code>neovim&lt;/code> for almost all my works involving text. Neovim is a fork of Vim,
+a highly configurable text editor that is designed to be extendible and also
+efficient through the maximal use of keyboard both with macros and
+shortcuts. It also comes with a powerful syntax highlighting engine and support
+for a wide range of programming languages and file formats. As a dialect of Vim,
+Neovim is fully compatible with Vim and uses the same configuration files and
+command syntax, but it includes additional functionality and improvements that
+are not available in the original Vim. dialect of vim.&lt;/p>
+&lt;p>&amp;lsquo;Why use neovim instead of vim?&amp;rsquo; you might ask. Right now, it does not matter to
+me whether I use vim or neovim since in both of these the things I want is
+available. I use neovim because it was my first decision to go with it and
+because of this I already have my files configured for neovim. The reason why I
+initially chose neovim over vim was because of a certain workflow video I have
+seen on youtube: Vim had not some the plugins that were used in the video. Later
+on, I thought that video was full of unnecessary stuff so I gave up on it.&lt;/p>
+&lt;p>Getting used to vim has significantly improved my speed and comfort when
+programming as its command mode is very efficient for text navigation and
+manipulation without even having to use mouse or moving your hand much.
+When my friends see me getting done stuff in VIM they sometimes refer to it as
+&amp;lsquo;black magic&amp;rsquo;, I like this a lot too. =)&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/8n-ylg-pw6s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+ &lt;/div>
+
+&lt;p>I should also mention that I have started to convert some of my .odt, .docx
+files like diaries, logs, records to plain text just because it gives me to
+flexibility to be able to edit/read them through simple text editors such as
+vim.&lt;/p>
+&lt;h3 id="terminal-multiplexer">Terminal Multiplexer&lt;/h3>
+&lt;p>A terminal multiplexer is a software program that allows multiple terminal
+sessions to be created, accessed, and controlled from a single terminal window
+or console. It enables users to have multiple terminal sessions running
+simultaneously, switch between them, and manage them easily.&lt;/p>
+&lt;p>Since I use terminal for almost all the text work I do including software
+development, it is, thus, ergonomically important for me to have a way to manage
+different programs through one terminal.&lt;/p>
+&lt;p>I do this thorugh a program called &lt;code>dvtm&lt;/code>, an alternative for tmux.&lt;/p>
+&lt;p>Although I can split screens in vim when doing software development, it does not
+give the same flexibity and ease of use the dvtm gives. There are some
+programs you might want to see running simultaneously through one terminal
+instead in addition to being able to edit/write files. You can do the latter in
+vim, but the former is not so trivial to achieve.&lt;/p>
+&lt;p>Since &lt;code>dvtm&lt;/code> already solves a problem that vim splits solve, I do not use vim
+splits anyways.&lt;/p>
+&lt;p>Here is an example showcase of dvtm:&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize" alt="Example DVTM
+Showcase">&lt;/p>
+&lt;h3 id="file-manager">File Manager&lt;/h3>
+&lt;p>I use &lt;code>ranger&lt;/code>, considering to switch to &lt;code>lf&lt;/code> but also don&amp;rsquo;t see a reason for it
+since I am already used to &lt;code>ranger&lt;/code>.&lt;/p>
+&lt;p>As far as I remember the only thing I have changed in ranger is some of the
+priorities on which programs to use when openning files and to enable image
+preview mechanism.&lt;/p>
+&lt;p>Before getting used to ranger I was using a file manager with GUI named
+&lt;code>dolphin&lt;/code>.&lt;/p>
+&lt;h3 id="taking-notes">Taking Notes&lt;/h3>
+&lt;p>I used lots of different note-taking apps such as Google Keep, Obsidian, Notion…
+The problem is, almost all of these apps come with features that I do not use at
+all, I mostly use note-taking applications as a way to remember the things that
+I intended to do and for this, all I need is a way to sync my files between my
+Phone and Computer. I used telegram for this purpose for a while, but since its
+purpose is not this, I then looked for some alternatives.&lt;/p>
+&lt;p>Meanwhile, I found &lt;code>gitjournal&lt;/code>, it is a git based note taking application with
+a Mobile App. On my phone, I use its own application whereas on my computer, I
+just use the &lt;code>gitjournal&lt;/code> script that I created that updates the notes by
+automatically running commands such as &lt;code>git pull&lt;/code> &lt;code>git commit&lt;/code> &lt;code>git push&lt;/code> before
+and after opening &lt;code>nvim&lt;/code> to change note files.&lt;/p>
+&lt;p>The script for this can be found &lt;a href="https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497">here&lt;/a>.&lt;/p>
+&lt;h3 id="password-management-and-otp">Password Management and OTP&lt;/h3>
+&lt;p>&lt;code>pass&lt;/code> and &lt;code>pass-otp&lt;/code>&lt;/p>
+&lt;p>Also there is a very simple script called &lt;code>passmenu&lt;/code> which uses dmenu to fetch
+the passwords from pass easily. For passphrase aplet to open, you need &lt;code>gtk2&lt;/code> or
+&lt;code>gtk3&lt;/code> though.&lt;/p>
+&lt;h3 id="wifi--bluetooth">Wifi &amp;amp; Bluetooth&lt;/h3>
+&lt;p>I use &lt;code>bluetoothctl&lt;/code> to connect bluetooth devices and use &lt;code>networkmanager&lt;/code> &amp;amp;
+&lt;code>nmcli&lt;/code> to connect to the internet.&lt;/p>
+&lt;h3 id="web-browser">Web Browser&lt;/h3>
+&lt;p>I just use &lt;code>brave&lt;/code> like a normal human being. I like that it has a builtin
+adblocker. Since I like moving with vim keybindings, I have also installed an
+extension called &lt;a href="https://vimium.github.io/">vimium&lt;/a>. This extension helps you to navigate your browser
+through vim keybindings.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t67Sn0RGK54?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+ &lt;/div>
+
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Switching to Arch Linux was a challenging experience due to its steep learning
+curve. I had to deal with many things that I always used, but never realized
+that there were actual programs for those functionalities, such as clipboard,
+screen locks, and opening screens. It took some time to get used to it, but now
+I am so accustomed to using Arch Linux that I don&amp;rsquo;t even want to use Windows
+anymore, except for cases like playing video games (which I also don&amp;rsquo;t do it
+much these days).&lt;/p>
+&lt;p>It&amp;rsquo;s also fun to challenge yourself and succesfully get over those challenges.&lt;/p></description></item></channel></rss>
