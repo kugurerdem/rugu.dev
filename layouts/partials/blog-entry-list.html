@@ -9,6 +9,6 @@
         {{ $postfix = "(outlink)"}}
     {{ end }}
 
-    <a href="{{ $url }}">{{ .Title }}{{ if .Params.recommended }} 🔥{{ end }}</a> {{$postfix }}
+    <a href="{{ $url }}"{{ if .Params.recommended }} class="recommended"{{ end }}>{{ .Title }}</a> {{$postfix }}
 </ul>
 {{ end }}
