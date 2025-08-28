@@ -18,24 +18,7 @@
 
                         {{ with .Site.GetPage "section" "blog" }}
                         {{ .Content }}
-                            {{- range .Pages }}
-                            <ul>
-                                {{ if .Params.recommended }}
-                                <img src="/icons/star.svg"/>
-                                {{ end }}
-
-                                {{ $url := .RelPermalink }}
-                                {{ $postfix := "" }}
-                                {{ if isset .Params "forward"}}
-                                    {{ $url = .Params.Forward }}
-                                    {{ $postfix = "(outlink)"}}
-                                {{ end }}
-
-                                <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
-
-                                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                            </ul>
-                            {{ end }}
+                            {{ partial "blog-entry-list.html" .Pages }}
                             {{ end }}
                     </div>
             </article>

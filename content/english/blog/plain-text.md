@@ -31,13 +31,14 @@ One problem with tabs, though, is precise editing. Since tabs represent multiple
 Like, what you perfectly see as OK in one editor where tabs are configured to take 4 columns, can be disgusting in another editor where tabs are configured to take 2 columns:
 
 Editor 1 with tabs configured to take 4 spaces:
-```javascript
+
+{{< highlight javascript >}}
 // 4 tabs, + 3 spaces
 function calculate(a, b,
                    c, d) {
     // Some logic
 }
-```
+{{< /highlight >}}
 
 Editor 2 with tabs configured to take 2 spaces:
 ```javascript
