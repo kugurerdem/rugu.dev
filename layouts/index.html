@@ -12,22 +12,7 @@
                 <h1 style="margin-top: 1em; text-align: center;"> Most Recent Essays </h1>
                 <div class="page">
                     {{ with .Site.GetPage "section" "blog" }}
-                        {{- range first 5 .Pages }}
-                        <ul>
-                            {{ if .Params.recommended }}
-                            <img src="/icons/star.svg"/>
-                            {{ end }}
-
-                            {{ $url := .RelPermalink }}
-                            {{ $postfix := "" }}
-                            {{ if isset .Params "forward"}}
-                                {{ $url = .Params.Forward }}
-                                {{ $postfix = "(outlink)"}}
-                            {{ end }}
-                            <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
-                            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                        </ul>
-                        {{ end }}
+                        {{ partial "blog-entry-list.html" (first 5 .Pages) }}
                     {{ end }}
                     <p style="text-align: center; margin-top: 1em;">
                         <a href="/en/blog/">View all essays</a>
@@ -37,23 +22,7 @@
                 <h1 style="margin-top:1.5em; text-align: center;"> Recommended Essays </h1>
                 <div class="page">
                     {{ with .Site.GetPage "section" "blog" }}
-                    {{- range .Pages }}
-                    {{ if .Params.recommended }}
-                    <ul>
-                        <img src="/icons/star.svg"/>
-
-                        {{ $url := .RelPermalink }}
-                        {{ $postfix := "" }}
-                        {{ if isset .Params "forward"}}
-                        {{ $url = .Params.Forward }}
-                        {{ $postfix = "(outlink)"}}
-                        {{ end }}
-
-                        <a href="{{ $url }}">{{ .Title }}</a> {{$postfix }}
-                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                    </ul>
-                    {{ end }}
-                    {{ end }}
+                        {{ partial "blog-entry-list.html" (where .Pages ".Params.recommended" true) }}
                     {{ end }}
                 </div>
 
