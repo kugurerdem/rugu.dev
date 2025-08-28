@@ -68,10 +68,27 @@ aside {
 }
 
 pre {
-    margin-left: 1em;
+    border: 2px solid #ccc;
+    border-radius: 2px;
     overflow-x: auto;
-    overflow-y: hidden;
 }
+
+.highlight {
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    padding: 0.5em 0;
+    overflow-x: auto;
+    font-size: 0.8em;
+}
+
+.highlight pre {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
 
 .page{
     background-color: #fff;
@@ -226,21 +243,6 @@ blockquote::after {
         right: 0;
         bottom: 0;
     }
-}
-
-pre {
-  padding-left: 1.5em;
-  margin-left: 0;
-  background-color: #eee;
-}
-
-pre > code {
-    background-color: #eee;
-}
-
-code {
-    background-color: #eee;
-    border-radius: 0.3em;
 }
 
 .tag {

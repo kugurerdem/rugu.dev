@@ -29,6 +29,22 @@ params:
         - essay: "https://rugu.dev/en/blog/mark-scroll-positions"
         - github: "https://github.com/kugurerdem/mark-scroll-positions"
 
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: true
+    style: github
+    tabWidth: 4
+    wrapperClass: highlight
+
 defaultContentLanguageInSubdir: true
 languages:
   en:
@@ -57,3 +73,5 @@ languages:
       welcomePath: 'data/en/welcome.md'
       recommendedPath: 'data/en/recommended.md'
       miscPath: 'data/en/misc.md'
+
+
