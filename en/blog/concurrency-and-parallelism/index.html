@@ -75,18 +75,29 @@ execute the callback functions that you provided when they complete their
 tasks.</p><div style=text-align:center><img src=https://miro.medium.com/v2/resize:fit:828/format:webp/1*U_zyHnKdlvjCdAQkoh0uuQ.png#75persize alt>
 (Image taken from <a href=https://medium.com/@abeythilakeudara3/nodejs-architecture-42a1d0efad8f>NodeJS Architecture</a>)</div><p>Having a bit of more idea how NodeJS concurrency works under the hood, we can
 now start practicing this theory by examining certain cases/situations.</p><p>Consider the following code (thanks to my friend
-<a href=https://github.com/onsah>Onur</a> for coming up with the example);</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>setTimeout</span>(() =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (<span style=color:#66d9ef>true</span>) {
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;a&#34;</span>);
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}, <span style=color:#ae81ff>1000</span>);
+<a href=https://github.com/onsah>Onur</a> for coming up with the example);</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#1f2328>setTimeout</span><span style=color:#1f2328>(()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>while</span> <span style=color:#1f2328>(</span><span style=color:#cf222e>true</span><span style=color:#1f2328>)</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>console</span><span style=color:#1f2328>.</span><span style=color:#1f2328>log</span><span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;a&#34;</span><span style=color:#1f2328>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>},</span> <span style=color:#0550ae>1000</span><span style=color:#1f2328>);</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#a6e22e>setTimeout</span>(() =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (<span style=color:#66d9ef>true</span>) {
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;b&#34;</span>);
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}, <span style=color:#ae81ff>1000</span>);
-</span></span></code></pre></div><p>Here, if you run this program, the only thing you will encounter on your screen
+</span></span><span style=display:flex><span><span style=color:#1f2328>setTimeout</span><span style=color:#1f2328>(()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>while</span> <span style=color:#1f2328>(</span><span style=color:#cf222e>true</span><span style=color:#1f2328>)</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>console</span><span style=color:#1f2328>.</span><span style=color:#1f2328>log</span><span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;b&#34;</span><span style=color:#1f2328>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>},</span> <span style=color:#0550ae>1000</span><span style=color:#1f2328>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>Here, if you run this program, the only thing you will encounter on your screen
 will be &ldquo;a"s. This is because the NodeJS interpreter continue executing the
 current callback as long as there are instructions still available.</p><p>As soon as all instructions in the main code are executed, the NodeJS runtime
 environment then starts calling the callback functions. You can also think of
@@ -105,48 +116,86 @@ remains uninterrupted, basically sequential.</p><p>If the programming logic cont
 (like <code>fs.readFile()</code>, <code>setTimeout()</code>, <code>setImmediate()</code>, or even
 <code>Promise.then()</code>), the race conditions can easily start to occur.</p><p>This also applies to the usage of <code>await</code> because you can think of <code>await</code>
 statements as shorthand for wrapping the remaining code in the current scope
-into a callback function that runs once the awaited <code>Promise</code> is resolved.</p><p>Consider the <code>test</code> and <code>test2</code> functions provided below:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span>
-</span></span><span style=display:flex><span>    {<span style=color:#a6e22e>scheduler</span>} <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;node:timers/promises&#39;</span>),
+into a callback function that runs once the awaited <code>Promise</code> is resolved.</p><p>Consider the <code>test</code> and <code>test2</code> functions provided below:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#cf222e>const</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span><span style=color:#1f2328>scheduler</span><span style=color:#1f2328>}</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>require</span><span style=color:#1f2328>(</span><span style=color:#0a3069>&#39;node:timers/promises&#39;</span><span style=color:#1f2328>),</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>test</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>test</span> <span style=color:#0550ae>=</span> <span style=color:#cf222e>async</span> <span style=color:#1f2328>()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>let</span> <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#0550ae>0</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>foo</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>scheduler</span>.<span style=color:#a6e22e>wait</span>(<span style=color:#ae81ff>100</span>)
-</span></span><span style=display:flex><span>            <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>const</span> <span style=color:#1f2328>foo</span> <span style=color:#0550ae>=</span> <span style=color:#cf222e>async</span> <span style=color:#1f2328>()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>let</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>x</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>await</span> <span style=color:#1f2328>scheduler</span><span style=color:#1f2328>.</span><span style=color:#1f2328>wait</span><span style=color:#1f2328>(</span><span style=color:#0550ae>100</span><span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>}</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>await</span> Promise.<span style=color:#a6e22e>all</span>([<span style=color:#a6e22e>foo</span>(), <span style=color:#a6e22e>foo</span>(), <span style=color:#a6e22e>foo</span>()])
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>) <span style=color:#75715e>// Returns 1, not 3
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    },
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>await</span> <span style=color:#6639ba>Promise</span><span style=color:#1f2328>.</span><span style=color:#1f2328>all</span><span style=color:#1f2328>([</span><span style=color:#1f2328>foo</span><span style=color:#1f2328>(),</span> <span style=color:#1f2328>foo</span><span style=color:#1f2328>(),</span> <span style=color:#1f2328>foo</span><span style=color:#1f2328>()])</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>console</span><span style=color:#1f2328>.</span><span style=color:#1f2328>log</span><span style=color:#1f2328>(</span><span style=color:#1f2328>x</span><span style=color:#1f2328>)</span> <span style=color:#57606a>// Returns 1, not 3
+</span></span></span><span style=display:flex><span><span style=color:#57606a></span>    <span style=color:#1f2328>},</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>test2</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>test2</span> <span style=color:#0550ae>=</span> <span style=color:#cf222e>async</span> <span style=color:#1f2328>()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>let</span> <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#0550ae>0</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>foo</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>scheduler</span>.<span style=color:#a6e22e>wait</span>(<span style=color:#ae81ff>100</span>)
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>
-</span></span><span style=display:flex><span>            <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>const</span> <span style=color:#1f2328>foo</span> <span style=color:#0550ae>=</span> <span style=color:#cf222e>async</span> <span style=color:#1f2328>()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>await</span> <span style=color:#1f2328>scheduler</span><span style=color:#1f2328>.</span><span style=color:#1f2328>wait</span><span style=color:#1f2328>(</span><span style=color:#0550ae>100</span><span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>let</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>x</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>}</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>await</span> Promise.<span style=color:#a6e22e>all</span>([<span style=color:#a6e22e>foo</span>(), <span style=color:#a6e22e>foo</span>(), <span style=color:#a6e22e>foo</span>()])
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>x</span>) <span style=color:#75715e>// Returns 3
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    },
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>await</span> <span style=color:#6639ba>Promise</span><span style=color:#1f2328>.</span><span style=color:#1f2328>all</span><span style=color:#1f2328>([</span><span style=color:#1f2328>foo</span><span style=color:#1f2328>(),</span> <span style=color:#1f2328>foo</span><span style=color:#1f2328>(),</span> <span style=color:#1f2328>foo</span><span style=color:#1f2328>()])</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>console</span><span style=color:#1f2328>.</span><span style=color:#1f2328>log</span><span style=color:#1f2328>(</span><span style=color:#1f2328>x</span><span style=color:#1f2328>)</span> <span style=color:#57606a>// Returns 3
+</span></span></span><span style=display:flex><span><span style=color:#57606a></span>    <span style=color:#1f2328>},</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>main</span> <span style=color:#f92672>=</span> () =&gt; {
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>test</span>()
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>test2</span>()
-</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>main</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>test</span><span style=color:#1f2328>()</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>test2</span><span style=color:#1f2328>()</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#a6e22e>main</span>()
-</span></span></code></pre></div><p>The reason <code>test()</code> logs 1 is that when the foos functions are called, as soon
+</span></span><span style=display:flex><span><span style=color:#1f2328>main</span><span style=color:#1f2328>()</span>
+</span></span></code></pre></td></tr></table></div></div><p>The reason <code>test()</code> logs 1 is that when the foos functions are called, as soon
 as they encounter <code>await scheduler.wait(100)</code>, they essentially finish. Because
 under the hood, using <code>await scheduler.wait(100)</code> evaluates something like the
-following:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>scheduler</span>.<span style=color:#a6e22e>wait</span>(<span style=color:#ae81ff>100</span>).<span style=color:#a6e22e>then</span>(() =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>})
-</span></span></code></pre></div><p>So, the first <code>foo</code> function finishes its job, it is now upto the callback
+following:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#1f2328>scheduler</span><span style=color:#1f2328>.</span><span style=color:#1f2328>wait</span><span style=color:#1f2328>(</span><span style=color:#0550ae>100</span><span style=color:#1f2328>).</span><span style=color:#1f2328>then</span><span style=color:#1f2328>(()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>})</span>
+</span></span></code></pre></td></tr></table></div></div><p>So, the first <code>foo</code> function finishes its job, it is now upto the callback
 function to continue the business, but since it will only be called 100ms
 after, the NodeJS interpreter does not stay idle but instead continues
 executing the second and third foo functions by order. They also set <code>y</code>
@@ -154,13 +203,19 @@ variable to the value of <code>x</code> before the callback from the first foo i
 triggered, and call <code>scheduler.wait</code> with the callback function. As a result,
 when the callbacks are eventually executed, they all update x using the
 previous value of x, so we get 1, instead of 3.</p><p>Why we get 3 logged out when running <code>test2()</code>? Because the place where <code>await</code>
-is being run is different and it evaluates to something like</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>scheduler</span>.<span style=color:#a6e22e>wait</span>(<span style=color:#ae81ff>100</span>).<span style=color:#a6e22e>then</span>(() =&gt; {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>})
-</span></span></code></pre></div><p>As soon as this callback function is called, nothing can interleave between</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>
-</span></span><span style=display:flex><span><span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span></code></pre></div><p>So, no race condition can occur.</p><h2 id=to-conclude>To Conclude</h2><p>The main idea here is that there is not just one way to achieve &ldquo;concurrency&rdquo;,
+is being run is different and it evaluates to something like</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#1f2328>scheduler</span><span style=color:#1f2328>.</span><span style=color:#1f2328>wait</span><span style=color:#1f2328>(</span><span style=color:#0550ae>100</span><span style=color:#1f2328>).</span><span style=color:#1f2328>then</span><span style=color:#1f2328>(()</span> <span style=color:#1f2328>=&gt;</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>let</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>x</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>})</span>
+</span></span></code></pre></td></tr></table></div></div><p>As soon as this callback function is called, nothing can interleave between</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#cf222e>let</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>x</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>x</span> <span style=color:#0550ae>=</span> <span style=color:#1f2328>y</span> <span style=color:#0550ae>+</span> <span style=color:#0550ae>1</span>
+</span></span></code></pre></td></tr></table></div></div><p>So, no race condition can occur.</p><h2 id=to-conclude>To Conclude</h2><p>The main idea here is that there is not just one way to achieve &ldquo;concurrency&rdquo;,
 and the way you achieve it can also affect many things, like how performant
 your programs will be or even what kind of problems you can encounter, or what
 things to watch out for and so on.</p><p>Just try to be mindful when working on programs that are supposed to work
