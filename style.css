@@ -388,3 +388,7 @@ blockquote::after {
     color: #666;
 }
 
+.recommended {
+    font-weight: bold;
+}
+
