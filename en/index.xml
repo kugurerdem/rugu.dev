@@ -5,10 +5,7 @@
 &lt;p&gt;Excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts. &lt;br&gt;
 - Aristotle&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Additionally, it is not very hard to find cases where this &amp;ldquo;fake it&amp;rdquo; logic fails. For example, if you are not able to do a pull-up, pretending you can do one is not going to help nearly as much as following exercises specifically designed for someone who cannot yet do a pull-up but wants to build the strength to get there. This is actually the opposite of faking: you acknowledge your current incapability and work from that starting point.&lt;/p&gt;
-&lt;p&gt;So maybe, a much better piece of advice than “fake it till you make it” is to remind ourselves that we do not become by pretending, but by practicing.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We are what we repeatedly do. Excellence, then, is not an act, but a habit. &lt;br&gt;
-- Will Durant&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
+&lt;p&gt;Maybe a much better piece of advice than &amp;ldquo;fake it till you make it&amp;rdquo; would be to remind ourselves that we grow more by practicing than by pretending. Just genuinely try to build the small habits that move you closer to who you want to become.&lt;/p&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Unfortunately, though, I don’t think the benefits I’ve gotten in this one month of using NixOS so far justified the cost I’ve initially spent and continue to spend learning Nix and NixOS. &lt;br&gt;
 &amp;mdash; &lt;br&gt;
@@ -1207,7 +1204,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode18s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode17s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -1954,31 +1951,15 @@ such questions about the tool which I am using, just because the program works,
 I might have fallen into the same pitfalls that others have encountered.&lt;/p&gt;
 &lt;h1 id="references"&gt;References&lt;/h1&gt;
 &lt;p&gt;1 - Cleary, Stephen. “Message Framing.” Message framing. Accessed November 21,
-2023. &lt;a href="https://blog.stephencleary.com/2009/04/message-framing.html"&gt;https://blog.stephencleary.com/2009/04/message-framing.html&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;In the following essay, I will reflect on my journey which led me to become a
-software developer.&lt;/p&gt;
-&lt;p&gt;I intend this essay to be more of a personal reflection than a technical
-advisement. But whether you are a seasoned programmer or a newcomer to the
-world of software development, I hope that my experiences and insights will
-provide valuable guidance and inspiration for your journey.&lt;/p&gt;
-&lt;h1 id="before-college"&gt;Before College&lt;/h1&gt;
-&lt;p&gt;When I was around 6 or 7 years old, I used to hang out with my
-&lt;a href="https://www.yuempek.com"&gt;cousin&lt;/a&gt; a lot. Whenever I would see him on his
-computer, he would always be engaged in something interesting like developing
-recreational applications.&lt;/p&gt;
-&lt;p&gt;During those years, I had a strong interest in a game called &lt;a href="https://en.wikipedia.org/wiki/Peg_solitaire"&gt;Solo
-Test&lt;/a&gt;. When I introduced the game
-to my cousin, he immediately had the idea of writing code to create &lt;a href="http://yuempek.com/examples/javascript/solotest-Javascript.htm"&gt;this
-game&lt;/a&gt; on his
-computer and even devloping a solution engine for it.&lt;/p&gt;
-&lt;p&gt;I witnessed the entire process of him writing lines of code and transforming
-them into something visible on the computer screen. It felt like pure magic to
-me. Since that moment, he has become one of my idols. Not only did he introduce
-me to the concept of programming, but he also helped me explore the world of
-creating games and animations with Macromedia Flash (which is no longer
-supported in most browsers nowadays).&lt;/p&gt;
-&lt;p&gt;Despite my early acquaintance and interest in programming, I didn’t seriously
-start learning it until high school. My attention was often consumed by other
-hobbies, such as playing games, reading books, and creating pivot animations.&lt;/p&gt;
+2023. &lt;a href="https://blog.stephencleary.com/2009/04/message-framing.html"&gt;https://blog.stephencleary.com/2009/04/message-framing.html&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;In this essay, I reflect on my journey of becoming a software developer. It is more of a personal reflection than a set of advices.&lt;/p&gt;
+&lt;h1 id="before-highschool"&gt;Before highschool&lt;/h1&gt;
+&lt;p&gt;I used to hang out with my &lt;a href="https://www.yuempek.com"&gt;cousin&lt;/a&gt; a lot when I was around 6 or 7 years old. He would always develop some cool, recreational applications whenever I saw him using his computer.&lt;/p&gt;
+&lt;p&gt;Back then, I used to play &lt;a href="https://en.wikipedia.org/wiki/Peg_solitaire"&gt;Solo Test&lt;/a&gt; a lot. When I first introduced this game to my cousin, I remember him coming up with the idea of coding &lt;a href="http://yuempek.com/examples/javascript/solotest-Javascript.htm"&gt;this game&lt;/a&gt; and then devloping a solution engine for it. He built both in front of my eyes. He was already one of my idols, but this was one of the moments that made me respect him even more. The idea of being able to build the things you like, the way you want, just by writing this thing called &amp;lsquo;code,&amp;rsquo; was fascinating.&lt;/p&gt;
+&lt;p&gt;Not only did my cousin introduced coding to me but he also encouraged me to explore a program called Macromedia Flash to build simple games.&lt;/p&gt;
+&lt;p&gt;Thanks to the inspiration I got from him, I would ocassionally try to make simple Flash games by following through the YouTube videos I saw on YouTube. Unfortunately though, most of the time I would get stuck on making the things the exact way I wanted it due to my limited understanding. I would get frustrated, and&amp;hellip; would give up eventually.&lt;/p&gt;
+&lt;p&gt;I guess this was due to both not being patient at those times (I was already less patient than an average child), as well as my limited understanding of the English language making it just way harder for me to find proper resources on my native language.&lt;/p&gt;
+&lt;p&gt;So, my attention would still be eventually consumbed by my other hobbies such as playing games, reading books and creating pivot animations, I did not seriously start learning programming until high school (where my English was a bit better, to the point that I was able to follow tutorials)&lt;/p&gt;
+&lt;h1 id="highschool"&gt;Highschool&lt;/h1&gt;
 &lt;p&gt;In high school, I started to become more aware of my analytical nature and my
 inclination to approach things methodically. Even in my interest in philosophy,
 I found myself more drawn to the schools of analytical philosophy rather than
