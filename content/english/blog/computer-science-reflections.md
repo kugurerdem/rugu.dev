@@ -9,37 +9,23 @@ tags:
     - technology
 ---
 
-In the following essay, I will reflect on my journey which led me to become a
-software developer.
+In this essay, I reflect on my journey of becoming a software developer. It is more of a personal reflection than a set of advices.
 
-I intend this essay to be more of a personal reflection than a technical
-advisement. But whether you are a seasoned programmer or a newcomer to the
-world of software development, I hope that my experiences and insights will
-provide valuable guidance and inspiration for your journey.
+# Before highschool
 
-# Before College
+I used to hang out with my [cousin](https://www.yuempek.com) a lot when I was around 6 or 7 years old. He would always develop some cool, recreational applications whenever I saw him using his computer.
 
-When I was around 6 or 7 years old, I used to hang out with my
-[cousin](https://www.yuempek.com) a lot. Whenever I would see him on his
-computer, he would always be engaged in something interesting like developing
-recreational applications.
+Back then, I used to play [Solo Test](https://en.wikipedia.org/wiki/Peg_solitaire) a lot. When I first introduced this game to my cousin, I remember him coming up with the idea of coding [this game](http://yuempek.com/examples/javascript/solotest-Javascript.htm) and then devloping a solution engine for it. He built both in front of my eyes. He was already one of my idols, but this was one of the moments that made me respect him even more. The idea of being able to build the things you like, the way you want, just by writing this thing called 'code,' was fascinating.
 
-During those years, I had a strong interest in a game called [Solo
-Test](https://en.wikipedia.org/wiki/Peg_solitaire). When I introduced the game
-to my cousin, he immediately had the idea of writing code to create [this
-game](http://yuempek.com/examples/javascript/solotest-Javascript.htm) on his
-computer and even devloping a solution engine for it.
+Not only did my cousin introduced coding to me but he also encouraged me to explore a program called Macromedia Flash to build simple games.
 
-I witnessed the entire process of him writing lines of code and transforming
-them into something visible on the computer screen. It felt like pure magic to
-me. Since that moment, he has become one of my idols. Not only did he introduce
-me to the concept of programming, but he also helped me explore the world of
-creating games and animations with Macromedia Flash (which is no longer
-supported in most browsers nowadays).
+Thanks to the inspiration I got from him, I would ocassionally try to make simple Flash games by following through the YouTube videos I saw on YouTube. Unfortunately though, most of the time I would get stuck on making the things the exact way I wanted it due to my limited understanding. I would get frustrated, and... would give up eventually.
 
-Despite my early acquaintance and interest in programming, I didn’t seriously
-start learning it until high school. My attention was often consumed by other
-hobbies, such as playing games, reading books, and creating pivot animations.
+I guess this was due to both not being patient at those times (I was already less patient than an average child), as well as my limited understanding of the English language making it just way harder for me to find proper resources on my native language.
+
+So, my attention would still be eventually consumbed by my other hobbies such as playing games, reading books and creating pivot animations, I did not seriously start learning programming until high school (where my English was a bit better, to the point that I was able to follow tutorials)
+
+# Highschool
 
 In high school, I started to become more aware of my analytical nature and my
 inclination to approach things methodically. Even in my interest in philosophy,
