@@ -2,10 +2,13 @@
 &lt;p&gt;If you take it literally, it encourages people to present themselves as something they are not. If you don&amp;rsquo;t see any problem with this, then why not phrase it more directly as: &amp;ldquo;It&amp;rsquo;s OK to manipulate others until you get what you want?&amp;rdquo; At least that wording captures the Machiavellian intent.&lt;/p&gt;
 &lt;p&gt;If you take a more charitable reading, such as &amp;ldquo;by acting like X, you eventually become like X. The actions you repeat become sticky, turn into habits, and eventually feel natural&amp;rdquo;. Then I would ask, &amp;ldquo;How is that even faking?&amp;rdquo; For example, when you act the way a courageous person would act in a situation that requires courage, would you say that you are faking courage or that you just acted courageously?&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.&amp;rdquo; &lt;br&gt;
+&lt;p&gt;Excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts. &lt;br&gt;
 - Aristotle&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Additionally, it is not very hard to find cases where this &amp;ldquo;fake it&amp;rdquo; logic fails. For example, if you are not able to do a pull-up, pretending you can do one is not going to help nearly as much as following exercises specifically designed for someone who cannot yet do a pull-up but wants to build the strength to get there. This is actually the opposite of faking: you acknowledge your current incapability and work from that starting point.&lt;/p&gt;
-&lt;p&gt;So, I think a way better piece of advice than &amp;ldquo;fake it till you make it&amp;rdquo; would be just something like &amp;ldquo;make it till you make it&amp;rdquo;&lt;/p&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
+&lt;p&gt;So maybe, a much better piece of advice than “fake it till you make it” is to remind ourselves that we do not become by pretending, but by practicing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are what we repeatedly do. Excellence, then, is not an act, but a habit. &lt;br&gt;
+- Will Durant&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Unfortunately, though, I don’t think the benefits I’ve gotten in this one month of using NixOS so far justified the cost I’ve initially spent and continue to spend learning Nix and NixOS. &lt;br&gt;
 &amp;mdash; &lt;br&gt;
@@ -1204,7 +1207,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode17s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode18s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
