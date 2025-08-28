@@ -1,1 +1,3 @@
-Here are some of my essays. The ones marked with a star icon are either the ones I highly recommend or the ones that became popular on discussion platforms like HackerNews, Lobsters, Reddit, and others.
+Here is a list of my blog posts.
+
+The ones that became popular on discussion platforms like HackerNews, Lobsters, Reddit, and others are market with 🔥 emoji.
