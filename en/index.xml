@@ -2451,45 +2451,24 @@ I might have fallen into the same pitfalls that others have encountered.&lt;/p&g
 &lt;p&gt;The company I worked for was getting a consultancy service from a cracked developer with the nickname &lt;a href="https://gwn.wtf/mortals.html"&gt;gwn&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In &lt;a href="https://rugu.dev/en/blog/switching-to-archlinux/"&gt;Switching to Arch Linux&lt;/a&gt; essay, I already mentioned my first impression of him as follows;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I was working. The developers were receiving consultancy from a strange&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;person. At one point, he took control of the screen sharing while reviewing&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;some of the pull requests that had been made to our codebase. When he shared&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;his screen, there was nothing but a black screen. Suddenly, a terminal screen&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;appeared with his keystrokes and he quickly began examining the codebase,&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;providing feedback on people’s code at a speed I had never seen before. He was&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;able to jump between different files in an instant, examining the diffs that&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;were made in different git commits.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;hr&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;After seeing what I saw, I thought to myself, ‘If I were able to develop and&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;refactor code at that speed, I would save a lot of time, I could have spent&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;more time thinking about the actual stuff with as little friction as possible.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I want to have this power.’ So I have looked at his CV and realized that he was&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;knowledgeable on topics that many developers, including myself, struggle with.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Influenced by this, I started asking him (he was our consultant, after all) as&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;many questions as I could and focused on the resources he suggested and the&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;technologies he used.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where
+I was working. The developers were receiving consultancy from a strange
+person. At one point, he took control of the screen sharing while reviewing
+some of the pull requests that had been made to our codebase. When he shared
+his screen, there was nothing but a black screen. Suddenly, a terminal screen
+appeared with his keystrokes and he quickly began examining the codebase,
+providing feedback on people’s code at a speed I had never seen before. He was
+able to jump between different files in an instant, examining the diffs that
+were made in different git commits.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;After seeing what I saw, I thought to myself, ‘If I were able to develop and
+refactor code at that speed, I would save a lot of time, I could have spent
+more time thinking about the actual stuff with as little friction as possible.
+I want to have this power.’ So I have looked at his CV and realized that he was
+knowledgeable on topics that many developers, including myself, struggle with.
+Influenced by this, I started asking him (he was our consultant, after all) as
+many questions as I could and focused on the resources he suggested and the
+technologies he used.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;I began frequently asking him questions about software development. Sometimes, questions that are not even related to the job we were doing. For example, his opinions on different approaches to software development or some Linux stuff.&lt;/p&gt;
 &lt;p&gt;He was usually more than willing to answer my questions. We got along well, and at some point, we even started working together on several projects. This has continued for quite some time.&lt;/p&gt;
 &lt;p&gt;I actually learned a lot from working very close to him. I did not learn anything knowledge-wise that I would not have been able to learn on my own. But, I must say that I learned a lot in terms of developer habits, approach, and procedural knowledge.&lt;/p&gt;
