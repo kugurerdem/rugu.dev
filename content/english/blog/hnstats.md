@@ -16,7 +16,7 @@ Recently, I thought the same Algolia API that this extension uses could also be 
 
 I'd certainly be interested in seeing HN analytics for my own site from time to time. I looked out whether such an app already exists or not, but after not finding one, I thought why not develop one?
 
-So, here, I introduce [HN Domain Stats](hnstats.rugu.dev). It is a very simple application that analyzes and visualizes how domains perform on Hacker News over time.
+So, here, I introduce [HN Domain Stats](https://hnstats.rugu.dev). It is a very simple application that analyzes and visualizes how domains perform on Hacker News over time.
 
 Here's what the app looks like after analyzing a domain (in this case, rugu.dev):
 
