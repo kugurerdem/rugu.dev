@@ -62,7 +62,7 @@ So, I was already building software projects for earning money even before worki
 
 I was discussing my recent projects with a friend who had a broader network than mine. He was surprised that I hadn't applied for a software development job, given the things I was already doing at that time.
 
-He referred me to one of his connections who recently founded a startup with [1.6$m funding](https://br.investing.com/news/cryptocurrency-news/metavest-integra-brz-e-recebe-aporte-de-us-16-milhao-1001097).
+He referred me to one of his connections who recently founded a startup.
 
 I succeeded both the technical and non-technical interviews. Then, started working as a part-time remote software developer there.
 
