@@ -5,7 +5,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode24s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode14s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -531,7 +531,8 @@ an insignificant task of typing.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This reasoning is similar to what &lt;em&gt;Hans Hoffman&lt;/em&gt; once said:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
-necessary may speak.”&lt;/p&gt;&lt;/blockquote&gt;
+necessary may speak.”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Typing is the way we actualize our ideas into real programs.&lt;/p&gt;
 &lt;p&gt;If you do not have the faculties to realise your ideas at the rate they occur,
 then they can accumulate to a point where you eventually reach a position where
@@ -716,7 +717,8 @@ protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
-neovim is more community driven.&amp;rsquo;&lt;/p&gt;&lt;/blockquote&gt;
+neovim is more community driven.&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
 They indeed become meaningful when the minor differences between them begin to
 matter. However, I believe that the best approach is to simply select a tool
@@ -815,7 +817,7 @@ important flags and utilities of the programs that I use, I am also a lot better
 (faster) at finding the stuff I need. It is just as much important, if not more
 important, to be able to find the stuff you need by knowing them by heart.&lt;/p&gt;
 &lt;h2 id="current-workflow"&gt;Current Workflow&lt;/h2&gt;
-&lt;p&gt;All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/dotfiles"&gt;dotfiles
+&lt;p&gt;All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/legacy-dotfiles"&gt;dotfiles
 github repository&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="window-manager"&gt;Window Manager&lt;/h3&gt;
 &lt;p&gt;I do not use any desktop environments. I use a tiling Window Manager (WM), a
@@ -931,7 +933,7 @@ a Mobile App. On my phone, I use its own application whereas on my computer, I
 just use the &lt;code&gt;gitjournal&lt;/code&gt; script that I created that updates the notes by
 automatically running commands such as &lt;code&gt;git pull&lt;/code&gt; &lt;code&gt;git commit&lt;/code&gt; &lt;code&gt;git push&lt;/code&gt; before
 and after opening &lt;code&gt;nvim&lt;/code&gt; to change note files.&lt;/p&gt;
-&lt;p&gt;The script for this can be found &lt;a href="https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The script for this can be found &lt;a href="https://github.com/kugurerdem/legacy-dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="password-management-and-otp"&gt;Password Management and OTP&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;pass&lt;/code&gt; and &lt;code&gt;pass-otp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Also there is a very simple script called &lt;code&gt;passmenu&lt;/code&gt; which uses dmenu to fetch
