@@ -32,7 +32,7 @@ repeating the process of configuring the same stuff over and over when
 switching to new host machines. You turn your home folder into a repository
 itself by initializing git directly inside of it, set the remote address, and
 pull the content. You can check out what my dotfiles looked like before
-switching to NixOS [here](https://github.com/kugurerdem/dotfiles).
+switching to NixOS [here](https://github.com/kugurerdem/legacy-dotfiles).
 
 Yet, even with this "dotfiles" approach there are some problems:
 
