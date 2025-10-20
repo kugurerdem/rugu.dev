@@ -141,15 +141,15 @@ examples:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When installing Firefox or Chromium browser packages, you can set which
 plugins you want to be installed by default.
-&lt;a href="https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L137"&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L137"&gt;Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For my default password manager &lt;code&gt;pass&lt;/code&gt; (a standard UNIX password
 manager), the plugins I wanted to integrate with pass can be defined
 through a derivation attribute &lt;code&gt;withExtensions&lt;/code&gt;.
-&lt;a href="https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L52"&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L52"&gt;Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;When installing the Minecraft launcher prismlauncher, you can declare
 which JDKs should be available and used by the launcher by simply
 overriding one of the package attributes.
-&lt;a href="https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L81"&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L81"&gt;Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For Neovim, you can declare which dependencies and plugins you want to
 install out of the box using the &lt;code&gt;extraPackages&lt;/code&gt; and &lt;code&gt;plugins&lt;/code&gt; options of the
 home-manager&amp;rsquo;s &lt;code&gt;programs.neovim&lt;/code&gt; option.&lt;/li&gt;
@@ -162,7 +162,7 @@ are installing so that it is not installed from the git source repository
 defined in the nixpkgs repo, but from your own source repository. I used this
 technique to install and set up my window manager dwm using my own git fork
 of dwm.
-&lt;a href="https://github.com/kugurerdem/nix-config/blob/main/home-manager/dwm.nix#L4"&gt;Example&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://github.com/kugurerdem/dotfiles/blob/main/home-manager/dwm.nix#L4"&gt;Example&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The configuration files and the nix-config repo I now have are much
