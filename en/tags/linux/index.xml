@@ -16,7 +16,7 @@ repeating the process of configuring the same stuff over and over when
 switching to new host machines. You turn your home folder into a repository
 itself by initializing git directly inside of it, set the remote address, and
 pull the content. You can check out what my dotfiles looked like before
-switching to NixOS &lt;a href="https://github.com/kugurerdem/dotfiles"&gt;here&lt;/a&gt;.&lt;/p&gt;
+switching to NixOS &lt;a href="https://github.com/kugurerdem/legacy-dotfiles"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Yet, even with this &amp;ldquo;dotfiles&amp;rdquo; approach there are some problems:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -602,7 +602,8 @@ protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
-neovim is more community driven.&amp;rsquo;&lt;/p&gt;&lt;/blockquote&gt;
+neovim is more community driven.&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
 They indeed become meaningful when the minor differences between them begin to
 matter. However, I believe that the best approach is to simply select a tool
@@ -701,7 +702,7 @@ important flags and utilities of the programs that I use, I am also a lot better
 (faster) at finding the stuff I need. It is just as much important, if not more
 important, to be able to find the stuff you need by knowing them by heart.&lt;/p&gt;
 &lt;h2 id="current-workflow"&gt;Current Workflow&lt;/h2&gt;
-&lt;p&gt;All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/dotfiles"&gt;dotfiles
+&lt;p&gt;All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/legacy-dotfiles"&gt;dotfiles
 github repository&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="window-manager"&gt;Window Manager&lt;/h3&gt;
 &lt;p&gt;I do not use any desktop environments. I use a tiling Window Manager (WM), a
@@ -817,7 +818,7 @@ a Mobile App. On my phone, I use its own application whereas on my computer, I
 just use the &lt;code&gt;gitjournal&lt;/code&gt; script that I created that updates the notes by
 automatically running commands such as &lt;code&gt;git pull&lt;/code&gt; &lt;code&gt;git commit&lt;/code&gt; &lt;code&gt;git push&lt;/code&gt; before
 and after opening &lt;code&gt;nvim&lt;/code&gt; to change note files.&lt;/p&gt;
-&lt;p&gt;The script for this can be found &lt;a href="https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The script for this can be found &lt;a href="https://github.com/kugurerdem/legacy-dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="password-management-and-otp"&gt;Password Management and OTP&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;pass&lt;/code&gt; and &lt;code&gt;pass-otp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Also there is a very simple script called &lt;code&gt;passmenu&lt;/code&gt; which uses dmenu to fetch
