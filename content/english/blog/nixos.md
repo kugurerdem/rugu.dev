@@ -165,15 +165,15 @@ Here are my first impressions after using NixOS for about a month:
   examples:
     - When installing Firefox or Chromium browser packages, you can set which
       plugins you want to be installed by default.
-      [Example](https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L137)
+      [Example](https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L137)
     - For my default password manager `pass` (a standard UNIX password
       manager), the plugins I wanted to integrate with pass can be defined
       through a derivation attribute `withExtensions`.
-      [Example](https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L52)
+      [Example](https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L52)
     - When installing the Minecraft launcher prismlauncher, you can declare
       which JDKs should be available and used by the launcher by simply
       overriding one of the package attributes.
-      [Example](https://github.com/kugurerdem/nix-config/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L81)
+      [Example](https://github.com/kugurerdem/dotfiles/blob/963f8a99545fa648e31edf085299fd96802e7d04/home-manager/home.nix#L81)
     - For Neovim, you can declare which dependencies and plugins you want to
       install out of the box using the `extraPackages` and `plugins` options of the
       home-manager's `programs.neovim` option.
@@ -187,7 +187,7 @@ Here are my first impressions after using NixOS for about a month:
   defined in the nixpkgs repo, but from your own source repository. I used this
   technique to install and set up my window manager dwm using my own git fork
   of dwm.
-  [Example](https://github.com/kugurerdem/nix-config/blob/main/home-manager/dwm.nix#L4)
+  [Example](https://github.com/kugurerdem/dotfiles/blob/main/home-manager/dwm.nix#L4)
 
 - The configuration files and the nix-config repo I now have are much
   more elegant and simpler than my previous dotfiles repo. It's much easier to
