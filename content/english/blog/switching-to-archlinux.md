@@ -296,7 +296,7 @@ important, to be able to find the stuff you need by knowing them by heart.
 ## Current Workflow
 
 All of the configs for the apps below can be found from my [dotfiles
-github repository](https://www.github.com/kugurerdem/dotfiles).
+github repository](https://www.github.com/kugurerdem/legacy-dotfiles).
 
 ### Window Manager
 
@@ -447,7 +447,7 @@ just use the `gitjournal` script that I created that updates the notes by
 automatically running commands such as `git pull` `git commit` `git push` before
 and after opening `nvim` to change note files.
 
-The script for this can be found [here](https://github.com/kugurerdem/dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497).
+The script for this can be found [here](https://github.com/kugurerdem/legacy-dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497).
 
 ### Password Management and OTP
 
