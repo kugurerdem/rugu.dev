@@ -89,7 +89,7 @@ dbus.lib
 
 Great, this means that for "libdbus-1.so.3", we can just install `dbus` package from Nixpkgs!
 
-To automate the process of finding dynamic libraries using `ldd` and then using `nix-locate` to identify which Nixpkgs provides them, I created a [small script](https://github.com/kugurerdem/nix-config/blob/23f0ae804112672e1c8c334efa126b410ed874d7/home-manager/dotfiles/.local/bin/nixldd). It lists the dynamic libraries and which nixpkgs provide them, all at once. To use it, you can simply run it as follows:
+To automate the process of finding dynamic libraries using `ldd` and then using `nix-locate` to identify which Nixpkgs provides them, I created a [small script](https://github.com/kugurerdem/dotfiles/blob/23f0ae804112672e1c8c334efa126b410ed874d7/home-manager/dotfiles/.local/bin/nixldd). It lists the dynamic libraries and which nixpkgs provide them, all at once. To use it, you can simply run it as follows:
 
 ```bash
 nixldd $PROGRAM_PATH
