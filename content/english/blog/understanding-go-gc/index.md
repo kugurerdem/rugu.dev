@@ -321,7 +321,7 @@ func BenchmarkStringBuilderGrow(b *testing.B) {
 ```
 
 Now, by running `go test -bench=. -benchmem`, I see the following results:
-```
+```bash
 BenchmarkStringConcat-8          2353044               510.9 ns/op          2016 B/op         25 allocs/op
 BenchmarkStringBuilder-8         6915342               173.9 ns/op           504 B/op          6 allocs/op
 BenchmarkStringBuilderGrow-8    13563996                88.26 ns/op          144 B/op          1 allocs/op
@@ -376,7 +376,7 @@ func BenchmarkEncodeReusedBuffer(b *testing.B) {
 
 When we run the benchmarks, we get the following results:
 
-```
+```bash
 BenchmarkEncodeNewBuffer-8               7850647               127.7 ns/op           160 B/op             3 allocs/op
 BenchmarkEncodeReusedBuffer-8           11686770               102.9 ns/op            48 B/op             1 allocs/op
 ```
