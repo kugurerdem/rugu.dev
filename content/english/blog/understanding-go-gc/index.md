@@ -33,27 +33,73 @@ Deciding when to trigger garbage collection is just as important as how you do G
 
 It's a bit like cleaning your house: **If you never clean and let garbage pile up, you waste space and also make the next cleaning much harder. If you keep checking a clean room again and again, you're just wasting time.**
 
-So, finding the right balance of when to clean and how to clean (your GC strategy) is very important part of the design. For this, Go has a specific logic called "pacer." [^pacer-source-code]
+Honestly, if I were to implement a pacer for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problems here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also be likely to fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.
 
-[^pacer-source-code]: For those who are curious about how the pacer works in more detail, I found the [source code](https://go.dev/src/runtime/mgcpacer.go) of the Go Pacer particularly easy to follow. It's about 1500 lines long, comments included.
+Fortunately, Go takes a smarter approach by using a special mechanism to decide when to trigger garbage collection. This mechanism is called the pacer.
+
+> [!NOTE]
+> Those who are curious about how the pacer works in more detail, can read the [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go). It is not that hard to follow and only about 1500 lines of code, comments included.
 
 # The GC Pacer
 
-If I were to implement a pacer for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problems here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also be likely to fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.
+The main idea behind Go's pacer is to keep garbage collection proportional to the rate of memory allocation. Basically, after each collection, the GC measures the size of the live heap (the memory still in use after collection) and some additional parameters to compute the next target.
 
-Go's pacer is smarter than those. It basically triggers GC once the heap target is reached. It also keeps track of how fast it is growing. So, it adjusts the frequency at which certain checks run as well. This way, the GC does not run too early and waste time, and it also does not run too late and risk blowing past memory limits. It bases its decisions on actual allocation behavior rather than sticking to a fixed rule. I find this very neat. For all these things mentioned, the Go Pacer basically uses an option called `GOGC`.
+Here is a piece of code from [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go#L1233) demonstrating how the heap goal is calculated.
 
-## The `GOGC` Option
+```golang
+// Compute the next GC goal, which is when the allocated heap
+// has grown by GOGC/100 over where it started the last cycle,
+// plus additional runway for non-heap sources of GC work.
+gcPercentHeapGoal := ^uint64(0)
+if gcPercent := c.gcPercent.Load(); gcPercent >= 0 {
+   gcPercentHeapGoal = c.heapMarked + (c.heapMarked+c.lastStackScan.Load()+c.globalsScan.Load())*uint64(gcPercent)/100
+}
+// Apply the minimum heap size here. It's defined in terms of gcPercent
+// and is only updated by functions that call commit.
+if gcPercentHeapGoal < c.heapMinimum {
+   gcPercentHeapGoal = c.heapMinimum
+}
+c.gcPercentHeapGoal.Store(gcPercentHeapGoal)
+```
 
-After each collection, the GC looks at the live heap size. It then uses the `GOGC` setting to decide for what the next heap target should be. The pacer also monitors how quickly the heap is growing, and estimates when it will reach that target in order to decide when to check again.
+Here, `heapMarked` is the number of bytes marked by the previous GC. It is the part of the heap that survived the last collection, and also known as the "live heap". The `lastStackScan` is the number of bytes of stack that were scanned last GC cyclea nd `globalsScan` is the total amount of global variable space that is scannable. There is also one last value to talk about `gcPercent`. It is the growth percentage. It comes from `GOGC` and defaults to `100`, which means the next goal allows roughly a 100 percent growth over the base term.
 
-This is kind of like a mom watching how quickly her child messes up their room. She has a certain tolerance for mess, and that tolerance depends on how messy the room was the last time she told them to clean it. Once she sees the room getting close to that limit, she steps in and tells her child to clean it again.
+> [!NOTE]
+>
+> As pointed in [A Guide to the Go Garbage Collector](https://go.dev/doc/gc-guide#GOGC), the calculation of the target heap memory can be summarized as:
+> ```
+> Target heap memory = Live heap + (Live heap + GC roots) * GOGC / 100 
+> ```
+> 
+> Here, I find the adding of `GC roots` rather interesting. Why add them into the equation in the first place? Why not use something as simple as the following example?
+> 
+> ```
+> Target heap memory = (1 + GOGC/100) * Live Heap
+> ```
+> 
+> Well, it turns out that it was already like this until Go v1.18. It seems like the main motivation for this change was to make the GC's pacing model reflect all of the work the collector needs to perform, not just the size of the heap. Those who are further interested in the topic, can look up the [GC Pacer Redesign](https://github.com/golang/proposal/blob/master/design/44167-gc-pacer-redesign.md) proposal that initiated the change.
 
-Let's try to make this a bit more concrete by exemplifying it. When the program starts there is no last time for the garbage being collected. So, as a default value, Go GC uses 4MiB . [^minimal-total-heap-size] After this, once the live heap crosses 4MiB, first GC gets triggered. For example, if the live heap is 6 MiB after the first collection and `GOGC=100`, the next trigger will be at 12 MiB. If, after that collection, the heap shrinks to 5 MiB, then the following trigger will be set at 10 MiB. This process repeats after each collection cycle.
+But yeah, the main idea holds true: we have a pacer that basically keeps the garbage collector in sync with the program’s allocation behavior. It constantly adjusts when the next collection should happen based on how the heap grows and how much work the previous GC cycle required.
+
+## The Trigger Points
+
+As for when to test for triggering the GC is being run. There are two places where the tests for triggering the GC is being done:
+
+1. In the [runtime/malloc.go](https://go.dev/src/runtime/malloc.go) implementation, for each large allocation (roughly > 32KB), the GC always checks whether the heap passed GC trigger threshold. For small allocations, it tests when enough space is allocated for a while. Those who are interested in these, can examine `mallocgc`, and in particular helper functions `mallocgcTiny`, `mallocgcSmallNoscan`, `mallocgcSmallScanNoHeader`, `mallocgcSmallScanHeader` and `mallocgcLarge`.
+
+2. There is also an additional goroutine called `forcegchelper`, defined and being run in [runtime/proc.go](https://go.dev/src/runtime/proc.go#L359). It basically runs GC if it does not run for a certain period of time defined by the constant `forcegcperiod`.
+
+> [!NOTE]
+> Long story short, the 
+
+The pacer also keeps track of how fast the heap is growing. So, it adjusts the frequency at which certain checks run as well. This way, the GC does not run too early and waste time, and it also does not run too late and risk blowing past memory limits. It bases its decisions on actual allocation behavior rather than sticking to a fixed rule. I find all these things very neat.
+
+[^gogc-example]: Let's try to understand how `GOGC` is being used to set a new heap target. When the program starts there is no last time for the garbage being collected. So, as a default value, Go GC uses 4MiB. After this, once the live heap crosses 4MiB, first GC gets triggered. For example, if the live heap is 6 MiB after the first collection and `GOGC=100`, the next trigger will be at 12 MiB. If, after that collection, the heap shrinks to 5 MiB, then the following trigger will be set at 10 MiB. This process repeats after each collection cycle.
 
 [^minimal-total-heap-size]: [GOGC](https://go.dev/doc/gc-guide#GOGC) section of the  "A Guide to the Go Garbage Collector" documentation notes that "the Go GC has a minimum total heap size of 4 MiB, so if the GOGC-set target is ever below that, it gets rounded up."
 
 ## The `GOMEMLIMIT` Option
+{burayı da sadeleştirip yukarıdaki pacing kısmına göm}
 
 In addition to `GOGC` there is also `GOMEMLIMIT`. It basically sets a soft cap on memory usage so that the GC runs more aggressively as the process starts using more memory than that is specified in the `GOMEMLIMIT`. So, for example if your process starts to using 700MB and we have `GOMEMLIMIT=800MiB`, it starts to run the GC a bit more agressively, and if our memory usage passes beyond 800MiB, it almost runs the GC all the time...
 
@@ -61,11 +107,9 @@ As it's mentioned in the *Efficient Go* book, "when your program allocates and u
 
 Dealing with `GOMEMLIMIT` is a bit trickier because if we already go past the limit and start using up about 25% of the CPU time, we are probably at a point where we should reconsider the limit itself or the memory behavior of the program. I think this option is meant for cases where you have very strict memory constraints and cannot go beyond the limit. In such situations, it makes sense to prioritize staying within that limit, even if it means higher CPU usage. For many applications built with Go, this is probably not the case. I also think this is why the option was only recently introduced in 2022 with the 1.19 release.
 
-## Before using `GOGC` and `GOMEMLIMIT`...
-
-To me, both `GOGC` and `GOMEMLIMIT` feel like parameters you should tweak only after everything else in your program is in good shape. Probably, code inefficiencies hurt performance more than any gains we'd get from tweaking these settings. I'll also share some practical ways to improve this later in the essay.
-
-So yeah, I think it's better to treat these settings as fine-tuning tools, not as something your app depends on to perform well.
+> [!WARNING]
+> To me, both `GOGC` and `GOMEMLIMIT` feel like parameters you should tweak only after everything else in your program is in good shape. Probably, code inefficiencies hurt performance more than any gains we'd get from tweaking these settings.
+> It's better to treat these settings as fine-tuning tools, not as something your app depends on to perform well.
 
 # How The GC Works
 
