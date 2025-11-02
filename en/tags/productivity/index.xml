@@ -5,7 +5,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode16s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode17s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -529,10 +529,15 @@ would allow us to allocate more time to the essential works.&lt;/p&gt;
 of the most critical skills for developers because it reduces the time spent on
 an insignificant task of typing.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This reasoning is similar to what &lt;em&gt;Hans Hoffman&lt;/em&gt; once said:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
 necessary may speak.”&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Typing is the way we actualize our ideas into real programs.&lt;/p&gt;
 &lt;p&gt;If you do not have the faculties to realise your ideas at the rate they occur,
 then they can accumulate to a point where you eventually reach a position where
@@ -711,14 +716,19 @@ your knowledge of such details tends to increase.&lt;/p&gt;
 to do it. As a result, you&amp;rsquo;re often left wondering, &amp;ldquo;which method/approach
 should I choose first?&amp;rdquo; I think that these kinds of questions frequently
 puzzled me. Here are some examples:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
 protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
 neovim is more community driven.&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
 They indeed become meaningful when the minor differences between them begin to
 matter. However, I believe that the best approach is to simply select a tool
