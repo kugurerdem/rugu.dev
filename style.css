@@ -214,6 +214,63 @@ blockquote::after {
   right: 0.5rem;
 }
 
+/* --- Override for alert-style blockquotes --- */
+blockquote.alert {
+  position: static;
+  font-style: normal;
+  border: 1px solid #e5e7eb;
+  border-left-width: 6px;
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  margin: 1rem 0;
+  background: #f9fafb;
+}
+
+/* Remove decorative quotation marks for alerts */
+blockquote.alert::before,
+blockquote.alert::after {
+  content: none;
+}
+
+/* Headings inside alert */
+blockquote.alert .alert-heading {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Base alert text spacing */
+blockquote.alert p {
+  margin: 0.25rem 0;
+}
+
+/* --- Variants --- */
+blockquote.alert.alert-note {
+  border-left-color: #3b82f6;
+  background: #eff6ff;
+}
+
+blockquote.alert.alert-tip {
+  border-left-color: #10b981;
+  background: #ecfdf5;
+}
+
+blockquote.alert.alert-warning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+blockquote.alert.alert-important {
+  border-left-color: #7c3aed;
+  background: #f5f3ff;
+}
+
+blockquote.alert.alert-caution {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
 
 @media (max-width: 52em) {
     .master-container {

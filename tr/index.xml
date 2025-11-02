@@ -27,10 +27,15 @@ enables us to focus on the more critical aspects of development.&lt;/p&gt;
 the most critical skills for developers because it reduces the time spent on an
 insignificant task of typing.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This reasoning is similar to what &lt;em&gt;Hans Hoffman&lt;/em&gt; once said:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
 necessary may speak.”&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Typing is the way we actualize our ideas into real programs.&lt;/p&gt;
 &lt;p&gt;Assume that you generate your ideas at a rate of 3X per unit of time, but you
 can only actualize X of them in that same time. This means that the number of
@@ -256,14 +261,19 @@ awareness of such things tend to increase.&lt;/p&gt;
 you do it. And because of this, one is left with the question &amp;ldquo;which program should one
 prefer first?&amp;rdquo; I must admit that I still often get stunned by this question and
 already lost enough time on it.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
 protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
 neovim is more community driven.&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Don’t get me wrong. I am not implying that these questions are meaningless. They
 are indeed meaningful after a point where small nuances between them start to
 matter.&lt;/p&gt;
@@ -524,8 +534,11 @@ Razor. As a result, this argument supports the ontology of Idealism, which is
 the view that reality is ultimately mental in nature.&lt;/p&gt;
 &lt;h1 id="argument"&gt;Argument&lt;/h1&gt;
 &lt;p&gt;Let me present you the outline of my argument:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
 or a posteriori.&lt;br&gt;
 P2. Agents don’t know a priori whether physical objects exist.&lt;br&gt;
 P3. Agents don’t know a posteriori whether physical objects exist.&lt;br&gt;
@@ -536,7 +549,9 @@ no reason assuming it exists. (parsimony principle)&lt;br&gt;
 P5. Assuming existence of physical objects does not give us more explanatory
 power than what we are left without it.&lt;br&gt;
 C2. There is no reason for assuming that physical objects exists.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;The first premise &lt;strong&gt;(P1)&lt;/strong&gt; is very easy to see, if not self-evident. By
 definition, a priori knowledge means the knowledge we gain without experiencing
 whereas a posteriori knowledge means the knowledge we gain with experience. It

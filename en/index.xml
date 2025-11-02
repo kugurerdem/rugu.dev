@@ -8,17 +8,27 @@
 &lt;p&gt;I feel that, &lt;strong&gt;ideally, organizing should happen only when something new comes up. After that, your habits should maintain order.&lt;/strong&gt; Once you’ve set up a system, your real task is simply not to disorganize it again.&lt;/p&gt;</description></item><item><title>Problems With "Fake It Till You Make It"</title><link>https://rugu.dev/en/blog/problems-with-fake-it-till-you-make-it/</link><pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/problems-with-fake-it-till-you-make-it/</guid><description>&lt;p&gt;I think &amp;ldquo;Fake it till you make it&amp;rdquo; is very poor advice if you read it literally, and otherwise, it is simply badly phrased advice.&lt;/p&gt;
 &lt;p&gt;If you take it literally, it encourages people to present themselves as something they are not. If you don&amp;rsquo;t see any problem with this, then why not phrase it more directly as: &amp;ldquo;It&amp;rsquo;s OK to manipulate others until you get what you want?&amp;rdquo; At least that wording captures the Machiavellian intent.&lt;/p&gt;
 &lt;p&gt;If you take a more charitable reading, such as &amp;ldquo;by acting like X, you eventually become like X. The actions you repeat become sticky, turn into habits, and eventually feel natural&amp;rdquo;. Then I would ask, &amp;ldquo;How is that even faking?&amp;rdquo; For example, when you act the way a courageous person would act in a situation that requires courage, would you say that you are faking courage or that you just acted courageously?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts. &lt;br&gt;
 - Aristotle&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Additionally, it is not very hard to find cases where this &amp;ldquo;fake it&amp;rdquo; logic fails. For example, if you are not able to do a pull-up, pretending you can do one is not going to help nearly as much as following exercises specifically designed for someone who cannot yet do a pull-up but wants to build the strength to get there. This is actually the opposite of faking: you acknowledge your current incapability and work from that starting point.&lt;/p&gt;
 &lt;p&gt;Maybe a much better piece of advice than &amp;ldquo;fake it till you make it&amp;rdquo; would be to remind ourselves that we grow more by practicing than by pretending. Just genuinely try to build the small habits that move you closer to who you want to become.&lt;/p&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Unfortunately, though, I don’t think the benefits I’ve gotten in this one month of using NixOS so far justified the cost I’ve initially spent and continue to spend learning Nix and NixOS. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Unfortunately, though, I don’t think the benefits I’ve gotten in this one month of using NixOS so far justified the cost I’ve initially spent and continue to spend learning Nix and NixOS. &lt;br&gt;
 &amp;mdash; &lt;br&gt;
 Ultimately, whether the benefits of learning a particular technology outweigh the costs depends on how much you take full advantage of its features. So, I believe that if I experiment with more setups, try different programs, or start managing servers with Nix, I will begin to see a better return on this investment from what I have learned so far. :)&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Well, it&amp;rsquo;s been about a year since I published that post. Since then, I&amp;rsquo;ve experimented with more setups, tried different programs, and started managing my own server with NixOS. And&amp;hellip; &lt;strong&gt;Contrary to my initial expectations that I would get a better return on investment from NixOS with more usage, the opposite happened.&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id="the-pain-of-getting-things-to-work"&gt;The Pain of Getting Things to Work&lt;/h1&gt;
 &lt;p&gt;So you want to try a new program/service? First, you try the NixOS module and see whether it works the way you want. Oh&amp;hellip; it doesn&amp;rsquo;t. Now, you have a few choices:&lt;/p&gt;
@@ -315,10 +325,15 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;p&gt;If we ever reach a point where learning and understanding become meaningless, we’ll likely face much bigger existential problems than unemployment.&lt;/p&gt;
 &lt;p&gt;Understanding the world, adapting to it, and striving to improve ourselves have been the best things we could do since the first days of humanity. Honestly, there&amp;rsquo;s still nothing better we can do now.&lt;/p&gt;
 &lt;p&gt;So, instead of thinking, &amp;lsquo;AI will take our jobs, so why bother?&amp;rsquo; focus on improving yourself. Not because AI can&amp;rsquo;t surpass you, but because &lt;strong&gt;there’s simply no better path than continuous self-improvement, no matter what the future holds.&lt;/strong&gt; If there’s any meaning to life, I believe it’s deeply connected to this pursuit of growth and understanding.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We cannot live better than in seeking to become better.&lt;/p&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;We cannot live better than in seeking to become better.&lt;/p&gt;
 &lt;p&gt;-Socrates&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Focus on the method that proved itself so far. Which is working hard and focusing on creating value.&lt;/p&gt;
 &lt;h1 id="conclusion"&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;The value of self-improvement and meaningful work goes beyond utility. It is tied to our sense of purpose and fulfillment.&lt;/p&gt;
@@ -363,10 +378,15 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;p&gt;I also realized that giving a disclaimer about my English skills upfront would help ease the pressure by lowering the audience&amp;rsquo;s expectations. So, I went ahead and did that too.&lt;/p&gt;
 &lt;p&gt;In the end, the actual podcast experience was much smoother and less stressful than I had expected. Despite frequent misspellings and struggles expressing myself, I believe the podcast turned out to be better than my initial expectations. I think this is also partly thanks to Brodie being an experienced host who knows how to make the guests comfortable by keeping the setting relaxed as well.&lt;/p&gt;
 &lt;p&gt;But again, all these experiences reminded me of one of the famous Stoic quotes;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We suffer more often in imagination than in reality.&lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;We suffer more often in imagination than in reality.&lt;br&gt;
 - Seneca&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;I think it was a great experience overall. And I also plan to turn some of the notes I&amp;rsquo;ve taken in the preparation document into separate essays as well.&lt;/p&gt;</description></item><item><title>NixOS Hates Precompiled Programs (Learn How To Fix It)</title><link>https://rugu.dev/en/blog/nixos-precompiled/</link><pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos-precompiled/</guid><description>&lt;p&gt;I&amp;rsquo;ve been using NixOS for about six months and am generally satisfied with my experience. However, in this essay, I won&amp;rsquo;t talk about how great NixOS is, but rather about one common issue that many users, including myself, have faced or will face in the future.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In NixOS, most pre-compiled programs will not work out of the box.&lt;/strong&gt; In this essay, I’ll share my experiences on this issue and explain why it happens, along with some approaches I’ve found very helpful to overcome it. Hopefully, this will help others avoid some of the frustrations I’ve encountered.&lt;/p&gt;
 &lt;h1 id="the-problem"&gt;The Problem&lt;/h1&gt;
@@ -430,10 +450,15 @@ Or, see the source code &lt;a href="https://github.com/kugurerdem/hn-domain-stat
 &lt;p&gt;There will be times that you might need to understand what a network interface is, what a block device is, what mounting is, how keyboard mappings are handled differently on the virtual console or in a desktop environment/window manager, and so on. It will force you to learn more and more and you’ll also begin to appreciate the underlying elements that are often hidden away by the layers we rely on. This effect will be amplified especially if you like to tinker and try to make things happen as you want them to be.&lt;/p&gt;
 &lt;p&gt;In the end, you&amp;rsquo;ll gain a deeper understanding of what happens under the hood. Your comfort zone will broaden as you develop the mindset of solving problems. &lt;strong&gt;I know that this kind of reasoning is not as forceful as the pragmatic or ideological reasons for some people, but it still is a good bonus that further motivated me to learn more and more about Linux.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;For the last few years, I&amp;rsquo;ve been mainly using Arch Linux as my choice of personal OS, and for the past few months, I&amp;rsquo;ve been using NixOS. Although I have not used/tried MacOS yet, I guess that if I tried it, most of the skills I acquired through using Linux would carry over to it and I would not have much problems getting adapted to it. However, I’m not so sure about the other way around, especially for those who switch from Windows to Linux.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If you&amp;rsquo;re going to fight in the rain, train in the storm.&lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;If you&amp;rsquo;re going to fight in the rain, train in the storm.&lt;br&gt;
 - Unknown&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;I think it&amp;rsquo;s good to have tools in our toolbox that let us work minimally, but I also think it does not make much sense to use them all the time if there are already other tools available to achieve things in an easier and faster way. &lt;strong&gt;So I am not against using non-minimal software by any means. They are fine as long as they don&amp;rsquo;t introduce more problems than they solve.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Lessons from Plain Text</title><link>https://rugu.dev/en/blog/plain-text/</link><pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/plain-text/</guid><description>&lt;p&gt;When you interact with a text file using an editor, what you see doesn&amp;rsquo;t necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it&amp;rsquo;s still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. &lt;strong&gt;This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as &lt;code&gt;\t&lt;/code&gt; or as a set number of spaces. The same applies when you press the enter key to create a new line. Whether it gets encoded as &lt;code&gt;\n&lt;/code&gt; (UNIX) or &lt;code&gt;\r\n&lt;/code&gt; (Windows) depends on the editor&amp;rsquo;s configuration.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Your text editor hides details so you don’t have to overthink. However, there are many times when these details leak through the protection layer that your text editor tries to provide. And you often don&amp;rsquo;t notice these complexities until you face them.&lt;/strong&gt;&lt;/p&gt;
@@ -539,10 +564,15 @@ we honestly tried to be consistent in our beliefs and approaches by applying
 points 3 and 4 a bit more.&lt;/p&gt;
 &lt;h1 id="dont-delegate-thinking-to-others"&gt;Don&amp;rsquo;t delegate thinking to others!&lt;/h1&gt;
 &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The unexamined life is not worth living. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;The unexamined life is not worth living. &lt;br&gt;
 - Socrates&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;hr&gt;
 &lt;p&gt;Consider the example of someone who has just started investing but lacks
 knowledge in the field and doesn’t have a clear strategy. What often happens is
@@ -577,10 +607,15 @@ problems to experts. Because, even selecting the right expert requires some
 thought, which affects the quality of the results you’ll get.&lt;/p&gt;
 &lt;h1 id="consistency-is-almost-the-best-thing-you-can-achieve"&gt;Consistency is (almost) the best thing you can achieve&lt;/h1&gt;
 &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We cannot live better than in seeking to become better. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;We cannot live better than in seeking to become better. &lt;br&gt;
 - Socrates&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;hr&gt;
 &lt;p&gt;When you think about it, we don&amp;rsquo;t seem to have much control over many things
 that influence and feed us. Where we were born, the society we live in, the
@@ -618,10 +653,15 @@ even questions whether the world exists or not (what does this mean anyway?).
 So I will stop philosophizing about why you should try to be consistent here and just
 finish this section quoting Marcus Aurelius.&lt;/p&gt;
 &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The happiness of your life depends upon the quality of your thoughts. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;The happiness of your life depends upon the quality of your thoughts. &lt;br&gt;
 - Marcus Aurelius&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;hr&gt;
 &lt;h1 id="dont-be-afraid-of-being-opinionated"&gt;Don&amp;rsquo;t be afraid of being opinionated&lt;/h1&gt;
 &lt;p&gt;Over time, I’ve realized that when I base my approach to a field on a
@@ -629,10 +669,15 @@ philosophy or system, making progress and building on my current position
 becomes much easier. I think this is because it’s easier to maintain a routine,
 especially when you understand, enjoy, and agree with it.&lt;/p&gt;
 &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If a man knows not to which port he sails, no wind is favorable. &lt;br&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;If a man knows not to which port he sails, no wind is favorable. &lt;br&gt;
 - Seneca&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;hr&gt;
 &lt;p&gt;I believe most people who take action don&amp;rsquo;t place enough importance on this
 phenomenon, and as a result, their potential is limited to mediocrity at best.&lt;/p&gt;
@@ -1220,7 +1265,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode16s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode17s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -1949,8 +1994,11 @@ character or sequence of characters.&lt;/p&gt;
 widespread tendency for people to misunderstand the behavior of one of the most
 fundamental tools a developer may need to interact with – a socket. For
 instance, consider the experience of a developer who highlights this issue:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;True story: I once worked for a company that developed custom client/server
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;True story: I once worked for a company that developed custom client/server
 software. The original communications code had made this common mistake.
 However, they were all on dedicated networks with high-end hardware, so the
 underlying problem only happened very rarely. When it did, the operators would
@@ -1961,7 +2009,9 @@ regularly, and the entire application protocol had to be changed to fix it. The
 truly amazing thing is that this software had been used in countless 24x7
 automation systems for 20 years; it was fundamentally broken and no one
 noticed. [1]&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;This entire process once again shows the importance of us developers being
 genuinely curious about the tools and protocols we work with. If I hadn&amp;rsquo;t asked
 such questions about the tool which I am using, just because the program works,
@@ -1998,8 +2048,11 @@ I might have fallen into the same pitfalls that others have encountered.&lt;/p&g
 &lt;h1 id="a-new-mentor"&gt;A new Mentor&lt;/h1&gt;
 &lt;p&gt;The company I worked for was getting a consultancy service from a cracked developer with the nickname &lt;a href="https://gwn.wtf/mortals.html"&gt;gwn&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In &lt;a href="https://rugu.dev/en/blog/switching-to-archlinux/"&gt;Switching to Arch Linux&lt;/a&gt; essay, I already mentioned my first impression of him as follows;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where
 I was working. The developers were receiving consultancy from a strange
 person. At one point, he took control of the screen sharing while reviewing
 some of the pull requests that had been made to our codebase. When he shared
@@ -2017,7 +2070,9 @@ knowledgeable on topics that many developers, including myself, struggle with.
 Influenced by this, I started asking him (he was our consultant, after all) as
 many questions as I could and focused on the resources he suggested and the
 technologies he used.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;I began frequently asking him questions about software development. Sometimes, questions that are not even related to the job we were doing. For example, his opinions on different approaches to software development or some Linux stuff.&lt;/p&gt;
 &lt;p&gt;He was usually more than willing to answer my questions. We got along well, and at some point, we even started working together on several projects. This has continued for quite some time.&lt;/p&gt;
 &lt;p&gt;I actually learned a lot from working very close to him. I did not learn anything knowledge-wise that I would not have been able to learn on my own. But, I must say that I learned a lot in terms of developer habits, approach, and procedural knowledge.&lt;/p&gt;
@@ -2071,10 +2126,15 @@ would allow us to allocate more time to the essential works.&lt;/p&gt;
 of the most critical skills for developers because it reduces the time spent on
 an insignificant task of typing.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This reasoning is similar to what &lt;em&gt;Hans Hoffman&lt;/em&gt; once said:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;“The ability to simplify means to eliminate the unnecessary so that the
 necessary may speak.”&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Typing is the way we actualize our ideas into real programs.&lt;/p&gt;
 &lt;p&gt;If you do not have the faculties to realise your ideas at the rate they occur,
 then they can accumulate to a point where you eventually reach a position where
@@ -2253,14 +2313,19 @@ your knowledge of such details tends to increase.&lt;/p&gt;
 to do it. As a result, you&amp;rsquo;re often left wondering, &amp;ldquo;which method/approach
 should I choose first?&amp;rdquo; I think that these kinds of questions frequently
 puzzled me. Here are some examples:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
 protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
 neovim is more community driven.&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
 They indeed become meaningful when the minor differences between them begin to
 matter. However, I believe that the best approach is to simply select a tool
@@ -2533,8 +2598,11 @@ Razor. As a result, this argument supports the ontology of Idealism, which is
 the view that reality is ultimately mental in nature.&lt;/p&gt;
 &lt;h1 id="argument"&gt;Argument&lt;/h1&gt;
 &lt;p&gt;Let me present you the outline of my argument:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
 or a posteriori.&lt;br&gt;
 P2. Agents don’t know a priori whether physical objects exist.&lt;br&gt;
 P3. Agents don’t know a posteriori whether physical objects exist.&lt;br&gt;
@@ -2545,7 +2613,9 @@ no reason assuming it exists. (parsimony principle)&lt;br&gt;
 P5. Assuming existence of physical objects does not give us more explanatory
 power than what we are left without it.&lt;br&gt;
 C2. There is no reason for assuming that physical objects exists.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;The first premise &lt;strong&gt;(P1)&lt;/strong&gt; is very easy to see, if not self-evident. By
 definition, a priori knowledge means the knowledge we gain without experiencing
 whereas a posteriori knowledge means the knowledge we gain with experience. It

@@ -596,14 +596,19 @@ your knowledge of such details tends to increase.&lt;/p&gt;
 to do it. As a result, you&amp;rsquo;re often left wondering, &amp;ldquo;which method/approach
 should I choose first?&amp;rdquo; I think that these kinds of questions frequently
 puzzled me. Here are some examples:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
 protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
 something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
 neovim is more community driven.&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
 They indeed become meaningful when the minor differences between them begin to
 matter. However, I believe that the best approach is to simply select a tool

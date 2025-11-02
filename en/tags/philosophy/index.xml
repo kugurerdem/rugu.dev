@@ -208,8 +208,11 @@ Razor. As a result, this argument supports the ontology of Idealism, which is
 the view that reality is ultimately mental in nature.&lt;/p&gt;
 &lt;h1 id="argument"&gt;Argument&lt;/h1&gt;
 &lt;p&gt;Let me present you the outline of my argument:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;P1. If agents can know whether something exists, then they know so a priori
 or a posteriori.&lt;br&gt;
 P2. Agents don’t know a priori whether physical objects exist.&lt;br&gt;
 P3. Agents don’t know a posteriori whether physical objects exist.&lt;br&gt;
@@ -220,7 +223,9 @@ no reason assuming it exists. (parsimony principle)&lt;br&gt;
 P5. Assuming existence of physical objects does not give us more explanatory
 power than what we are left without it.&lt;br&gt;
 C2. There is no reason for assuming that physical objects exists.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
+
 &lt;p&gt;The first premise &lt;strong&gt;(P1)&lt;/strong&gt; is very easy to see, if not self-evident. By
 definition, a priori knowledge means the knowledge we gain without experiencing
 whereas a posteriori knowledge means the knowledge we gain with experience. It
