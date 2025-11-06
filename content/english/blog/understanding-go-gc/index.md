@@ -43,7 +43,7 @@ It's a bit like cleaning your house: **If you never clean and let garbage pile u
 
 Fortunately, Go takes a smarter approach by using a special mechanism to decide when to trigger garbage collection. This mechanism is called the pacer.
 
-# The GC Pacer
+# How Does The Pacer Works?
 
 > [!NOTE] Go's GC Pacer Source Code
 > Those who are curious about how the pacer works in more detail, can read the [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go). It is not that hard to follow and only about 1500 lines of code, comments included.
@@ -105,11 +105,7 @@ In addition to these, we can also trigger the GC manually via `runtime.GC()` and
 
 [^minimal-total-heap-size]: [GOGC](https://go.dev/doc/gc-guide#GOGC) section of the  "A Guide to the Go Garbage Collector" documentation notes that "the Go GC has a minimum total heap size of 4 MiB, so if the GOGC-set target is ever below that, it gets rounded up."
 
-# How The GC Works
-
-As I mentioned in the previous section, Go's garbage collector doesn't give us many things to tweak. Just `GOGC` and `GOMEMLIMIT`. So it's very tempting to ask: why even bother understanding how it works if there's so little we can actually change?
-
-One reason is simple curiosity. But there's also a more practical one. **By understanding how the GC works, we can better appreciate the costs involved. Thus, be more motivated to avoiding patterns that create unnecessary garbage.**
+# How Does The Collection Works?
 
 The Efficient Go books summarizes how the Go's GC works as follows:
 
@@ -120,6 +116,10 @@ The Efficient Go books summarizes how the Go's GC works as follows:
 > 3. Terminate marking by removing the write barrier from the goroutines. This requires another STW event. After the mark phase, the GC function is generally complete. As interesting as it sounds, the GC doesn't release any memory! Instead, the sweeping phase releases objects that were not marked as in use. It is done lazily: every time a goroutine wants to allocate memory through the Go Allocator, it must perform a sweeping work first, then allocate. This is counted as an allocation latency, even though it is technically a garbage collection functionality—worth noting!
 
 So, I know this is a lot to take in if you're learning about garbage collectors for the first time. What does **“concurrent, nongenerational, tri-color mark-and-sweep collector”** even mean? Let's explain these terms one by one. I'll start with the **tri-color mark-and-sweep** part, it's the core idea behind how the GC identifies and frees unused memory. After that, I will move on to explaining the **concurrent** and **nongenerational** parts.
+
+> [!NOTE] Objects and Garbages
+> 
+> You will encounter the term "Object" quite a lot during discussions related to GC. What it means is any value or data structure that resides in the heap. Garbages are basically objects that are no longer pointed by any reachable reference (or root).
 
 ## Tri-color Mark and Sweep
 
