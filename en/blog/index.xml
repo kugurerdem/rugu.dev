@@ -30,7 +30,7 @@
 &lt;p&gt;For this, in the following sections, I will examine the Go Garbage Collector in more detail. I will examine its trigger policy, how it frees or rearranges memory, and the side effects of these actions. I will also talk about what we can do to help the GC, so that our applications suffer less from latency caused by poorly managed memory.&lt;/p&gt;
 &lt;h1 id="the-pacing-problem"&gt;The Pacing Problem&lt;/h1&gt;
 &lt;p&gt;Now, even if we had a procedure for cleaning up garbage, unless we trigger it, we are basically no better of. So, any garbage collector, in a way, requires a mechanism for determining when to trigger the collection process.&lt;/p&gt;
-&lt;p&gt;Honestly, if I were to implement such a trigger mechanism for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problems here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also be likely to fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.&lt;/p&gt;
+&lt;p&gt;Honestly, if I were to implement such a trigger mechanism for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problem here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also likely fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.&lt;/p&gt;
 &lt;p&gt;So, &lt;strong&gt;whatever mechanism we come up with, it better should adapt to the program’s behavior.&lt;/strong&gt; It needs to monitor how fast memory is being allocated and how quickly old objects become unreachable, then decide when to run the collector accordingly.&lt;/p&gt;
 
 
@@ -49,7 +49,7 @@
 
 &lt;p&gt;It&amp;rsquo;s a bit like cleaning your house: &lt;strong&gt;If you never clean and let garbage pile up, you waste space and also make the next cleaning much harder. If you keep checking a clean room again and again, you&amp;rsquo;re just wasting time.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Fortunately, Go takes a smarter approach by using a special mechanism to decide when to trigger garbage collection. This mechanism is called the pacer.&lt;/p&gt;
-&lt;h1 id="how-does-the-pacer-works"&gt;How Does The Pacer Works?&lt;/h1&gt;
+&lt;h1 id="how-does-the-pacer-work"&gt;How Does The Pacer Work?&lt;/h1&gt;
 
 
 
@@ -1480,7 +1480,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode16s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode23s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
