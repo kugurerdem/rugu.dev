@@ -8,7 +8,9 @@ date: 2025-11-15
 
 ![gopher-gc-thumbnail.png](gopher-gc-thumbnail.png#halfsize)
 
-I was reading [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/) and came across the section on garbage collection (GC). I realized how little I actually knew about such an important topic. Both out of curiosity and for the fun of learning things, I decided to learn a bit more about how it works. So, I looked into many different resources [^resources] and wrote down my understanding to make it stick. This post is the result, and I hope it proves itself to be useful for others as well.
+I was reading [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/) and came across the section on garbage collection (GC). I realized how little I actually knew about such an important topic. Both out of curiosity and for the fun of learning things, I decided to learn a bit more about how it works. So, I looked into many different resources [^resources] and wrote down my understanding to make it stick. This post is the result. I hope it becomes useful for you as well.
+
+Also, special thanks to my friends [Onur](https://blog.aiono.dev) and [Oussama](https://github.com/singularhomology) for their early feedbacks and some clarifications.
 
 [^resources]: In a way, this post is the result of my overall understanding and summary of the things I learned from resources such as some of the official Go blog posts (like, [A Guide to the Go Garbage Collector](https://go.dev/doc/gc-guide), [Go GC: Prioritizing low latency and simplicity](https://go.dev/blog/go15gc), the ISMM keynote [Getting to Go: The Journey of Go's Garbage Collector](https://go.dev/blog/ismmkeynote) ), the [Memory Efficiency: Mastering Go's Garbage Collector](https://goperf.dev/01-common-patterns/gc/) from the [Go Optimization Guide](https://goperf.dev/), and of course the [Eficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/) book. Oh, and also some  Wikipedia entries as well.
 
@@ -16,21 +18,21 @@ I was reading [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9
 
 Go is a garbage-collected language. This is great for developer velocity. It allows us to spend less time on manual memory management and more on business logic. Unfortunately though, making GC work efficiently is neither simple nor cheap.
 
-The thing is, just because GC hides memory management details from us doesn't mean they don't happen under the hood. They happen, and they are costly. If we don't think about it, we might just generate garbage without realizing the possible runtime costs.
+The thing is, just because GC hides memory management details from us doesn't mean that they don't happen under the hood. They happen, and they are costly. If we don't think about it, we might just generate garbage without realizing the possible runtime costs.
 
 > Think of a garbage collector like a Roomba: Just because you have one does not mean you tell your children not to drop arbitrary pieces of garbage onto the floor.
 >
 > \- Halvar Flake
 
-So, **By seeing the actual costs involved with GC, we can better appreciate the complexity of the problem it's solving. Thus, we might feel more motivated to write code that creates less garbage.** At least, that was my experience.
+Thus, **by seeing the actual costs involved with GC, we can better appreciate the complexity of the problem it's solving. Thus, we might feel more motivated to write code that creates less garbage.** At least, that was my experience.
 
 For this, in the following sections, I will examine the Go Garbage Collector in more detail. I will examine its trigger policy, how it frees or rearranges memory, and the side effects of these actions. I will also talk about what we can do to help the GC, so that our applications suffer less from latency caused by poorly managed memory.
 
 # The Pacing Problem
 
-Now, even if we had a procedure for cleaning up garbages, unless we trigger it, we are basically are no better of. So, any garbage collector, in a way, requires a mechanism for determining when to trigger the collection process.
+Now, even if we had a procedure for cleaning up garbage, unless we trigger it, we are basically no better of. So, any garbage collector, in a way, requires a mechanism for determining when to trigger the collection process.
 
-Honestly, if I were to implement such a trigger mechanism for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problems here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also be likely to fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.
+Honestly, if I were to implement such a trigger mechanism for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problem here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also likely fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.
 
 So, **whatever mechanism we come up with, it better should adapt to the program’s behavior.** It needs to monitor how fast memory is being allocated and how quickly old objects become unreachable, then decide when to run the collector accordingly.
 
@@ -46,7 +48,7 @@ It's a bit like cleaning your house: **If you never clean and let garbage pile u
 
 Fortunately, Go takes a smarter approach by using a special mechanism to decide when to trigger garbage collection. This mechanism is called the pacer.
 
-# How Does The Pacer Works?
+# How Does The Pacer Work?
 
 > [!NOTE] Go's GC Pacer Source Code
 > Those who are curious about how the pacer works in more detail, can read the [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go). It is not that hard to follow and only about 1500 lines of code, comments included.
