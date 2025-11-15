@@ -12,10 +12,10 @@
  &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src="https://rugu.dev/en/blog/understanding-go-gc/gopher-gc-thumbnail.png#halfsize" alt="gopher-gc-thumbnail.png"&gt;&lt;/p&gt;
-&lt;p&gt;I was reading &lt;a href="https://www.oreilly.com/library/view/efficient-go/9781098105709/"&gt;Efficient Go&lt;/a&gt; and came across the section on garbage collection (GC). I realized how little I actually knew about such an important topic. Both out of curiosity and for the fun of learning things, I decided to learn a bit more about how it works. So, I looked into many different resources &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; and wrote down my understanding to make it stick. This post is the result, and I hope it proves itself to be useful for others as well.&lt;/p&gt;
+&lt;p&gt;I was reading &lt;a href="https://www.oreilly.com/library/view/efficient-go/9781098105709/"&gt;Efficient Go&lt;/a&gt; and came across the section on garbage collection (GC). I realized how little I actually knew about such an important topic. Both out of curiosity and for the fun of learning things, I decided to learn a bit more about how it works. So, I looked into many different resources &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; and wrote down my understanding to make it stick. This post is the result. I hope it becomes useful for you as well.&lt;/p&gt;
 &lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Go is a garbage-collected language. This is great for developer velocity. It allows us to spend less time on manual memory management and more on business logic. Unfortunately though, making GC work efficiently is neither simple nor cheap.&lt;/p&gt;
-&lt;p&gt;The thing is, just because GC hides memory management details from us doesn&amp;rsquo;t mean they don&amp;rsquo;t happen under the hood. They happen, and they are costly. If we don&amp;rsquo;t think about it, we might just generate garbage without realizing the possible runtime costs.&lt;/p&gt;
+&lt;p&gt;The thing is, just because GC hides memory management details from us doesn&amp;rsquo;t mean that they don&amp;rsquo;t happen under the hood. They happen, and they are costly. If we don&amp;rsquo;t think about it, we might just generate garbage without realizing the possible runtime costs.&lt;/p&gt;
 
 
 
@@ -25,10 +25,10 @@
 
  &lt;/blockquote&gt;
 
-&lt;p&gt;So, &lt;strong&gt;By seeing the actual costs involved with GC, we can better appreciate the complexity of the problem it&amp;rsquo;s solving. Thus, we might feel more motivated to write code that creates less garbage.&lt;/strong&gt; At least, that was my experience.&lt;/p&gt;
+&lt;p&gt;Thus, &lt;strong&gt;by seeing the actual costs involved with GC, we can better appreciate the complexity of the problem it&amp;rsquo;s solving. Thus, we might feel more motivated to write code that creates less garbage.&lt;/strong&gt; At least, that was my experience.&lt;/p&gt;
 &lt;p&gt;For this, in the following sections, I will examine the Go Garbage Collector in more detail. I will examine its trigger policy, how it frees or rearranges memory, and the side effects of these actions. I will also talk about what we can do to help the GC, so that our applications suffer less from latency caused by poorly managed memory.&lt;/p&gt;
 &lt;h1 id="the-pacing-problem"&gt;The Pacing Problem&lt;/h1&gt;
-&lt;p&gt;Now, even if we had a procedure for cleaning up garbages, unless we trigger it, we are basically are no better of. So, any garbage collector, in a way, requires a mechanism for determining when to trigger the collection process.&lt;/p&gt;
+&lt;p&gt;Now, even if we had a procedure for cleaning up garbage, unless we trigger it, we are basically are no better of. So, any garbage collector, in a way, requires a mechanism for determining when to trigger the collection process.&lt;/p&gt;
 &lt;p&gt;Honestly, if I were to implement such a trigger mechanism for the first time, the first idea that would come to my mind would be to simply trigger the GC periodically at a fixed interval. But, even a little bit of thought shows the problems here. A fixed interval does not care whether the program is allocating a lot or very little. What about something like triggering the GC after allocating memory a determined number of times? Likewise, this approach would also be likely to fail. Because it simply ignores the fact that allocations can have very different sizes and lifetimes.&lt;/p&gt;
 &lt;p&gt;So, &lt;strong&gt;whatever mechanism we come up with, it better should adapt to the program’s behavior.&lt;/strong&gt; It needs to monitor how fast memory is being allocated and how quickly old objects become unreachable, then decide when to run the collector accordingly.&lt;/p&gt;
 
@@ -200,6 +200,7 @@
 &lt;p&gt;I think we&amp;rsquo;ve covered quite a bit in this blog post; The pacing problem, how the collection itself works, soem of the implementation details, and so on&amp;hellip; I believe, &lt;strong&gt;If there&amp;rsquo;s one thing to take away from all this, it&amp;rsquo;s that we should stay mindful of the garbage our code generates. Even though the GC hides it from us, it still happens under the hood and has real effects on how our programs perform.&lt;/strong&gt; In &lt;em&gt;Helping Out The Go&amp;rsquo;s GC&lt;/em&gt; essay, we are also going to look into some of the practical things we can do to achieve this.&lt;/p&gt;
 &lt;p&gt;I hope this post helped you build a clearer intuition about how Go&amp;rsquo;s garbage collector works. It sure helped me a lot. If you spotted something I missed, or have other insights worth sharing, I&amp;rsquo;d love to hear about them.&lt;/p&gt;
 &lt;p&gt;Thanks for reading all the way through&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Also, special thanks to my friends &lt;a href="https://blog.aiono.dev"&gt;Onur&lt;/a&gt; and Oussama for their early feedbacks and some clarifications.&lt;/p&gt;
 &lt;h1 id="bonus-the-green-tea-garbage-collector"&gt;BONUS: The Green Tea Garbage Collector&lt;/h1&gt;
 &lt;p&gt;As I&amp;rsquo;m writing this, there&amp;rsquo;s an ongoing effort to make Go&amp;rsquo;s garbage collector even more performant. The work is part of a new proposal called &amp;ldquo;Green Tea GC&amp;rdquo;. You can follow the discussion and progress in &lt;a href="https://github.com/golang/go/issues/73581"&gt;issue&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
@@ -1479,7 +1480,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode16s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode18s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
