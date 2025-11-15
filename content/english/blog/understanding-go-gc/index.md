@@ -51,7 +51,7 @@ Fortunately, Go takes a smarter approach by using a special mechanism to decide 
 # How Does The Pacer Work?
 
 > [!NOTE] Go's GC Pacer Source Code
-> Those who are curious about how the pacer works in more detail, can read the [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go). It is not that hard to follow and only about 1500 lines of code, comments included.
+> Those who are curious about how the pacer works in more detail can read the [runtime/mgcpacer](https://go.dev/src/runtime/mgcpacer.go). It is not that hard to follow and only about 1500 lines of code (comments included).
 
 The main idea behind Go's pacer is to keep garbage collection proportional to the rate of memory allocation. Basically, after each collection, the GC measures the size of the live heap (the memory still in use after collection) and some additional parameters to compute the next target.
 
@@ -73,14 +73,14 @@ if gcPercentHeapGoal < c.heapMinimum {
 c.gcPercentHeapGoal.Store(gcPercentHeapGoal)
 ```
 
-Here, `heapMarked` is the number of bytes marked by the previous GC. It is the part of the heap that survived the last collection, and also known as the "live heap". The `lastStackScan` is the number of bytes of stack that were scanned last GC cyclea nd `globalsScan` is the total amount of global variable space that is scannable. There is also one last value to talk about `gcPercent`. It is the growth percentage. It comes from `GOGC` and defaults to `100`, which means the next goal allows roughly a 100 percent growth over the base term.
+Here, `heapMarked` is the number of bytes marked by the previous GC. It is the part of the heap that survived the last collection, and also known as the "live heap". The `lastStackScan` is the number of bytes of stack that were scanned last GC cycle and `globalsScan` is the total amount of global variable space that is scannable. There is also one last value to talk about `gcPercent`. It is the growth percentage. It comes from `GOGC` and defaults to `100`, which means the next goal allows roughly a 100 percent growth over the base term.
 
 > [!NOTE] Target Heap Memory
 > [A Guide to the Go Garbage Collector](https://go.dev/doc/gc-guide#GOGC), summarizes this calculation of the target heap memory as:
 > ```
 > Target heap memory = Live heap + (Live heap + GC roots) * GOGC / 100 
 > ```
-> Here, I find the adding of `GC roots` rather interesting. Why add them into the equation in the first place? Why not use something as simple as the following example?
+> Here, I find the addition of `GC roots` rather interesting. Why add them into the equation in the first place? Why not use something as simple as the following example?
 > 
 >```
 >Target heap memory = (1 + GOGC/100) * Live Heap
@@ -90,9 +90,9 @@ Here, `heapMarked` is the number of bytes marked by the previous GC. It is the p
 Regardless of these details, the main idea is still the same: we have a pacer that basically keeps the garbage collector in sync with the program’s allocation behavior. It constantly adjusts when the next collection should happen based on how the heap grows and how much work the previous GC cycle required.
 
 > [!NOTE] The `GOMEMLIMIT` Option
-> Go also provides an called `GOMEMLIMIT`. When the process approaches this limit, the pacer logic triggers the GC immediately, without prior checks. It serves as another pacing mechanism, but one focused on memory pressure rather than allocation rate.
+> Go also provides an option called `GOMEMLIMIT`. When the process approaches this limit, the pacer logic triggers the GC immediately, without prior checks. It serves as another pacing mechanism, but one focused on memory pressure rather than allocation rate.
 >
-> However, this option is a tricky one. _Efficient Go_ book especially warns us about it:
+> However, this option is a tricky one. The _Efficient Go_ especially warns us about it:
 > > **When your program allocates and uses more memory than the desired limit with the `GOMEMLIMIT` option set, it will only make things worse.** This is because the GC will run nearly continuously, **consuming around 25% of the CPU time** that could otherwise be used by your program.
 
 
@@ -112,7 +112,7 @@ In addition to these, we can also trigger the GC manually via `runtime.GC()` and
 
 # How Does The Collection Works?
 
-The Efficient Go books summarizes how the Go's GC works as follows:
+The Efficient Go book summarizes how Go's GC works as follows:
 
 > The Go GC implementation can be described as the [concurrent, nongenerational, tri‐color mark and sweep collector](https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html) implementation. Whether invoked by the programmer or by the runtime-based `GOGC` or `GOMEMLIMIT` option, the `runtime.GC()` implementation comprises a few phases. The first one is a mark phase that has to:
 >
@@ -129,7 +129,7 @@ So, I know this is a lot to take in if you're learning about garbage collectors 
 
 ## Tri-color Mark and Sweep
 
-The **tri-color mark-and-sweep** algorithm is the main technique Go's garbage collector uses to determine which parts of memory are still in use. It belongs to the family of [Tracing GC](https://en.wikipedia.org/wiki/Tracing_garbage_collection) algorithms. They are called tracing collectors because, instead of something like tracking how many active references point to a given object (aka [reference counting](https://en.wikipedia.org/wiki/Reference_counting)), they start from a set of known roots and trace through every reachable object. **The main idea is simple; Anything that cannot be reached during this traversal is unused and thus, can be used by the allocator.**
+The **tri-color mark-and-sweep** algorithm is the main technique that Go's garbage collector uses to determine which parts of memory are still in use. It belongs to the family of [Tracing GC](https://en.wikipedia.org/wiki/Tracing_garbage_collection) algorithms. They are called tracing collectors because, instead of something like tracking how many active references point to a given object (aka [reference counting](https://en.wikipedia.org/wiki/Reference_counting)), they start from a set of known roots and trace through every reachable object. **The main idea is simple; Anything that cannot be reached during this traversal is unused and thus, can be used by the allocator.**
 
 The tri-color in the name refers to how the objects are categorized into different groups during the tracing phase. During the scan (tracing), the collector needs a way to separate objects that are known to be reachable and completed, objects that are reachable but still need to be processed, and objects whose reachability is still unknown. So, it classifies objects into three groups:
 
@@ -141,7 +141,7 @@ The diagram below shows how objects move between these states:
 
 ![](./tricolor-state-diagram.png)
 
-At the start of a garbage collection cycle, every object begins in the white set. The collector scans the roots and moves the objects they reference into the gray set. As it continues to follow pointers, any newly discovered object moves from white to gray. A gray object becomes black once all of its children have been scanned. By the end of the cycle, all reachable objects have become black, and anything that remains white is considered unreachable. This process repeats every time a new collection starts.
+At the start of a garbage collection cycle, every object begins in the white set. The collector scans the roots and moves the objects they reference into the gray set. As it continues to follow pointers, any newly discovered object moves from white to gray. A gray object becomes black once all of its children have been scanned. By the end of the cycle, all reachable objects become black, and anything that remains white is considered unreachable. This process is repeated every time a new collection starts.
 
 > [!WARNING]
 > Keep in mind that this description is just an oversimplified, conceptual model of how Go's collector behaves. The actual implementation does not store literal colors on objects and uses internal bitmaps, spans, and work queues to represent these states efficiently. If you want to see how this works in practice, the relevant code lives in [src/runtime/mgcmark.go](https://go.dev/src/runtime/mgcmark.go) and [src/runtime/mgcsweep.go](https://go.dev/src/runtime/mgcmark.go) in the Go source tree.
@@ -158,11 +158,11 @@ Here, I think it's important to realize that Go's GC does not stop goroutines to
 >
 > [Memory Efficiency: Mastering Go's Garbage Collector](https://goperf.dev/01-common-patterns/gc/)
 
-So, Go's GC doesn't block other goroutines most of the time, except for those tiny moments when it adds or removes the write barriers. I found this trick of introducing barriers pretty clever.
+So, Go's GC doesn't block other Goroutines most of the time, except for those tiny moments when it adds or removes the write barriers. I found this trick of introducing barriers pretty clever.
 
 ## Nongenerational
 
-**Nongenerational** just means Go is not generational. And what does generational mean? Well, it's basically to treat objects differently depending on how long they've been around and how often they're accessed. Why? Because they can use this information to optimize collection cycles. Most objects die young. So, by focusing on recently created ones more often, the GC can reclaim memory faster without scanning the entire heap each time. This is interesting. But if this approach is so efficient, why doesn't Go do the same? Apparently, the reason is that there was no obvious benefit to it, that is, the benefits were not sufficient enough. [^why-nongenerational]
+**Nongenerational** just means Go is not generational. And what does generational mean? Well, it's basically treating objects differently depending on how long they've been around and how often they're accessed. Why? Because they can use this information to optimize collection cycles. Most objects die young. So, by focusing on recently created ones more often, the GC can reclaim memory faster without scanning the entire heap each time. This is interesting. But if this approach is so efficient, why doesn't Go do the same? Apparently, the reason is that there was no obvious benefit to it, that is, the benefits were not sufficient enough. [^why-nongenerational]
 
 [^why-nongenerational]: As for why Go is non-generational, [Go Optimization Guide](https://goperf.dev/01-common-patterns/gc/#non-generational) notes that "it hasn't shown clear, consistent benefits in real-world Go programs with the designs tried so far." The ISMM keynote, [Getting to Go: The Journey of Go's Garbage Collector](https://go.dev/blog/ismmkeynote) also explains that while generational collectors can help reduce long stop-the-world pauses, Go's concurrent GC already avoids those and instead focuses on maintaining low, predictable latency.
 
@@ -170,7 +170,7 @@ So, Go's GC doesn't block other goroutines most of the time, except for those ti
 
 The more I read about how Go's garbage collector works, the more I realize how deep the topic goes. It is absolutely possible to study every corner of the runtime, but that wasn't the goal of this essay. My goal was to build a practical understanding of the system and develop an intuition for the bigger picture. I think, at this point, it’s enough to recognize that the Go team [prioritized low latency and simplicity](https://go.dev/blog/go15gc).
 
-I think we've covered quite a bit in this blog post; The pacing problem, how the collection itself works, soem of the implementation details, and so on... I believe, **If there's one thing to take away from all this, it's that we should stay mindful of the garbage our code generates. Even though the GC hides it from us, it still happens under the hood and has real effects on how our programs perform.** In _Helping Out The Go's GC_ essay, we are also going to look into some of the practical things we can do to achieve this.
+I think we've covered quite a bit in this blog post; The pacing problem, how the collection itself works, some of the implementation details, and so on... I believe, **If there's one thing to take away from all of this, it's that we should stay mindful of the garbage our code generates. Even though the GC hides it from us, it still happens under the hood and has real effects on how our programs perform.** In _Helping Out The Go's GC_ essay, we are going to look into some of the practical things we can implement to achieve this.
 
 I hope this post helped you build a clearer intuition about how Go's garbage collector works. It sure helped me a lot. If you spotted something I missed, or have other insights worth sharing, I'd  love to hear about them.
 
@@ -178,5 +178,5 @@ Thanks for reading all the way through...
 
 # BONUS: The Green Tea Garbage Collector
 
-As I'm writing this, there's an ongoing effort to make Go's garbage collector even more performant. The work is part of a new proposal called "Green Tea GC". You can follow the discussion and progress in [issue](https://github.com/golang/go/issues/73581) on GitHub.
+As I'm writing this, there's an ongoing effort to make Go's garbage collector even more performant. The work is part of a new proposal called "Green Tea GC". You can follow the discussion and progress in [this issue](https://github.com/golang/go/issues/73581) on GitHub.
 
