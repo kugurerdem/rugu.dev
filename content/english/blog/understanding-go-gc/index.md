@@ -1,6 +1,6 @@
 ---
-title: "Understanding Go\'s Garbage Collector"
-date: 2025-09-28
+title: "Understanding Go's Garbage Collector"
+date: 2025-11-15
 ---
 
 > [!WARNING] Disclaimer
