@@ -60,7 +60,7 @@
  Go&amp;rsquo;s GC Pacer Source Code
  
  &lt;/p&gt;
- &lt;p&gt;Those who are curious about how the pacer works in more detail, can read the &lt;a href="https://go.dev/src/runtime/mgcpacer.go"&gt;runtime/mgcpacer&lt;/a&gt;. It is not that hard to follow and only about 1500 lines of code, comments included.&lt;/p&gt;
+ &lt;p&gt;Those who are curious about how the pacer works in more detail can read the &lt;a href="https://go.dev/src/runtime/mgcpacer.go"&gt;runtime/mgcpacer&lt;/a&gt;. It is not that hard to follow and only about 1500 lines of code (comments included).&lt;/p&gt;
  &lt;/blockquote&gt;
 
 &lt;p&gt;The main idea behind Go&amp;rsquo;s pacer is to keep garbage collection proportional to the rate of memory allocation. Basically, after each collection, the GC measures the size of the live heap (the memory still in use after collection) and some additional parameters to compute the next target.&lt;/p&gt;
@@ -78,7 +78,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;gcPercentHeapGoal&lt;/span&gt; = &lt;span style="color:#a6e22e"&gt;c&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;heapMinimum&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;c&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;gcPercentHeapGoal&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;Store&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;gcPercentHeapGoal&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here, &lt;code&gt;heapMarked&lt;/code&gt; is the number of bytes marked by the previous GC. It is the part of the heap that survived the last collection, and also known as the &amp;ldquo;live heap&amp;rdquo;. The &lt;code&gt;lastStackScan&lt;/code&gt; is the number of bytes of stack that were scanned last GC cyclea nd &lt;code&gt;globalsScan&lt;/code&gt; is the total amount of global variable space that is scannable. There is also one last value to talk about &lt;code&gt;gcPercent&lt;/code&gt;. It is the growth percentage. It comes from &lt;code&gt;GOGC&lt;/code&gt; and defaults to &lt;code&gt;100&lt;/code&gt;, which means the next goal allows roughly a 100 percent growth over the base term.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here, &lt;code&gt;heapMarked&lt;/code&gt; is the number of bytes marked by the previous GC. It is the part of the heap that survived the last collection, and also known as the &amp;ldquo;live heap&amp;rdquo;. The &lt;code&gt;lastStackScan&lt;/code&gt; is the number of bytes of stack that were scanned last GC cycle and &lt;code&gt;globalsScan&lt;/code&gt; is the total amount of global variable space that is scannable. There is also one last value to talk about &lt;code&gt;gcPercent&lt;/code&gt;. It is the growth percentage. It comes from &lt;code&gt;GOGC&lt;/code&gt; and defaults to &lt;code&gt;100&lt;/code&gt;, which means the next goal allows roughly a 100 percent growth over the base term.&lt;/p&gt;
 
 
 
@@ -91,7 +91,7 @@
  &lt;/p&gt;
  &lt;p&gt;&lt;a href="https://go.dev/doc/gc-guide#GOGC"&gt;A Guide to the Go Garbage Collector&lt;/a&gt;, summarizes this calculation of the target heap memory as:&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;Target heap memory = Live heap + (Live heap + GC roots) * GOGC / 100 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here, I find the adding of &lt;code&gt;GC roots&lt;/code&gt; rather interesting. Why add them into the equation in the first place? Why not use something as simple as the following example?&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here, I find the addition of &lt;code&gt;GC roots&lt;/code&gt; rather interesting. Why add them into the equation in the first place? Why not use something as simple as the following example?&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;Target heap memory = (1 + GOGC/100) * Live Heap
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It turns out that it was already like this until Go v1.18. It seems like the main motivation for this change was to make the GC&amp;rsquo;s pacing model reflect all of the work the collector needs to perform, not just the size of the heap. Those who are further interested in the topic, can look up the &lt;a href="https://github.com/golang/proposal/blob/master/design/44167-gc-pacer-redesign.md"&gt;GC Pacer Redesign&lt;/a&gt; proposal that initiated the change.&lt;/p&gt;
  &lt;/blockquote&gt;
@@ -107,8 +107,8 @@
  The &lt;code&gt;GOMEMLIMIT&lt;/code&gt; Option
  
  &lt;/p&gt;
- &lt;p&gt;Go also provides an called &lt;code&gt;GOMEMLIMIT&lt;/code&gt;. When the process approaches this limit, the pacer logic triggers the GC immediately, without prior checks. It serves as another pacing mechanism, but one focused on memory pressure rather than allocation rate.&lt;/p&gt;
-&lt;p&gt;However, this option is a tricky one. &lt;em&gt;Efficient Go&lt;/em&gt; book especially warns us about it:&lt;/p&gt;
+ &lt;p&gt;Go also provides an option called &lt;code&gt;GOMEMLIMIT&lt;/code&gt;. When the process approaches this limit, the pacer logic triggers the GC immediately, without prior checks. It serves as another pacing mechanism, but one focused on memory pressure rather than allocation rate.&lt;/p&gt;
+&lt;p&gt;However, this option is a tricky one. The &lt;em&gt;Efficient Go&lt;/em&gt; especially warns us about it:&lt;/p&gt;
 
 
 
@@ -130,7 +130,7 @@
 &lt;/ol&gt;
 &lt;p&gt;In addition to these, we can also trigger the GC manually via &lt;code&gt;runtime.GC()&lt;/code&gt; and &lt;code&gt;debug.FreeOSMemory()&lt;/code&gt;. I guess they can be helpful in cases where we want to reclaim memory deterministically or prepare for a memory-heavy phase. But in many cases we don&amp;rsquo;t need this, or simply using better patterns is a better idea.&lt;/p&gt;
 &lt;h1 id="how-does-the-collection-works"&gt;How Does The Collection Works?&lt;/h1&gt;
-&lt;p&gt;The Efficient Go books summarizes how the Go&amp;rsquo;s GC works as follows:&lt;/p&gt;
+&lt;p&gt;The Efficient Go book summarizes how Go&amp;rsquo;s GC works as follows:&lt;/p&gt;
 
 
 
@@ -159,14 +159,14 @@
  &lt;/blockquote&gt;
 
 &lt;h2 id="tri-color-mark-and-sweep"&gt;Tri-color Mark and Sweep&lt;/h2&gt;
-&lt;p&gt;The &lt;strong&gt;tri-color mark-and-sweep&lt;/strong&gt; algorithm is the main technique Go&amp;rsquo;s garbage collector uses to determine which parts of memory are still in use. It belongs to the family of &lt;a href="https://en.wikipedia.org/wiki/Tracing_garbage_collection"&gt;Tracing GC&lt;/a&gt; algorithms. They are called tracing collectors because, instead of something like tracking how many active references point to a given object (aka &lt;a href="https://en.wikipedia.org/wiki/Reference_counting"&gt;reference counting&lt;/a&gt;), they start from a set of known roots and trace through every reachable object. &lt;strong&gt;The main idea is simple; Anything that cannot be reached during this traversal is unused and thus, can be used by the allocator.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;tri-color mark-and-sweep&lt;/strong&gt; algorithm is the main technique that Go&amp;rsquo;s garbage collector uses to determine which parts of memory are still in use. It belongs to the family of &lt;a href="https://en.wikipedia.org/wiki/Tracing_garbage_collection"&gt;Tracing GC&lt;/a&gt; algorithms. They are called tracing collectors because, instead of something like tracking how many active references point to a given object (aka &lt;a href="https://en.wikipedia.org/wiki/Reference_counting"&gt;reference counting&lt;/a&gt;), they start from a set of known roots and trace through every reachable object. &lt;strong&gt;The main idea is simple; Anything that cannot be reached during this traversal is unused and thus, can be used by the allocator.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The tri-color in the name refers to how the objects are categorized into different groups during the tracing phase. During the scan (tracing), the collector needs a way to separate objects that are known to be reachable and completed, objects that are reachable but still need to be processed, and objects whose reachability is still unknown. So, it classifies objects into three groups:&lt;/p&gt;
 &lt;p&gt;- &lt;strong&gt;White&lt;/strong&gt; for objects that have not been reached yet. &lt;br&gt;
 - &lt;strong&gt;Gray&lt;/strong&gt; for objects that have been reached, but whose children still need to be scanned. Gray objects are basically in-progress to become black. &lt;br&gt;
 - &lt;strong&gt;Black&lt;/strong&gt; for objects that are confirmed reachable and fully processed, including everything they point to.&lt;/p&gt;
 &lt;p&gt;The diagram below shows how objects move between these states:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://rugu.dev/en/blog/understanding-go-gc/tricolor-state-diagram.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;At the start of a garbage collection cycle, every object begins in the white set. The collector scans the roots and moves the objects they reference into the gray set. As it continues to follow pointers, any newly discovered object moves from white to gray. A gray object becomes black once all of its children have been scanned. By the end of the cycle, all reachable objects have become black, and anything that remains white is considered unreachable. This process repeats every time a new collection starts.&lt;/p&gt;
+&lt;p&gt;At the start of a garbage collection cycle, every object begins in the white set. The collector scans the roots and moves the objects they reference into the gray set. As it continues to follow pointers, any newly discovered object moves from white to gray. A gray object becomes black once all of its children have been scanned. By the end of the cycle, all reachable objects become black, and anything that remains white is considered unreachable. This process is repeated every time a new collection starts.&lt;/p&gt;
 
 
 
@@ -193,16 +193,16 @@
 
  &lt;/blockquote&gt;
 
-&lt;p&gt;So, Go&amp;rsquo;s GC doesn&amp;rsquo;t block other goroutines most of the time, except for those tiny moments when it adds or removes the write barriers. I found this trick of introducing barriers pretty clever.&lt;/p&gt;
+&lt;p&gt;So, Go&amp;rsquo;s GC doesn&amp;rsquo;t block other Goroutines most of the time, except for those tiny moments when it adds or removes the write barriers. I found this trick of introducing barriers pretty clever.&lt;/p&gt;
 &lt;h2 id="nongenerational"&gt;Nongenerational&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Nongenerational&lt;/strong&gt; just means Go is not generational. And what does generational mean? Well, it&amp;rsquo;s basically to treat objects differently depending on how long they&amp;rsquo;ve been around and how often they&amp;rsquo;re accessed. Why? Because they can use this information to optimize collection cycles. Most objects die young. So, by focusing on recently created ones more often, the GC can reclaim memory faster without scanning the entire heap each time. This is interesting. But if this approach is so efficient, why doesn&amp;rsquo;t Go do the same? Apparently, the reason is that there was no obvious benefit to it, that is, the benefits were not sufficient enough. &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nongenerational&lt;/strong&gt; just means Go is not generational. And what does generational mean? Well, it&amp;rsquo;s basically treating objects differently depending on how long they&amp;rsquo;ve been around and how often they&amp;rsquo;re accessed. Why? Because they can use this information to optimize collection cycles. Most objects die young. So, by focusing on recently created ones more often, the GC can reclaim memory faster without scanning the entire heap each time. This is interesting. But if this approach is so efficient, why doesn&amp;rsquo;t Go do the same? Apparently, the reason is that there was no obvious benefit to it, that is, the benefits were not sufficient enough. &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h1 id="to-conclude"&gt;To Conclude&lt;/h1&gt;
 &lt;p&gt;The more I read about how Go&amp;rsquo;s garbage collector works, the more I realize how deep the topic goes. It is absolutely possible to study every corner of the runtime, but that wasn&amp;rsquo;t the goal of this essay. My goal was to build a practical understanding of the system and develop an intuition for the bigger picture. I think, at this point, it’s enough to recognize that the Go team &lt;a href="https://go.dev/blog/go15gc"&gt;prioritized low latency and simplicity&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I think we&amp;rsquo;ve covered quite a bit in this blog post; The pacing problem, how the collection itself works, soem of the implementation details, and so on&amp;hellip; I believe, &lt;strong&gt;If there&amp;rsquo;s one thing to take away from all this, it&amp;rsquo;s that we should stay mindful of the garbage our code generates. Even though the GC hides it from us, it still happens under the hood and has real effects on how our programs perform.&lt;/strong&gt; In &lt;em&gt;Helping Out The Go&amp;rsquo;s GC&lt;/em&gt; essay, we are also going to look into some of the practical things we can do to achieve this.&lt;/p&gt;
+&lt;p&gt;I think we&amp;rsquo;ve covered quite a bit in this blog post; The pacing problem, how the collection itself works, some of the implementation details, and so on&amp;hellip; I believe, &lt;strong&gt;If there&amp;rsquo;s one thing to take away from all of this, it&amp;rsquo;s that we should stay mindful of the garbage our code generates. Even though the GC hides it from us, it still happens under the hood and has real effects on how our programs perform.&lt;/strong&gt; In &lt;em&gt;Helping Out The Go&amp;rsquo;s GC&lt;/em&gt; essay, we are going to look into some of the practical things we can implement to achieve this.&lt;/p&gt;
 &lt;p&gt;I hope this post helped you build a clearer intuition about how Go&amp;rsquo;s garbage collector works. It sure helped me a lot. If you spotted something I missed, or have other insights worth sharing, I&amp;rsquo;d love to hear about them.&lt;/p&gt;
 &lt;p&gt;Thanks for reading all the way through&amp;hellip;&lt;/p&gt;
 &lt;h1 id="bonus-the-green-tea-garbage-collector"&gt;BONUS: The Green Tea Garbage Collector&lt;/h1&gt;
-&lt;p&gt;As I&amp;rsquo;m writing this, there&amp;rsquo;s an ongoing effort to make Go&amp;rsquo;s garbage collector even more performant. The work is part of a new proposal called &amp;ldquo;Green Tea GC&amp;rdquo;. You can follow the discussion and progress in &lt;a href="https://github.com/golang/go/issues/73581"&gt;issue&lt;/a&gt; on GitHub.&lt;/p&gt;
+&lt;p&gt;As I&amp;rsquo;m writing this, there&amp;rsquo;s an ongoing effort to make Go&amp;rsquo;s garbage collector even more performant. The work is part of a new proposal called &amp;ldquo;Green Tea GC&amp;rdquo;. You can follow the discussion and progress in &lt;a href="https://github.com/golang/go/issues/73581"&gt;this issue&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -1480,7 +1480,7 @@ or in
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode23s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode16s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
