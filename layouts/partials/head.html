@@ -6,6 +6,9 @@
     <title> {{ if (isset .Params "title") }} {{ .Params.Title }} | {{ end }}
     rugu </title>
 
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
     <script data-goatcounter="https://stats.rugu.dev/count"
             async src="//stats.rugu.dev/count.js"></script>
 </head>
