@@ -1,5 +1,5 @@
 ---
-title: "Using Corne Keyboard For Half A Year"
+title: "Using The Corne Keyboard For Half A Year"
 date: 2025-12-25
 images:
   - corne-with-white-case.jpg
