@@ -1,13 +1,13 @@
 ---
 title: "Using Corne Keyboard For Half A Year"
-date: 2025-12-26
+date: 2025-12-25
 ---
 
-I built my own Corne keyboard around half a year ago. I have been using it ever since July. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. So, I thought that if I wrote down my experiences, it could still be of interest to people who are just considering whether or not to switch to a split keyboard, or, if they are already using one, could further benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, and the things I learned and applied to improve my keyboard ergonomics over the last 5 months.
+I built my own Corne keyboard around six months ago. I have been using it ever since July. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
 
 ![](./corne-with-white-case.jpg#75persize)
 
-I will first talk about my overall reasons for choosing such a niche keyboard to use, then why and how I built it, and finally share some very cool tips and tricks about how I played with the layout to make my Corne fit my specific needs better.
+I will first talk about my overall reasons for choosing such a niche keyboard, then why and how I built it. Finally, I will share some very cool tips and tricks about how I played with the layout to make my Corne fit my specific needs better.
 
 Let us get started without losing any more time. :)
 
@@ -15,17 +15,17 @@ Let us get started without losing any more time. :)
 
 Whenever a friend sees my Corne keyboard, they usually ask what it is, where I got it from, and why I am using it. Sometimes they want to try it, and I let them play around with it for a bit. After a few minutes, the reaction is almost always the same: they tell me that it is hard and frustrating to use. I understand this. It definitely looks strange, and it is far from a natural typing experience for someone who is used to a "normal" keyboard. Still, I want to try my best to explain why I decided to use a split keyboard in the first place.
 
-I can think of three possible reasons for using a split keyboard. First, they look cool, and some people simply enjoy trying cool things. Second, there is the promise of improved typing speed or efficiency. Third, and most importantly for me, they are often more ergonomic and natural for the body. I admit that the aesthetics played a small role in my decision as well, but for me, the primary factor that convinced me try a split keyboard was simply ergonomics.
+I can think of three possible reasons for using a split keyboard. First, they look cool, and some people simply enjoy trying cool things. Second, there is the promise of improved typing speed or efficiency. Third, and most importantly for me, they are often more ergonomic and natural for the body. I admit that the aesthetics played a small role in my decision as well, but the primary factor was simply ergonomics.
 
-For some context, I have been dealing with neck and back pain for quite a while. Because of that, I had already spent a lot of time thinking about office ergonomics. I regularly use laptop and monitor stands to keep my screen at eye level. I pay attention to chair and desk height, distance, and how they relate to my posture and leg position. I have also invested in a standing desk and a chair that I find comfortable for long work sessions. I also started learning more about biomechanics and began exercising more regularly. [^workout-vs-ergonomics]
+For some context, I have been dealing with neck and back pain for quite a while. For this, I had already spent a lot of time thinking about office ergonomics. I regularly use laptop and monitor stands to keep my screen at eye level. I pay attention to chair and desk height, distance, and how they relate to my posture and leg position. I have also invested in a standing desk and a chair that I find comfortable for long work sessions. I also started learning more about biomechanics and began exercising more regularly. [^workout-vs-ergonomics]
 
-[^workout-vs-ergonomics]: I can say that exercise helped me the most on a personal level. Still, paying attention to ergonomics was also very helpful. To me, exercise feels like a way to increase my overall tolerance, while improving ergonomics is more about reducing the damage being taken. Because of that, I wanted to take the best of both worlds as much as possible.
+[^workout-vs-ergonomics]: I can say that exercise helped me the most on a personal level. Still, paying attention to ergonomics was also very helpful. To me, exercise feels like a way to increase my overall tolerance, while improving ergonomics is more about reducing the damage. Because of that, I wanted to take the best of both worlds as much as possible.
 
-This led me to think about how I could further improve my ergonomics. After some thinking, it became obvious that the two things I interact with the most when using a computer are my keyboard and mouse. A quick research pointed me toward two promising upgrades for my setup: a split keyboard and a vertical mouse.
+This made me think about how I could further improve my ergonomics. After some thinking, it became obvious that the two things I interact with the most when using a computer are my keyboard and mouse. A quick research pointed me toward two promising upgrades for my setup: a split keyboard and a vertical mouse.
 
-Both made sense to me. A vertical mouse more closely resembles a neutral hand position, which can help reduce awkward wrist movements. **With a split keyboard, the ability to position the two halves independently allows the wrists to remain in a more neutral alignment. This same split setup, combined with the option to place the halves farther apart, also helps reduce internal shoulder rotation. Over time, this can improve shoulder comfort and may even reduce strain in the neck.**
+Both made sense to me. A vertical mouse more closely resembles a neutral hand position, which can help reduce awkward wrist movements. With a split keyboard, the ability to position the two halves independently allows the wrists to remain in a more neutral alignment. This same split setup, combined with the option to place the halves farther apart, also helps reduce internal shoulder rotation. Over time, this can improve shoulder comfort and may even reduce neck strain.
 
-To give you a brief idea, the following image I found from [boardsource.xyz](https://boardsource.xyz/products/unicorne-lp-aluminum-corne-case) demonstrates this really well.
+To give you a brief idea, the following image from [boardsource.xyz](https://boardsource.xyz/products/unicorne-lp-aluminum-corne-case) demonstrates this really well.
 
 ![](https://images.boardsource.xyz/Copy%20of%20_ergo_comparison_split.jpg)
 
@@ -33,15 +33,15 @@ So, a split keyboard it is. But there is still one very important question: why 
 
 ## Why Ortholinear?
 
-Another concept that I came across while researching different types of keyboards was 'ortholinear'. Here, 'ortho' means right angled, and 'linear' means arranged in lines, so an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.
+Another concept that I came across while researching was "ortholinear". Here, "ortho" means right-angled, and "linear" means arranged in lines. So, an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.
 
 For those who are further interested, I recommend checking out [The Planck Keyboard](https://mattgemmell.scot/the-planck-keyboard/) blog post by Matt Gemmell. Just to give you a brief idea of what an ortholinear keyboard looks like, here is a photo of his keyboard:
 
 ![](https://live.staticflickr.com/65535/51350002123_c951701270_c_d.jpg#75persize)
 
-So what is the point of using such a keyboard? I think the main goal is to reduce finger movement. In a typical keyboard, the layout is staggered, so each row is shifted sideways relative to the one above it. This forces the fingers to move diagonally instead of straight up and down meaning more travel distance.
+So what is the point of using such a keyboard? I think the main goal is to reduce finger movement. In a typical keyboard, the layout is staggered, so each row is shifted sideways relative to the one above it. This forces the fingers to move diagonally instead of straight up and down, meaning more travel distance.
 
-This makes sense to me. However, I was also concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
+This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
 
 ## Why Corne, Specifically?
 
@@ -49,13 +49,13 @@ When I first looked into the list of split keyboards being recommended, I was ba
 
 Just to give an example, consider X and Y. These are both split keyboards, but do you see how much they differ from each other?
 
-This is how I quickly realized that it would be better for me to first set my expectations and then filter them, instead of trying to learn all the subtleties of these keyboards and then trying to make an educated guess.
+This is how I quickly realized that it would be better for me to first set my expectations and then filter them. Not the other way around of trying to learn all the subtleties and then trying to make an educated guess.
 
-Since it would be my first attempt to try a split keyboard, I thought it would be a nice idea to choose a keyboard with at least **a bit of a community around it**, so that I could benefit from the experiences of other people and find answers to my questions if I ever had them.
+Since it would be my first attempt at a split keyboard, I wanted a keyboard with a community around it. This way, I could benefit from the experiences of other people and find answers to my questions if I ever had them.
 
-The split keyboard **being open source** was also really important to me, because rebuying it if something ever went wrong was not an option for me. Not just because of the prices, but also due to some customs regulations that make it much harder for people where I live (Turkey) to order items from foreign countries above a certain threshold (currently 30 Euro). There is also not much of a marketplace for split keyboards here in Turkey. So, I either needed to ask for my friends who were abroad to buy the things for me, or, obtain the parts seperately and solder and assemble it myself. I thought with the latter option, at least, I would not be as dependant as the first option. I could still ask for help, but, if things would go southway, fixing things myself would at least be possible.
+The split keyboard being open source was also really important to me, because rebuying it if something ever went wrong was not an option for me. Not just because of the prices, but also due to some customs regulations that make it much harder for people where I live (Turkey) to order items from foreign countries above a certain threshold (currently 30 Euro). There is also not much of a marketplace for split keyboards here in Turkey. So, I either needed to ask my friends who were abroad to buy the things for me, or obtain the parts separately and solder and assemble it myself. I thought with the latter option, at least, I would not be as dependant as the first option. I could still ask for help, but, if things would go southway, fixing things myself would at least be possible.
 
-And of course, **it had to be ergonomic**. In fact, I was okay with going with split keyboards that prioritize ergonomics more, even at the expense of challenging my habits. I was okay to try new things if I was convinced of the possible benefits.
+And of course, it had to be ergonomic. In fact, I was okay with going with split keyboards that prioritize ergonomics more, even at the expense of challenging my habits. I was okay to try new things if I was convinced of the possible benefits.
 
 So, after some market research, my final decision came down to [Corne vs Lily58](https://www.reddit.com/r/ErgoMechKeyboards/comments/17ygfe5/lily58_vs_corne_for_a_first_timer/). Both of them seemed to satisfy my main requirements, with one key difference between them. The Lily58 has 58 keys, while the Corne has only 42.
 
@@ -65,15 +65,19 @@ Since I could not clearly decide which one to go with, I went YOLO. I decided to
 
 ## Building The Corne Keyboard
 
-Before starting on my own, I wanted to see if anyone else in Turkey has already built a split keyboard. I found a subreddit called [MechIstanbul](https://www.reddit.com/r/mechistanbul/), there were lots of split keyboard builds. Although the subreddit itself seemed to be inactive, I realized that their Telegram group were still very active and there, I asked some of the questions I had in mind to the experts directly. :) Especially a member named Erdem (yes, we share the same name), helped me a lot about which parts he himself ordered and from where while building his own Corne keyboards.
+Before starting on my own, I wanted to see if anyone else in Turkey has already built a split keyboard. I found a subreddit called [MechIstanbul](https://www.reddit.com/r/mechistanbul/), where there were lots of split keyboard builds. Although the subreddit itself seemed to be inactive, I realized that their [Telegram group](https://t.me/mechistanbul) was still very active. There, I asked some of the questions I had in mind to the experts directly. :) Especially a member named Erdem (yes, we share the same name), who helped me a lot with which parts to order and from where for building a Corne keyboard.
 
 After having a better sense of which parts I need to order. I bought all the parts that were essential for a split Corne keyboard through AliExpress. Specifically, I used all of my monthly order limitations for the following items (each order under a 30 EUR cost):
 
-- **100 XDA keycaps.** There was no particular reason behind this choice. I was just browsing keycaps, and these simply looked nice.
-- **110 Outemu Silent Yellow switches.** I wanted my split keyboard to be relatively quiet. I went with Outemu instead of Cherry MX mainly because they were cheaper, and the sound tests I watched online did not mean any significant difference to me.
-- **5 NRF52840 MCUs.** These basically share the same interfaces and functionalities as nice!nano MCUs, but they are much cheaper.
-- **A Corne PCB kit**, which includes the Corne circuit boards, diodes, hot swappable sockets (so that the switches are not soldered directly to the board and can be easily replaced later), TRRS jacks, and similar components.
-- **Upper and lower plates** to sandwich the PCB. These serve both as a protective layer and as an aesthetic element.
+- 100 XDA keycaps. There was no particular reason behind this choice. I was just browsing keycaps, and these simply looked nice.
+
+- 110 Outemu Silent Yellow switches. I wanted my split keyboard to be relatively quiet. I went with Outemu instead of Cherry MX mainly because they were cheaper. The sound tests I watched online did not mean any significant difference to me.
+
+- 5 NRF52840 MCUs. These basically share the same interfaces and functionalities as nice!nano MCUs, but they are much cheaper.
+
+- A Corne PCB kit, which includes the Corne circuit boards, diodes, hot swappable sockets (so that the switches are not soldered directly to the board and can be easily replaced later), TRRS jacks, and similar components.
+
+- Upper and lower plates to sandwich the PCB. These serve both as a protective layer and as an aesthetic element.
 
 If you are further interested, you can see the list of all parts with their costs through this [X reply.](https://x.com/kugurerdem/status/1953458825245364394/photo/1)
 
@@ -83,7 +87,7 @@ After the orders reached, I simply followed tutorials available on the internet.
 
 While watching the video, I noticed that the soldering part looked a bit tedious. Since I had never done soldering before, I did not want to risk the process. So, I went to my cousin and asked for help with the soldering. Thankfully, he helped a lot. After that, I plugged in the parts, installed the ZMK firmware on the MCUs, and then programmed the left and right halves using the [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/).
 
-Of course, there were a few minor issues along the way. For example, the female pins we soldered onto the PCB were slightly too long, which caused the MCU to sit a bit higher than intended and left insufficient space to attach the covers properly. We also accidentally stripped the soldered area on the battery during soldering, and ended up breaking the on off switch as well.
+Of course, there were a few minor issues along the way. For example, the female pins we soldered onto the PCB were slightly too long, which caused the MCU to sit a bit higher than intended and left insufficient space to attach the covers properly. We also accidentally stripped the soldered area on the battery during soldering, and ended up breaking the on-off switch as well.
 
 But, despite these problems, I think that the overall result was still good enough, and I finally had a keyboard that was fully usable.
 
@@ -93,45 +97,45 @@ But, despite these problems, I think that the overall result was still good enou
 
 ### Speed
 
-The moment I had my Corne keyboard working, the first thing I did was open [MonkeyType](https://monkeytype.com/) and see how fast I could type things down. It was 3 words per minute in my first try. On the second try it was a bit better, and after a few iterations I was able to get around 60 WPM in the same hour I started experimenting. It's not really fast compared to my usual speed. [^normal-speed] But it was still good enough for me to get things done using this keyboard.
+The moment I had my Corne keyboard working, the first thing I did was open [MonkeyType](https://monkeytype.com/) and see how fast I could type things down. It was 3 words per minute in my first try. On the second try, it was a bit better, and after a few iterations, I was able to get around 60 WPM in the same hour I started experimenting. It's not really fast compared to my usual speed. [^normal-speed] But it was still good enough for me to get things done using this keyboard.
 
 [^normal-speed]:Just to give you an idea, I used to be able to consistently type around 110+ WPM on MonkeyType with my Logitech K380.
 
-I can say that after around two days of using the Corne keyboard, I was getting 90 to 100 WPM, which was about 80 to 90 percent of my previous performance, and I was also able to use it effectively at work.
+I can say that after around two days of using the Corne keyboard, I was getting 90 to 100 WPM, which was about 80 to 90 percent of my previous performance. This was sufficient for me to use the keyboard effectively at work.
 
-I believe this shows two things. **First, as many people expect, changing from a normal staggered layout to an ortholinear split layout decreases your typing speed tremendously at first. Second, it is not that hard to recover from that decrease.** In fact, not long after that, around three weeks later, I was able to [beat](https://x.com/kugurerdem/status/1961393205053644993) my previous typing record on MonkeyType with 139 WPM.
+I believe this shows two things. First, as many people expect, changing from a normal staggered layout to an ortholinear split layout decreases your typing speed tremendously at first. Second, it is not that hard to recover from that decrease. In fact, not long after that, around three weeks later, I was able to [beat](https://x.com/kugurerdem/status/1961393205053644993) my previous typing record on MonkeyType with 139 WPM.
 
 ![](./139wpm.jpg)
 
-I do not know about other people, but for me the main reason I slowed down when I first started using the Corne keyboard was not that it was split. I think one reason was simply that the keys are in an ortholinear layout. For example, at the beginning, I used to type 'C' a lot when I meant to type 'X'. This is because, I was so used to a staggered layout that when I typed from the row below the home row, so my fingers naturally moved a little to the right. I had to unlearn that habit. I also had to learn new ways of writing some of the characters that were directly available in a typical keyboard. Since Corne has fewer keys than a typical keyboard, you need to learn new key combinations for many special characters.
+I do not know about other people, but for me, the main reason I slowed down when I first started using the Corne keyboard was not that it was split. I think one reason was simply that the keys are in an ortholinear layout. For example, at the beginning, I used to type 'C' a lot when I meant to type 'X'. This is because I was so used to a staggered layout that when I typed from the row below the home row, my fingers naturally moved a little to the right. I had to unlearn that habit. I also had to learn new ways of writing some of the characters that were not directly available on a typical keyboard. Since Corne has fewer keys than a typical keyboard, you need to learn new key combinations for many special characters.
 
 ### Embracing "Less is More"
 
 I think the Corne keyboard is a good example of [less is more](https://en.wikipedia.org/wiki/Less_is_more). You are reducing the number of available keys, but you still gain more than you had before: better ergonomics, more speed, and more precision. Realizing this made me wonder whether I could push the idea more. For example, could I reduce pinky usage even further by removing the sixth column from the keyboard?
 
-After coming accross "the endgame keyboard" video by Joshua Blais, I realized that I could even go further.
+After coming across "the endgame keyboard" video by Joshua Blais, I realized that I could even go further.
 
 {{< youtube Ong_-2G9RDM >}}
 
-I started thinking about ways to reduce my pinky usage, and Erdem from the MechIstanbul community sent me the [Home Row Mods](https://mattgemmell.scot/home-row-mods/) post by Matt Gemmel again. It was a great read. To summarize the main idea, you can define custom behaviors for certain keys so that they act as modifier keys when held and as normal keys when tapped.
+I started thinking about ways to reduce my pinky usage. Erdem from the MechIstanbul community sent me the [Home Row Mods](https://mattgemmell.scot/home-row-mods/) post by Matt Gemmel again. It was a great read. To summarize the main idea, you can define custom behaviors for certain keys so that they act as modifier keys when held and as normal keys when tapped.
 
-This lets you move most of the modifier keys that are usually pressed with the pinkies onto the home row, reducing pinky strain even further. What I did was mirror the home row modifier keys on both halves of the keyboard, so when I need to press a key on the left side with a modifier, I can use the modifier on the right side, and vice versa.
+This lets you move most of the modifier keys that are usually pressed with the pinkies onto the home row, reducing pinky strain even further. What I did was mirror the home row modifier keys on both halves of the keyboard. This way, when I need to press a key on the left side with a modifier, I can use the modifier on the right side, and vice versa.
 
 Here is what my default layout looks right now:
 
 ![](./default_corne_layer.png)
 
-As you can see, I have four empty keys in total, which means I am actively using 38 keys. I still rely heavily on my right pinky, but I recently realized that some of those keys can be moved to the empty thumb positions. I can also start using [combo keys](https://zmk.dev/docs/keymaps/combos), a custom behavior that allows certain characters to be typed by pressing two keys together. However, at the time I was configuring my keyboard, however, this setup seemed acceptable.
+As you can see, I have four empty keys in total, which means I am actively using 38 keys. I still rely heavily on my right pinky, but I recently realized that some of those keys can be moved to the empty thumb positions. I can also start using [combo keys](https://zmk.dev/docs/keymaps/combos), a custom behavior that allows certain characters to be typed by pressing two keys together. However, at the time I was configuring my keyboard, this setup seemed acceptable.
 
 ### Emphasis on Thumb Keys
 
-One thing I quickly noticed when using this keyboard was that it shifts some of the load that was previously placed on the pinkies onto the thumbs. Normally, I used my thumbs only for pressing the space key. With this keyboard, each thumb is assigned three keys. The important point is that these thumb operated keys usually replace functions that were previously handled by the pinkies.
+One thing I quickly noticed when using this keyboard was that it shifts some of the load that was previously placed on the pinkies onto the thumbs. Normally, I used my thumbs only for pressing the space key. With this keyboard, each thumb is assigned three keys. The important point is that these thumb keys usually replace functions that were previously handled by the pinkies.
 
-I think this is very good overall. Because it kindof balances the load between your fingers. At the same time, if your thumbs are sensitive, this change can make things worse rather than better. After using the Corne keyboard for a few weeks, I noticed a slight pain in my thumbs. It was concerning, so I took a break over the weekend and the pain went away. It never returned. I suspect this was either due to my hands adapting to the new layout or a minor strain from doing knuckle pushups and pull ups around the same time. Even so, the experience made me realize that these keyboards may not be ideal for people with sensitive thumbs.
+I think this is very good overall. Because it kindof balances the load between your fingers. At the same time, if your thumbs are sensitive, this change can make things worse rather than better. After using the Corne keyboard for a few weeks, I noticed a slight pain in my thumbs. It was concerning, so I took a break over the weekend, and the pain went away. It never returned. I suspect this was either due to my hands adapting to the new layout or a minor strain from doing knuckle push-ups and pull-ups around the time. Even so, the experience made me realize that these keyboards may not be ideal for people with sensitive thumbs.
 
 ## What About Lily58?
 
-You might remember that in the _Why Corne Specifically?_ section, I mentioned that during my decision period between the Corne and the Lily58, I went YOLO and decided to try both.
+You might remember that in the Why Corne Specifically? section, I mentioned that during my decision period between the Corne and the Lily58, I went YOLO and decided to try both.
 
 Well... By the time my friend handed me a Halycon Lily58 kit that was bought from [splitkb.com](https://splitkb.com), it was already too late. I was already certain that I was not going to leave the Corne anytime soon. I had adapted to it extremely well and was not really seeking the additional keys that the Lily58 offered anyway. In other words, even if I used the Lily58, I would most likely stick to the same keybindings and layouts that I already use on my Corne keyboard.
 
