@@ -5,7 +5,8 @@ images:
   - corne-with-white-case.jpg
 ---
 
-I built my own Corne keyboard around six months ago. I have been using it ever since July. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
+
+I built my own Corne keyboard around six months ago in July. I have been using it ever since. I have been using it ever since July. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
 
 ![](./corne-with-white-case.jpg#75persize)
 
@@ -35,7 +36,8 @@ So, a split keyboard it is. But there is still one very important question: why 
 
 ## Why Ortholinear?
 
-Another concept that I came across while researching was "ortholinear". Here, "ortho" means right-angled, and "linear" means arranged in lines. So, an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.
+
+Another concept that I came across while researching this topic was "ortholinear". Here, "ortho" means right-angled, and "linear" means arranged in lines. So, an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.
 
 For those who are further interested, I recommend checking out [The Planck Keyboard](https://mattgemmell.scot/the-planck-keyboard/) blog post by Matt Gemmell. Just to give you a brief idea of what an ortholinear keyboard looks like, here is a photo of his keyboard:
 
@@ -49,7 +51,7 @@ This makes sense to me. However, I was concerned that, since an ortholinear keyb
 
 When I first looked into the list of split keyboards being recommended, I was baffled. Not only are there so many alternatives, but they also differ a lot.
 
-Just to give an example, consider X and Y. These are both split keyboards, but do you see how much they differ from each other?
+Just to give an example, consider something as minimalist as [ChocoFi](https://github.com/pashutk/chocofi) and something as full fledged as [Moonlander](https://www.zsa.io/moonlander). Both are split keyboards, yet the difference between them is immediately obvious.
 
 This is how I quickly realized that it would be better for me to first set my expectations and then filter them. Not the other way around of trying to learn all the subtleties and then trying to make an educated guess.
 
