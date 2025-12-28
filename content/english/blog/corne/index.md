@@ -1,12 +1,14 @@
 ---
-title: "Using The Corne Keyboard For Half A Year"
+title: "Using The Corne Split Keyboard For Half A Year"
 date: 2025-12-25
+updated: 2025-12-28
 images:
   - corne-with-white-case.jpg
+discussions:
+    hackernews: https://news.ycombinator.com/item?id=46414292
 ---
 
-
-I built my own Corne keyboard around six months ago in July. I have been using it ever since. I have been using it ever since July. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
+I built my own Corne keyboard around six months ago, in July. I have been using it ever since. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
 
 ![](./corne-with-white-case.jpg#75persize)
 
@@ -32,10 +34,7 @@ To give you a brief idea, the following image from [boardsource.xyz](https://boa
 
 ![](https://images.boardsource.xyz/Copy%20of%20_ergo_comparison_split.jpg)
 
-So, a split keyboard it is. But there is still one very important question: why choose the Corne over the many other split keyboards available?
-
 ## Why Ortholinear?
-
 
 Another concept that I came across while researching this topic was "ortholinear". Here, "ortho" means right-angled, and "linear" means arranged in lines. So, an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.
 
@@ -43,25 +42,27 @@ For those who are further interested, I recommend checking out [The Planck Keybo
 
 ![](https://live.staticflickr.com/65535/51350002123_c951701270_c_d.jpg#75persize)
 
-So what is the point of using such a keyboard? I think the main goal is to reduce finger movement. In a typical keyboard, the layout is staggered, so each row is shifted sideways relative to the one above it. This forces the fingers to move diagonally instead of straight up and down, meaning more travel distance.
+This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non-split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
 
-This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
+This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non-split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
+
+So, a split, ortholinear keyboard it is. But there is still one very important question: why choose the Corne over the many other split keyboards available?
 
 ## Why Corne, Specifically?
 
 When I first looked into the list of split keyboards being recommended, I was baffled. Not only are there so many alternatives, but they also differ a lot.
 
-Just to give an example, consider something as minimalist as [ChocoFi](https://github.com/pashutk/chocofi) and something as full fledged as [Moonlander](https://www.zsa.io/moonlander). Both are split keyboards, yet the difference between them is immediately obvious.
+Just to give an example, consider something as minimalist as [ChocoFi](https://github.com/pashutk/chocofi) and something as full-fledged as [Moonlander](https://www.zsa.io/moonlander). Both are split keyboards, yet the difference between them is immediately obvious.
 
 This is how I quickly realized that it would be better for me to first set my expectations and then filter them. Not the other way around of trying to learn all the subtleties and then trying to make an educated guess.
 
 Since it would be my first attempt at a split keyboard, I wanted a keyboard with a community around it. This way, I could benefit from the experiences of other people and find answers to my questions if I ever had them.
 
-The split keyboard being open source was also really important to me, because rebuying it if something ever went wrong was not an option for me. Not just because of the prices, but also due to some customs regulations that make it much harder for people where I live (Turkey) to order items from foreign countries above a certain threshold (currently 30 Euro). There is also not much of a marketplace for split keyboards here in Turkey. So, I either needed to ask my friends who were abroad to buy the things for me, or obtain the parts separately and solder and assemble it myself. I thought with the latter option, at least, I would not be as dependant as the first option. I could still ask for help, but, if things would go southway, fixing things myself would at least be possible.
+The split keyboard being open source was also very important, because rebuying it if something ever went wrong was not an option. This is not only due to the prices, but also because customs regulations in Turkey currently make ordering items from abroad very difficult. For example, anything above 30 euros, including shipping, requires a formal customs declaration and additional fees. Likewise, the number of orders that can be placed is limited on a monthly basis, and at the moment, this limit is five orders per month. On top of this, there is not much of a marketplace for split keyboards in Turkey either. That meant I either had to ask friends abroad to buy parts for me as a gift, or obtain the components separately and solder and assemble the keyboard myself. I chose the second option because it made me less dependent on others. I could still ask for keyboard help if needed, but if something went wrong, fixing it myself would at least be possible.
 
-And of course, it had to be ergonomic. In fact, I was okay with going with split keyboards that prioritize ergonomics more, even at the expense of challenging my habits. I was okay to try new things if I was convinced of the possible benefits.
+And of course, the keyboard had to be ergonomic. In fact, I was okay with going with split keyboards that prioritize ergonomics more, even at the expense of challenging my habits. I was okay to try new things if I was convinced of the possible benefits.
 
-So, after some market research, my final decision came down to [Corne vs Lily58](https://www.reddit.com/r/ErgoMechKeyboards/comments/17ygfe5/lily58_vs_corne_for_a_first_timer/). Both of them seemed to satisfy my main requirements, with one key difference between them. The Lily58 has 58 keys, while the Corne has only 42.
+So, after some market research, my final decision came down to [Corne vs Lily58](https://old.reddit.com/r/ErgoMechKeyboards/comments/17ygfe5/lily58_vs_corne_for_a_first_timer/). Both of them seemed to satisfy my main requirements, with one key difference between them. The Lily58 has 58 keys, while the Corne has only 42.
 
 In practice, this means that the entire number row and a few additional keys are removed on the Corne to make it more compact. Access to those missing keys is handled through layer combinations instead. On paper, I liked the idea that it would reduce overall hand movement. However, my main concern was whether I would actually like the experience or not.
 
@@ -69,27 +70,28 @@ Since I could not clearly decide which one to go with, I went YOLO. I decided to
 
 ## Building The Corne Keyboard
 
-Before starting on my own, I wanted to see if anyone else in Turkey has already built a split keyboard. I found a subreddit called [MechIstanbul](https://www.reddit.com/r/mechistanbul/), where there were lots of split keyboard builds. Although the subreddit itself seemed to be inactive, I realized that their [Telegram group](https://t.me/mechistanbul) was still very active. There, I asked some of the questions I had in mind to the experts directly. :) Especially a member named Erdem (yes, we share the same name), who helped me a lot with which parts to order and from where for building a Corne keyboard.
+Before starting on my own, I wanted to see if anyone else in Turkey has already built a split keyboard. I found a subreddit called [MechIstanbul](https://www.reddit.com/r/mechistanbul/), where there were lots of split keyboard builds. Although the subreddit itself seemed to be inactive, I realized that their [Telegram group](https://t.me/mechistanbul) was still very active. There, I was able to ask some of the questions that I had in mind to the experts directly :) I'm especially indebted to a member named Erdem (yes, we share the same name) who helped me a lot with choosing which parts to order and from where for a Corne keyboard build.
 
-After having a better sense of which parts I need to order. I bought all the parts that were essential for a split Corne keyboard through AliExpress. Specifically, I used all of my monthly order limitations for the following items (each order under a 30 EUR cost):
 
-- 100 XDA keycaps. There was no particular reason behind this choice. I was just browsing keycaps, and these simply looked nice.
+After having a better sense of which parts I needed to order, I bought all the parts that were essential for a split Corne keyboard through AliExpress. Specifically, I used all of my monthly order limitations for the following items (each order under a 30 EUR cost):
 
-- 110 Outemu Silent Yellow switches. I wanted my split keyboard to be relatively quiet. I went with Outemu instead of Cherry MX mainly because they were cheaper. The sound tests I watched online did not mean any significant difference to me.
+- **100 XDA keycaps.** There was no particular reason behind this choice. I was just browsing keycaps, and these simply looked nice.
+- **110 Outemu Silent Yellow switches.** I wanted my split keyboard to be relatively quiet. I went with Outemu instead of Cherry MX mainly because they were cheaper. I couldn't spot any significant difference between the two when listening to sound comparisons between the two.
+- **5 NRF52840 MCUs.** These basically share the same interfaces and functionalities as nice!nano MCUs, but they are much cheaper.
+- **A Corne PCB kit,** which includes the Corne circuit boards, diodes, hot swappable sockets (so that the switches are not soldered directly to the board and can be easily replaced later), TRRS jacks, and similar components.
+- **Upper and lower plates** to sandwich the PCB. These serve both as a protective layer and as an aesthetic element.
 
-- 5 NRF52840 MCUs. These basically share the same interfaces and functionalities as nice!nano MCUs, but they are much cheaper.
+If you are further interested, here is the list of all parts with their costs:
 
-- A Corne PCB kit, which includes the Corne circuit boards, diodes, hot swappable sockets (so that the switches are not soldered directly to the board and can be easily replaced later), TRRS jacks, and similar components.
+![](https://pbs.twimg.com/media/GxwUUDsXYAAnAWZ?format=png&name=large)
 
-- Upper and lower plates to sandwich the PCB. These serve both as a protective layer and as an aesthetic element.
+Keep in mind that I bought most of the parts in double the needed amount, just in case I use them for another keyboard later.
 
-If you are further interested, you can see the list of all parts with their costs through this [X reply.](https://x.com/kugurerdem/status/1953458825245364394/photo/1)
-
-After the orders reached, I simply followed tutorials available on the internet. [^tutorials]
+After the orders reached, I simply followed the tutorials available on the internet. [^tutorials]
 
 [^tutorials]: I found both [this video](https://www.youtube.com/watch?v=vzDTdLaAzXc) from Josean Martinez and [this one](https://www.youtube.com/watch?v=FJgvi7WShxY) from Joe Scotto, very helpful during the process.
 
-While watching the video, I noticed that the soldering part looked a bit tedious. Since I had never done soldering before, I did not want to risk the process. So, I went to my cousin and asked for help with the soldering. Thankfully, he helped a lot. After that, I plugged in the parts, installed the ZMK firmware on the MCUs, and then programmed the left and right halves using the [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/).
+While watching the video, I noticed that the soldering part looked a bit tedious. Since I had never done soldering before, I did not want to risk the process. So, I went to my cousin, who is experienced with soldering, and asked for help. Thankfully, he helped a lot. After that, I plugged in the parts, installed the ZMK firmware on the MCUs, and then programmed the left and right halves using the [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/).
 
 Of course, there were a few minor issues along the way. For example, the female pins we soldered onto the PCB were slightly too long, which caused the MCU to sit a bit higher than intended and left insufficient space to attach the covers properly. We also accidentally stripped the soldered area on the battery during soldering, and ended up breaking the on-off switch as well.
 
@@ -101,7 +103,7 @@ But, despite these problems, I think that the overall result was still good enou
 
 ### Speed
 
-The moment I had my Corne keyboard working, the first thing I did was open [MonkeyType](https://monkeytype.com/) and see how fast I could type things down. It was 3 words per minute in my first try. On the second try, it was a bit better, and after a few iterations, I was able to get around 60 WPM in the same hour I started experimenting. It's not really fast compared to my usual speed. [^normal-speed] But it was still good enough for me to get things done using this keyboard.
+The moment I had my Corne keyboard working, the first thing I did was open [MonkeyType](https://monkeytype.com/) and see how fast I could type things down. It was 3 words per minute in my first try. On the second try, it was a bit better, and after a few iterations, I was able to get around 60 WPM in the same hour in which I started experimenting. It's not really fast compared to my usual speed. [^normal-speed] But it was still good enough for me to get things done using this keyboard.
 
 [^normal-speed]:Just to give you an idea, I used to be able to consistently type around 110+ WPM on MonkeyType with my Logitech K380.
 
@@ -111,7 +113,27 @@ I believe this shows two things. First, as many people expect, changing from a n
 
 ![](./139wpm.jpg)
 
-I do not know about other people, but for me, the main reason I slowed down when I first started using the Corne keyboard was not that it was split. I think one reason was simply that the keys are in an ortholinear layout. For example, at the beginning, I used to type 'C' a lot when I meant to type 'X'. This is because I was so used to a staggered layout that when I typed from the row below the home row, my fingers naturally moved a little to the right. I had to unlearn that habit. I also had to learn new ways of writing some of the characters that were not directly available on a typical keyboard. Since Corne has fewer keys than a typical keyboard, you need to learn new key combinations for many special characters.
+I do not know about other people, but for me, the main reason I slowed down when I first started using the Corne keyboard was not that it was split. I think one reason was simply that the keys are in an ortholinear layout. For example, at the beginning, I used to type 'C' a lot when I meant to type 'X'. This is because I was so used to a staggered layout that when I typed from the row below the home row, my fingers naturally moved a little to the right. I had to unlearn that habit.
+
+### Getting Used To Layer Keys
+
+Besides unlearning some of my previous habits, I also realized that I needed to learn new ways of typing special characters. The Corne has fewer keys than a typical keyboard, and as a result, letters and modifier keys occupy almost all of the base layer. This means that other characters, such as curly braces `{}`, square brackets `[]`, and even numbers, have to be typed using layer keys.
+
+For example, pressing the key that corresponds to q on the base layer produces `q`. Pressing the same key while holding the layer 1 key produces `1`, and holding the layer 2 key produces `!`.
+
+To give a concrete idea, this is how my keys behave when I am holding the **layer 1 key**:
+
+![](./layer1_corne.png)
+
+And this is how they behave when I am holding the **layer 2 key**:
+
+![](./layer2_corne.png)
+
+This might seem a bit confusing at first, but when you think about it, **layer keys are not very different from modifier keys like Shift or Ctrl. They simply change the behavior of the other keys while they are being held.**
+
+As for how long it took to get used to these keybindings, adapting to layer 1 was especially easy for me, and layer 2 was not much harder either.
+
+One important thing I noticed is that **I adapted faster to the special characters I used most often than to the ones I used less frequently. This is actually good news, because the characters you need the most become available to you first.**
 
 ### Embracing "Less is More"
 
@@ -154,3 +176,6 @@ Goodbye, Lily58.
 So far, I am very fond of my Corne, but I have a feeling that I could eventually switch to a 5x3 layout. I already have a PCB for a wireless Choc Corne at home, and I plan to build it in one of my spare periods. I also want to improve my CAD skills and experiment with 3D printed cases and rests designed specifically for my own needs. For now, however, I am happy with my current Corne, and I think the best next step is to start using this 6x3 keyboard as if it were a 5x3.
 
 Anyway, thanks for reading this far. I hope this post was helpful for at least some of you.
+
+I would also like to thank [Oussama](https://github.com/SingularHomology) for reviewing the initial draft of this post.
+
