@@ -2,7 +2,6 @@
 &lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/corne-with-white-case.jpg#75persize" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;I will first talk about my overall reasons for choosing such a niche keyboard, then why and how I built it. Finally, I will share some very cool tips and tricks about how I played with the layout to make my Corne fit my specific needs better.&lt;/p&gt;
 &lt;p&gt;Let us get started without losing any more time. :)&lt;/p&gt;
-&lt;p&gt;I would also like to thank &lt;a href="https://github.com/SingularHomology"&gt;Oussama&lt;/a&gt; for reviewing the initial draft of this post.&lt;/p&gt;
 &lt;h2 id="why-a-split-keyboard"&gt;Why A Split Keyboard?&lt;/h2&gt;
 &lt;p&gt;Whenever a friend sees my Corne keyboard, they usually ask what it is, where I got it from, and why I am using it. Sometimes they want to try it, and I let them play around with it for a bit. After a few minutes, the reaction is almost always the same: they tell me that it is hard and frustrating to use. I understand this. It definitely looks strange, and it is far from a natural typing experience for someone who is used to a &amp;ldquo;normal&amp;rdquo; keyboard. Still, I want to try my best to explain why I decided to use a split keyboard in the first place.&lt;/p&gt;
 &lt;p&gt;I can think of three possible reasons for using a split keyboard. First, they look cool, and some people simply enjoy trying cool things. Second, there is the promise of improved typing speed or efficiency. Third, and most importantly for me, they are often more ergonomic and natural for the body. I admit that the aesthetics played a small role in my decision as well, but the primary factor was simply ergonomics.&lt;/p&gt;
@@ -87,6 +86,7 @@
 &lt;h2 id="so-whats-next"&gt;So, What&amp;rsquo;s Next?&lt;/h2&gt;
 &lt;p&gt;So far, I am very fond of my Corne, but I have a feeling that I could eventually switch to a 5x3 layout. I already have a PCB for a wireless Choc Corne at home, and I plan to build it in one of my spare periods. I also want to improve my CAD skills and experiment with 3D printed cases and rests designed specifically for my own needs. For now, however, I am happy with my current Corne, and I think the best next step is to start using this 6x3 keyboard as if it were a 5x3.&lt;/p&gt;
 &lt;p&gt;Anyway, thanks for reading this far. I hope this post was helpful for at least some of you.&lt;/p&gt;
+&lt;p&gt;I would also like to thank &lt;a href="https://github.com/SingularHomology"&gt;Oussama&lt;/a&gt; for reviewing the initial draft of this post.&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
