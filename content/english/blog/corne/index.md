@@ -4,6 +4,7 @@ date: 2025-12-25
 updated: 2025-12-28
 images:
   - corne-with-white-case.jpg
+recommended: true
 discussions:
     lobsters: https://lobste.rs/s/x6ruya/using_corne_split_keyboard_for_half_year
 ---
