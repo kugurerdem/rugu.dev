@@ -5,7 +5,7 @@ updated: 2025-12-28
 images:
   - corne-with-white-case.jpg
 discussions:
-    hackernews: https://news.ycombinator.com/item?id=46414292
+    lobsters: https://lobste.rs/s/x6ruya/using_corne_split_keyboard_for_half_year
 ---
 
 I built my own Corne keyboard around six months ago, in July. I have been using it ever since. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.
