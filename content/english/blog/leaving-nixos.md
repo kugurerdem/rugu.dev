@@ -6,6 +6,7 @@ discussions:
     hackernews: https://news.ycombinator.com/item?id=44785093
     twitter: https://x.com/kugurerdem/status/1952096414240026911
     linkedin: https://www.linkedin.com/feed/update/urn:li:activity:7357858884037787649/
+    programming.dev: https://programming.dev/post/35107436
 ---
 
 Around a year ago, I published a blog post explaining my overall experience [Switching from Arch to NixOS](https://www.rugu.dev/en/blog/nixos/). You can read it if you're interested in my early experiences, but, to give you a spoiler, that post ends with me saying:
