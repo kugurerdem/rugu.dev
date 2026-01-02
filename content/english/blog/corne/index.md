@@ -45,8 +45,6 @@ For those who are further interested, I recommend checking out [The Planck Keybo
 
 This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non-split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
 
-This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non-split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.
-
 So, a split, ortholinear keyboard it is. But there is still one very important question: why choose the Corne over the many other split keyboards available?
 
 ## Why Corne, Specifically?
