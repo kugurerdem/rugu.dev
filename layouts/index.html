@@ -22,9 +22,8 @@
 
                     <h1 style="margin-top:1.5em; text-align: center;"> Recommended Essays </h1>
                     <div class="page">
-                        {{ with .Site.GetPage "section" "blog" }}
-                            {{ partial "blog-entry-list.html" (where .Pages ".Params.recommended" true) }}
-                        {{ end }}
+                        {{ $blogPages := where .Site.RegularPages "Section" "blog" }}
+                        {{ partial "blog-entry-list.html" (where $blogPages "Params.tags" "intersect" (slice "highlights")) }}
                     </div>
                 </article>
             </div>

@@ -3,10 +3,10 @@ title: 'Reflections on My Journey into Software Development'
 draft: false
 date: '2023-09-22'
 updated: '2025-09-06'
-recommended: true
 discussions:
     hackernews: https://news.ycombinator.com/item?id=37622974
 tags:
+    - highlights
     - technology
 ---
 

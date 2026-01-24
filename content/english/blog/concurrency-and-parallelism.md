@@ -3,12 +3,14 @@ title: 'Understanding Concurrency, Parallelism and JS'
 draft: false
 date: '2024-09-08'
 updated: '2024-09-18'
-recommended: true
+images:
+  - https://martin-thoma.com/images/2021/05/parallel-interleaved.png
 discussions:
     hackernews: https://news.ycombinator.com/item?id=41487965
 translations:
     KR: https://velog.io/@surim014/concurrency-and-parallelism
 tags:
+    - highlights
     - technology
 ---
 

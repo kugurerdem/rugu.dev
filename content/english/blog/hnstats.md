@@ -1,6 +1,8 @@
 ---
 title: 'Introducing: HackerNews Domain Stats'
 date: 2025-05-17
+images:
+  - https://raw.githubusercontent.com/kugurerdem/hn-domain-stats/refs/heads/master/overview.png
 ---
 
 You can quickly try the app through [hnstats.rugu.dev](https://hnstats.rugu.dev) \

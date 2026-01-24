@@ -446,7 +446,9 @@ code {
 
 .blog-entry-thumbnail {
     width: 220px;
-    height: 145px;
+    max-width: 40vw;
+    height: auto;
+    aspect-ratio: 220 / 145;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
@@ -459,10 +461,12 @@ code {
 
     .blog-entry-thumbnail {
         width: 160px;
-        height: 110px;
+        max-width: 45vw;
+        height: auto;
+        aspect-ratio: 160 / 110;
     }
 }
 
-.recommended {
+.highlights {
     font-weight: bold;
 }

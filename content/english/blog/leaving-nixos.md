@@ -1,7 +1,8 @@
 ---
 title: Why I'm Leaving NixOS After a Year?
 date: 2025-08-03
-recommended: true
+tags:
+  - highlights
 discussions:
     hackernews: https://news.ycombinator.com/item?id=44785093
     twitter: https://x.com/kugurerdem/status/1952096414240026911

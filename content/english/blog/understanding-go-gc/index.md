@@ -1,6 +1,8 @@
 ---
 title: "Understanding Go's Garbage Collector"
 date: 2025-11-15
+images:
+  - gopher-gc-thumbnail.png
 ---
 
 > [!WARNING] Disclaimer
@@ -179,4 +181,3 @@ Thanks for reading all the way through...
 # BONUS: The Green Tea Garbage Collector
 
 As I'm writing this, there's an ongoing effort to make Go's garbage collector even more performant. The work is part of a new proposal called "Green Tea GC". You can follow the discussion and progress in [this issue](https://github.com/golang/go/issues/73581) on GitHub.
-
