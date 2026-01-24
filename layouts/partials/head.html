@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Uğur Erdem Seyfi">
     <link rel="stylesheet" href="/style.css?v={{.Date.Unix}}">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/index.xml">
     <title> {{ if (isset .Params "title") }} {{ .Params.Title }} | {{ end }}
     rugu </title>
 
