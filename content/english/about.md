@@ -1,6 +1,9 @@
 ---
 title: 'About Me'
 draft: false
+_build:
+  render: never
+  list: never
 ---
 
 # Hi! I'm Uğur
