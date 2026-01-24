@@ -3,10 +3,10 @@ title: 'Understanding Keyboard Events Better'
 draft: false
 date: '2023-12-02'
 updated: '2023-12-04'
-recommended: true
 discussions:
     hackernews: 'https://news.ycombinator.com/item?id=38515004'
 tags:
+    - highlights
     - technology
     - linux
 ---

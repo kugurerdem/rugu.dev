@@ -2,7 +2,8 @@
 title: 'Linux Asceticism'
 draft: false
 date: '2024-11-10'
-recommended: true
+tags:
+    - highlights
 discussions:
     hackernews: https://news.ycombinator.com/item?id=42099398
     r/linux: https://old.reddit.com/r/linux/comments/1go1tyg/linux_asceticism

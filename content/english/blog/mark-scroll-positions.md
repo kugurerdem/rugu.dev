@@ -1,10 +1,10 @@
 ---
 title: 'Introducing: Mark Scroll Positions'
 draft: false
-recommended: true
 date: '2024-06-03'
 updated: '2024-06-05'
 tags:
+    - highlights
     - technology
     - productivity
 discussions:
@@ -190,4 +190,3 @@ Anyway, I hope this application will be useful to some people. It will at least
 be useful to me. If you want to contribute, please feel free to send your PRs
 to
 [kugurerdem/mark-scroll-positions](https://github.com/kugurerdem/mark-scroll-positions)
-

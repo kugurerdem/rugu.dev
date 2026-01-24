@@ -9,7 +9,7 @@
             {{ $postfix = "(outlink)"}}
         {{ end }}
 
-        <a href="{{ $url }}" class="blog-entry-title{{ if .Params.recommended }} recommended{{ end }}">{{ .Title }}</a> {{$postfix }}
+        <a href="{{ $url }}" class="blog-entry-title{{ if in .Params.tags "highlights" }} highlights{{ end }}">{{ .Title }}</a> {{$postfix }}
 
         {{ with .Summary }}
             <p class="blog-entry-description">{{ . | plainify | truncate 120 }}</p>
@@ -19,7 +19,11 @@
     </div>
     {{ with .Params.images }}
         {{ $first := index . 0 }}
-        <img class="blog-entry-thumbnail" src="{{ $pageUrl }}{{ $first }}" alt="">
+        {{ $img := $first }}
+        {{ if not (hasPrefix $first "http") }}
+            {{ $img = printf "%s%s" $pageUrl $first }}
+        {{ end }}
+        <img class="blog-entry-thumbnail" src="{{ $img }}" alt="">
     {{ end }}
 </div>
 {{ end }}

@@ -1,6 +1,7 @@
 ---
 title: 'Lessons from Plain Text'
-recommended: true
+tags:
+    - highlights
 date: '2024-10-10'
 updated: '2024-10-13'
 discussions:
