@@ -7,8 +7,8 @@ params:
   connect:
     - linkedin: 'https://www.linkedin.com/in/ugur-erdem-seyfi'
     - github: 'https://github.com/kugurerdem'
-    - hackernews: 'https://news.ycombinator.com/user?id=kugurerdem'
     - twitter: 'https://twitter.com/kugurerdem'
+    - hackernews: 'https://news.ycombinator.com/user?id=kugurerdem'
     - rss: '/en/index.xml'
   email: "ugur@rugu.dev"
   repo: "https://github.com/kugurerdem/rugudev"
