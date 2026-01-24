@@ -9,13 +9,19 @@
             {{ range .Site.Params.Connect }}
                 {{ range $k, $v := . }}
                     <a href="{{ $v }}" target="_blank">
-                        <img class="icon hover" src="/icons/{{ $k }}.svg"/>
+                        <picture>
+                            <source srcset="/icons/dark/{{ $k }}.svg" media="(prefers-color-scheme: dark)"/>
+                            <img class="icon hover" src="/icons/light/{{ $k }}.svg" alt="{{ $k }} icon"/>
+                        </picture>
                     </a>
                 {{ end }}
             {{ end }}
             <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
             <a class="source-link" href="{{ .Site.Params.Repo }}" target="_blank">
-                <img class="icon" src="/icons/git.svg"/>
+                <picture>
+                    <source srcset="/icons/dark/git.svg" media="(prefers-color-scheme: dark)"/>
+                    <img class="icon" src="/icons/light/git.svg" alt="git icon"/>
+                </picture>
                 Source
             </a>
         </div>
