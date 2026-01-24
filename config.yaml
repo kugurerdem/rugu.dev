@@ -37,6 +37,7 @@ languages:
     params:
       description: "a software developer with a hacker's attitude, interested in philosophy and psychology"
       contact: 'Contact'
+      aboutPath: 'data/en/about.md'
       recommendedPath: 'data/en/recommended.md'
       miscPath: 'data/en/misc.md'
   tr:
@@ -46,5 +47,6 @@ languages:
     params:
       description: "hacker kafalı yazılımcı, felsefe ve psikoloji ile ilgileniyor"
       contact: 'İletişim'
+      aboutPath: 'data/tr/about.md'
       recommendedPath: 'data/en/recommended.md'
       miscPath: 'data/en/misc.md'
