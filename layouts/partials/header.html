@@ -6,17 +6,21 @@
         <a class="header-name" href="{{ .Site.Home.RelPermalink }}"><b>Uğur Erdem Seyfi</b></a>
         <div class="header-description">{{ .Site.Params.Description }}</div>
         <div class="header-links">
-            {{ range .Site.Params.Connect }}
-                {{ range $k, $v := . }}
-                    <a href="{{ $v }}" target="_blank">
-                        <picture>
-                            <source srcset="/icons/dark/{{ $k }}.svg" media="(prefers-color-scheme: dark)"/>
-                            <img class="icon hover" src="/icons/light/{{ $k }}.svg" alt="{{ $k }} icon"/>
-                        </picture>
-                    </a>
+            <div class="header-links-icons">
+                {{ range .Site.Params.Connect }}
+                    {{ range $k, $v := . }}
+                        <a href="{{ $v }}" target="_blank">
+                            <picture>
+                                <source srcset="/icons/dark/{{ $k }}.svg" media="(prefers-color-scheme: dark)"/>
+                                <img class="icon hover" src="/icons/light/{{ $k }}.svg" alt="{{ $k }} icon"/>
+                            </picture>
+                        </a>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-            <a class="header-email" href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+            </div>
+            <div class="header-links-contact">
+                <a class="header-email" href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+            </div>
         </div>
     </div>
 </header>
