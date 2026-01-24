@@ -145,13 +145,26 @@ article {
 .header-links {
     display: flex;
     align-items: center;
-    gap: 0.5em;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5em;
+    width: 100%;
     font-size: 0.85em;
 }
 
+.header-links-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.header-links-contact {
+    display: flex;
+    align-items: center;
+}
+
 .header-email {
-    margin-left: 0.75em;
+    white-space: nowrap;
 }
 
 .header-links .icon {
@@ -366,7 +379,9 @@ blockquote.alert.alert-caution {
     }
 
     .header-links {
+        flex-direction: column;
         justify-content: center;
+        gap: 0.5em;
     }
 
     blockquote {
