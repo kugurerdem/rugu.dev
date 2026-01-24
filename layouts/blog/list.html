@@ -2,8 +2,10 @@
     {{ partial "head.html" . }}
     <body>
         {{ partial "nav.html" . }}
-        <div class="master-container">
-            <article>
+        {{ partial "header.html" . }}
+        <main>
+            <div class="master-container">
+                <article>
                     <div class="page">
                         <h1> Blog </h1>
                         {{ if .Site.Taxonomies.tags }}
@@ -19,10 +21,10 @@
                         {{ with .Site.GetPage "section" "blog" }}
                         {{ .Content }}
                             {{ partial "blog-entry-list.html" .Pages }}
-                            {{ end }}
+                        {{ end }}
                     </div>
-            </article>
-            {{ partial "aside.html" . }}
-        </div>
+                </article>
+            </div>
+        </main>
     </body>
 <html>

@@ -6,37 +6,39 @@
     {{ end }}
     <body>
         {{ partial "nav.html" . }}
-        <div class="master-container">
-            <article>
-                <div class="page">
-                    <h1> {{ .Title }} </h1>
-                    {{ if isset .Params "subtitle" }}
-                        <h2>
-                            {{ .Params.subtitle }}
-                        </h2>
-                    {{ end }}
-
-                    {{ if isset .Params "date" }}
-                        <i>
-                        Written at {{ dateFormat "2006-01-02" .Params.date }}
-                        {{ if isset .Params "updated" }}
-                           - <a
-                               target="_blank"
-                               href="{{$.Site.Params.Repo}}/commits/master/{{$filepath}}">
-                           Updated </a> at {{ dateFormat "2006-01-02" .Params.updated }}
+        {{ partial "header.html" . }}
+        <main>
+            <div class="master-container">
+                <article>
+                    <div class="page">
+                        <h1> {{ .Title }} </h1>
+                        {{ if isset .Params "subtitle" }}
+                            <h2>
+                                {{ .Params.subtitle }}
+                            </h2>
                         {{ end }}
-                        </i>
-                    {{ end }}
+
+                        {{ if isset .Params "date" }}
+                            <i>
+                            Written at {{ dateFormat "2006-01-02" .Params.date }}
+                            {{ if isset .Params "updated" }}
+                               - <a
+                                   target="_blank"
+                                   href="{{$.Site.Params.Repo}}/commits/master/{{$filepath}}">
+                               Updated </a> at {{ dateFormat "2006-01-02" .Params.updated }}
+                            {{ end }}
+                            </i>
+                        {{ end }}
 
 
-                    {{ partial "param-links.html" (dict "param" .Params.discussions "title" "Discussions") }}
-                    {{ partial "param-links.html" (dict "param" .Params.mentions "title" "Mentioned In") }}
-                    {{ partial "param-links.html" (dict "param" .Params.translations "title" "Translations") }}
-                    <hr>
-                    {{ .Content }}
-                </div>
-            </article>
-            {{ partial "aside.html" . }}
-        </div>
+                        {{ partial "param-links.html" (dict "param" .Params.discussions "title" "Discussions") }}
+                        {{ partial "param-links.html" (dict "param" .Params.mentions "title" "Mentioned In") }}
+                        {{ partial "param-links.html" (dict "param" .Params.translations "title" "Translations") }}
+                        <hr>
+                        {{ .Content }}
+                    </div>
+                </article>
+            </div>
+        </main>
     </body>
 <html>
