@@ -1,4 +1,237 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/technology/</link><description>Recent content in Technology on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p&gt;Up until now, I was not aware that concurrency and parallelism were actually
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Highlights on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/highlights/</link><description>Recent content in Highlights on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/highlights/index.xml" rel="self" type="application/rss+xml"/><item><title>Using The Corne Split Keyboard For Half A Year</title><link>https://rugu.dev/en/blog/corne/</link><pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/corne/</guid><description>&lt;p&gt;I built my own Corne keyboard around six months ago, in July. I have been using it ever since. Although I am no expert on split keyboards, I accumulated a fair amount of observations during this whole process. I thought that if I wrote down my experiences, they might still be of interest to people who are considering whether to try a split keyboard. Or, if they are already using one, maybe they can also benefit from some of the tricks that helped me a lot. So, here it is: a blog post about how and why I built my own Corne keyboard, the things I learned and applied to improve my ergonomics over the last 6 months.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/corne-with-white-case.jpg#75persize" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;I will first talk about my overall reasons for choosing such a niche keyboard, then why and how I built it. Finally, I will share some very cool tips and tricks about how I played with the layout to make my Corne fit my specific needs better.&lt;/p&gt;
+&lt;p&gt;Let us get started without losing any more time. :)&lt;/p&gt;
+&lt;h2 id="why-a-split-keyboard"&gt;Why A Split Keyboard?&lt;/h2&gt;
+&lt;p&gt;Whenever a friend sees my Corne keyboard, they usually ask what it is, where I got it from, and why I am using it. Sometimes they want to try it, and I let them play around with it for a bit. After a few minutes, the reaction is almost always the same: they tell me that it is hard and frustrating to use. I understand this. It definitely looks strange, and it is far from a natural typing experience for someone who is used to a &amp;ldquo;normal&amp;rdquo; keyboard. Still, I want to try my best to explain why I decided to use a split keyboard in the first place.&lt;/p&gt;
+&lt;p&gt;I can think of three possible reasons for using a split keyboard. First, they look cool, and some people simply enjoy trying cool things. Second, there is the promise of improved typing speed or efficiency. Third, and most importantly for me, they are often more ergonomic and natural for the body. I admit that the aesthetics played a small role in my decision as well, but the primary factor was simply ergonomics.&lt;/p&gt;
+&lt;p&gt;For some context, I have been dealing with neck and back pain for quite a while. For this, I had already spent a lot of time thinking about office ergonomics. I regularly use laptop and monitor stands to keep my screen at eye level. I pay attention to chair and desk height, distance, and how they relate to my posture and leg position. I have also invested in a standing desk and a chair that I find comfortable for long work sessions. I also started learning more about biomechanics and began exercising more regularly. &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This made me think about how I could further improve my ergonomics. After some thinking, it became obvious that the two things I interact with the most when using a computer are my keyboard and mouse. A quick research pointed me toward two promising upgrades for my setup: a split keyboard and a vertical mouse.&lt;/p&gt;
+&lt;p&gt;Both made sense to me. A vertical mouse more closely resembles a neutral hand position, which can help reduce awkward wrist movements. With a split keyboard, the ability to position the two halves independently allows the wrists to remain in a more neutral alignment. This same split setup, combined with the option to place the halves farther apart, also helps reduce internal shoulder rotation. Over time, this can improve shoulder comfort and may even reduce neck strain.&lt;/p&gt;
+&lt;p&gt;To give you a brief idea, the following image from &lt;a href="https://boardsource.xyz/products/unicorne-lp-aluminum-corne-case"&gt;boardsource.xyz&lt;/a&gt; demonstrates this really well.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://images.boardsource.xyz/Copy%20of%20_ergo_comparison_split.jpg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="why-ortholinear"&gt;Why Ortholinear?&lt;/h2&gt;
+&lt;p&gt;Another concept that I came across while researching this topic was &amp;ldquo;ortholinear&amp;rdquo;. Here, &amp;ldquo;ortho&amp;rdquo; means right-angled, and &amp;ldquo;linear&amp;rdquo; means arranged in lines. So, an ortholinear keyboard is one where the keys are placed in a straight grid of aligned rows and columns instead of being staggered.&lt;/p&gt;
+&lt;p&gt;For those who are further interested, I recommend checking out &lt;a href="https://mattgemmell.scot/the-planck-keyboard/"&gt;The Planck Keyboard&lt;/a&gt; blog post by Matt Gemmell. Just to give you a brief idea of what an ortholinear keyboard looks like, here is a photo of his keyboard:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://live.staticflickr.com/65535/51350002123_c951701270_c_d.jpg#75persize" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;This makes sense to me. However, I was concerned that, since an ortholinear keyboard is usually narrower than a normal one, it might cause more wrist deviation. So I did not want to try a non-split ortholinear keyboard such as the Planck. Still, I wanted my split keyboard to be ortholinear, because being able to align the two halves already solves the wrist deviation problem.&lt;/p&gt;
+&lt;p&gt;So, a split, ortholinear keyboard it is. But there is still one very important question: why choose the Corne over the many other split keyboards available?&lt;/p&gt;
+&lt;h2 id="why-corne-specifically"&gt;Why Corne, Specifically?&lt;/h2&gt;
+&lt;p&gt;When I first looked into the list of split keyboards being recommended, I was baffled. Not only are there so many alternatives, but they also differ a lot.&lt;/p&gt;
+&lt;p&gt;Just to give an example, consider something as minimalist as &lt;a href="https://github.com/pashutk/chocofi"&gt;ChocoFi&lt;/a&gt; and something as full-fledged as &lt;a href="https://www.zsa.io/moonlander"&gt;Moonlander&lt;/a&gt;. Both are split keyboards, yet the difference between them is immediately obvious.&lt;/p&gt;
+&lt;p&gt;This is how I quickly realized that it would be better for me to first set my expectations and then filter them. Not the other way around of trying to learn all the subtleties and then trying to make an educated guess.&lt;/p&gt;
+&lt;p&gt;Since it would be my first attempt at a split keyboard, I wanted a keyboard with a community around it. This way, I could benefit from the experiences of other people and find answers to my questions if I ever had them.&lt;/p&gt;
+&lt;p&gt;The split keyboard being open source was also very important, because rebuying it if something ever went wrong was not an option. This is not only due to the prices, but also because customs regulations in Turkey currently make ordering items from abroad very difficult. For example, anything above 30 euros, including shipping, requires a formal customs declaration and additional fees. Likewise, the number of orders that can be placed is limited on a monthly basis, and at the moment, this limit is five orders per month. On top of this, there is not much of a marketplace for split keyboards in Turkey either. That meant I either had to ask friends abroad to buy parts for me as a gift, or obtain the components separately and solder and assemble the keyboard myself. I chose the second option because it made me less dependent on others. I could still ask for keyboard help if needed, but if something went wrong, fixing it myself would at least be possible.&lt;/p&gt;
+&lt;p&gt;And of course, the keyboard had to be ergonomic. In fact, I was okay with going with split keyboards that prioritize ergonomics more, even at the expense of challenging my habits. I was okay to try new things if I was convinced of the possible benefits.&lt;/p&gt;
+&lt;p&gt;So, after some market research, my final decision came down to &lt;a href="https://old.reddit.com/r/ErgoMechKeyboards/comments/17ygfe5/lily58_vs_corne_for_a_first_timer/"&gt;Corne vs Lily58&lt;/a&gt;. Both of them seemed to satisfy my main requirements, with one key difference between them. The Lily58 has 58 keys, while the Corne has only 42.&lt;/p&gt;
+&lt;p&gt;In practice, this means that the entire number row and a few additional keys are removed on the Corne to make it more compact. Access to those missing keys is handled through layer combinations instead. On paper, I liked the idea that it would reduce overall hand movement. However, my main concern was whether I would actually like the experience or not.&lt;/p&gt;
+&lt;p&gt;Since I could not clearly decide which one to go with, I went YOLO. I decided to build the Corne myself and asked my friend Onur to bring me a Lily58 for personal use.&lt;/p&gt;
+&lt;h2 id="building-the-corne-keyboard"&gt;Building The Corne Keyboard&lt;/h2&gt;
+&lt;p&gt;Before starting on my own, I wanted to see if anyone else in Turkey has already built a split keyboard. I found a subreddit called &lt;a href="https://www.reddit.com/r/mechistanbul/"&gt;MechIstanbul&lt;/a&gt;, where there were lots of split keyboard builds. Although the subreddit itself seemed to be inactive, I realized that their &lt;a href="https://t.me/mechistanbul"&gt;Telegram group&lt;/a&gt; was still very active. There, I was able to ask some of the questions that I had in mind to the experts directly :) I&amp;rsquo;m especially indebted to a member named Erdem (yes, we share the same name) who helped me a lot with choosing which parts to order and from where for a Corne keyboard build.&lt;/p&gt;
+&lt;p&gt;After having a better sense of which parts I needed to order, I bought all the parts that were essential for a split Corne keyboard through AliExpress. Specifically, I used all of my monthly order limitations for the following items (each order under a 30 EUR cost):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;100 XDA keycaps.&lt;/strong&gt; There was no particular reason behind this choice. I was just browsing keycaps, and these simply looked nice.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;110 Outemu Silent Yellow switches.&lt;/strong&gt; I wanted my split keyboard to be relatively quiet. I went with Outemu instead of Cherry MX mainly because they were cheaper. I couldn&amp;rsquo;t spot any significant difference between the two when listening to sound comparisons between the two.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;5 NRF52840 MCUs.&lt;/strong&gt; These basically share the same interfaces and functionalities as nice!nano MCUs, but they are much cheaper.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A Corne PCB kit,&lt;/strong&gt; which includes the Corne circuit boards, diodes, hot swappable sockets (so that the switches are not soldered directly to the board and can be easily replaced later), TRRS jacks, and similar components.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upper and lower plates&lt;/strong&gt; to sandwich the PCB. These serve both as a protective layer and as an aesthetic element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are further interested, here is the list of all parts with their costs:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pbs.twimg.com/media/GxwUUDsXYAAnAWZ?format=png&amp;amp;name=large" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Keep in mind that I bought most of the parts in double the needed amount, just in case I use them for another keyboard later.&lt;/p&gt;
+&lt;p&gt;After the orders reached, I simply followed the tutorials available on the internet. &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;While watching the video, I noticed that the soldering part looked a bit tedious. Since I had never done soldering before, I did not want to risk the process. So, I went to my cousin, who is experienced with soldering, and asked for help. Thankfully, he helped a lot. After that, I plugged in the parts, installed the ZMK firmware on the MCUs, and then programmed the left and right halves using the &lt;a href="https://nickcoutsos.github.io/keymap-editor/"&gt;Keymap Editor&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Of course, there were a few minor issues along the way. For example, the female pins we soldered onto the PCB were slightly too long, which caused the MCU to sit a bit higher than intended and left insufficient space to attach the covers properly. We also accidentally stripped the soldered area on the battery during soldering, and ended up breaking the on-off switch as well.&lt;/p&gt;
+&lt;p&gt;But, despite these problems, I think that the overall result was still good enough, and I finally had a keyboard that was fully usable.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/corne-first-iteration.jpg#75persize" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="the-overall-user-experience"&gt;The Overall User Experience&lt;/h2&gt;
+&lt;h3 id="speed"&gt;Speed&lt;/h3&gt;
+&lt;p&gt;The moment I had my Corne keyboard working, the first thing I did was open &lt;a href="https://monkeytype.com/"&gt;MonkeyType&lt;/a&gt; and see how fast I could type things down. It was 3 words per minute in my first try. On the second try, it was a bit better, and after a few iterations, I was able to get around 60 WPM in the same hour in which I started experimenting. It&amp;rsquo;s not really fast compared to my usual speed. &lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; But it was still good enough for me to get things done using this keyboard.&lt;/p&gt;
+&lt;p&gt;I can say that after around two days of using the Corne keyboard, I was getting 90 to 100 WPM, which was about 80 to 90 percent of my previous performance. This was sufficient for me to use the keyboard effectively at work.&lt;/p&gt;
+&lt;p&gt;I believe this shows two things. First, as many people expect, changing from a normal staggered layout to an ortholinear split layout decreases your typing speed tremendously at first. Second, it is not that hard to recover from that decrease. In fact, not long after that, around three weeks later, I was able to &lt;a href="https://x.com/kugurerdem/status/1961393205053644993"&gt;beat&lt;/a&gt; my previous typing record on MonkeyType with 139 WPM.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/139wpm.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;I do not know about other people, but for me, the main reason I slowed down when I first started using the Corne keyboard was not that it was split. I think one reason was simply that the keys are in an ortholinear layout. For example, at the beginning, I used to type &amp;lsquo;C&amp;rsquo; a lot when I meant to type &amp;lsquo;X&amp;rsquo;. This is because I was so used to a staggered layout that when I typed from the row below the home row, my fingers naturally moved a little to the right. I had to unlearn that habit.&lt;/p&gt;
+&lt;h3 id="getting-used-to-layer-keys"&gt;Getting Used To Layer Keys&lt;/h3&gt;
+&lt;p&gt;Besides unlearning some of my previous habits, I also realized that I needed to learn new ways of typing special characters. The Corne has fewer keys than a typical keyboard, and as a result, letters and modifier keys occupy almost all of the base layer. This means that other characters, such as curly braces &lt;code&gt;{}&lt;/code&gt;, square brackets &lt;code&gt;[]&lt;/code&gt;, and even numbers, have to be typed using layer keys.&lt;/p&gt;
+&lt;p&gt;For example, pressing the key that corresponds to q on the base layer produces &lt;code&gt;q&lt;/code&gt;. Pressing the same key while holding the layer 1 key produces &lt;code&gt;1&lt;/code&gt;, and holding the layer 2 key produces &lt;code&gt;!&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To give a concrete idea, this is how my keys behave when I am holding the &lt;strong&gt;layer 1 key&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/layer1_corne.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;And this is how they behave when I am holding the &lt;strong&gt;layer 2 key&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/layer2_corne.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;This might seem a bit confusing at first, but when you think about it, &lt;strong&gt;layer keys are not very different from modifier keys like Shift or Ctrl. They simply change the behavior of the other keys while they are being held.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As for how long it took to get used to these keybindings, adapting to layer 1 was especially easy for me, and layer 2 was not much harder either.&lt;/p&gt;
+&lt;p&gt;One important thing I noticed is that &lt;strong&gt;I adapted faster to the special characters I used most often than to the ones I used less frequently. This is actually good news, because the characters you need the most become available to you first.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="embracing-less-is-more"&gt;Embracing &amp;ldquo;Less is More&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;I think the Corne keyboard is a good example of &lt;a href="https://en.wikipedia.org/wiki/Less_is_more"&gt;less is more&lt;/a&gt;. You are reducing the number of available keys, but you still gain more than you had before: better ergonomics, more speed, and more precision. Realizing this made me wonder whether I could push the idea more. For example, could I reduce pinky usage even further by removing the sixth column from the keyboard?&lt;/p&gt;
+&lt;p&gt;After coming across &amp;ldquo;the endgame keyboard&amp;rdquo; video by Joshua Blais, I realized that I could even go further.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Ong_-2G9RDM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;I started thinking about ways to reduce my pinky usage. Erdem from the MechIstanbul community sent me the &lt;a href="https://mattgemmell.scot/home-row-mods/"&gt;Home Row Mods&lt;/a&gt; post by Matt Gemmel again. It was a great read. To summarize the main idea, you can define custom behaviors for certain keys so that they act as modifier keys when held and as normal keys when tapped.&lt;/p&gt;
+&lt;p&gt;This lets you move most of the modifier keys that are usually pressed with the pinkies onto the home row, reducing pinky strain even further. What I did was mirror the home row modifier keys on both halves of the keyboard. This way, when I need to press a key on the left side with a modifier, I can use the modifier on the right side, and vice versa.&lt;/p&gt;
+&lt;p&gt;Here is what my default layout looks right now:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/default_corne_layer.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, I have four empty keys in total, which means I am actively using 38 keys. I still rely heavily on my right pinky, but I recently realized that some of those keys can be moved to the empty thumb positions. I can also start using &lt;a href="https://zmk.dev/docs/keymaps/combos"&gt;combo keys&lt;/a&gt;, a custom behavior that allows certain characters to be typed by pressing two keys together. However, at the time I was configuring my keyboard, this setup seemed acceptable.&lt;/p&gt;
+&lt;h3 id="emphasis-on-thumb-keys"&gt;Emphasis on Thumb Keys&lt;/h3&gt;
+&lt;p&gt;One thing I quickly noticed when using this keyboard was that it shifts some of the load that was previously placed on the pinkies onto the thumbs. Normally, I used my thumbs only for pressing the space key. With this keyboard, each thumb is assigned three keys. The important point is that these thumb keys usually replace functions that were previously handled by the pinkies.&lt;/p&gt;
+&lt;p&gt;I think this is very good overall. Because it kindof balances the load between your fingers. At the same time, if your thumbs are sensitive, this change can make things worse rather than better. After using the Corne keyboard for a few weeks, I noticed a slight pain in my thumbs. It was concerning, so I took a break over the weekend, and the pain went away. It never returned. I suspect this was either due to my hands adapting to the new layout or a minor strain from doing knuckle push-ups and pull-ups around the time. Even so, the experience made me realize that these keyboards may not be ideal for people with sensitive thumbs.&lt;/p&gt;
+&lt;h2 id="what-about-lily58"&gt;What About Lily58?&lt;/h2&gt;
+&lt;p&gt;You might remember that in the Why Corne Specifically? section, I mentioned that during my decision period between the Corne and the Lily58, I went YOLO and decided to try both.&lt;/p&gt;
+&lt;p&gt;Well&amp;hellip; By the time my friend handed me a Halycon Lily58 kit that was bought from &lt;a href="https://splitkb.com"&gt;splitkb.com&lt;/a&gt;, it was already too late. I was already certain that I was not going to leave the Corne anytime soon. I had adapted to it extremely well and was not really seeking the additional keys that the Lily58 offered anyway. In other words, even if I used the Lily58, I would most likely stick to the same keybindings and layouts that I already use on my Corne keyboard.&lt;/p&gt;
+&lt;p&gt;So, I asked a couple of my friends whether they would be interested in using the keyboard. Thankfully, &lt;a href="https://x.com/mertcobanov"&gt;Mert&lt;/a&gt; was interested, so I handed my Lily58 over to him. 🙂&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rugu.dev/en/blog/corne/halycon-lily58.jpg#75persize" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Goodbye, Lily58.&lt;/p&gt;
+&lt;h2 id="so-whats-next"&gt;So, What&amp;rsquo;s Next?&lt;/h2&gt;
+&lt;p&gt;So far, I am very fond of my Corne, but I have a feeling that I could eventually switch to a 5x3 layout. I already have a PCB for a wireless Choc Corne at home, and I plan to build it in one of my spare periods. I also want to improve my CAD skills and experiment with 3D printed cases and rests designed specifically for my own needs. For now, however, I am happy with my current Corne, and I think the best next step is to start using this 6x3 keyboard as if it were a 5x3.&lt;/p&gt;
+&lt;p&gt;Anyway, thanks for reading this far. I hope this post was helpful for at least some of you.&lt;/p&gt;
+&lt;p&gt;I would also like to thank &lt;a href="https://github.com/SingularHomology"&gt;Oussama&lt;/a&gt; for reviewing the initial draft of this post.&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I can say that exercise helped me the most on a personal level. Still, paying attention to ergonomics was also very helpful. To me, exercise feels like a way to increase my overall tolerance, while improving ergonomics is more about reducing the damage. Because of that, I wanted to take the best of both worlds as much as possible.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;I found both &lt;a href="https://www.youtube.com/watch?v=vzDTdLaAzXc"&gt;this video&lt;/a&gt; from Josean Martinez and &lt;a href="https://www.youtube.com/watch?v=FJgvi7WShxY"&gt;this one&lt;/a&gt; from Joe Scotto, very helpful during the process.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Just to give you an idea, I used to be able to consistently type around 110+ WPM on MonkeyType with my Logitech K380.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Why I'm Leaving NixOS After a Year?</title><link>https://rugu.dev/en/blog/leaving-nixos/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/leaving-nixos/</guid><description>&lt;p&gt;Around a year ago, I published a blog post explaining my overall experience &lt;a href="https://www.rugu.dev/en/blog/nixos/"&gt;Switching from Arch to NixOS&lt;/a&gt;. You can read it if you&amp;rsquo;re interested in my early experiences, but, to give you a spoiler, that post ends with me saying:&lt;/p&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Unfortunately, though, I don’t think the benefits I’ve gotten in this one month of using NixOS so far justified the cost I’ve initially spent and continue to spend learning Nix and NixOS. &lt;br&gt;
+&amp;mdash; &lt;br&gt;
+Ultimately, whether the benefits of learning a particular technology outweigh the costs depends on how much you take full advantage of its features. So, I believe that if I experiment with more setups, try different programs, or start managing servers with Nix, I will begin to see a better return on this investment from what I have learned so far. :)&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+
+&lt;p&gt;Well, it&amp;rsquo;s been about a year since I published that post. Since then, I&amp;rsquo;ve experimented with more setups, tried different programs, and started managing my own server with NixOS. And&amp;hellip; &lt;strong&gt;Contrary to my initial expectations that I would get a better return on investment from NixOS with more usage, the opposite happened.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id="the-pain-of-getting-things-to-work"&gt;The Pain of Getting Things to Work&lt;/h1&gt;
+&lt;p&gt;So you want to try a new program/service? First, you try the NixOS module and see whether it works the way you want. Oh&amp;hellip; it doesn&amp;rsquo;t. Now, you have a few choices:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Try to figure out what&amp;rsquo;s wrong with your current configuration (maybe even read the source code of the NixOS module you&amp;rsquo;re using.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stick to more standard NixOS modules instead of using the one provided for the program you&amp;rsquo;re trying to install. For example, you might create your a systemd unit file and include the program binary using Nix.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Just use some containerization technology like Docker, or maybe a sandboxing solution like Flatpak (which is exactly what you can do on any typical FHS-based Linux distro.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sometimes, you just can&amp;rsquo;t foresee whether the reason an app isn&amp;rsquo;t running the way you want is due to a problem or limitation in the NixOS module. And if you don&amp;rsquo;t put a time limit on how much you investigate it, you may lose a lot of time. The problem with the second option is that it&amp;rsquo;s not fun to go through that process every time you want to try a new application or service on your system. Especially if it&amp;rsquo;s just because you can&amp;rsquo;t install it the native way, or you just don&amp;rsquo;t like something about the native way. So you end up falling back to the third option, which is something you can just as easily do on any FHS-based distro anyway.&lt;/p&gt;
+&lt;p&gt;You need to run a program like Electron in your Node project for your new job, and you try to install it through npm and then run it? Well, guess what. &lt;a href="https://www.rugu.dev/en/blog/nixos-precompiled/"&gt;NixOS hates pre-compiled programs&lt;/a&gt;, so you need to learn more about how to resolve this problem while using NixOS. So you&amp;rsquo;re kind of forced to learn about other specific Nix tools (&lt;code&gt;nix-ld&lt;/code&gt;, &lt;code&gt;buildFhsEnv&lt;/code&gt;, creating your derivations, etc.) if you need to use them regardless.&lt;/p&gt;
+&lt;p&gt;In an FHS system, you&amp;rsquo;d configure a file and then run the program with that configuration. In NixOS (or home-manager), you now write a DSL based on Nix expressions, which then generates the actual configuration file the program will use. I think this just means another layer to trace when debugging. &lt;strong&gt;When you are using NixOS, and things work, everything works smoothly. It&amp;rsquo;s fine. But when things go wrong, you now have an additional layer to worry about.&lt;/strong&gt; Did you misconfigure something at the NixOS level, or did the config generate correctly but there&amp;rsquo;s an issue with the program itself? And so on&amp;hellip;&lt;/p&gt;
+&lt;h1 id="problem-of-leaky-abstractions"&gt;Problem of (Leaky) Abstractions&lt;/h1&gt;
+&lt;p&gt;I think one of the main issues here is that NixOS just adds an abstraction layer on top of a procedural system. &lt;strong&gt;You interact with it as if it were declarative, but it&amp;rsquo;s not. Under the hood, you&amp;rsquo;re still running programs that were designed for FHS environments, where programs share their libraries, bootstrap themselves, install other precompiled programs, and so on&amp;hellip; I believe that almost all my frustrations with NixOS is due to this phenomenon of abstractions.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As the &lt;a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/"&gt;Law of Leaky Abstractions&lt;/a&gt; suggests, &lt;em&gt;&amp;ldquo;All non-trivial abstractions, to some degree, are leaky.&amp;rdquo;&lt;/em&gt; And it turns out that NixOS is not immune to this phenomenon either.&lt;/p&gt;
+&lt;p&gt;I would definitely prefer NixOS over an FHS-based Linux distro if it weren&amp;rsquo;t just a wrapper around Linux, but instead its own system with dedicated tooling and native programs. But I also understand how hard it is to build and sustain a community of people developing software specifically for a niche OS. So, it makes sense that NixOS is designed as a Linux distro. It&amp;rsquo;s similar to how Rich Hickey made Clojure run on the JVM and JavaScript runtimes to take advantage of their tooling and ecosystems, despite sharing very little with them in terms of philosophy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;But in the end, I feel like the discrepancy between the philosophy of NixOS and the programs and services running under the hood is so great that it is almost impossible to not feel this in some negative way, as a user.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id="the-time-cost"&gt;The Time Cost&lt;/h1&gt;
+&lt;p&gt;Well, I like NixOS and Nix&amp;rsquo;s philosophy. That&amp;rsquo;s why I stuck with it for over a year and tried to learn as much as I could despite the frustrations. I also think NixOS delivers on most of its promises, so the issue for me isn’t whether it works or not. It’s also not about whether you can make things work (you can). The problem is: at what cost? Tasks that would take very little time on a traditional FHS-based distro can take significantly longer on NixOS. And I really don’t like that.&lt;/p&gt;
+&lt;p&gt;I understand the benefits of reproducibility and so on, but when I think about how much I&amp;rsquo;ve gained from that reproducibility compared to my old dotfiles setup, I realize that I did NOT see any real benefits &lt;strong&gt;in practice&lt;/strong&gt;. I am just sure that configuring and making stuff run the Nix way just takes way more time than just using a regular FHS distro.&lt;/p&gt;
+&lt;h1 id="back-to-arch-btw"&gt;Back to Arch, BTW&lt;/h1&gt;
+&lt;p&gt;I still think that NixOS can be useful for some people who especially HEAVILY rely on syncing configurations across multiple devices and TRULY need system-level reproducibility. But I’m definitely not one of those people. I don’t need reproducibility to the extent that NixOS provides, and &lt;strong&gt;I also realized that I&amp;rsquo;m way more comfortable getting things done in an impure system than dealing with the friction of a pure one that slows me down in almost in every change I do.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So now, I&amp;rsquo;m just back to using Arch Linux, btw.&lt;/p&gt;</description></item><item><title>Linux Asceticism</title><link>https://rugu.dev/en/blog/linux-asceticism/</link><pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/linux-asceticism/</guid><description>&lt;p&gt;Most well-known living philosophies -such as Cynicism, Epicureanism, Stoicism, Buddhism, and Sufism- advocate some form of &lt;a href="https://en.wikipedia.org/wiki/Asceticism"&gt;Asceticism&lt;/a&gt;. This could involve various acts such as fasting, deliberately confronting personal fears, or even something as subtle as choosing not to pour salt on food. But regardless of the specific way that these practices are pursued, the main goal remains the same: Strengthening your body and mind to make yourself indifferent to and indifferent from the things that are outside your control. That is to say, turn yourself into someone who can handle hardships with as few possessions as possible.&lt;/p&gt;
+&lt;p&gt;When people argue for using Linux, they often focus on either political or practical reasons. For instance, they may choose Linux because it supports the principles of software freedom and personal control. They may also choose it for reasons such as cost savings, customizability, flexibility to meet specific needs, performance, tool availability, and so on.&lt;/p&gt;
+&lt;p&gt;However, there’s another often-overlooked aspect that can make using a minimal Linux distribution worthwhile: &lt;strong&gt;using a minimal Linux distro on your personal computer is a form of &lt;a href="https://en.wikipedia.org/wiki/Asceticism#Etymology_and_meaning"&gt;Askesis&lt;/a&gt;&lt;/strong&gt; -disciplined practices done for self-improvement. At first, it will probably feel uncomfortable and overwhelming. You’ll face many problems that you’ll need to solve. But you’ll also come to realize and understand better that many of the features you take for granted in an OS with a preconfigured desktop environment are actually separate components that need to exist on your system for you to have that functionality.&lt;/p&gt;
+&lt;p&gt;There will be times that you might need to understand what a network interface is, what a block device is, what mounting is, how keyboard mappings are handled differently on the virtual console or in a desktop environment/window manager, and so on. It will force you to learn more and more and you’ll also begin to appreciate the underlying elements that are often hidden away by the layers we rely on. This effect will be amplified especially if you like to tinker and try to make things happen as you want them to be.&lt;/p&gt;
+&lt;p&gt;In the end, you&amp;rsquo;ll gain a deeper understanding of what happens under the hood. Your comfort zone will broaden as you develop the mindset of solving problems. &lt;strong&gt;I know that this kind of reasoning is not as forceful as the pragmatic or ideological reasons for some people, but it still is a good bonus that further motivated me to learn more and more about Linux.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For the last few years, I&amp;rsquo;ve been mainly using Arch Linux as my choice of personal OS, and for the past few months, I&amp;rsquo;ve been using NixOS. Although I have not used/tried MacOS yet, I guess that if I tried it, most of the skills I acquired through using Linux would carry over to it and I would not have much problems getting adapted to it. However, I’m not so sure about the other way around, especially for those who switch from Windows to Linux.&lt;/p&gt;
+
+
+
+ &lt;blockquote&gt;
+ &lt;p&gt;If you&amp;rsquo;re going to fight in the rain, train in the storm.&lt;br&gt;
+- Unknown&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s good to have tools in our toolbox that let us work minimally, but I also think it does not make much sense to use them all the time if there are already other tools available to achieve things in an easier and faster way. &lt;strong&gt;So I am not against using non-minimal software by any means. They are fine as long as they don&amp;rsquo;t introduce more problems than they solve.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Lessons from Plain Text</title><link>https://rugu.dev/en/blog/plain-text/</link><pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/plain-text/</guid><description>&lt;p&gt;When you interact with a text file using an editor, what you see doesn&amp;rsquo;t necessarily reflect the data stored in the file. Sure, the contents of plain text files are byte codes encoded in formats like ASCII, UTF8, or UTF16, and these byte codes are the ultimate source of truth. But in the end, it&amp;rsquo;s still your text editor that chooses how to interpret and represent that ultimate source of truth - binary codes into something recognizable to you. &lt;strong&gt;This means that two different files could look the same, or the same file might appear differently depending on the editor(s) you use.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Your text editor might highlight (or not) certain parts based on syntax it recognizes, it can control how tabs appear (2 spaces, 4 spaces, or even 8). It decides how to encode the tab key input, whether as &lt;code&gt;\t&lt;/code&gt; or as a set number of spaces. The same applies when you press the enter key to create a new line. Whether it gets encoded as &lt;code&gt;\n&lt;/code&gt; (UNIX) or &lt;code&gt;\r\n&lt;/code&gt; (Windows) depends on the editor&amp;rsquo;s configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your text editor hides details so you don’t have to overthink. However, there are many times when these details leak through the protection layer that your text editor tries to provide. And you often don&amp;rsquo;t notice these complexities until you face them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So, the main goal of this essay is to share some of my experiences and what I&amp;rsquo;ve learned over time about common problems you might encounter with plain text.&lt;/p&gt;
+&lt;h2 id="tabs-vs-spaces"&gt;Tabs vs Spaces&lt;/h2&gt;
+&lt;p&gt;Historically speaking, spaces existed long before tabs. The &lt;a href="https://en.wikipedia.org/wiki/Tab_key"&gt;reason&lt;/a&gt; why tabs were initially developed was to reduce the repetitive use of both the space bar and backspace key.&lt;/p&gt;
+&lt;p&gt;However, people still debate using tabs or spaces in their projects. &lt;strong&gt;This isn&amp;rsquo;t about whether we should use the tab key itself, but rather whether text editors should insert spaces or tabs when we press it,&lt;/strong&gt; that is to say how to encode the blank spaces we see in our editor when we press tab key.&lt;/p&gt;
+&lt;p&gt;I guess the main advantage of tabs over spaces is the flexibility it provides. When using tabs, you can collaborate with many different people who prefer to see different levels of indentation, without having to expose their preferences over others. (Sure, there is also the fact that tab character takes less space, but I don&amp;rsquo;t think this makes much of a difference, especially considering that we are in 2024.)&lt;/p&gt;
+&lt;p&gt;One problem with tabs, though, is precise editing. Since tabs represent multiple spaces at once, aligning lines may not work as one expects from time to time.&lt;/p&gt;
+&lt;p&gt;Like, what you perfectly see as OK in one editor where tabs are configured to take 4 columns, can be disgusting in another editor where tabs are configured to take 2 columns:&lt;/p&gt;
+&lt;p&gt;Editor 1 with tabs configured to take 4 spaces:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 4 tabs, + 3 spaces
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;calculate&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;a&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;b&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;c&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;d&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Some logic
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Editor 2 with tabs configured to take 2 spaces:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 4 tabs, + 3 spaces
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;calculate&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;a&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;b&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;c&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;d&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Some logic
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is also partly the reason why I use spaces most of the time. If you still end up adjusting the tab width to match others&amp;rsquo; preferences, what&amp;rsquo;s the purpose of using tabs in the first place?&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t know whether this is just due to &lt;a href="https://en.wikipedia.org/wiki/First-mover_advantage"&gt;first-mover advantage&lt;/a&gt; or not but it also looks like more projects use &lt;a href="https://insanelab.com/blog/notes/spaces-vs-tabs/"&gt;spaces over tabs&lt;/a&gt;. So what&amp;rsquo;s the point of going against the tide where there does not seem to be a very powerful advantage anyway?&lt;/p&gt;
+&lt;p&gt;With all that said, I still believe that in many cases this conversation is somewhat overkill and often doesn&amp;rsquo;t make a significant practical difference. In the end, what truly matters is whether the codebase is consistent (either using tabs or spaces throughout). Aside from that, it shouldn&amp;rsquo;t matter much since these settings can be easily configured in many environments anyway.&lt;/p&gt;
+&lt;h2 id="soft-wrapping-vs-hard-wrapping"&gt;Soft Wrapping vs Hard Wrapping&lt;/h2&gt;
+&lt;p&gt;When using plain text, there will come a point when the text you write becomes too long. In many text editors (Notepad, Notepad++, Neovim, or even VSCode), the default behavior is for the text to continue growing horizontally until you press Enter to create a new line break. This can be somewhat unuser-friendly compared to most email or messaging clients, where the text automatically wraps, making it much easier to read.&lt;/p&gt;
+&lt;p&gt;To be more clear, let me show you what non-wrapped and wrapped texts look like.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The text that is not wrapped:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis nec elit bibendum, sit amet tempus sapien volutpat. Sed eu congue massa, non condimentum diam. Aenean vel consectetur odio. Suspendisse nec diam ac nisl bibendum tempor. Ut rutrum maximus velit, commodo consectetur nulla auctor ac. Curabitur neque dui, scelerisque in facilisis at, sagittis quis massa. Ut non tempor arcu. Vivamus elit massa, pulvinar vitae tellus ut, lobortis sagittis elit. Aenean vehicula varius eros, vitae pellentesque lorem consequat non. Aenean gravida velit id pellentesque tempor. Aenean ut purus nulla. Curabitur fringilla felis consequat ante condimentum porta. Curabitur id ex in libero rhoncus lobortis sit amet ac ligula.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The text that is wrapped:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum
+felis nec elit bibendum, sit amet tempus sapien volutpat. Sed eu congue massa,
+non condimentum diam. Aenean vel consectetur odio. Suspendisse nec diam ac nisl
+bibendum tempor. Ut rutrum maximus velit, commodo consectetur nulla auctor ac.
+Curabitur neque dui, scelerisque in facilisis at, sagittis quis massa. Ut non
+tempor arcu. Vivamus elit massa, pulvinar vitae tellus ut, lobortis sagittis
+elit. Aenean vehicula varius eros, vitae pellentesque lorem consequat non.
+Aenean gravida velit id pellentesque tempor. Aenean ut purus nulla. Curabitur
+fringilla felis consequat ante condimentum porta. Curabitur id ex in libero
+rhoncus lobortis sit amet ac ligula.
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;As you can see, the wrapped text is a lot easier to read compared to the unwrapped one. This is why many people follow the practice of inserting newlines after a certain number of characters is reached (often around 78). In fact, in the text editor I use, Neovim, it is as simple as just pressing &lt;code&gt;gq&lt;/code&gt; for this line-wrapping procedure to happen for the current line you are in.&lt;/p&gt;
+&lt;p&gt;This procedure of putting actual newlines between text so that it looks wrapped is known as hard-wrapping. This was what I did for a while as well, but since you are wrapping a line into multiple lines just because you can read it more easily in the text editor, you now have the following problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s frustrating to constantly hard-wrap the text manually, even if you have a shortcut.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If you copy the wrapped text this way and paste it into another application, like your favorite messaging app, it will likely look unpleasant, especially on smaller devices like smartphones.&lt;/strong&gt; This happens because when the screen size is reduced, the messaging app will make sure each line is wrapped again if they don&amp;rsquo;t fit the vertical window size. I recommend reading &lt;a href="https://www.arp242.net/email-wrapping.html"&gt;The problems with hard wrapping email body text&lt;/a&gt; to understand this phenomenon a bit better.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Once you start adding actual newlines into your text just to make it more readable, you are sacrificing greppability.&lt;/strong&gt; You can think of the term &amp;ldquo;greppability&amp;rdquo; as a way to describe how well the text is suited for efficient searching through tools like grep. In the case of hard-wrapped text, if you search a sentence that is split across multiple lines, the search/find tools like grep might just fail since they usually operate on a line-by-line basis.
+&lt;br&gt;
+&lt;br&gt;
+This idea of greppability is so important and time-saving especially when working on a code-base. For example, in general, it is not very optimal to split your error message or log messages into multiple lines as you lose greppability. See &lt;a href="https://morizbuesing.com/blog/greppability-code-metric/"&gt;Greppability is an underrated code metric&lt;/a&gt;, if you are further interested.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, what&amp;rsquo;s the solution? &lt;strong&gt;Stop hard-wrapping and just use soft-wrapping&lt;/strong&gt;, many modern text editors already provide soft-wrapping solutions. This is what I have started to do recently. I am sure there are ways to achieve it in many modern editors. In Neovim it is as simple as to use the following commands:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;:set linebreak
+:set wrap
+:set columns=80
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="newline"&gt;Newline&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s say that you are collaborating with other people through Git, and you just changed one line of code in a file and then pushed it to a branch. And suddenly, your colleagues started complaining about how your commit diff looks like you&amp;rsquo;ve changed the entire file.&lt;/p&gt;
+&lt;p&gt;In this case, if you are not sure what&amp;rsquo;s going on, you might find yourself spending some time just to realize that it is your text editor that automatically converts all the line break characters to its format.&lt;/p&gt;
+&lt;p&gt;I had a few friends who used VSCode as their main text editor and experienced the same issue. They were very confused the first time they encountered this kind of issue. Luckily, I was there to help them understand what was going on. :)&lt;/p&gt;
+&lt;p&gt;I’m going to take a step back in time, but please bear with me for a bit.&lt;/p&gt;
+&lt;p&gt;A long time ago, before monitors were common, people interacted with computers using these cool devices known as &lt;a href="https://en.wikipedia.org/wiki/Teleprinter"&gt;teleprinters&lt;/a&gt;. These were devices that combined a keyboard for input and a printer for output. You would type stuff, and when you send your command to the computer, you would get the results just like this:&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/AwqryPuwl_w?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;Now, in the context of a teleprinter, what &amp;ldquo;newline&amp;rdquo; meant was something like first physically moving the typewriter&amp;rsquo;s carriage back to the beginning of the line (CR: Carriage Return) and then moving the paper up by one line (LF: Line Feed)&lt;/p&gt;
+&lt;p&gt;For these early machines designed to work with teletypes, both CR and LF were required to begin typing on a new line. And this influenced the early days of both Unix (1971) and MS-DOS (1981) as well. Back then, teletypes were still in use, so it kind of had to influence both operating systems in various ways. It turns out that, Unix developers chose to simplify the process of creating new lines by treating the LF character alone to signify the end of a line, while MS-DOS retained the full CR + LF combination. I guess the Microsoft guys were more concerned about legacy and hardware compatibility.&lt;/p&gt;
+&lt;p&gt;And all these conventions continue to exist even today. Files created in Windows use &lt;code&gt;\r\n&lt;/code&gt; for newlines and those generated in UNIX-like systems (Linux/MacOS/BSD) use &lt;code&gt;\n&lt;/code&gt;. However, many modern text editors are capable of reading and parsing both formats across both operating systems anyway so we don&amp;rsquo;t even notice these small differences. Unless we mess up our git diffs :D&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To avoid these situations, you can configure your text editor correctly, use a linter, and create a &lt;code&gt;.git/config&lt;/code&gt; file with &lt;code&gt;autocrlf&lt;/code&gt; set to your need.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id="conclude"&gt;Conclude&lt;/h1&gt;
+&lt;p&gt;Even plain text might not always be as straightforward as it appears. Understanding what’s happening behind the scenes can be helpful, especially for those who work with it frequently.&lt;/p&gt;
+&lt;p&gt;Also, if you have additional things to say about plain text, feel free to share them with me. I would really like to hear them.&lt;/p&gt;</description></item><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p&gt;Up until now, I was not aware that concurrency and parallelism were actually
 different things since they are often used interchangeably by some. I just
 learned that this is not the case while reading &lt;a href="https://www.braveclojure.com/concurrency/"&gt;Chapter
 9&lt;/a&gt; of the book &amp;ldquo;Clojure for the
@@ -660,121 +893,7 @@ your phone. Install &lt;code&gt;adb&lt;/code&gt; on your computer, connect to yo
 identify packages that seem unnecessary, and free your device from the unwanted
 &amp;lsquo;guests.&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Go ahead and take back at least a partial ownership of your phone by getting
-rid of these intruders!&lt;/p&gt;</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p&gt;For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
-It forms an essential part of my routine, as I use it for nearly all my tasks
-involving text. Be it drafting an essay, sending an email, or coding, Neovim is
-my go-to tool.&lt;/p&gt;
-&lt;p&gt;Moreover, I have a deep admiration for the UNIX philosophy and its command-line
-interface programs. It&amp;rsquo;s quite fascinating to observe how these small,
-uncomplicated UNIX programs, designed to do one thing flawlessly, interact
-effectively using piping mechanisms. Tools like sed, grep, awk, count, cut, and
-many others, often prove to be incredibly useful for text processing.&lt;/p&gt;
-&lt;p&gt;I can confidently state that both Neovim and UNIX have proven themselves
-invaluable in my work.&lt;/p&gt;
-&lt;p&gt;However, like many others, I have been introduced to another set of efficient
-tools for dealing with text, known as Large Language Models or LLMs. I&amp;rsquo;ve spent
-several months experimenting with tools like Co-pilot and ChatGPT, and I&amp;rsquo;ve
-found them to be highly beneficial for text-based tasks.&lt;/p&gt;
-&lt;p&gt;Naturally, I wanted to utilize the true potential of all these tools in my
-interactions including text. For this reason, I began searching for Neovim plugins
-and command-line interface programs capable of integrating these AI tools.&lt;/p&gt;
-&lt;p&gt;The process of integrating Co-pilot was relatively simple thanks to a
-&lt;a href="https://github.com/github/copilot.vim"&gt;plugin&lt;/a&gt; available on Neovim.&lt;/p&gt;
-&lt;p&gt;However, incorporating ChatGPT into my workflow wasn&amp;rsquo;t as straightforward as I
-had hoped. I looked into several neovim plugins, like
-&lt;a href="https://github.com/jackMort/ChatGPT.nvim"&gt;ChatGPT.nvim&lt;/a&gt;, which allow
-interaction with ChatGPT through Neovim. However, the majority of these plugins
-seemed like an overkill compared to what I expect from them. They also had many
-features designed to simplify the programming process, a job that Co-pilot
-already handles for me. Additionally, I would want llms to be accessible not
-only in vim but also within my regular terminal environment. I would appreciate
-it as a command-line interface tool, which would enable piping, giving
-arguments, and flags for more complicated tasks. Unlike Co-pilot, I would like
-to use a tool like ChatGPT in a more widespread context.&lt;/p&gt;
-&lt;p&gt;Hanging around Twitter, I recently saw a post from
-&lt;a href="https://twitter.com/garybernhardt/status/1735090271690637803"&gt;Gary&lt;/a&gt;, giving a
-credit to Simon Willison&amp;rsquo;s library, &lt;a href="https://github.com/simonw/llm"&gt;llm&lt;/a&gt;. I was
-surprised to find out that this library was exactly what I was looking for as
-well. It was a command-line interface tool that allowed me to interact with
-LLMs through my terminal, which is exactly what I wanted. I could pipe the
-output of any command into llm, and it would return the result of the input.
-For instance, I could pipe the output of a command like &lt;code&gt;cat&lt;/code&gt; into &lt;code&gt;llm&lt;/code&gt;, and
-it would return a response from the AI model, which you could pipe or redirect
-into another command or file.&lt;/p&gt;
-&lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
-&lt;p&gt;Here are some of the examples that comes to my mind on how you could use the
-&lt;code&gt;llm&lt;/code&gt; tool:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git diff | llm &lt;span style="color:#e6db74"&gt;&amp;#39;Recommend 5 different commit messages for these change&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat essay.txt | llm &lt;span style="color:#e6db74"&gt;&amp;#39;Summarize what these are about&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Furthermore, if you keep finding yourself using the same prompts over and over
-again, you can create templates for them.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Create a template for finding synonyms of a word&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;llm --system &lt;span style="color:#e6db74"&gt;&amp;#39;What are the synonyms of the following prompt&amp;#39;&lt;/span&gt; --save synonyms
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Create a template for rephrasing text&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;llm --system &lt;span style="color:#e6db74"&gt;&amp;#39;Fix grammar mistakes and rephrase the text&amp;#39;&lt;/span&gt; --save rephrase
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Create a template for finding titles for given content&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;llm --system &lt;span style="color:#e6db74"&gt;&amp;#39;Recommend 5 titles for the following prompt&amp;#39;&lt;/span&gt; --save titleize
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can later use these templates by passing the &lt;code&gt;-t&lt;/code&gt; flag to the command.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Rephrase the text which are copiod in your clipboard&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;xsel -b | llm -t rephrase
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Find synonyms of the word &amp;#39;serenity&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#39;serenity&amp;#39;&lt;/span&gt; | llm -t synonyms
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Find appropriate titles for your document&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat vi-llm.md | llm -t titleize
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can also further specify system messages, choose language model you want to
-interact with, and many more things, which you can examine on the
-&lt;a href="https://llm.datasette.io/en/stable/help.html"&gt;documentation&lt;/a&gt; of the app.&lt;/p&gt;
-&lt;h2 id="the-readline-issue"&gt;The Readline Issue&lt;/h2&gt;
-&lt;p&gt;So, I was quite happy for finding this tool, but the only thing I did not like
-about it was that when you try to use chat mode with &lt;code&gt;llm chat&lt;/code&gt; command, the
-readline would break my initial GNU readline settings defined in my
-&lt;code&gt;~/.inputrc&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;When delved into the source code of the repo, I have seen that other people
-have been encountering the same
-&lt;a href="https://github.com/simonw/llm/issues/376"&gt;issue&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I figured out that the issue is likely caused by the readline libraries used to
-build the &lt;code&gt;llm chat&lt;/code&gt; command overriding the default readline settings.
-Because I&amp;rsquo;m not very familiar with these Python libraries, I decided not to try
-fixing the issue by changing the source code. Instead, I have decided to use
-the &lt;code&gt;rlwrap&lt;/code&gt; command to address this problem. Basically, &lt;code&gt;rlwrap&lt;/code&gt; is a
-program that allows you the wrap the readline of the programs that you run so
-that you can still use the application&amp;rsquo;s readline as it was respecting your
-shell&amp;rsquo;s readline settings.&lt;/p&gt;
-&lt;p&gt;I know that by the time you, the reader, come across this, the issue may
-already be fixed. However, the purpose of this piece is not just to provide a
-solution to this particular problem, but to share how I approached solving it
-and what I learned from the experience.&lt;/p&gt;
-&lt;h2 id="the-vi-llm-wrapper"&gt;The vi-llm Wrapper&lt;/h2&gt;
-&lt;p&gt;Anyways, the problem with the &lt;code&gt;rlwrap&lt;/code&gt; solution was that, yeah, it allowed me
-to use my shell&amp;rsquo;s readline settings, so I could use vi keybindings when giving
-prompts, but I still could not copy, highlight, and modify the answers that are
-given to me, or the previous prompts that I have give. For this, I have built a
-shell script called &lt;a href="https://github.com/kugurerdem/vi-llm"&gt;vi-llm&lt;/a&gt; based around
-one of my favorite unix utils &lt;a href="https://joeyh.name/code/moreutils/"&gt;vipe&lt;/a&gt;, and
-llm. &lt;code&gt;vi-llm&lt;/code&gt; is basically a wrapper for llm that gets all of its prompts
-from Vim, enabling an interactive communication with ChatGPT using llm, by
-letting you input a message through the vim editor, then sending that message
-to the LLM interface. subsequently displaying any logs received from the
-interface right back in your text editor, repeatedly, until the user quitting
-the vim editor without doing any changes. In essence, it operates similarly to
-a chat interface. You type in messages (or commands) which get sent to the LLM
-system, and any response from the LLM system gets displayed back to you. This
-cycle continues, enabling continuous, interactive communication with the LLM
-from your command line.&lt;/p&gt;
-&lt;p&gt;Here is a quick showcase:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center" alt="vi-llm-showcase"&gt;&lt;/p&gt;
-&lt;p&gt;If you are interested, you can check out the &lt;a href="https://github.com/kugurerdem/vi-llm"&gt;github repo.&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ve been using Copilot and ChatGPT for months and now I am using this tool for
-a few days now. Now I have all the tools that I have needed in order to utilize
-my workflow even more, a strong autocompletion tool such as Copilot, a program
-that allows me to interact with large language models through shell: llm, and
-finally, a wrapper vi-llm based around llm for my personal use case.&lt;/p&gt;
-&lt;p&gt;I hope that this essay was helpful or at least interesting to some of you.&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
+rid of these intruders!&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
 across the system on Linux machines using X. This experience helped me grasp
 how the OS and Window Managers handle keyboard inputs, clarifying the reasons
 behind an unexpected behavior I had encountered before, which I also mention in
@@ -921,85 +1040,7 @@ configure their preferences through utilities provided by their window manager,
 and the window manager handles the interaction with the OS.&lt;/p&gt;
 &lt;p&gt;This serves as a compelling example of how casually experimenting with things
 can significantly contribute to one&amp;rsquo;s understanding of the core concepts they
-are dealing with.&lt;/p&gt;</description></item><item><title>Sockets and Message Framing</title><link>https://rugu.dev/en/blog/sockets-and-message-framing/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/sockets-and-message-framing/</guid><description>&lt;p&gt;I&amp;rsquo;ve recently been involved in a fintech project that demands high performance,
-posing various challenges related to a solid understanding of low-level
-concepts, concepts that are primarily relevant to the inner workings of the
-tools and protocols used beneath the surface.&lt;/p&gt;
-&lt;p&gt;One challenge involved separating two tasks into different processes:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;The main process, responsible for constructing the necessary business state from
-incoming messages through a specific socket connection.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The monitoring process, allowing users to track relevant changes in the state.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;To enable communication between these processes, I implemented Inter-Process
-Communication (IPC), and sockets naturally came to mind as a suitable solution.&lt;/p&gt;
-&lt;p&gt;Since not all incoming protocol socket messages to the main process were
-relevant to user interaction, I set up a mechanism to filter and process the
-relevant messages for the front-end perspective. These refined messages were
-then sent to the monitoring processes through a socket connection.&lt;/p&gt;
-&lt;p&gt;However, acknowledging that sockets operate at a low level and suspecting I might
-be overlooking something about the socket protocol, I aimed to confirm that each
-piece of data sent from the main process would result in one received data on
-each monitoring process. Delving into the self-assigned task of understanding
-how sockets work, it turned out that one sent message does not always have to
-correspond with one received data.&lt;/p&gt;
-&lt;p&gt;When sending messages through a TCP socket, it separates our messages into
-multiple parts called packets and sends those. The receiving socket then
-reorders and reassembles those packets into a chunk of the original message which is
-sent – a data – and appends it to the socket&amp;rsquo;s buffer. Since it is said that
-these packets are reordered and reassembled by the TCP socket itself, most
-people assume that one sent data will result in one data received. The thing is,
-sockets do not wait for all incoming packets to be reordered and reassembled to
-append them to their buffer. Instead, they append the chunks that are validated
-and arrive in the correct order as they keep coming. A socket can essentially be
-considered a Duplex Stream; it does not frame your messages and does not
-necessarily know which parts of the incoming/outgoing data actually constitute a
-meaningful message from your application layer&amp;rsquo;s perspective.&lt;/p&gt;
-&lt;p&gt;From the perspective of socket users, the inner workings of &amp;ldquo;packets&amp;rdquo; are not
-something to be worried about. The chunks added to the socket&amp;rsquo;s buffer are
-simply referred to as &amp;ldquo;received data&amp;rdquo; or &amp;ldquo;data chunks&amp;rdquo;. The meaningful portions
-of this data, converging as intended by the sender to convey a message, are
-simply labeled as &amp;ldquo;messages&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Since the sockets lack awareness of the types of data and the desired format for
-transmission, users of the socket must devise methods to identify which portions
-of the incoming data constitute meaningful messages. This process, commonly
-known as message framing, involves two approaches: the length prefix approach,
-where each message is prefixed by the byte length of its content, and the
-delimiter approach, where messages are separated by a designated delimiter
-character or sequence of characters.&lt;/p&gt;
-&lt;p&gt;What struck me the most about diving into these concepts was observing the
-widespread tendency for people to misunderstand the behavior of one of the most
-fundamental tools a developer may need to interact with – a socket. For
-instance, consider the experience of a developer who highlights this issue:&lt;/p&gt;
-
-
-
- &lt;blockquote&gt;
- &lt;p&gt;True story: I once worked for a company that developed custom client/server
-software. The original communications code had made this common mistake.
-However, they were all on dedicated networks with high-end hardware, so the
-underlying problem only happened very rarely. When it did, the operators would
-just chalk it up to “that buggy Windows OS” or “another network glitch” and
-reboot. One of my tasks at this company was to change the communication to
-include a lot more information; of course, this caused the problem to manifest
-regularly, and the entire application protocol had to be changed to fix it. The
-truly amazing thing is that this software had been used in countless 24x7
-automation systems for 20 years; it was fundamentally broken and no one
-noticed. [1]&lt;/p&gt;
-
- &lt;/blockquote&gt;
-
-&lt;p&gt;This entire process once again shows the importance of us developers being
-genuinely curious about the tools and protocols we work with. If I hadn&amp;rsquo;t asked
-such questions about the tool which I am using, just because the program works,
-I might have fallen into the same pitfalls that others have encountered.&lt;/p&gt;
-&lt;h1 id="references"&gt;References&lt;/h1&gt;
-&lt;p&gt;1 - Cleary, Stephen. “Message Framing.” Message framing. Accessed November 21,
-2023. &lt;a href="https://blog.stephencleary.com/2009/04/message-framing.html"&gt;https://blog.stephencleary.com/2009/04/message-framing.html&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;This blog post is a review of my journey into software development up until 2023-09-22. It is not intended to be a series of detailed explanations/guidelines for my career choices. Consider it more like personal reflections on events that shaped me as a developer. So, take the things that I say here with a grain of salt.&lt;/p&gt;
+are dealing with.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;This blog post is a review of my journey into software development up until 2023-09-22. It is not intended to be a series of detailed explanations/guidelines for my career choices. Consider it more like personal reflections on events that shaped me as a developer. So, take the things that I say here with a grain of salt.&lt;/p&gt;
 &lt;h1 id="my-first-introduction-to-programming"&gt;My First Introduction to Programming&lt;/h1&gt;
 &lt;p&gt;I used to hang out with my &lt;a href="https://www.yuempek.com"&gt;cousin&lt;/a&gt; a lot when I was around 6 or 7 years old. He would always develop something cool whenever I saw him using his computer.&lt;/p&gt;
 &lt;p&gt;Back then, I used to play &lt;a href="https://en.wikipedia.org/wiki/Peg_solitaire"&gt;Solo Test&lt;/a&gt; a lot. When I showed this game to my cousin, he thought about coding it and building a solution engine for it. He did both in front of my eyes. The game is still &lt;a href="http://yuempek.com/examples/javascript/solotest-Javascript.htm"&gt;available&lt;/a&gt; on his website. He was already one of my idols, but this was one of the moments that made me respect him even more. The idea of being able to build the things you like, the way you want, by this thing called &amp;ldquo;code&amp;rdquo; was fascinating.&lt;/p&gt;
@@ -1147,404 +1188,4 @@ Racer&lt;/a&gt; for exercise.&lt;/p&gt;
 English keyboard layout even their native language is not English. Most
 programming languages are designed to use symbols readily available on a US
 keyboard, such as {}[]/`\&amp;quot;&amp;rsquo;, which may not be as easily accessible on other
-layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
-was working. The developers were receiving consultancy from a strange person. At
-one point, he took control of the screen sharing while reviewing some of the
-pull requests that had been made to our codebase. When he shared his screen,
-there was nothing but a black screen. Suddenly, a terminal screen appeared with
-his keystrokes and he quickly began examining the codebase, providing feedback
-on people&amp;rsquo;s code at a speed I had never seen before. He was able to jump between
-different files in an instant, examining the diffs that were made in different
-git commits.&lt;/p&gt;
-&lt;p&gt;After seeing what I saw, I thought to myself, ‘If I were able to develop and
-refactor code at that speed, I would save a lot of time, I could have spent
-more time thinking about the actual stuff with as little friction as possible.
-I want to have this power.’ So I have looked at &lt;a href="https://gwn.wtf/resume.html"&gt;his
-CV&lt;/a&gt; and realized that he was knowledgeable on
-topics that many developers, including myself, struggle with. Influenced by
-this, I started asking him (he was our consultant, after all) as many questions
-as I could and focused on the resources he suggested and the technologies he
-used.&lt;/p&gt;
-&lt;p&gt;The inspiration from this hacker guy, combined with the very precious help from
-a friend of mine who had a strong interest in operating systems (he uses Arch in
-Qubes OS btw), being libre, and having control over his computer, led me to
-switch to Arch Linux. I have also benefited a lot from discussions on hackernews
-and from youtubers like Luke Smith which I also heard from the Qubes OS friend
-of mine.&lt;/p&gt;
-&lt;p&gt;In this post, I will first provide a brief overview of Linux and Arch Linux in
-particular. Then, I will discuss my reflections on the past few months,
-including the downsides and upsides of switching to Arch Linux. Finally, I will
-explain the programs that I currently use in my workflow.&lt;/p&gt;
-&lt;h2 id="what-are-my-reasons-for-using-linux"&gt;What are my reasons for using Linux?&lt;/h2&gt;
-&lt;p&gt;Unlike MacOS or Windows, Linux is a free and open-source operating system.
-Perhaps you are already know that a vast majority of servers actually run on
-Linux. Android, which is the operating system most phones use, is a specific
-variant of the Linux Operating System. By these means, many developers already
-seem to acknowledge the importance of learning Linux for practical reasons.
-However, the controversy usually arises when it comes to using Linux on a
-personal computer.&lt;/p&gt;
-&lt;p&gt;For an average computer user, it typically doesn&amp;rsquo;t matter which operating
-system they use as long as it doesn&amp;rsquo;t interfere with their daily tasks.&lt;/p&gt;
-&lt;p&gt;However, in my case, as my views have become more nuanced, switching to Linux
-has started to be more appealing.&lt;/p&gt;
-&lt;p&gt;Here are some of the reasons why I prefer using Linux over MacOS or Windows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Both Windows and MacOS forces you their ecosystem by their updates. With each
-update, its more likely that your Desktop Environment is cluttered by a new
-application which Microsoft added and most likely you will not even use. Most
-of the prebuilt stuff that are coming with Windows, I do not use at all. I
-think the same argument also holds for MacOS, as using one of their apps
-usually forces you to use other Apple apps and you to stick with their
-environment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Since both MacOS and Windows are closed-source, we don&amp;rsquo;t know for sure what
-they do under the scenes. Windows, for example had a builtin keylogger. If
-you are curious about this, please type &amp;ldquo;Windows builtin keylogger&amp;rdquo; to your
-favorite search engine. You will encounter many entries explaining how to
-disable builtin keylogging. Although I do not have sufficient reasons to
-claim that the Apple is doing the same thing, in practice, there is nothing
-preventing these Close Sourced applications to do things like that besides
-legal issues.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You need to pay some money in order to use both MacOS and Windows, whereas
-Linux is essentially free. You can set up Linux on a computer with no cost at
-all except some finite amount of time you will put in to learn things.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Linux is highly customizable and allows users to modify and tailor their
-environment to meet their specific needs. In contrast, Windows and Mac OS are
-more limited in terms of customization. This partly makes Linux a better
-choice for users who aim to be a power user, a user who wants to have control
-over their operating system and want to modify or customize it to meet their
-specific needs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Linux offers a variety of versions that cater to the different needs of
-various users, which is a significant advantage. These versions, known as
-Linux distros, are essentially Linux systems with additional packages
-specifically designed for certain users. I have not come across a similar
-phenomenon in either MacOS or Windows. Linux provides more options than any
-other proprietary operating system can offer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Using a product often means more than just using it; it also means becoming
-part of a group. Using Linux involves you in a community populated by hacker
-minded people. And whether you indend it or not being part of a group
-influences your habits. By immersing yourself in an environment filled with
-more experienced individuals, you become more exposed to their knowledge and
-ideas.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I understand that similar points could be made for the sake of Windows or
-MacOS. Examples include Linux not being able to run some proprietary software
-that these operating systems can, or Linux not being as convenient because you
-often have to figure out most things yourself. I get that. However, all things
-considered, the value that Linux provides to me exceeds the values that those
-proprietary OSes provide.&lt;/p&gt;
-&lt;h2 id="what-is-unique-about-arch-linux"&gt;What is unique about Arch Linux?&lt;/h2&gt;
-&lt;p&gt;Essentially, a Linux distro is a version of the Linux operating system that
-comes packaged with additional software and tools.&lt;/p&gt;
-&lt;p&gt;Oversimplicated, but an intuitive formula can be given as:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DISTRIBUTION = KERNEL + SOME ADDITIONAL DEPENDENCIES&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Theoretically, there&amp;rsquo;s nothing stopping you from doing in one Linux
-distribution what you can do in another simply by altering the &amp;lsquo;SOME ADDITIONAL
-DEPENDENCIES&amp;rsquo; part of the above formula. These additional dependencies can
-range from package managers to init systems, as well as the initial software
-that comes with the distribution.&lt;/p&gt;
-&lt;p&gt;When you examine the variety of potential distributions one can select from, it
-can be overwhelming. Why are there so many different Linux distributions? The
-answer is because many people have different objectives when using an operating
-system and therefore require different dependencies. Additionally, numerous
-organizations and communities each have their distinct views on what
-constitutes a good Linux distribution.&lt;/p&gt;
-&lt;p&gt;While distros like Ubuntu focus on being more friendly and welcoming to new
-users, some distros, like Debian focus on stability and some like Arch, focus
-on a certain combination of being minimal, cutting-edge and active.&lt;/p&gt;
-&lt;p&gt;To me the key principles that Arch Linux were emphasasising (which can also be
-read in their &lt;a href="https://wiki.archlinux.org/title/Arch_Linux"&gt;wiki&lt;/a&gt;), were more
-appealing than the other mainstream distros available.&lt;/p&gt;
-&lt;p&gt;Arch Linux essentially distinguishes itself as a minimalist distribution with a
-very knowledgeable community. This fact partially explains why Arch is
-considered one of the most cutting-edge distributions out there &amp;ndash; its active
-community maintains available packages that Arch users can install through a
-community-driven repository called the Arch User Repository.&lt;/p&gt;
-&lt;p&gt;When you install Arch, you don&amp;rsquo;t receive anything but a virtual console and
-specific programs that you instructed the Arch installer to download. Unlike
-other distributions that build many packages into your system by default, which
-might include several programs that you may need but at the cost of downloading
-additional unwanted programs, Arch Linux instead puts the customization
-responsibility on the user. Which allows you to install and focus solely on
-what you need.&lt;/p&gt;
-&lt;h2 id="some-reflections"&gt;Some Reflections&lt;/h2&gt;
-&lt;h3 id="getting-used-to-it"&gt;Getting used to it&lt;/h3&gt;
-&lt;p&gt;Switching from Windows to Arch Linux was really challenging as in Arch Linux,
-it is you that needs to bear practically all responsibilities regarding your
-computer. As a result of this transition, I began to appreciate all the
-features we often take for granted; screen lockers, clipboard functionalities,
-power management, multimedia keys, and so on. These functionalities are usually
-managed by specific processes running unseen in the background. The average
-computer user might not realize that these are distinct programs that need
-setup. However, when you are building your system on a minimalist distribution,
-your knowledge of such details tends to increase.&lt;/p&gt;
-&lt;h3 id="variety-of-solutions"&gt;Variety of Solutions&lt;/h3&gt;
-&lt;p&gt;When you want to accomplish something on Linux, there are many alternative ways
-to do it. As a result, you&amp;rsquo;re often left wondering, &amp;ldquo;which method/approach
-should I choose first?&amp;rdquo; I think that these kinds of questions frequently
-puzzled me. Here are some examples:&lt;/p&gt;
-
-
-
- &lt;blockquote&gt;
- &lt;p&gt;&amp;lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
-protocol, should I switch to it?&amp;rsquo;&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;A program called pipeware for audio handling is recommended but some suggest
-something called pulseaudio, which one shall I use?&amp;rsquo;&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
-neovim is more community driven.&amp;rsquo;&lt;/p&gt;
-
- &lt;/blockquote&gt;
-
-&lt;p&gt;Don&amp;rsquo;t misunderstand me. I&amp;rsquo;m not suggesting that these questions are irrelevant.
-They indeed become meaningful when the minor differences between them begin to
-matter. However, I believe that the best approach is to simply select a tool
-that resolves the problem at hand without overthinking and keep progressing in
-our work. It&amp;rsquo;s not beneficial for beginners to obsessively search for the
-&amp;lsquo;best&amp;rsquo; program. Often, opting for a &amp;lsquo;sufficient&amp;rsquo; solution can also be the
-&amp;lsquo;best&amp;rsquo; choice, considering the time you might waste finding a program.&lt;/p&gt;
-&lt;h3 id="some-beginner-mistakes"&gt;Some beginner mistakes&lt;/h3&gt;
-&lt;p&gt;One common mistake I see among beginners, which I also made myself, is
-attempting to do things without understanding them properly. This is especially
-common among new Linux users who may wind up breaking their system by copying
-and pasting commands from some forum. They tend to install programs that
-perform the same functions and use different package managers that configure
-multiple dependencies and configuration files. Which often leads to one manager
-disrupting the changes made by the other, and so on.&lt;/p&gt;
-&lt;p&gt;While it&amp;rsquo;s understandable that people may want to work in the same way they&amp;rsquo;re
-accustomed to, this habit can also hinder them from getting used to the Linux
-environment. For instance, instead of looking for programs that allow
-installations through GUI-based applications, it&amp;rsquo;s more beneficial to
-understand how to operate the native package manager through a terminal, learn
-how to build things from source code using makefiles, and so on.&lt;/p&gt;
-&lt;p&gt;The solutions people try to replicate their previous workspace can become
-overly complicated. In these cases, it can be better not to solve the &amp;lsquo;problem&amp;rsquo;
-in the first place. Hell, even I&amp;rsquo;ve been guilty of this myself. Since I loved to
-use MSPaint, whenever I needed to draw something on Linux, I used to run a
-Windows instance on QEMU and start MSPaint with a bash alias that I had set up.
-In retrospect, this was a poor solution as it would have been just simpler to
-switch to another drawing program designed for Linux.&lt;/p&gt;
-&lt;h3 id="dual-boot"&gt;Dual Boot&lt;/h3&gt;
-&lt;p&gt;Setting up a dual-boot computer with Linux and Windows could seem like a good
-choice for those interested in learning Linux. However based on my experience,
-it is usually a bad idea. I made the error of installing Linux Mint alongside
-Windows few years ago only to find myself frequently trying to synchronize my
-files between the two systems. The maintenance that was required increased due
-to the usage of both systems. Moreover, having the option to fall back on
-Windows when facing issues prevented me from engaging with the Linux
-environment enough. I could not learn how to troubleshoot and resolve issues on
-myself.&lt;/p&gt;
-&lt;p&gt;In my view, what I have described above is like attempting to learn swimming
-while using a flotation device. It&amp;rsquo;s probably more effective to dive in and
-learn the Linux operating system without relying on Windows as a safety
-net.&lt;/p&gt;
-&lt;p&gt;I guess the only valid reason for wanting to keep Windows installed on a
-computer is to play video games or use specific programs that are not available
-on Linux. Other than that, I suggest using Linux for most things you do.&lt;/p&gt;
-&lt;h3 id="gui-vs-terminal"&gt;GUI vs Terminal&lt;/h3&gt;
-&lt;p&gt;Linux users often use terminal programs as they sometimes offer more
-flexibility and power for certain tasks. The tasks are usually completed by
-using command-line interface (CLI) programs which allows users to enter
-commands to perform various actions. This is different from programs with a
-graphical user interface (GUI) which usually have buttons and menus.&lt;/p&gt;
-&lt;p&gt;Even when using GUIs, we often end up performing repetitive tasks manually. In
-these kinds of situations, using a terminal instead of a GUI program can become
-really handy. As simple CLI can easily be used programmatically. They can be
-used in loops, conditionally, and to pipe the output from one program to
-another. This approach can be a game-changer, especially for those who aspire
-to become power users. Here are a few simple examples of where this approach
-has saved me a significant amount of time:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Recently, I had a batch of 113 weirdly rotated images, but I was able to
-rotate them all to the desired orientation using the following code:&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt; for file in *.jpg;
- do
- convert $file -rotate 90 rotated-$file;
- done
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I used &lt;code&gt;yt-dlp&lt;/code&gt; to easily download youtube videos and playlists. It was one
-of the most comfortable downloading experiences I had.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I used &lt;code&gt;pdfcrop&lt;/code&gt; for cropping PDF files.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I changed the structure of folders that have many files in them by using
-simple for loops alongside with &lt;code&gt;mv cp rm&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Not to mention how much its easier to install packages that are on AUR or Arch
-Repository compared to installing stuff in Windows.&lt;/p&gt;
-&lt;p&gt;Overall, I strongly believe that the power of interacting with programs through
-terminal can increase one&amp;rsquo;s overall productivity.&lt;/p&gt;
-&lt;h3 id="arch-linux-manuals"&gt;Arch Linux manuals&lt;/h3&gt;
-&lt;p&gt;One caveat of using command-line interfaces (CLIs) is that it can be easy to
-forget the specifics of the interface. As a result, it is essential for terminal
-users to know how to quickly open and find the information they need in manual
-pages in order to effectively use CLIs.&lt;/p&gt;
-&lt;p&gt;Thankfully, most programs in Linux already have their own manuals available
-through the &lt;code&gt;man&lt;/code&gt; command. When I need to use a certain utility or CLI function,
-all I do is open the terminal through a keybinding that I have set up and type
-&lt;code&gt;man programname&lt;/code&gt;, then I can quickly scroll through the manual page using VI
-keybindings.&lt;/p&gt;
-&lt;p&gt;Despite the fact that I am already acquinted by heart with some of the most
-important flags and utilities of the programs that I use, I am also a lot better
-(faster) at finding the stuff I need. It is just as much important, if not more
-important, to be able to find the stuff you need by knowing them by heart.&lt;/p&gt;
-&lt;h2 id="current-workflow"&gt;Current Workflow&lt;/h2&gt;
-&lt;p&gt;All of the configs for the apps below can be found from my &lt;a href="https://www.github.com/kugurerdem/legacy-dotfiles"&gt;dotfiles
-github repository&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="window-manager"&gt;Window Manager&lt;/h3&gt;
-&lt;p&gt;I do not use any desktop environments. I use a tiling Window Manager (WM), a
-type of software that automatically arranges and resizes application windows in
-a non-overlapping fashion, without the need for manual dragging and resizing.
-The particular WM I use now is called &lt;code&gt;dwm&lt;/code&gt;, it is one of the tools that are
-built by the hacker organization &lt;a href="https://suckless.org/"&gt;suckless&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Having switching to a tiling window manager, I now realize that how much of a
-hassle was it to manually resize, drag, and select all my application windows.
-Besides slowing me down, your average desktop environment also takes a lot of
-space with their tilebars and etc. which I might want to use for seeing more
-content.&lt;/p&gt;
-&lt;p&gt;dwm comes with another program called &lt;code&gt;dmenu&lt;/code&gt; which enables you to select list
-of options from the menu and do whatever you want with it. Initially dwm uses
-dmenu to make the user easily open the programs they want to open through a
-certain shortcut.&lt;/p&gt;
-&lt;p&gt;I also use &lt;code&gt;dwmblocks&lt;/code&gt; to control the contents of the info bar on the top left.
-I only show Volume, Battery, Memory and Date info there.&lt;/p&gt;
-&lt;h3 id="keyboard-layout"&gt;Keyboard Layout&lt;/h3&gt;
-&lt;p&gt;Since I am from Turkey, I need to use Turkish characters in my daily life a lot
-especially when interacting with my friends. The thing is I also find English
-keyboard layout very productive, especially when it comes to coding and using
-Vim. As a result, I needed a mechanism to be able to benefit from both of these
-functionalities. For this, I have attached a shortcut to switch between TR and
-US layouts.&lt;/p&gt;
-&lt;p&gt;I have also swapped the Escape key with the CapsLock key as I use the escaping
-functionality a lot when using VIM but do not use Caps Lock that much. It is
-ergonomically a lot more preferable to use the CapsLock key for the Escape
-functionality.&lt;/p&gt;
-&lt;p&gt;Here are my settings in .xinitrc that imply those changes:&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# ~/.xinitrc
-
-setxkbmap -option &amp;#34;caps:swapescape&amp;#34;
-setxkbmap -model pc104 -layout us,tr -option grp:win_space_toggle
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I am also aware that I could have used &lt;code&gt;tr-alt-q&lt;/code&gt; layout which is basically an
-English keyboard layout but if you use AltGr, keys like &lt;code&gt;i,o,u,g,c&lt;/code&gt; turns into
-&lt;code&gt;ı,ö,ü,ğ,ç&lt;/code&gt;. The problem is that the only way I found was to change the keycode
-tables through &lt;code&gt;.Xmodmap&lt;/code&gt; and it was buggy. I could not find a simple and clean
-way to implement this layout&lt;/p&gt;
-&lt;h3 id="terminal--shell"&gt;Terminal &amp;amp; Shell&lt;/h3&gt;
-&lt;p&gt;As terminal, I use &lt;code&gt;st&lt;/code&gt;, so far I have not seen particular advantage of using st
-over other possible terminals that I could have use Alacritty or so, I just
-needed a terminal that is lightweight and st was one of the possibilities I
-could choose.&lt;/p&gt;
-&lt;p&gt;As shell, I mostly use bash. But I understand using zsh is perfectly fine in a
-personal environment as well. The only possible problem that I can think of zsh
-is portability problem of the scripts written for it.&lt;/p&gt;
-&lt;h3 id="text-editing-and-programming"&gt;Text editing and programming&lt;/h3&gt;
-&lt;p&gt;I use &lt;code&gt;neovim&lt;/code&gt; for almost all my works involving text. Neovim is a fork of Vim,
-a highly configurable text editor that is designed to be extendible and also
-efficient through the maximal use of keyboard both with macros and
-shortcuts. It also comes with a powerful syntax highlighting engine and support
-for a wide range of programming languages and file formats. As a dialect of Vim,
-Neovim is fully compatible with Vim and uses the same configuration files and
-command syntax, but it includes additional functionality and improvements that
-are not available in the original Vim. dialect of vim.&lt;/p&gt;
-&lt;p&gt;&amp;lsquo;Why use neovim instead of vim?&amp;rsquo; you might ask. Right now, it does not matter to
-me whether I use vim or neovim since in both of these the things I want is
-available. I use neovim because it was my first decision to go with it and
-because of this I already have my files configured for neovim. The reason why I
-initially chose neovim over vim was because of a certain workflow video I have
-seen on youtube: Vim had not some the plugins that were used in the video. Later
-on, I thought that video was full of unnecessary stuff so I gave up on it.&lt;/p&gt;
-&lt;p&gt;Getting used to vim has significantly improved my speed and comfort when
-programming as its command mode is very efficient for text navigation and
-manipulation without even having to use mouse or moving your hand much.
-When my friends see me getting done stuff in VIM they sometimes refer to it as
-&amp;lsquo;black magic&amp;rsquo;, I like this a lot too. =)&lt;/p&gt;
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/8n-ylg-pw6s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-&lt;p&gt;I should also mention that I have started to convert some of my .odt, .docx
-files like diaries, logs, records to plain text just because it gives me to
-flexibility to be able to edit/read them through simple text editors such as
-vim.&lt;/p&gt;
-&lt;h3 id="terminal-multiplexer"&gt;Terminal Multiplexer&lt;/h3&gt;
-&lt;p&gt;A terminal multiplexer is a software program that allows multiple terminal
-sessions to be created, accessed, and controlled from a single terminal window
-or console. It enables users to have multiple terminal sessions running
-simultaneously, switch between them, and manage them easily.&lt;/p&gt;
-&lt;p&gt;Since I use terminal for almost all the text work I do including software
-development, it is, thus, ergonomically important for me to have a way to manage
-different programs through one terminal.&lt;/p&gt;
-&lt;p&gt;I do this thorugh a program called &lt;code&gt;dvtm&lt;/code&gt;, an alternative for tmux.&lt;/p&gt;
-&lt;p&gt;Although I can split screens in vim when doing software development, it does not
-give the same flexibity and ease of use the dvtm gives. There are some
-programs you might want to see running simultaneously through one terminal
-instead in addition to being able to edit/write files. You can do the latter in
-vim, but the former is not so trivial to achieve.&lt;/p&gt;
-&lt;p&gt;Since &lt;code&gt;dvtm&lt;/code&gt; already solves a problem that vim splits solve, I do not use vim
-splits anyways.&lt;/p&gt;
-&lt;p&gt;Here is an example showcase of dvtm:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize" alt="Example DVTM
-Showcase"&gt;&lt;/p&gt;
-&lt;h3 id="file-manager"&gt;File Manager&lt;/h3&gt;
-&lt;p&gt;I use &lt;code&gt;ranger&lt;/code&gt;, considering to switch to &lt;code&gt;lf&lt;/code&gt; but also don&amp;rsquo;t see a reason for it
-since I am already used to &lt;code&gt;ranger&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;As far as I remember the only thing I have changed in ranger is some of the
-priorities on which programs to use when openning files and to enable image
-preview mechanism.&lt;/p&gt;
-&lt;p&gt;Before getting used to ranger I was using a file manager with GUI named
-&lt;code&gt;dolphin&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="taking-notes"&gt;Taking Notes&lt;/h3&gt;
-&lt;p&gt;I used lots of different note-taking apps such as Google Keep, Obsidian, Notion…
-The problem is, almost all of these apps come with features that I do not use at
-all, I mostly use note-taking applications as a way to remember the things that
-I intended to do and for this, all I need is a way to sync my files between my
-Phone and Computer. I used telegram for this purpose for a while, but since its
-purpose is not this, I then looked for some alternatives.&lt;/p&gt;
-&lt;p&gt;Meanwhile, I found &lt;code&gt;gitjournal&lt;/code&gt;, it is a git based note taking application with
-a Mobile App. On my phone, I use its own application whereas on my computer, I
-just use the &lt;code&gt;gitjournal&lt;/code&gt; script that I created that updates the notes by
-automatically running commands such as &lt;code&gt;git pull&lt;/code&gt; &lt;code&gt;git commit&lt;/code&gt; &lt;code&gt;git push&lt;/code&gt; before
-and after opening &lt;code&gt;nvim&lt;/code&gt; to change note files.&lt;/p&gt;
-&lt;p&gt;The script for this can be found &lt;a href="https://github.com/kugurerdem/legacy-dotfiles/commit/8eb5c90e3db4fe4e553e9caea23607c88333c0ce#diff-b756de9b4e56d77950c9933ad361337ca35b7a23f479d34d9ac28a8ac29db497"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="password-management-and-otp"&gt;Password Management and OTP&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;pass&lt;/code&gt; and &lt;code&gt;pass-otp&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Also there is a very simple script called &lt;code&gt;passmenu&lt;/code&gt; which uses dmenu to fetch
-the passwords from pass easily. For passphrase aplet to open, you need &lt;code&gt;gtk2&lt;/code&gt; or
-&lt;code&gt;gtk3&lt;/code&gt; though.&lt;/p&gt;
-&lt;h3 id="wifi--bluetooth"&gt;Wifi &amp;amp; Bluetooth&lt;/h3&gt;
-&lt;p&gt;I use &lt;code&gt;bluetoothctl&lt;/code&gt; to connect bluetooth devices and use &lt;code&gt;networkmanager&lt;/code&gt; &amp;amp;
-&lt;code&gt;nmcli&lt;/code&gt; to connect to the internet.&lt;/p&gt;
-&lt;h3 id="web-browser"&gt;Web Browser&lt;/h3&gt;
-&lt;p&gt;I just use &lt;code&gt;brave&lt;/code&gt; like a normal human being. I like that it has a builtin
-adblocker. Since I like moving with vim keybindings, I have also installed an
-extension called &lt;a href="https://vimium.github.io/"&gt;vimium&lt;/a&gt;. This extension helps you to navigate your browser
-through vim keybindings.&lt;/p&gt;
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t67Sn0RGK54?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Switching to Arch Linux was a challenging experience due to its steep learning
-curve. I had to deal with many things that I always used, but never realized
-that there were actual programs for those functionalities, such as clipboard,
-screen locks, and opening screens. It took some time to get used to it, but now
-I am so accustomed to using Arch Linux that I don&amp;rsquo;t even want to use Windows
-anymore, except for cases like playing video games (which I also don&amp;rsquo;t do it
-much these days).&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s also fun to challenge yourself and succesfully get over those challenges.&lt;/p&gt;</description></item></channel></rss>
+layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item></channel></rss>
