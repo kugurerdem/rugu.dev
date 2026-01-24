@@ -2,29 +2,31 @@
     {{ partial "head.html" . }}
     <body>
         {{ partial "nav.html" . }}
-        <div class="master-container">
-            <article>
-                <div class="page">
-                    {{ $content := readFile $.Site.Params.WelcomePath }}
-                    {{ $content | markdownify }}
-                </div>
+        {{ partial "header.html" . }}
+        <main>
+            <div class="master-container">
+                <article>
+                    <div class="page">
+                        {{ $content := readFile $.Site.Params.WelcomePath }}
+                        {{ $content | markdownify }}
+                    </div>
 
-                <h1 style="margin-top: 1em; text-align: center;"> Most Recent Essays </h1>
-                <div class="page">
-                    {{ with .Site.GetPage "section" "blog" }}
-                        {{ partial "blog-entry-list.html" (first 5 .Pages) }}
-                    {{ end }}
-                    <p style="text-align: center; margin-top: 1em;">
-                        <a href="/en/blog/">View all essays</a>
-                    </p>
-                </div>
+                    <h1 style="margin-top: 1em; text-align: center;"> Most Recent Essays </h1>
+                    <div class="page">
+                        {{ with .Site.GetPage "section" "blog" }}
+                            {{ partial "blog-entry-list.html" (first 5 .Pages) }}
+                        {{ end }}
+                        <p style="text-align: center; margin-top: 1em;">
+                            <a href="/en/blog/">View all essays</a>
+                        </p>
+                    </div>
 
-                <h1 style="margin-top:1.5em; text-align: center;"> Recommended Essays </h1>
-                <div class="page">
-                    {{ with .Site.GetPage "section" "blog" }}
-                        {{ partial "blog-entry-list.html" (where .Pages ".Params.recommended" true) }}
-                    {{ end }}
-                </div>
+                    <h1 style="margin-top:1.5em; text-align: center;"> Recommended Essays </h1>
+                    <div class="page">
+                        {{ with .Site.GetPage "section" "blog" }}
+                            {{ partial "blog-entry-list.html" (where .Pages ".Params.recommended" true) }}
+                        {{ end }}
+                    </div>
 
                     <h1 style="margin-top: 1.5em; text-align: center"> Projects </h1>
                     <div class="projects-grid">
@@ -50,9 +52,8 @@
                         </div>
                         {{ end }}
                     </div>
-
-            </article>
-            {{ partial "aside.html" . }}
-        </div>
+                </article>
+            </div>
+        </main>
     </body>
 <html>
