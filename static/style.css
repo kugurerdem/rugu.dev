@@ -132,6 +132,11 @@ article {
     gap: 0.25em;
 }
 
+.header-name {
+    color: inherit;
+    text-decoration: none;
+}
+
 .header-description {
     font-size: 0.9em;
     color: var(--text-muted);
