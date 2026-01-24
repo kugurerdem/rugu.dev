@@ -457,7 +457,6 @@ code {
     display: flex;
     flex-direction: column;
     gap: 0.25em;
-    flex: 1;
     max-width: 36em;
 }
 
@@ -486,16 +485,22 @@ code {
     flex-shrink: 0;
 }
 
-@media (max-width: 52em) {
+@media (max-width: 60em) {
     .blog-entry-content {
         max-width: none;
     }
 
+    .blog-entry {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
     .blog-entry-thumbnail {
-        width: 160px;
-        max-width: 45vw;
+        width: 100%;
+        max-width: 100%;
         height: auto;
-        aspect-ratio: 160 / 110;
+        aspect-ratio: 16 / 9;
+        margin-top: 0.2em;
     }
 }
 
