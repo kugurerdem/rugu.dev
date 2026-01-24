@@ -7,9 +7,7 @@
             <div class="master-container">
                 <article>
                     <div class="page">
-                        {{ with .Site.GetPage "/about" }}
-                            {{ .Content }}
-                        {{ end }}
+                        {{ readFile $.Site.Params.aboutPath | markdownify }}
                     </div>
 
                     <h1 style="margin-top: 1em; text-align: center;"> Most Recent Essays </h1>
