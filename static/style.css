@@ -72,14 +72,6 @@ nav {
   max-width: 71em; /* Same as .master-container */
 }
 
-nav > .menu{
-    display: flex;
-    gap: 1em;
-    padding-left: 0em;
-    flex-grow: 9;
-    flex-wrap: wrap;
-}
-
 nav > .languages {
     flex-grow: 1;
     display: flex;
@@ -164,23 +156,10 @@ article {
     gap: 0.2em;
 }
 
-pre {
-    margin-left: 1em;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
 .page{
     max-width: 54rem;
     margin-bottom: 1em;
     padding: 1em 1em;
-}
-
-.icon-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 .icon {
@@ -366,6 +345,8 @@ blockquote.alert.alert-caution {
 pre {
   padding-left: 1.5em;
   margin-left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
   background-color: var(--code-bg);
 }
 
