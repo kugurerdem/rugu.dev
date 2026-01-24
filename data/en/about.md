@@ -1,11 +1,3 @@
----
-title: 'About Me'
-draft: false
-_build:
-  render: never
-  list: never
----
-
 # Hi! I'm Uğur
 
 I write about software development, philosophy, and psychology, mostly through self-observations.
