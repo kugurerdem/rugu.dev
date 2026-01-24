@@ -304,6 +304,39 @@ blockquote.alert.alert-caution {
   background: #fef2f2;
 }
 
+/* Dark mode alert overrides */
+@media (prefers-color-scheme: dark) {
+  blockquote.alert {
+    border-color: #444;
+    background: #2a2a2a;
+  }
+
+  blockquote.alert.alert-note {
+    border-left-color: #3b82f6;
+    background: #1e3a5f;
+  }
+
+  blockquote.alert.alert-tip {
+    border-left-color: #10b981;
+    background: #1a3d2e;
+  }
+
+  blockquote.alert.alert-warning {
+    border-left-color: #f59e0b;
+    background: #3d3520;
+  }
+
+  blockquote.alert.alert-important {
+    border-left-color: #7c3aed;
+    background: #2d2548;
+  }
+
+  blockquote.alert.alert-caution {
+    border-left-color: #ef4444;
+    background: #3d2020;
+  }
+}
+
 @media (max-width: 52em) {
     .site-header {
         flex-direction: column;
