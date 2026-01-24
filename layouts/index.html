@@ -26,31 +26,6 @@
                             {{ partial "blog-entry-list.html" (where .Pages ".Params.recommended" true) }}
                         {{ end }}
                     </div>
-
-                    <h1 style="margin-top: 1.5em; text-align: center"> Projects </h1>
-                    <div class="projects-grid">
-                        {{ range $.Site.Params.Projects }}
-                        <div class="project-card">
-                            <div class="project-card-header">
-                                {{ with .icon }}
-                                <img src="{{ . }}" alt="Project icon" class="project-icon" />
-                                {{ end }}
-                                <h2 class="project-name">{{ .name }}</h2>
-                            </div>
-
-                            <p class="project-description">{{ .description }}</p>
-                            <div class="project-links">
-                                {{ range .links }}
-                                    {{ range $k, $v := . }}
-                                    <a href="{{ $v }}" target="_blank">
-                                        <img class="icon hover" src="/icons/{{ $k }}.svg"/>
-                                    </a>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
                 </article>
             </div>
         </main>
