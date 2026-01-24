@@ -150,6 +150,10 @@ article {
     font-size: 0.85em;
 }
 
+.header-email {
+    margin-left: 0.75em;
+}
+
 .header-links .icon {
     width: 1.5em;
     height: 1.5em;
@@ -159,6 +163,19 @@ article {
     display: flex;
     align-items: center;
     gap: 0.2em;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    margin: 2.5em auto 1.5em;
+    padding: 1.2em 1em 0;
+    max-width: 54em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    font-size: 0.85em;
 }
 
 .page{
