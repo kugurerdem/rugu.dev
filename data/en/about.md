@@ -1,4 +1,4 @@
-# Hi! I'm Uğur
+# Hi!
 
 I write about software development, philosophy, and psychology, mostly through self-observations.
 

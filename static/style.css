@@ -1,7 +1,28 @@
 * { box-sizing: border-box }
 
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --text-muted: #555;
+    --code-bg: #eee;
+    --border-color: #ddd;
+    --link-color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --text-muted: #aaa;
+        --code-bg: #2a2a2a;
+        --border-color: #444;
+        --link-color: #6db3f2;
+    }
+}
+
 html {
-    background-color: #eee;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     tab-size: 4;
     font: 16px / 180% sans-serif;
 }
@@ -31,14 +52,6 @@ html {
         line-height: 1.3;
         margin-top: 1em;
         margin-bottom: 0.3em;
-    }
-    
-    .project-name {
-        font-size: 1.1rem;
-    }
-    
-    .project-description {
-        font-size: 0.9rem;
     }
 }
 
@@ -75,6 +88,10 @@ nav > .languages {
     flex-wrap: wrap;
 }
 
+.active-lang {
+    color: var(--text-color);
+}
+
 ul, li {
     margin: 0 0;
     margin-left: 0.5em;
@@ -83,7 +100,7 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: blue;
+    color: var(--link-color);
 }
 
 time {
@@ -125,7 +142,7 @@ article {
 
 .header-description {
     font-size: 0.9em;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .header-links {
@@ -154,11 +171,9 @@ pre {
 }
 
 .page{
-    background-color: #fff;
     max-width: 54rem;
     margin-bottom: 1em;
     padding: 1em 1em;
-    box-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
 
 .icon-container {
@@ -351,103 +366,33 @@ blockquote.alert.alert-caution {
 pre {
   padding-left: 1.5em;
   margin-left: 0;
-  background-color: #eee;
+  background-color: var(--code-bg);
 }
 
 pre > code {
-    background-color: #eee;
+    background-color: var(--code-bg);
 }
 
 code {
-    background-color: #eee;
+    background-color: var(--code-bg);
     border-radius: 0.3em;
 }
 
 .tag {
-    background-color: #eee;
+    background-color: var(--code-bg);
     padding: 0.2em;
     margin-right: 0.2em;
     border-radius: 0.3em;
 }
 
 .tag:hover {
-    background-color: #ccc;
+    background-color: var(--border-color);
 }
 
 .tag span {
     color: #900;
     font-size: 0.7em;
     border-radius: 100%;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.project-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1.2rem;
-  background-color: #fdfdfd;
-  transition: box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.project-card-header {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.project-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
-.project-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.project-description {
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-.project-links {
-  justify-content: end;
-  margin-top: auto;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.project-link {
-  font-size: 0.85rem;
-  color: #0066cc;
-  text-decoration: none;
-  border: 1px solid #0066cc;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  transition: background 0.2s ease;
-}
-
-.project-link:hover {
-  background: #0066cc;
-  color: white;
 }
 
 .blog-entry {
@@ -461,7 +406,7 @@ code {
     width: 6em;
     flex-shrink: 0;
     font-size: 0.8em;
-    color: #666;
+    color: var(--text-muted);
 }
 
 .recommended {

@@ -5,7 +5,7 @@
                 <span> | </span>
             {{ end }}
             {{ if eq $.Lang $lang.Lang }}
-            <a href="/{{ $lang.Lang }}" style="color: black"> {{ $lang.Lang }} </a>
+            <a href="/{{ $lang.Lang }}" class="active-lang"> {{ $lang.Lang }} </a>
             {{ else }}
             <a href="/{{ $lang.Lang }}"> {{ $lang.Lang }} </a>
             {{ end }}
