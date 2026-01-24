@@ -21,17 +21,11 @@ languages:
     weight: 0
     params:
       description: "a software developer with a hacker's attitude, interested in philosophy and psychology"
-      contact: 'Contact'
       aboutPath: 'data/en/about.md'
-      recommendedPath: 'data/en/recommended.md'
-      miscPath: 'data/en/misc.md'
   tr:
     contentDir: content/turkce
     languageName: Turkce
     weight: 1
     params:
       description: "hacker kafalı yazılımcı, felsefe ve psikoloji ile ilgileniyor"
-      contact: 'İletişim'
-      aboutPath: 'data/tr/about.md'
-      recommendedPath: 'data/en/recommended.md'
-      miscPath: 'data/en/misc.md'
+      aboutPath: 'data/en/about.md'
