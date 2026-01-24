@@ -13,21 +13,6 @@ params:
   email: "ugur@rugu.dev"
   repo: "https://github.com/kugurerdem/rugudev"
 
-  projects:
-    - name: "HackerNews Domain Stats"
-      description: "A web-based tool that analyzes and visualizes how domains perform on Hacker News over time."
-      links:
-        - url: "https://hnstats.rugu.dev"
-        - essay: "https://rugu.dev/en/blog/hnstats"
-        - github: "https://github.com/kugurerdem/hn-domain-stats"
-    - name: "Mark Scroll Positions"
-      icon: "https://lh3.googleusercontent.com/0c57_gJprYM30_Z_MXYltog7WowlktAWgRtn_BNfDiCN17POHQtSAt2AaLleCjhFofD53_Ez1osMaTSiC4HT-Qbu0Q=s120"
-      description: "An extension for saving scroll positions so that you can resume reading later with an ease."
-      links:
-        - url: "https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald"
-        - essay: "https://rugu.dev/en/blog/mark-scroll-positions"
-        - github: "https://github.com/kugurerdem/mark-scroll-positions"
-
 defaultContentLanguageInSubdir: true
 languages:
   en:
