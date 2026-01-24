@@ -1,7 +1,9 @@
 <header class="site-header">
-    <img class="header-author-image" src="{{.Site.Params.AuthorImage}}"/>
+    <a href="{{ .Site.Home.RelPermalink }}">
+        <img class="header-author-image" src="{{.Site.Params.AuthorImage}}"/>
+    </a>
     <div class="header-info">
-        <b>Uğur Erdem Seyfi</b>
+        <a class="header-name" href="{{ .Site.Home.RelPermalink }}"><b>Uğur Erdem Seyfi</b></a>
         <div class="header-description">{{ .Site.Params.Description }}</div>
         <div class="header-links">
             {{ range .Site.Params.Connect }}
