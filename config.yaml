@@ -1,6 +1,6 @@
 baseURL: 'https://rugu.dev/'
 languageCode: 'en-us'
-title: 'ugur'
+title: 'Uğur Erdem Seyfi'
 
 params:
   authorImage: "/ugur_img.jpg"
