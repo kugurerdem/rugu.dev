@@ -1,10 +1,4 @@
 <nav>
-    <div class="menu">
-        <a href="/{{ $.Site.Language }}"> {{ $.Site.Params.Menu.Home }}  </a>
-        <a href="/{{ $.Site.Language }}/blog"> Blog </a>
-        <a href="/{{ $.Site.Language }}/about"> About </a>
-    </div>
-
     <div class="languages">
         {{ range $key, $lang := $.Site.Languages }}
             {{ if ne $key 0 }}
