@@ -96,17 +96,55 @@ time {
     margin: 0.5rem 0;
 }
 
-article, aside {
+article {
     display: block;
+    max-width: 54em;
 }
 
-aside {
-    width: 15em;
-    margin-left: 2em;
-    margin-right: 1em;
-    flex-shrink: 0;
+.site-header {
+    display: flex;
     align-items: center;
-    text-align: center;
+    gap: 1em;
+    max-width: 54em;
+    margin: 1em auto;
+    padding: 0 1em;
+}
+
+.header-author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+.header-description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+}
+
+.header-links .icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.source-link {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
 }
 
 pre {
@@ -121,17 +159,6 @@ pre {
     margin-bottom: 1em;
     padding: 1em 1em;
     box-shadow: 0 0 6px rgb(0 0 0 / 20%);
-}
-
-.author-image {
-    margin: 0 auto;
-    max-width: 208px;
-    width: 100%;
-    height: auto;
-
-    display: block;
-    width: 100%;
-    border-radius: 25%;
 }
 
 .icon-container {
@@ -284,17 +311,13 @@ blockquote.alert.alert-caution {
 }
 
 @media (max-width: 52em) {
-    .master-container {
-        display: block;
+    .site-header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    aside {
-        margin-top: 1em;
-        width: auto;
-    }
-
-    .source {
-        position: static;
+    .header-links {
+        justify-content: center;
     }
 
     blockquote {
@@ -320,21 +343,8 @@ blockquote.alert.alert-caution {
 }
 
 @media (min-width: 52em){
-    article {
-        width: calc(100% - 17em);
-        max-width: 54em;
-    }
-
     .page {
         min-width: 35em;
-    }
-
-
-    .source {
-        position: fixed;
-        padding: 1em;
-        right: 0;
-        bottom: 0;
     }
 }
 
@@ -438,21 +448,6 @@ code {
 .project-link:hover {
   background: #0066cc;
   color: white;
-}
-
-.newsletter-btn {
-    margin-top: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.3em;
-    cursor: pointer;
-}
-
-.newsletter-btn:hover {
-    background-color: #0056b3;
 }
 
 .blog-entry {

@@ -2,29 +2,31 @@
     {{ partial "head.html" . }}
     <body>
         {{ partial "nav.html" . }}
-        <div class="master-container">
-            <article>
-                <div class="page">
-                    <h1> {{ .Title }} Essays </h1>
-                    {{ $tag := .Title | lower }}
-                    {{- range where .Site.RegularPages "Type" "blog" -}}
-                            {{ if in .Params.tags $tag }}
-                                <ul>
-                                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                                    {{ $url := .RelPermalink }}
-                                    {{ $postfix := "" }}
-                                    {{ if isset .Params "forward"}}
-                                        {{ $url = .Params.Forward }}
-                                        {{ $postfix = "(outlink)"}}
-                                    {{ end }}
-                                    <a href="{{ $url }}">{{ .Title }}</a> {{
-                                    $postfix }}
-                                </ul>
-                            {{ end }}
-                    {{ end }}
-                </div>
-            </article>
-            {{ partial "aside.html" . }}
-        </div>
+        {{ partial "header.html" . }}
+        <main>
+            <div class="master-container">
+                <article>
+                    <div class="page">
+                        <h1> {{ .Title }} Essays </h1>
+                        {{ $tag := .Title | lower }}
+                        {{- range where .Site.RegularPages "Type" "blog" -}}
+                                {{ if in .Params.tags $tag }}
+                                    <ul>
+                                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
+                                        {{ $url := .RelPermalink }}
+                                        {{ $postfix := "" }}
+                                        {{ if isset .Params "forward"}}
+                                            {{ $url = .Params.Forward }}
+                                            {{ $postfix = "(outlink)"}}
+                                        {{ end }}
+                                        <a href="{{ $url }}">{{ .Title }}</a> {{
+                                        $postfix }}
+                                    </ul>
+                                {{ end }}
+                        {{ end }}
+                    </div>
+                </article>
+            </div>
+        </main>
     </body>
 <html>
