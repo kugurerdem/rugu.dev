@@ -6,7 +6,7 @@
         <a class="header-name" href="{{ .Site.Home.RelPermalink }}"><b>Uğur Erdem Seyfi</b></a>
         <div class="header-description">{{ .Site.Params.Description }}</div>
         <div class="header-links">
-            <div class="header-links-icons">
+            <div>
                 {{ range .Site.Params.Connect }}
                     {{ range $k, $v := . }}
                         <a href="{{ $v }}" target="_blank">
