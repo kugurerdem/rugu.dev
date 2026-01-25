@@ -160,8 +160,8 @@ article {
 }
 
 .header-links .icon {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.7em;
+    height: 1.7em;
 }
 
 .source-link {
@@ -373,7 +373,13 @@ blockquote.alert.alert-caution {
     .header-links {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 0.5em;
+    }
+
+    .header-links .icon {
+        width: 2em;
+        height: 2em;
     }
 
     blockquote {
