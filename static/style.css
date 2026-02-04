@@ -108,6 +108,8 @@ time {
 article {
     display: block;
     max-width: 54em;
+    width: 100%;
+    min-width: 0;
 }
 
 .site-header {
@@ -187,6 +189,7 @@ article {
     max-width: 54rem;
     margin-bottom: 1em;
     padding: 1em 1em;
+    overflow-wrap: anywhere;
 }
 
 .icon {
