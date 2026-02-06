@@ -73,6 +73,10 @@ nav {
   padding: 0 1em;
 }
 
+nav > .nav-home {
+    font-size: 0.9em;
+}
+
 nav > .languages {
     flex-grow: 1;
     display: flex;
