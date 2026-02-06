@@ -132,6 +132,8 @@ article {
     display: flex;
     flex-direction: column;
     gap: 0.25em;
+    flex: 1;
+    min-width: 0;
 }
 
 .header-name {
