@@ -67,9 +67,10 @@ h1 {
 
 nav {
   display: flex;
-  justify-content: center; /* Center the content inside nav */
+  justify-content: center;
   margin: 0.5em auto;
-  max-width: 71em; /* Same as .master-container */
+  max-width: 54em;
+  padding: 0 1em;
 }
 
 nav > .languages {
