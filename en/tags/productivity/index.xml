@@ -1,11 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>&lt;p&gt;Try the extension in
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>
+
+
+ &lt;blockquote class="alert alert-warning"&gt;
+ &lt;p class="alert-heading"&gt;
+ ℹ️
+ 
+ Disclaimer
+ 
+ &lt;/p&gt;
+ &lt;p&gt;This post was written when Mark Scroll Positions was first built. Since then, it has been modernized by a lot, and the application does not look as it&amp;rsquo;s been showcased in here. Still, the ideas here should remain useful for building an intuition about how it works.&lt;/p&gt;
+ &lt;/blockquote&gt;
+
+&lt;p&gt;Try the extension in
 &lt;a href="https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald"&gt;Chrome&lt;/a&gt;
 or in
 &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/mark-scroll-positions/"&gt;Firefox&lt;/a&gt;
 &lt;br&gt;
 See the source code
 &lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="hahahugoshortcode25s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode26s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BzbMsaQkt34?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
