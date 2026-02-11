@@ -11,6 +11,9 @@ discussions:
     hackernews: https://news.ycombinator.com/item?id=40589852
 ---
 
+> [!WARNING] Disclaimer
+> This post was written when Mark Scroll Positions was first built. Since then, it has been modernized by a lot, and the application does not look as it's been showcased in here. Still, the ideas here should remain useful for building an intuition about how it works.
+
 Try the extension in
 [Chrome](https://chromewebstore.google.com/detail/mark-scroll-positions/echejfhmdgnabmbihbmkdgeajmbojald)
 or in
