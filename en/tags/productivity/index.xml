@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Productivity on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/productivity/</link><description>Recent content in Productivity on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ugur@rugu.dev (Uğur Erdem Seyfi)</managingEditor><webMaster>ugur@rugu.dev (Uğur Erdem Seyfi)</webMaster><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>
 
 
  &lt;blockquote class="alert alert-warning"&gt;
@@ -149,7 +149,7 @@ should adapt to these changes.&lt;/p&gt;
 &lt;p&gt;Anyway, I hope this application will be useful to some people. It will at least
 be useful to me. If you want to contribute, please feel free to send your PRs
 to
-&lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p&gt;A significant amount of my time of the day is spent interacting with computers
+&lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Importance of Intentionality in Digital Consumption</title><link>https://rugu.dev/en/blog/intentional-digital-consumption/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/intentional-digital-consumption/</guid><description>&lt;p&gt;A significant amount of my time of the day is spent interacting with computers
 and cell phones. Some of these are due to habits (like having a feeling of
 missing out), some are due to reasons related to dopamine (like watching
 movies, tv-series or content which are supposed to be fun), and some are
@@ -283,7 +283,7 @@ the first place.&lt;/p&gt;
 that lets you customize the CSS styles of websites. One problem I had with both
 the mobile and web versions of WhatsApp was that archived chats were still
 easily accessible at the top, even showing a notification icon. I just hid that
-section from the UI using this app.&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
+section from the UI using this app.&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
 windows and prompting her to use services she doesn’t need. After checking her
 phone and doing some online research, I found out that many others have also
 complained about this issue.&lt;/p&gt;
@@ -388,7 +388,7 @@ your phone. Install &lt;code&gt;adb&lt;/code&gt; on your computer, connect to yo
 identify packages that seem unnecessary, and free your device from the unwanted
 &amp;lsquo;guests.&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Go ahead and take back at least a partial ownership of your phone by getting
-rid of these intruders!&lt;/p&gt;</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p&gt;For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+rid of these intruders!&lt;/p&gt;</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p&gt;For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
 It forms an essential part of my routine, as I use it for nearly all my tasks
 involving text. Be it drafting an essay, sending an email, or coding, Neovim is
 my go-to tool.&lt;/p&gt;
@@ -502,7 +502,7 @@ a few days now. Now I have all the tools that I have needed in order to utilize
 my workflow even more, a strong autocompletion tool such as Copilot, a program
 that allows me to interact with large language models through shell: llm, and
 finally, a wrapper vi-llm based around llm for my personal use case.&lt;/p&gt;
-&lt;p&gt;I hope that this essay was helpful or at least interesting to some of you.&lt;/p&gt;</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important"&gt;Typing Fast is Important&lt;/h2&gt;
+&lt;p&gt;I hope that this essay was helpful or at least interesting to some of you.&lt;/p&gt;</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important"&gt;Typing Fast is Important&lt;/h2&gt;
 &lt;p&gt;It is often mentioned that the bottleneck in building software projects is not
 one&amp;rsquo;s typing ability but ability to think clearly, and to design the
 architecture effectively. Afterall, if typing speed was so essential to
@@ -582,7 +582,7 @@ Racer&lt;/a&gt; for exercise.&lt;/p&gt;
 English keyboard layout even their native language is not English. Most
 programming languages are designed to use symbols readily available on a US
 keyboard, such as {}[]/`\&amp;quot;&amp;rsquo;, which may not be as easily accessible on other
-layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
+layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,

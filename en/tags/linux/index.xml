@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/linux/</link><description>Recent content in Linux on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p&gt;I’ve switched my desktop computer environment from Arch Linux to NixOS and used
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/linux/</link><description>Recent content in Linux on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ugur@rugu.dev (Uğur Erdem Seyfi)</managingEditor><webMaster>ugur@rugu.dev (Uğur Erdem Seyfi)</webMaster><lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p&gt;I’ve switched my desktop computer environment from Arch Linux to NixOS and used
 it for about a month. I want to share my migration experience in case it might
 interest or even help others.&lt;/p&gt;
 &lt;p&gt;I also want to thank my friends &lt;a href="https://github.com/onsah"&gt;Onur&lt;/a&gt; and
@@ -197,7 +197,7 @@ don&amp;rsquo;t see a serious problem here.&lt;/p&gt;
 the costs depends on how much you take full advantage of its features. So, I
 believe that if I experiment with more setups, try different programs, or start
 managing servers with Nix, I will begin to see a better return on this
-investment from what I have learned so far. :)&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
+investment from what I have learned so far. :)&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
 windows and prompting her to use services she doesn’t need. After checking her
 phone and doing some online research, I found out that many others have also
 complained about this issue.&lt;/p&gt;
@@ -302,7 +302,7 @@ your phone. Install &lt;code&gt;adb&lt;/code&gt; on your computer, connect to yo
 identify packages that seem unnecessary, and free your device from the unwanted
 &amp;lsquo;guests.&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Go ahead and take back at least a partial ownership of your phone by getting
-rid of these intruders!&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
+rid of these intruders!&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
 across the system on Linux machines using X. This experience helped me grasp
 how the OS and Window Managers handle keyboard inputs, clarifying the reasons
 behind an unexpected behavior I had encountered before, which I also mention in
@@ -449,7 +449,7 @@ configure their preferences through utilities provided by their window manager,
 and the window manager handles the interaction with the OS.&lt;/p&gt;
 &lt;p&gt;This serves as a compelling example of how casually experimenting with things
 can significantly contribute to one&amp;rsquo;s understanding of the core concepts they
-are dealing with.&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
+are dealing with.&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,

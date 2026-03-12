@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/technology/</link><description>Recent content in Technology on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p&gt;Up until now, I was not aware that concurrency and parallelism were actually
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Uğur Erdem Seyfi</title><link>https://rugu.dev/en/tags/technology/</link><description>Recent content in Technology on Uğur Erdem Seyfi</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ugur@rugu.dev (Uğur Erdem Seyfi)</managingEditor><webMaster>ugur@rugu.dev (Uğur Erdem Seyfi)</webMaster><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rugu.dev/en/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Concurrency, Parallelism and JS</title><link>https://rugu.dev/en/blog/concurrency-and-parallelism/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/concurrency-and-parallelism/</guid><description>&lt;p&gt;Up until now, I was not aware that concurrency and parallelism were actually
 different things since they are often used interchangeably by some. I just
 learned that this is not the case while reading &lt;a href="https://www.braveclojure.com/concurrency/"&gt;Chapter
 9&lt;/a&gt; of the book &amp;ldquo;Clojure for the
@@ -218,7 +218,7 @@ and provide feedback.&lt;/p&gt;
 &lt;p&gt;In the HackerNews discussion, @duped and @donatj recommended &lt;a href="https://www.youtube.com/watch?v=oV9rvDllKEg"&gt;Concurrency is
 not Parallelism&lt;/a&gt; by Rob Pike. It
 is a very good talk, so I wanted to mention it here as well for anyone else
-further interested in the topic.&lt;/p&gt;</description></item><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p&gt;I’ve switched my desktop computer environment from Arch Linux to NixOS and used
+further interested in the topic.&lt;/p&gt;</description></item><item><title>Switching from Arch to NixOS</title><link>https://rugu.dev/en/blog/nixos/</link><pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/nixos/</guid><description>&lt;p&gt;I’ve switched my desktop computer environment from Arch Linux to NixOS and used
 it for about a month. I want to share my migration experience in case it might
 interest or even help others.&lt;/p&gt;
 &lt;p&gt;I also want to thank my friends &lt;a href="https://github.com/onsah"&gt;Onur&lt;/a&gt; and
@@ -417,7 +417,7 @@ don&amp;rsquo;t see a serious problem here.&lt;/p&gt;
 the costs depends on how much you take full advantage of its features. So, I
 believe that if I experiment with more setups, try different programs, or start
 managing servers with Nix, I will begin to see a better return on this
-investment from what I have learned so far. :)&lt;/p&gt;</description></item><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>
+investment from what I have learned so far. :)&lt;/p&gt;</description></item><item><title>Introducing: Mark Scroll Positions</title><link>https://rugu.dev/en/blog/mark-scroll-positions/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/mark-scroll-positions/</guid><description>
 
 
  &lt;blockquote class="alert alert-warning"&gt;
@@ -568,7 +568,7 @@ should adapt to these changes.&lt;/p&gt;
 &lt;p&gt;Anyway, I hope this application will be useful to some people. It will at least
 be useful to me. If you want to contribute, please feel free to send your PRs
 to
-&lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
+&lt;a href="https://github.com/kugurerdem/mark-scroll-positions"&gt;kugurerdem/mark-scroll-positions&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debloating My Android Phone with ADB</title><link>https://rugu.dev/en/blog/debloat-with-adb/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/debloat-with-adb/</guid><description>&lt;p&gt;My mother recently mentioned that her phone is continually opening certain
 windows and prompting her to use services she doesn’t need. After checking her
 phone and doing some online research, I found out that many others have also
 complained about this issue.&lt;/p&gt;
@@ -673,7 +673,7 @@ your phone. Install &lt;code&gt;adb&lt;/code&gt; on your computer, connect to yo
 identify packages that seem unnecessary, and free your device from the unwanted
 &amp;lsquo;guests.&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Go ahead and take back at least a partial ownership of your phone by getting
-rid of these intruders!&lt;/p&gt;</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p&gt;For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+rid of these intruders!&lt;/p&gt;</description></item><item><title>Incorporating AI Tools Into My Terminal Workflow</title><link>https://rugu.dev/en/blog/vi-llm/</link><pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/vi-llm/</guid><description>&lt;p&gt;For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
 It forms an essential part of my routine, as I use it for nearly all my tasks
 involving text. Be it drafting an essay, sending an email, or coding, Neovim is
 my go-to tool.&lt;/p&gt;
@@ -787,7 +787,7 @@ a few days now. Now I have all the tools that I have needed in order to utilize
 my workflow even more, a strong autocompletion tool such as Copilot, a program
 that allows me to interact with large language models through shell: llm, and
 finally, a wrapper vi-llm based around llm for my personal use case.&lt;/p&gt;
-&lt;p&gt;I hope that this essay was helpful or at least interesting to some of you.&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
+&lt;p&gt;I hope that this essay was helpful or at least interesting to some of you.&lt;/p&gt;</description></item><item><title>Understanding Keyboard Events Better</title><link>https://rugu.dev/en/blog/understanding-keyboard-events/</link><pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/understanding-keyboard-events/</guid><description>&lt;p&gt;In this essay, I describe how I made a Node.js module to listen to keypresses
 across the system on Linux machines using X. This experience helped me grasp
 how the OS and Window Managers handle keyboard inputs, clarifying the reasons
 behind an unexpected behavior I had encountered before, which I also mention in
@@ -934,7 +934,7 @@ configure their preferences through utilities provided by their window manager,
 and the window manager handles the interaction with the OS.&lt;/p&gt;
 &lt;p&gt;This serves as a compelling example of how casually experimenting with things
 can significantly contribute to one&amp;rsquo;s understanding of the core concepts they
-are dealing with.&lt;/p&gt;</description></item><item><title>Sockets and Message Framing</title><link>https://rugu.dev/en/blog/sockets-and-message-framing/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/sockets-and-message-framing/</guid><description>&lt;p&gt;I&amp;rsquo;ve recently been involved in a fintech project that demands high performance,
+are dealing with.&lt;/p&gt;</description></item><item><title>Sockets and Message Framing</title><link>https://rugu.dev/en/blog/sockets-and-message-framing/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/sockets-and-message-framing/</guid><description>&lt;p&gt;I&amp;rsquo;ve recently been involved in a fintech project that demands high performance,
 posing various challenges related to a solid understanding of low-level
 concepts, concepts that are primarily relevant to the inner workings of the
 tools and protocols used beneath the surface.&lt;/p&gt;
@@ -1012,7 +1012,7 @@ such questions about the tool which I am using, just because the program works,
 I might have fallen into the same pitfalls that others have encountered.&lt;/p&gt;
 &lt;h1 id="references"&gt;References&lt;/h1&gt;
 &lt;p&gt;1 - Cleary, Stephen. “Message Framing.” Message framing. Accessed November 21,
-2023. &lt;a href="https://blog.stephencleary.com/2009/04/message-framing.html"&gt;https://blog.stephencleary.com/2009/04/message-framing.html&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;This blog post is a review of my journey into software development up until 2023-09-22. It is not intended to be a series of detailed explanations/guidelines for my career choices. Consider it more like personal reflections on events that shaped me as a developer. So, take the things that I say here with a grain of salt.&lt;/p&gt;
+2023. &lt;a href="https://blog.stephencleary.com/2009/04/message-framing.html"&gt;https://blog.stephencleary.com/2009/04/message-framing.html&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reflections on My Journey into Software Development</title><link>https://rugu.dev/en/blog/computer-science-reflections/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/computer-science-reflections/</guid><description>&lt;p&gt;This blog post is a review of my journey into software development up until 2023-09-22. It is not intended to be a series of detailed explanations/guidelines for my career choices. Consider it more like personal reflections on events that shaped me as a developer. So, take the things that I say here with a grain of salt.&lt;/p&gt;
 &lt;h1 id="my-first-introduction-to-programming"&gt;My First Introduction to Programming&lt;/h1&gt;
 &lt;p&gt;I used to hang out with my &lt;a href="https://www.yuempek.com"&gt;cousin&lt;/a&gt; a lot when I was around 6 or 7 years old. He would always develop something cool whenever I saw him using his computer.&lt;/p&gt;
 &lt;p&gt;Back then, I used to play &lt;a href="https://en.wikipedia.org/wiki/Peg_solitaire"&gt;Solo Test&lt;/a&gt; a lot. When I showed this game to my cousin, he thought about coding it and building a solution engine for it. He did both in front of my eyes. The game is still &lt;a href="http://yuempek.com/examples/javascript/solotest-Javascript.htm"&gt;available&lt;/a&gt; on his website. He was already one of my idols, but this was one of the moments that made me respect him even more. The idea of being able to build the things you like, the way you want, by this thing called &amp;ldquo;code&amp;rdquo; was fascinating.&lt;/p&gt;
@@ -1080,7 +1080,7 @@ technologies he used.&lt;/p&gt;
 &lt;p&gt;Some of the bots we built during that time included an IDO sniping bot for buying coins as soon as they were introduced to the market, a &lt;a href="https://github.com/kugurerdem/DVFBot"&gt;market-making bot&lt;/a&gt; for &lt;a href="https://rhino.fi/"&gt;DeversiFi&lt;/a&gt; to benefit from an airdrop program, an &lt;a href="https://github.com/kugurerdem/yakFarmer"&gt;automated reinvesting bot&lt;/a&gt; for the &lt;a href="https://yieldyak.com/"&gt;Yield Yak Auto Compounder&lt;/a&gt;, and a few other small automation bots.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important"&gt;Typing Fast is Important&lt;/h2&gt;
+&lt;/div&gt;</description></item><item><title>On the Importance of Typing Fast</title><link>https://rugu.dev/en/blog/on-typing-fast/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/on-typing-fast/</guid><description>&lt;h2 id="typing-fast-is-important"&gt;Typing Fast is Important&lt;/h2&gt;
 &lt;p&gt;It is often mentioned that the bottleneck in building software projects is not
 one&amp;rsquo;s typing ability but ability to think clearly, and to design the
 architecture effectively. Afterall, if typing speed was so essential to
@@ -1160,7 +1160,7 @@ Racer&lt;/a&gt; for exercise.&lt;/p&gt;
 English keyboard layout even their native language is not English. Most
 programming languages are designed to use symbols readily available on a US
 keyboard, such as {}[]/`\&amp;quot;&amp;rsquo;, which may not be as easily accessible on other
-layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
+layouts, (e.g. Turkish layout).&lt;/p&gt;</description></item><item><title>My Experience on Switching to Arch Linux</title><link>https://rugu.dev/en/blog/switching-to-archlinux/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><author>ugur@rugu.dev (Uğur Erdem Seyfi)</author><guid>https://rugu.dev/en/blog/switching-to-archlinux/</guid><description>&lt;p&gt;About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,
