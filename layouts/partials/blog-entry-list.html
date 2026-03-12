@@ -23,7 +23,7 @@
         {{ if not (hasPrefix $first "http") }}
             {{ $img = printf "%s%s" $pageUrl $first }}
         {{ end }}
-        <img class="blog-entry-thumbnail" src="{{ $img }}" alt="">
+        <a href="{{ $url }}"><img class="blog-entry-thumbnail" src="{{ $img }}" alt=""></a>
     {{ end }}
 </div>
 {{ end }}
