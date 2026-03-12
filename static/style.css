@@ -466,6 +466,7 @@ code {
     flex-direction: column;
     gap: 0.25em;
     max-width: 36em;
+    flex: 1;
 }
 
 .blog-entry-title {
@@ -475,6 +476,10 @@ code {
 .blog-entry-description {
     margin: 0;
     font-size: 0.9em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     color: var(--text-muted);
 }
 
@@ -499,24 +504,10 @@ code {
         width: 100%;
     }
 
-    .blog-entry-content {
-        max-width: none;
-    }
-
-    .blog-entry {
-        flex-direction: column;
-        gap: 0.8em;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 0.8em;
-    }
-
     .blog-entry-thumbnail {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        margin-top: 0.2em;
+        width: 120px;
+        max-width: 30vw;
+        aspect-ratio: 220 / 145;
     }
 }
 

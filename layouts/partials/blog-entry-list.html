@@ -12,7 +12,7 @@
         <a href="{{ $url }}" class="blog-entry-title{{ if in .Params.tags "highlights" }} highlights{{ end }}">{{ .Title }}</a> {{$postfix }}
 
         {{ with .Summary }}
-            <p class="blog-entry-description">{{ . | plainify | truncate 120 }}</p>
+            <p class="blog-entry-description">{{ . | plainify }}</p>
         {{ end }}
 
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
