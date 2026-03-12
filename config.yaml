@@ -3,6 +3,9 @@ languageCode: 'en-us'
 title: 'Uğur Erdem Seyfi'
 
 params:
+  author:
+    name: 'Uğur Erdem Seyfi'
+    email: 'ugur@rugu.dev'
   authorImage: "/ugur_img.jpg"
   connect:
     - linkedin: 'https://www.linkedin.com/in/ugur-erdem-seyfi'
