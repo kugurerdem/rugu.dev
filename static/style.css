@@ -494,6 +494,11 @@ code {
 }
 
 @media (max-width: 60em) {
+    img[src$='#halfsize'],
+    img[src$='#75persize'] {
+        width: 100%;
+    }
+
     .blog-entry-content {
         max-width: none;
     }
@@ -501,6 +506,9 @@ code {
     .blog-entry {
         flex-direction: column;
         gap: 0.8em;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 0.8em;
     }
 
     .blog-entry-thumbnail {
