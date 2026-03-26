@@ -1,0 +1,117 @@
+---
+title: "Tailscale’d Into Homelabbing"
+date: 2026-03-26
+images:
+  - homelab_lenovo.png
+---
+
+Having my own homelab was something I wanted to try for a long time. However, I just couldn't get started. Mostly because I kept overthinking it. How will I handle dynamic IPs? Do I need something like a local DNS on my router for that? Even if I solve things inside the home, how am I supposed to access it remotely? Do I need port forwarding at the NAT layer? And what about TLS certificates, how do I even manage those without using a public certificate authority?
+
+Of course, I know there are answers to all of these questions. And each one, on its own, is probably manageable. But I was discouraged by the possibility of [Lingchi](https://en.wikipedia.org/wiki/Lingchi), small things slowly adding up until the maintenance burden is no longer low.
+
+I knew that I could have used a VPS. Hosting everything there would have solved all these problems I mentioned. But I chose not to, for three main reasons: (1) A VPS still lives on someone else's computer. So, **nothing fundamentally prevents a VPS company from accessing your machine.** (2) My old home computer is cheaper than renting an equivalent compute and storage. And lastly, but maybe most importantly, (3) I would feel much more satisfied homelabbing on hardware I physically control.
+
+So, how did I start homelabbing then? What changed?
+
+Well, my friend [Halil](https://github.com/nikneym) introduced me to Tailscale. He showed me how it kind of solves all the problems I talked about. I do not want to explain how it works in detail here; I think it would be more appropriate to examine that in a separate blog post. **But shortly, Tailscale lets you create a private peer-to-peer network between your devices, with a lot of conveniences that make it very easy to manage.** For example, it allows me to access my machines remotely without exposing them to the public internet. Makes SSH access trivial. Handles HTTPS certificates so local services can be accessed securely, and gives fine-grained control over which devices can communicate with each other.
+
+Since most of my concerns were eliminated by Tailscale, there was basically no reason not to try it. So I started a small homelab experiment and used my old Lenovo computer as the server. The next step was to decide which apps I wanted to try and what features I should be looking for.
+
+
+{{< center >}}
+![](homelab_lenovo.png)
+(Lenovo Ideapad, age 7, running my homelab. A Linux Tux stitched by my aunt ensures morale stays high 😃)
+{{</ center >}}
+
+# Prioritizing Local-First Software
+
+Now, since things like electricity or internet outages are real possibilities, I think it is reasonable to expect that there will be times when the server is not available. Especially when I am away from it. In those cases, I would still want to be able to use the programs, with everything syncing back once the server is available again. I simply do not want to be blocked from using something when I need it. So it became kind of a hard requirement for me that the most important apps I use also have local-first clients.
+
+Luckily, all of the important apps I set up so far had local-first clients. For example, my Vaultwarden setup uses the Bitwarden client, where the vault is stored locally for up to 90 days, and the server is mainly there for syncing across devices.
+
+With Immich, the client is still usable even if it cannot reach the server at that moment. You can view files on your device, and everything shows up again once the server is available.
+
+And for note-taking, I use Obsidian, which is already offline-first by design. Syncing is handled through Nextcloud whenever an internet connection is available.
+
+# The Architecture
+
+The initial architecture I followed for this homelab setup is fairly simple. I have a `homelab` directory under my `$HOME` directory. Right now, it looks something like this:
+
+```fish
+$ tree -a -L 2
+.
+├── caddy -> /etc/caddy/
+├── immich
+│   ├── docker-compose.yml
+│   ├── .env
+│   ├── library
+│   └── postgres
+├── nextcloud
+│   ├── db_data
+│   ├── docker-compose.yml
+│   ├── .env
+│   └── nextcloud_data
+└── vaultwarden
+    ├── data
+    └── docker-compose.yml 
+```
+
+I use [Caddy](https://caddyserver.com/) as a reverse proxy in front of all my services, and the `caddy` folder here is a symlink to its configuration in `/etc/caddy`. I prefer keeping everything related to my homelab in one place, and any change I make here is automatically reflected there, and vice versa. The nice thing about Caddy is that it [integrates well with Tailscale](https://tailscale.com/blog/caddy). Basically, it automatically fetches and renews certificates for `*.ts.net` services through the local daemon, which you would otherwise have to manage manually.
+
+Each of the remaining folders is used to bootstrap its service with Docker and store its data. They contain a `docker-compose.yml` and a `.env` file, and the volumes are mounted directly into these folders, so it is always clear where the data lives, especially for backups.
+
+Overall, I tried to keep things simple: the `caddy` folder is for configuration, and every service gets its own directory with its compose file, environment variables, and local volumes.
+
+# Applications Tried
+
+Now that I have covered the overall setup I followed for starting my self-hosting journey, I think it is a good time to talk about the apps I tried so far and my overall experience. I will start with the ones I liked the most, and then briefly mention some of the others that did not work as well for me.
+
+## VaultWarden for Password Management 
+
+The first thing I wanted to self-host was my password manager. I was using Bitwarden through its public server at [bitwarden.com](https://bitwarden.com). But one concern I had was whether it really made sense to store such critical information somewhere outside. I know that passwords are encrypted client-side, and if you choose a strong passphrase, it should be fine. But even then, you still allow things like someone looking over your shoulder, seeing your master password, and then being able to log in to your vault from anywhere. I think it's also possible to overlook certain security issues or newly discovered vulnerabilities (yes, even regarding cryptographic implementations), which, while rare, do happen from time to time. 
+
+**The main point is, these risks would be much less of a concern if my password manager was hosted somewhere not directly accessible from the internet, where access is restricted to a specific subnet.**
+
+So I just started by self-hosting something I was already using on a daily basis, and something I was already concerned about being accessible over the whole internet. Setting up [Vaultwarden](https://github.com/dani-garcia/vaultwarden) was very easy. Migrating my existing vault to the new self-hosted instance was also straightforward. And the nice part is that, since I now self-host Bitwarden, I also get access to paid features like OTP and similar functionality.
+## Immich for Managing Photos
+
+I was missing a proper photo application for a long time. Just to give you an idea, while most of my friends were enjoying the convenience of syncing their photos across devices through their default apps, I was just manually backing up my photos over USB using MTP (Media Transfer Protocol). I was not able to access the photos I had backed up to my SSD or laptop when I was on my phone. I also was not able to do cool stuff like people or location based filtering, since I was not using any service that extracts metadata or uses image recognition to identify faces. :)
+
+This was partly because I did not like the idea of something as personal as my photos being stored on someone else's computer. But once I started homelabbing, I realized I could just host something like an image server myself. I looked it up and luckily found [Immich](https://immich.app/). It is really, really good. It not only handles syncing, but also provides all the niceties I mentioned earlier. It has a lightweight image recognition system that detects faces and tags your photos, extracts location data from metadata, and even lets you search your images using a lightweight NLP model, and so on...
+
+## Nextcloud for Syncing Files
+
+Another thing I thought would be useful was a way to sync my markdown notes across all my devices. I had used [Syncthing](https://syncthing.net/) before for this. It uses a relay server to help devices discover each other, and then they communicate directly. It is lightweight and fast. I had already used this setup to sync my notes between my phone, through a community-maintained client, and my computer.
+
+But there is one important aspect of Syncthing. **Since it is peer-to-peer, there is no single source of truth. By default, it does not provide an experience similar to something like Google Drive. It is not like you just connect with credentials and immediately start syncing your notes.** For every device, you need to establish connections and explicitly authorize access to the folders you want to share. This is great for fine-grained control, but not always the best in terms of user experience.
+
+So, since I had already tried Syncthing, I wanted to try something a bit different this time. I gave [Nextcloud](https://nextcloud.com/) a try, and it worked fine out of the box. Syncthing would have been enough as well, but I found the overall experience a bit easier with Nextcloud.
+## Synchronized note-taking on Obsidian (with Nextcloud)
+
+Now, for both mobile and desktop, I like Obsidian the most for note-taking.
+
+So I looked for a way to use it across all my devices, with my vault automatically synced through Nextcloud. Setting this up between my MacBook and Linux machine was very easy. I just created the vault inside my Nextcloud folder on one device, and on the MacBook I simply opened it from there. Any change I make on one device is quickly reflected on the other.
+
+For mobile, it is a bit different. Nextcloud does not support a continuously watched folder like it does on desktop, probably due to OS restrictions around background execution and filesystem access. But I still managed to find a workaround. While we do not have a local folder that syncs automatically, we can still access files through WebDAV.
+
+So if Obsidian could sync a local vault with WebDAV, that would solve the problem. Luckily, there is already a community plugin called [Remotely Save](https://github.com/remotely-save/remotely-save) that does exactly that. I installed it on my mobile client, set it up with my WebDAV credentials, and it works great.
+
+## Applications I Tried But Will Not Use
+
+Well, so far so good. I have talked about the applications I tried and liked quite a lot. But what about the ones I tried and decided not to continue with?
+
+Here are a few that I experimented with, and why I ended up not using them:
+
+- **Kavita** for a book/comic reading. There is no proper mobile (and desktop) client that allows offline reading. This was simply my reason for it.
+- **Ghostfolio** for portfolio tracking. The mental model did not really fit mine. It also does not support adding custom assets, so if you are investing in something not available in its dataset, you cannot track it. For now, I will probably stick with spreadsheets, or maybe build something simple myself for my use cases.
+- **Joplin** for note-taking. I tried running Joplin Server as a backend for it. If the sync experience and the app worked well for me, I might not have needed to set up Nextcloud at all, since syncing notes was the primary reason I set it up in the first place. While everything technically worked and syncing was fine, I just did not like the UI/UX compared to Obsidian. It is as simple as that.
+
+But of course, just because they did not work for me does not mean they are bad. If you are curious, I would encourage you to try them yourself.
+
+# To Conclude
+
+So far, this little self-hosting experiment has been running smoothly. I am using almost all the services I set up here on a daily basis.
+
+Of course, there are still many things on my mind. How should I set up a proper backup system? Which apps should I try next, maybe things like Jellyfin, Paperless-ngx, or some bookmarking tools? What other features of Tailscale can I make better use of? How can I improve the observability of my home server so I can easily track resource usage? Is there anything I can do about power outages so that if my computer shuts down, it can start back up automatically? And so on... But the good thing is, I do not have to answer all of these questions at once. I intend to continue this experiment incrementally and document what I learn along the way through new blog posts.
+
+Thanks for reading this far. If you have any questions or feedback, feel free to share them with me.
