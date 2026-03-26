@@ -37,6 +37,9 @@
                         {{ partial "param-links.html" (dict "param" .Params.translations "title" "Translations") }}
                         <hr>
                         {{ .Content }}
+                        {{ if eq .Section "blog" }}
+                            {{ partial "post-footer.html" . }}
+                        {{ end }}
                     </div>
                 </article>
             </div>
