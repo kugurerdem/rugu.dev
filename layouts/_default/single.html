@@ -11,6 +11,7 @@
             <div class="master-container">
                 <article>
                     <div class="page">
+                        {{ partial "series-meta.html" (dict "page" . "class" "page-series") }}
                         <h1> {{ .Title }} </h1>
                         {{ if isset .Params "subtitle" }}
                             <h2>

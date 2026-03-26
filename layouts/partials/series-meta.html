@@ -1,0 +1,18 @@
+{{ with .page.GetTerms "series" }}
+    {{ $term := index . 0 }}
+    {{ $seriesPages := $term.Pages.ByDate }}
+    {{ $entry := 0 }}
+
+    {{ range $index, $seriesPage := $seriesPages }}
+        {{ if eq $seriesPage.RelPermalink $.page.RelPermalink }}
+            {{ $entry = add $index 1 }}
+        {{ end }}
+    {{ end }}
+
+    <div class="series-meta{{ with $.class }} {{ . }}{{ end }}">
+        <a href="{{ $term.RelPermalink }}" class="series-kicker series-kicker-link">{{ $term.LinkTitle }}</a>
+        {{ if gt $entry 0 }}
+            <span class="series-entry">#{{ $entry }}</span>
+        {{ end }}
+    </div>
+{{ end }}
