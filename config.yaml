@@ -11,6 +11,7 @@ params:
     name: 'Uğur Erdem Seyfi'
     email: 'ugur@rugu.dev'
   authorImage: "/ugur_img.jpg"
+  shareBaseURL: 'https://rugu.dev'
   connect:
     - linkedin: 'https://www.linkedin.com/in/ugur-erdem-seyfi'
     - github: 'https://github.com/kugurerdem'

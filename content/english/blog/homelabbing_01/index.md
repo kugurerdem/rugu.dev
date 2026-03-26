@@ -115,5 +115,3 @@ But of course, just because they did not work for me does not mean they are bad.
 So far, this little self-hosting experiment has been running smoothly. I am using almost all the services I set up here on a daily basis.
 
 Of course, there are still many things on my mind. How should I set up a proper backup system? Which apps should I try next, maybe things like Jellyfin, Paperless-ngx, or some bookmarking tools? What other features of Tailscale can I make better use of? How can I improve the observability of my home server so I can easily track resource usage? Is there anything I can do about power outages so that if my computer shuts down, it can start back up automatically? And so on... But the good thing is, I do not have to answer all of these questions at once. I intend to continue this experiment incrementally and document what I learn along the way through new blog posts.
-
-Thanks for reading this far. If you have any questions or feedback, feel free to share them with me.
