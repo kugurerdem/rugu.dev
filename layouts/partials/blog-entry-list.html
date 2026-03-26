@@ -9,6 +9,7 @@
             {{ $postfix = "(outlink)"}}
         {{ end }}
 
+        {{ partial "series-meta.html" (dict "page" . "class" "blog-entry-series") }}
         <a href="{{ $url }}" class="blog-entry-title{{ if in .Params.tags "highlights" }} highlights{{ end }}">{{ .Title }}</a> {{$postfix }}
 
         {{ with .Summary }}

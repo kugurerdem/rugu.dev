@@ -7,23 +7,14 @@
             <div class="master-container">
                 <article>
                     <div class="page">
-                        <h1> {{ .Title }} Essays </h1>
-                        {{ $tag := .Title | lower }}
-                        {{- range where .Site.RegularPages "Type" "blog" -}}
-                                {{ if in .Params.tags $tag }}
-                                    <ul>
-                                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time>
-                                        {{ $url := .RelPermalink }}
-                                        {{ $postfix := "" }}
-                                        {{ if isset .Params "forward"}}
-                                            {{ $url = .Params.Forward }}
-                                            {{ $postfix = "(outlink)"}}
-                                        {{ end }}
-                                        <a href="{{ $url }}">{{ .Title }}</a> {{
-                                        $postfix }}
-                                    </ul>
-                                {{ end }}
-                        {{ end }}
+                        <h1>
+                            {{ if eq .Data.Plural "series" }}
+                                {{ .Title }}
+                            {{ else }}
+                                {{ .Title }} Posts
+                            {{ end }}
+                        </h1>
+                        {{ partial "blog-entry-list.html" .Pages }}
                     </div>
                 </article>
             </div>

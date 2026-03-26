@@ -1,6 +1,8 @@
 ---
 title: "Tailscale’d Into Homelabbing"
 date: 2026-03-26
+series:
+  - Homelabbing Series
 images:
   - homelab_lenovo.png
 ---

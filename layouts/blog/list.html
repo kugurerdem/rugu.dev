@@ -9,13 +9,15 @@
                     <div class="page">
                         <h1> Blog </h1>
                         {{ if .Site.Taxonomies.tags }}
-                        Tags:
-                        {{ range .Site.Taxonomies.tags }}
-                        <a href="{{ .Page.Permalink }}" class="tag"> {{ .Page.Title }}
-                            <span>
-                                ({{.Count}})
-                            </span> </a>
-                        {{ end }}
+                        <div class="blog-tags">
+                            <span class="blog-tags-label">Tags:</span>
+                            {{ range .Site.Taxonomies.tags }}
+                            <a href="{{ .Page.Permalink }}" class="tag"> {{ .Page.Title }}
+                                <span>
+                                    ({{.Count}})
+                                </span> </a>
+                            {{ end }}
+                        </div>
                         {{ end }}
 
                         {{ with .Site.GetPage "section" "blog" }}
