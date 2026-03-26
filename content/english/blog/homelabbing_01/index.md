@@ -92,7 +92,7 @@ So, since I had already tried Syncthing, I wanted to try something a bit differe
 
 Now, for both mobile and desktop, I like Obsidian the most for note-taking.
 
-So I looked for a way to use it across all my devices, with my vault automatically synced through Nextcloud. Setting this up between my MacBook and Linux machine was very easy. I just created the vault inside my Nextcloud folder on one device, and on the MacBook I simply opened it from there. Any change I make on one device is quickly reflected on the other.
+So I looked for a way to use it across all my devices, with my vault automatically synced through Nextcloud. Setting this up between my MacBook and Linux machine was very easy. I just created the vault inside my Nextcloud folder on one device, and on the MacBook I simply opened it from there. Any change made on one device is quickly reflected on the other.
 
 For mobile, it is a bit different. Nextcloud does not support a continuously watched folder like it does on desktop, probably due to OS restrictions around background execution and filesystem access. But I still managed to find a workaround. While we do not have a local folder that syncs automatically, we can still access files through WebDAV.
 
@@ -100,7 +100,7 @@ So if Obsidian could sync a local vault with WebDAV, that would solve the proble
 
 ## Applications I Tried But Will Not Use
 
-Well, so far so good. I have talked about the applications I tried and liked quite a lot. But what about the ones I tried and decided not to continue with?
+Well, so far so good. I've shared my experiences with the applications that I tried and thoroughly enjoyed. But what about the ones that left a bad taste in my mouth and I ended up abandoning?
 
 Here are a few that I experimented with, and why I ended up not using them:
 
