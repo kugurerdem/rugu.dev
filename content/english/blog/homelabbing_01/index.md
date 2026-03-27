@@ -1,8 +1,9 @@
 ---
 title: "Tailscale’d Into Homelabbing"
 date: 2026-03-26
-series:
-  - Homelabbing Series
+series: Homelabbing Series
+discussions:
+    lobsters: https://lobste.rs/s/abrpfr/tailscale_d_into_homelabbing
 images:
   - homelab_lenovo.png
 ---
